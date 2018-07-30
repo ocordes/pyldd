@@ -15,8 +15,7 @@ class Brick( object ):
         for name, value in adict.items():
             setattr( self, name, value )
 
-
-
-def gen_material_list( bricklist ):
-    for brick in bricklist:
-        pass
+    def __str__( self ):
+        return 'designID= {:>5} materialID= {:>3} itemNos= {:>7}'.format( self.designID,
+                                                                    self.materialID,
+                                                                    self.itemNos )
