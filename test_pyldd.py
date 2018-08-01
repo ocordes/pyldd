@@ -15,17 +15,48 @@ History:
 
 from  pyldd.files import read_ldd_xml_file
 
+import sys
+import getopt
+
+
+
+def usage():
+     print( 'Usage: {} [options]'.format( sys.argv[0] ) )
+     print( ' Options:' )
+     print( ' -m | --material_list : shows the list of used bricks with amounts ')
+     print( ' -p | --povray file   : exports the file to povray ')
 
 #  main
 
-#lego_scene = read_ldd_xml_file( '/Users/ocordes/ownCloud/Lego/Models/Einkaufsliste.lxfml' )
-lego_scene = read_ldd_xml_file( '/Users/ocordes/ownCloud/Lego/Models/Haus_test2.lxfml' )
+# parse command line
 
+shortopts = 'mp:'
+longopts = [ '--material_list', '--povray=' ]
+
+try:
+    opts, args = getopt.getopt( sys.argv[1:], shortopts, longopts )
+except getopt.GetoptError as err:
+    # print help information and exit:
+    print( err ) # will print something like "option -a not recognized"
+    usage()
+    sys.exit( 2 )
+
+if len( args ) < 1:
+    print( 'No LDD XML file given!')
+    sys.exit( 2 )
+
+# now read the ldd xml file
+lego_scene = read_ldd_xml_file( args[0] )
 print( 'Scene contains {} LEGO bricks'.format( lego_scene.nr_bricks ) )
 
-mat_list = lego_scene.gen_material_list()
+for o, a in opts:
+    if o in ( '-m', '--material_list' ):
+        mat_list = lego_scene.gen_material_list()
+        for i,val in mat_list.items():
+            print( '{:>3}x {}'.format( val[0], val[1] ) )
+    elif o in ( '-p', '--povray' ):
+        pass
 
-for i,val in mat_list.items():
-    print( '{:>3}x {}'.format( val[0], val[1] ) )
+
 
 print( 'Done.' )
