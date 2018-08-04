@@ -24,14 +24,17 @@ def usage():
      print( 'Usage: {} [options]'.format( sys.argv[0] ) )
      print( ' Options:' )
      print( ' -m | --material_list : shows the list of used bricks with amounts ')
-     print( ' -p | --povray file   : exports the file to povray ')
+     print( ' -p | --povray=file   : exports the file to povray ')
+     print( ' -d | --declare=name  : name of the generated povray declare object [default=scene]')
 
 #  main
 
 # parse command line
 
-shortopts = 'mp:'
-longopts = [ '--material_list', '--povray=' ]
+declare_name = 'scene'
+
+shortopts = 'mp:d:'
+longopts = [ '--material_list', '--povray=', '--declare=' ]
 
 try:
     opts, args = getopt.getopt( sys.argv[1:], shortopts, longopts )
@@ -55,7 +58,11 @@ for o, a in opts:
         for i,val in mat_list.items():
             print( '{:>3}x {}'.format( val[0], val[1] ) )
     elif o in ( '-p', '--povray' ):
-        pass
+        povfile = a
+        lego_scene.generate_povfile( povfile, declare_name )
+    elif o in ( '-d', '--declare' ):
+        declare_name = a
+
 
 
 
