@@ -14,6 +14,10 @@ from pypovlib.pypovanimation import *
 from pypovlib.pypovobjects import *
 from pypovlib.pypovtextures import *
 
+lego_transform_macro = """
+#macro L_Transform( width, height, length )
+#end
+"""
 
 class Scene( object ):
     def __init__( self, abricks ):

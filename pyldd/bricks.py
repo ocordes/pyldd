@@ -82,9 +82,9 @@ color_table = { 26: 'lg_black',
 
 
 
-known_bricks = { 3021: { 'lg_3021' : 'n' },
-                 6098: { 'lg_6098' : 'n' },
-                 6141: { 'lg_6141' : 'n' } }
+known_bricks = { 3021: [ '3021', { 'lg_3021' : 'n' }],
+                 6098: [ '3867', { 'lg_3867' : 'n' }],
+                 6141: [ '6141', { 'lg_6141' : 'n' }] }
 
 
 
@@ -105,7 +105,7 @@ class Brick( object ):
         if self.designID in known_bricks:
             defs = known_bricks[self.designID]
             objs = []
-            for parts in defs:
+            for parts in defs[1]:
                 macro = parts
                 print( self.angle )
                 print( self.ax )
@@ -127,7 +127,7 @@ class Brick( object ):
                 obj = u
             else:
                 obj = objs[0]
-            return obj, 'lg_{}.inc'.format( self.designID )
+            return obj, 'lg_{}.inc'.format( defs[0] )
         else:
             print( 'Brick with designID={} not implemented!'.format( self.designID ) )
         return None, None
