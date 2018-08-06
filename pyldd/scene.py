@@ -15,7 +15,14 @@ from pypovlib.pypovobjects import *
 from pypovlib.pypovtextures import *
 
 lego_transform_macro = """
-#macro L_Transform( width, height, length )
+// create a macro for system LEGO transformation
+#macro L_Transform( WIDTH, HEIGHT, LENGTH )
+transform{
+scale <-1.000000,-1.000000,1.000000>
+rotate <-90.000000,-90.000000,0.000000>  // rotate back into xz plane
+// apply the centroid
+translate <LG_BRICK_WIDTH*WIDTH/2.,HEIGHT,-LG_BRICK_WIDTH*LENGTH/2.>
+}
 #end
 """
 
@@ -54,6 +61,7 @@ class Scene( object ):
                 scene.add( pov_part )
                 f.add_include( include_list )
 
+        f.add_macro( lego_transform_macro )
         f.add_declare( declare_name, scene )
 
         f.write_povfile()

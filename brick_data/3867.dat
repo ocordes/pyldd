@@ -1,0 +1,11 @@
+# Base 16 x 16 plate
+#
+# Oliver Cordes 2018-08-06
+type=baseplate
+file=lg_3867
+width=16
+length=16
+depth=-LG_PLATE_HEIGHT
+parts=1
+part0=lg_3867
+text0=n

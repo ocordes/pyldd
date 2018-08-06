@@ -1,0 +1,11 @@
+# Base 2 x 3 plate
+#
+# Oliver Cordes 2018-08-06
+type=plate
+file=lg_3021
+width=2
+length=3
+depth=0
+parts=1
+part0=lg_3021
+text0=n

@@ -14,6 +14,9 @@ from pypovlib.pypovanimation import *
 from pypovlib.pypovobjects import *
 from pypovlib.pypovtextures import *
 
+import sys, os
+
+brick_data_dir = 'brick_data'
 
 color_table = { 26: 'lg_black',
                 23: 'lg_blue',
@@ -82,9 +85,9 @@ color_table = { 26: 'lg_black',
 
 
 
-known_bricks = { 3021: [ '3021', { 'lg_3021' : 'n' }],
-                 6098: [ '3867', { 'lg_3867' : 'n' }],
-                 6141: [ '6141', { 'lg_6141' : 'n' }] }
+known_bricks = { 3021: [ '3021', None ],
+                 6098: [ '3867', None ],
+                 6141: [ '6141', None ] }
 
 
 
@@ -96,27 +99,69 @@ class Brick( object ):
             else:
                 setattr( self, name, float( value ) )
 
+
     def __str__( self ):
         return 'designID= {:>5} materialID= {:>3} itemNos= {:>7}'.format( self.designID,
                                                                     self.materialID,
                                                                     self.itemNos )
 
+
+    def load_brick_data( self, brickname ):
+        filename = os.path.join( brick_data_dir, '{}.dat'.format( brickname ) )
+        print( filename )
+
+        try:
+            f = open( filename, 'r' )
+            d = {}
+            parts = []
+            for line in f:
+                line = line.replace( '\n', '' ).lstrip().rstrip()
+                if line[0] == '#':
+                    continue
+                key, val = line.split('=',1)
+                if ( key in ( 'type', 'file', 'width', 'length', 'depth' ) ):
+                    d[key] = val
+                else:
+                    if key == 'parts':
+                        parts = [[None,None]] * int(val)
+                    elif key[:4] == 'part':
+                        nr = int( key[4:])
+                        print( key, nr, val )
+                        parts[nr][0] = val
+                        print( parts )
+                    elif key[:4] == 'text':
+                        nr = int( key[4:])
+                        print( key, nr, val )
+                        parts[nr][1] = val
+                        print( parts )
+            d['parts'] = parts
+            f.close()
+            return d
+        except:
+            return None
+
+
     def get_pov_object( self ):
         if self.designID in known_bricks:
             defs = known_bricks[self.designID]
+            if defs[1] is None:
+                defs[1] = self.load_brick_data( defs[0] )
+
+            defs = defs[1]
+            print( defs )
+
             objs = []
-            for parts in defs[1]:
-                macro = parts
+            for parts in defs['parts']:
+                macro = parts[0]
                 print( self.angle )
                 print( self.ax )
                 print( self.ay )
                 print( self.az )
                 obj = PovCSGMacro( '%i' % self.refID, macrocmd=macro )
-                obj.set_scale( [-1,-1,1] )
+                #obj.set_scale( [-1,-1,1] )
                 ax = self.ax * self.angle
                 ay = self.ay * self.angle
                 az = self.az * self.angle
-                obj.rotate = [-90,-90,0]
                 obj.rotate = [ax,ay,az]
                 obj.translate = [self.tx,self.ty,self.tz]
                 obj.set_texture( color_table.get( self.materialID, 'lg_unknown' ) )
@@ -127,7 +172,10 @@ class Brick( object ):
                 obj = u
             else:
                 obj = objs[0]
-            return obj, 'lg_{}.inc'.format( defs[0] )
+
+            # now apply the macros
+            obj.macros =  'L_Transform( {}, {}, {} )'.format( defs['width'], defs['depth'], defs['length'] )
+            return obj, '{}.inc'.format( defs['file'] )
         else:
             print( 'Brick with designID={} not implemented!'.format( self.designID ) )
         return None, None
