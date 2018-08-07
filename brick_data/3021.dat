@@ -4,8 +4,11 @@
 type=plate
 file=lg_3021
 width=2
-length=3
+length=1
 depth=0
+sx=1
+sy=1
+sz=1
 parts=1
 part0=lg_3021
 text0=n

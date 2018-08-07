@@ -16,12 +16,13 @@ from pypovlib.pypovtextures import *
 
 lego_transform_macro = """
 // create a macro for system LEGO transformation
-#macro L_Transform( WIDTH, HEIGHT, LENGTH )
+#macro L_Transform( WIDTH, HEIGHT, LENGTH, SX, SY, SZ )
 transform{
 scale <-1.000000,-1.000000,1.000000>
 rotate <-90.000000,-90.000000,0.000000>  // rotate back into xz plane
 // apply the centroid
-translate <LG_BRICK_WIDTH*WIDTH/2.,HEIGHT,-LG_BRICK_WIDTH*LENGTH/2.>
+scale <SX,SY,SZ>
+translate <LG_BRICK_WIDTH*WIDTH/2.,LG_BRICK_HEIGHT*HEIGHT,-LG_BRICK_WIDTH*LENGTH/2.>
 }
 #end
 """

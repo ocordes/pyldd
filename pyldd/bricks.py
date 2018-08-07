@@ -85,7 +85,12 @@ color_table = { 26: 'lg_black',
 
 
 
-known_bricks = { 3021: [ '3021', None ],
+known_bricks = { 3004: [ '3004', None ],
+                 3021: [ '3021', None ],
+                 3023: [ '3023', None ],
+                 3040: [ '3040', None ],
+                 3069: [ '3069', None ],
+                 3070: [ '3070', None ],
                  6098: [ '3867', None ],
                  6141: [ '6141', None ] }
 
@@ -119,23 +124,21 @@ class Brick( object ):
                 if line[0] == '#':
                     continue
                 key, val = line.split('=',1)
-                if ( key in ( 'type', 'file', 'width', 'length', 'depth' ) ):
+                if ( key in ( 'type', 'file', 'width', 'length', 'depth', 'sx', 'sy', 'sz' ) ):
                     d[key] = val
                 else:
                     if key == 'parts':
-                        parts = [[None,None]] * int(val)
+                        #parts = [[None,None]] * int(val)
+                        parts = [ [None,None] for _ in range( int(val) ) ]
                     elif key[:4] == 'part':
                         nr = int( key[4:])
-                        print( key, nr, val )
                         parts[nr][0] = val
-                        print( parts )
                     elif key[:4] == 'text':
                         nr = int( key[4:])
-                        print( key, nr, val )
                         parts[nr][1] = val
-                        print( parts )
             d['parts'] = parts
             f.close()
+            print( d )
             return d
         except:
             return None
@@ -148,23 +151,16 @@ class Brick( object ):
                 defs[1] = self.load_brick_data( defs[0] )
 
             defs = defs[1]
-            print( defs )
 
             objs = []
             for parts in defs['parts']:
                 macro = parts[0]
-                print( self.angle )
-                print( self.ax )
-                print( self.ay )
-                print( self.az )
                 obj = PovCSGMacro( '%i' % self.refID, macrocmd=macro )
-                #obj.set_scale( [-1,-1,1] )
-                ax = self.ax * self.angle
-                ay = self.ay * self.angle
-                az = self.az * self.angle
-                obj.rotate = [ax,ay,az]
-                obj.translate = [self.tx,self.ty,self.tz]
-                obj.set_texture( color_table.get( self.materialID, 'lg_unknown' ) )
+                if parts[1] == 'n':
+                    obj.set_texture( color_table.get( self.materialID, 'lg_unknown' ) )
+                elif parts[1] == 'r':
+                    obj.set_texture( '{} {}'.format( color_table.get( self.materialID, 'lg_unknown' ),
+                                                    'normal { bumps 0.3 scale 0.02 }' ) )
                 objs.append( obj )
             if len( objs ) > 1:
                 u = PovCSGUnion()
@@ -173,8 +169,19 @@ class Brick( object ):
             else:
                 obj = objs[0]
 
+            ax = self.ax * self.angle
+            ay = self.ay * self.angle
+            az = self.az * self.angle
+            obj.rotate = [ax,ay,az]
+            obj.translate = [self.tx,self.ty,self.tz]
+
             # now apply the macros
-            obj.macros =  'L_Transform( {}, {}, {} )'.format( defs['width'], defs['depth'], defs['length'] )
+            obj.macros =  'L_Transform( {},{},{},{},{},{} )'.format( defs['width'],
+                                                                    defs['depth'],
+                                                                    defs['length'],
+                                                                    defs['sx'],
+                                                                    defs['sy'],
+                                                                    defs['sz'] )
             return obj, '{}.inc'.format( defs['file'] )
         else:
             print( 'Brick with designID={} not implemented!'.format( self.designID ) )
