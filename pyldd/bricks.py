@@ -85,14 +85,19 @@ color_table = { 26: 'lg_black',
 
 
 
-known_bricks = { 3004: [ '3004', None ],
-                 3021: [ '3021', None ],
-                 3023: [ '3023', None ],
-                 3040: [ '3040', None ],
-                 3069: [ '3069', None ],
-                 3070: [ '3070', None ],
-                 6098: [ '3867', None ],
-                 6141: [ '6141', None ] }
+known_bricks = { 3004:  [ '3004', None ],     # brick 1 x 2
+                 3009:  [ '3009', None ],     # brick 1 x 6
+                 3021:  [ '3021', None ],     # plate 2 x 3
+                 3023:  [ '3023', None ],     # plate 1 x 2
+                 3040:  [ '3040', None ],     # Roof tile 1 x 2 / 45°
+                 3069:  [ '3069', None ],     # flat tile 1 x 2
+                 3070:  [ '3070', None ],     # flat tile 1 x 1
+                 3666:  [ '3666', None ],     # plate 1 x 6
+                 3710:  [ '3710', None ],     # plate 1 x 4
+                 6098:  [ '3867', None ],     # base 16 x 16 plate
+                 6141:  [ '6141', None ],     # plate 1 x 1 round
+                 6636:  [ '6636', None ],     # flat tile 1 x 6
+                 92946: [ '92946', None ] }   # Root tile 1 x 2 45° W 1/3 Plate
 
 
 
@@ -160,7 +165,8 @@ class Brick( object ):
                     obj.set_texture( color_table.get( self.materialID, 'lg_unknown' ) )
                 elif parts[1] == 'r':
                     obj.set_texture( '{} {}'.format( color_table.get( self.materialID, 'lg_unknown' ),
-                                                    'normal { bumps 0.3 scale 0.02 }' ) )
+                                                    #'normal { bumps 0.3 scale 0.02 }' ) )
+                                                    'normal { bumps 0.1 scale 2 }' ) )
                 objs.append( obj )
             if len( objs ) > 1:
                 u = PovCSGUnion()

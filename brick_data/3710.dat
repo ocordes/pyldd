@@ -1,14 +1,14 @@
-# Plate 1 x 1 round
+# Plate  1 x 4
 #
 # Oliver Cordes 2018-08-06
 type=plate
-file=lg_6141
-width=0
+file=lg_3710
+width=3
 length=0
 depth=0
 sx=1
 sy=1
 sz=1
 parts=1
-part0=lg_6141
+part0=lg_3710
 text0=n
