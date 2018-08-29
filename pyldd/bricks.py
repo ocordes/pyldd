@@ -89,7 +89,7 @@ known_bricks = { 3004:  [ '3004', None ],     # brick 1 x 2
                  3009:  [ '3009', None ],     # brick 1 x 6
                  3021:  [ '3021', None ],     # plate 2 x 3
                  3023:  [ '3023', None ],     # plate 1 x 2
-                 3040:  [ '3040', None ],     # Roof tile 1 x 2 / 45°
+                 3040:  [ '3040', None ],     # roof tile 1 x 2 / 45°
                  3069:  [ '3069', None ],     # flat tile 1 x 2
                  3070:  [ '3070', None ],     # flat tile 1 x 1
                  3666:  [ '3666', None ],     # plate 1 x 6
@@ -97,7 +97,8 @@ known_bricks = { 3004:  [ '3004', None ],     # brick 1 x 2
                  6098:  [ '3867', None ],     # base 16 x 16 plate
                  6141:  [ '6141', None ],     # plate 1 x 1 round
                  6636:  [ '6636', None ],     # flat tile 1 x 6
-                 92946: [ '92946', None ] }   # Root tile 1 x 2 45° W 1/3 Plate
+                 93273: [ '93273', None ],    # plate with bow 1 x 4 x 2/3
+                 92946: [ '92946', None ] }   # roof tile 1 x 2 45° W 1/3 Plate
 
 
 
