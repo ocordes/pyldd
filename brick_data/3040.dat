@@ -1,6 +1,8 @@
 # Roof tile  1 x 2 / 45°
 #
 # Oliver Cordes 2018-08-06
+#
+descr=roof tile 1 x 2 / 45°
 type=Roof
 file=lg_3040
 width=0

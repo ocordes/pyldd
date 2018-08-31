@@ -1,3 +1,8 @@
+
+#include "LDX.inc"
+
+#declare LDXSW = 0.5;   // Seam Width (0 for no seams)
+
 #declare LDX_s_slash_93273s01_dot_dat_in_part = union {
 // ~Slope Brick Curved  4 x  1 Double without Top Surface
 // Name: s\93273s01.dat
@@ -225,4 +230,8 @@ union {
 #declare lg_93273 =
 object {
                 LDX_93273_dot_dat
+								LDXSeamMatrix(20, 16.00016, 80.001289, 0, -8.00008, 0)
+
+								scale 1/25.
+								rotate x*-90
 				}

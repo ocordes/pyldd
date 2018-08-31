@@ -1,6 +1,8 @@
 # Brick  1 x 6
 #
 # Oliver Cordes 2018-08-06
+#
+descr=brick 1 x 6
 type=brick
 file=lg_3009
 width=5

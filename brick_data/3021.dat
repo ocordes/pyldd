@@ -1,6 +1,8 @@
-# Plate 2 x 3 plate
+# Plate 2 x 3 
 #
 # Oliver Cordes 2018-08-06
+# 
+descr=plate 2 x 3
 type=plate
 file=lg_3021
 width=2

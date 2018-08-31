@@ -1,6 +1,8 @@
 # Flat tile  1 x 1 
 #
 # Oliver Cordes 2018-08-06
+#
+descr=flat tile 1 x 1
 type=plate
 file=lg_3070
 width=0

@@ -1,6 +1,8 @@
 # Plate  1 x 2 
 #
 # Oliver Cordes 2018-08-06
+#
+descr=plate 1 x 2
 type=plate
 file=lg_3023
 width=1

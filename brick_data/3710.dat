@@ -1,6 +1,8 @@
 # Plate  1 x 4
 #
 # Oliver Cordes 2018-08-06
+#
+descr=plate 1 x 4
 type=plate
 file=lg_3710
 width=3

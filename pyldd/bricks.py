@@ -5,6 +5,7 @@ pyldd/bricks.py
 Author: Oliver Cordes
 
 History:
+ 2018-08-31: add more bricks
  2018-07-27: start project
 
 """
@@ -130,7 +131,7 @@ class Brick( object ):
                 if line[0] == '#':
                     continue
                 key, val = line.split('=',1)
-                if ( key in ( 'type', 'file', 'width', 'length', 'depth', 'sx', 'sy', 'sz' ) ):
+                if ( key in ( 'descr', 'type', 'file', 'width', 'length', 'depth', 'sx', 'sy', 'sz' ) ):
                     d[key] = val
                 else:
                     if key == 'parts':
@@ -144,7 +145,7 @@ class Brick( object ):
                         parts[nr][1] = val
             d['parts'] = parts
             f.close()
-            print( d )
+            #print( d )
             return d
         except:
             return None
@@ -159,9 +160,10 @@ class Brick( object ):
             defs = defs[1]
 
             objs = []
+            descr = defs.get( 'descr', 'unknown brick' )
             for parts in defs['parts']:
                 macro = parts[0]
-                obj = PovCSGMacro( '%i' % self.refID, macrocmd=macro )
+                obj = PovCSGMacro( '#%i %s' % ( self.refID, descr), macrocmd=macro )
                 if parts[1] == 'n':
                     obj.set_texture( color_table.get( self.materialID, 'lg_unknown' ) )
                 elif parts[1] == 'r':
@@ -170,7 +172,7 @@ class Brick( object ):
                                                     'normal { bumps 0.1 scale 2 }' ) )
                 objs.append( obj )
             if len( objs ) > 1:
-                u = PovCSGUnion()
+                u = PovCSGUnion( comment=descr )
                 u.add( objs )
                 obj = u
             else:
