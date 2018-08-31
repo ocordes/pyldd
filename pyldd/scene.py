@@ -53,16 +53,22 @@ class Scene( object ):
         f.add_include( 'lg_color2.inc')
         f.add_include( 'lg_defs.inc')
 
+        known_bricks = 0
+        unknown_bricks = 0
         scene = PovCSGUnion()
         for brick in self.bricks:
             pov_part, include_list = brick.get_pov_object()
             if pov_part is None:
-                pass
+                unknown_bricks += 1
             else:
                 scene.add( pov_part )
                 f.add_include( include_list )
+                known_bricks += 1
 
         f.add_macro( lego_transform_macro )
         f.add_declare( declare_name, scene )
 
         f.write_povfile()
+
+        print( 'Brick statistics:')
+        print( '  {} known / {} unknown bricks'.format( known_bricks, unknown_bricks ) )

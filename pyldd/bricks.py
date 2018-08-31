@@ -19,67 +19,32 @@ import sys, os
 
 brick_data_dir = 'brick_data'
 
-color_table = { 26: 'lg_black',
-                23: 'lg_blue',
-                28: 'lg_green',
-                37: 'lg_bright_green',
-                116: 'lg_blue_green',
-                 4: 'lg_light_red',
-                1007: 'lg_rose',
-                24: 'lg_yellow',   # lg_yellow2 ?
-                 1: 'lg_white',
-                 6: 'lg_light_green',
-                 3: 'lg_light_yellow',
-                 5: 'lg_tan',
-                39: 'lg_light_violet',
-                22: 'lg_violet',
-                23: 'lg_violet_blue',
-                25: 'lg_orange',
-                26: 'lg_magenta',
-                27: 'lg_dark_tan',  # lg_lime ?
-                29: 'lg_light_purple',
-                33: 'lg_clear_blue',
-                34: 'lg_clear_green',
-                36: 'lg_clear_red',
-                37: 'lg_clear_violet',
-                40: 'lg_clear_brown',
-                41: 'lg_clear_cyan',
-                42: 'lg_clear_neon_yellow',
-                45: 'lg_clear_pink',
-                46: 'lg_clear_yellow',
-                47: 'lg_clear',
-                57: 'lg_clear_neon_orange',
-                69: 'lg_bright_purple',
-                70: 'lg_reddish_brown',
-                194: 'lg_bluish_grey',
-                199: 'lg_dark_bluish_grey',
-                73: 'lg_medium_blue',
-                74: 'lg_medium_green',
-                77: 'lg_paradisa_pink',
-                78: 'lg_light_flesh',
-                85: 'lg_medium_violet',
-                86: 'lg_dark_flesh',
-                89: 'lg_royal_blue',
-                92: 'lg_flesh',
-                134: 'lg_pearl_copper',
-                135: 'lg_pearl_grey',
-                137: 'lg_pearl_blue',
-                142: 'lg_pearl_gold',
-                151: 'lg_very_light_bluish_grey',
-                272: 'lg_dark_blue',
-                288: 'lg_dark_green',
-                320: 'lg_dark_red',
-                313: 'lg_maersk_blue',
-                334: 'lg_gold_chrome',
-                335: 'lg_sand_red',
-                366: 'lg_earth_orange',
-                373: 'lg_sand_purple',
-                378: 'lg_sand_green',
-                379: 'lg_sand_blue',
-                383: 'lg_chrome',
-                462: 'lg_light_orange',
-                484: 'lg_dark_orange',
-                503: 'lg_very_light_grey',
+color_table = {    1: 'lg_white',
+		 100: 'lg_salmon',
+                1001: 'lg_gold_chrome',
+		1002: 'lg_metal_silver',   # missing
+		1004: 'lg_metal_gold',     # missing
+		1007: 'lg_pink',
+		 102: 'lg_medium_blue',
+		 103: 'lg_very_light_grey',
+		 104: 'lg_purple',
+		 105: 'lg_medium_orange',
+		 106: 'lg_orange',
+		 107: 'lg_blue_green',
+		  11: 'lg_maersk_blue',
+		 110: 'lg_violet_blue',
+		 111: 'lg_clear_brown',
+		 112: 'lg_royal_blue',
+		 113: 'lg_clear_pink',
+		 114: 'lg_glitter_trans_dark_pink',   # missing
+		 115: 'lg_lime',
+		 116: 'lg_light_turquoise',  # missing
+		 117: 'lg_trans_glitter',    # missing
+		 118: 'lg_aqua',             # missing
+		 119: 'lg_lime',
+		  12: 'lg_light_orange',
+		 120: 'lg_light_green',
+		 124: 'lg_magenta',
                 999: 'lg_undefined',
                 998: 'lg_medium_orange'   # no code known
             }
@@ -120,7 +85,7 @@ class Brick( object ):
 
     def load_brick_data( self, brickname ):
         filename = os.path.join( brick_data_dir, '{}.dat'.format( brickname ) )
-        print( filename )
+        print( 'loading brick data \'{}\' ...'.format( filename ) )
 
         try:
             f = open( filename, 'r' )
@@ -160,14 +125,17 @@ class Brick( object ):
             defs = defs[1]
 
             objs = []
+            color = color_table.get( self.materialID, 'lg_unknown' )
+            if ( color == 'lg_unknown' ):
+                print( 'Warning: Unknown color #{}'.format( self.materialID) )
             descr = defs.get( 'descr', 'unknown brick' )
             for parts in defs['parts']:
                 macro = parts[0]
                 obj = PovCSGMacro( '#%i %s' % ( self.refID, descr), macrocmd=macro )
                 if parts[1] == 'n':
-                    obj.set_texture( color_table.get( self.materialID, 'lg_unknown' ) )
+                    obj.set_texture( color )
                 elif parts[1] == 'r':
-                    obj.set_texture( '{} {}'.format( color_table.get( self.materialID, 'lg_unknown' ),
+                    obj.set_texture( '{} {}'.format( color,
                                                     #'normal { bumps 0.3 scale 0.02 }' ) )
                                                     'normal { bumps 0.1 scale 2 }' ) )
                 objs.append( obj )
