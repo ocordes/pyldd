@@ -11,9 +11,9 @@
 /* It is provided for private non-commercial use only.                         */
 /*                                                                             */
 /* lg_color: Color Definitions for LGEO POV-Ray Library                        */
-/*                                                                             */ 
+/*                                                                             */
 /*******************************************************************************/
-/* Adapted version for POV-Ray 3.7 by Friedrich.A.Lohmüller, 07-Feb-2009       */
+/* Adapted version for POV-Ray 3.7 by Friedrich.A.Lohmï¿½ller, 07-Feb-2009       */
 /*                                                                             */
 /*******************************************************************************/
 #ifndef(lg_quality)
@@ -25,9 +25,9 @@
 #include "colors.inc"
 
 #declare lg_normal = normal{ bumps 0.00 scale 0.35 } // added
-// normal{ lg_normal } 
+// normal{ lg_normal }
 
-#declare lg_solid_finish =      
+#declare lg_solid_finish =
  finish {
   #if (lg_quality > 1)
    phong 0.2
@@ -211,6 +211,13 @@
 }
 #declare lg_rose = lg_pink
 
+
+#declare lg_light_pink = texture {
+ pigment { rgb <254/255, 204/255, 207/255> }
+ normal { lg_normal }
+ finish { lg_solid_finish }
+}
+
 // 14
 #declare lg_yellow = texture {
  pigment { rgb<1,0.75,0.0>} //{{ rgb <255/255, 220/255, 0/255> }
@@ -267,6 +274,13 @@
 }
 #declare lg_violet = lg_purple
 
+
+#declare lg_dark_purple = texture{
+  pigment { rgb <63/255, 54/255, 145/255> }
+  normal { lg_normal }
+  finish { lg_solid_finish }
+}
+
 // 23
 #declare lg_violet_blue = texture {
  pigment { rgb <71/255, 50/255, 176/255> }
@@ -312,6 +326,16 @@
 // 33
 #declare lg_clear_blue = texture {
  pigment { rgb <0/255, 32/255, 160/255>
+  #if (lg_quality > 1)
+   filter 0.9
+  #end
+ }
+ normal { lg_normal }
+ finish { lg_transparent_finish }
+}
+
+#declare lg_clear_light_blue = texture {
+ pigment { rgb <193/255, 223/255, 240/255>
   #if (lg_quality > 1)
    filter 0.9
   #end
@@ -514,6 +538,21 @@
  finish { lg_solid_finish }
 }
 
+
+#declare lg_pearl_white = texture {
+ pigment { color rgb <234/255, 224/255, 200/255> }
+ normal { lg_normal }
+ finish { lg_pearl_finish }
+}
+
+
+#declare lg_milky_white = texture {
+ pigment { color rgb <220/255, 217/255, 205/255> }
+ normal { lg_normal }
+ finish { lg_solid_finish }
+}
+
+
 // 134
 #declare lg_pearl_copper = texture {
  pigment { color rgb <147/255, 135/255, 103/255> }
@@ -573,6 +612,12 @@
 // 313
 #declare lg_maersk_blue = texture {
  pigment { rgb <53/255, 162/255, 189/255> }
+ normal { lg_normal }
+ finish { lg_solid_finish }
+}
+
+#declare lg_sky_blue = texture {
+ pigment { rgb <125/255, 191/255, 221/255> }
  normal { lg_normal }
  finish { lg_solid_finish }
 }
