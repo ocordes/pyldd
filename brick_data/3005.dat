@@ -1,0 +1,16 @@
+# Brick  1 x 1 
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=brick 1 x 1
+type=brick
+file=lg_3005
+width=0
+length=0
+depth=2/3
+sx=1
+sy=1
+sz=1
+parts=1
+part0=lg_3005
+text0=n

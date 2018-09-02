@@ -1,0 +1,16 @@
+# Brick  2 x 2 corner
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=brick 2 x 2 corner
+type=brick
+file=lg_2357
+width=2
+length=0
+depth=2/3
+sx=-1
+sy=1
+sz=1
+parts=1
+part0=lg_2357
+text0=n

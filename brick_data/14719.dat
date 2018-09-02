@@ -1,0 +1,16 @@
+# flat tile  2 x 2 corner
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=flat tile  2 x 2 corner
+type=plate
+file=lg_14719
+width=2
+length=0
+depth=0
+sx=-1
+sy=1
+sz=1
+parts=1
+part0=lg_14719
+text0=n

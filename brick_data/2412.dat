@@ -1,0 +1,16 @@
+# tile 1 x 2 grille without groove
+#
+# Oliver Cordes 2018-08-06
+#
+descr=tile 1 x 2 grille without groove
+type=plate
+file=lg_2412
+width=1
+length=0
+depth=0
+sx=1
+sy=1
+sz=1
+parts=1
+part0=lg_2412
+text0=n

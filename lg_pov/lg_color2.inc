@@ -232,11 +232,19 @@
 }
 
 // 15
-#declare lg_white = texture {
+#declare lg_medium_white = texture {
  pigment { rgb <255/255, 255/255, 255/255> }
  normal { lg_normal }
  finish { lg_solid_finish }
 }
+
+#declare lg_bright_white = texture {
+	 pigment { rgb <255/255, 255/255, 255/255>*1.5 }
+         normal { lg_normal }
+         finish { lg_solid_finish }
+}
+
+#declare lg_white = lg_bright_white
 
 // 17
 #declare lg_light_green = texture {
