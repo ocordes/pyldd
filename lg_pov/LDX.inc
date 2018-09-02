@@ -6,6 +6,9 @@
 // the content is copied from povray files which are
 // created by LDView 4.2.1.1
 
+// some constants
+#declare LDXSW = 0.5;
+
 #macro LDXSeamMatrix(Width, Height, Depth, CenterX, CenterY, CenterZ)
 #local aw = 0;
 #local ah = 0;
@@ -56,6 +59,23 @@ matrix <aw,0,0,0,ah,0,0,0,ad,ax,ay,az>
         <0,0,0>,<0,1,0>,1
 }
 
+#declare LDX_4_dash_4ndis_dot_dat_in_part = disc // Not-Disc 1
+{
+	        <0,0,0>,<0,1,0>,2,1
+	        clipped_by
+	        {
+	                box
+	                {
+	                        <-1,-1,-1>,<1,1,1>
+	                }
+	        }
+}
+
+#declare LDX_4_dash_4ring2_dot_dat_in_part = disc // Ring 1
+{
+        <0,0,0>,<0,1,0>,3,2
+}
+
 #declare LDX_4_dash_4cyli_dot_dat_in_part = cylinder // Cylinder 1
 {
         <0,0,0>,<0,1,0>,1 open
@@ -65,7 +85,6 @@ matrix <aw,0,0,0,ah,0,0,0,ad,ax,ay,az>
 {
         <0,0,0>,<0,1,0>,1 open
 }
-
 
 
 #declare LDX_stud3_dot_dat_in_part = union {
@@ -178,5 +197,35 @@ matrix <aw,0,0,0,ah,0,0,0,ad,ax,ay,az>
                 {
                         <-1,0,0>,0
                 }
+        }
+}
+
+
+#declare LDX_stud2a_dot_dat_in_part = union {
+// Stud Open without Base Edges
+// Name: stud2a.dat
+// Author: James Jessiman
+// !LDRAW_ORG Primitive UPDATE 2009-02
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 1999-07-05 [PTadmin] Official Update 1999-05
+// !HISTORY 2002-04-04 [sbliss] Modified for BFC compliance
+// !HISTORY 2002-04-25 [PTadmin] Official Update 2002-02
+// !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement
+// !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01
+// !HISTORY 2009-06-21 [cwdee] Update ring references to 4-4ring
+// !HISTORY 2009-09-03 [PTadmin] Official Update 2009-02
+// BFC INVERTNEXT
+        object {
+                LDX_4_dash_4cyli_dot_dat_in_part
+                matrix <4,0,0,0,4,0,0,0,4,0,-4,0>
+        }
+        object {
+                LDX_4_dash_4cyli_dot_dat_in_part
+                matrix <6,0,0,0,4,0,0,0,6,0,-4,0>
+        }
+        object {
+                LDX_4_dash_4ring2_dot_dat_in_part
+                matrix <2,0,0,0,1,0,0,0,2,0,-4,0>
         }
 }

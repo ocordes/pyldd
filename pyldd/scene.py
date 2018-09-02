@@ -65,6 +65,7 @@ class Scene( object ):
                 f.add_include( include_list )
                 known_bricks += 1
 
+        scene.scale = [-1,1,1]
         f.add_macro( lego_transform_macro )
         f.add_declare( declare_name, scene )
 
