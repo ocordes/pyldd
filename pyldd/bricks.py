@@ -164,6 +164,7 @@ known_bricks = { 2357:  [ '2357', None ],     # brick 2 x 2 corner
                  3666:  [ '3666', None ],     # plate 1 x 6
                  3710:  [ '3710', None ],     # plate 1 x 4
                  3811:  [ '3811', None ],     # base 32 x 32 plate
+                 3900:  [ '3900', None ],     # minifig signal holder (stop sign)
                  4162:  [ '4162', None ],     # flat tile 1 x 8
                  4589:  [ '4589', None ],     # nose cone small 1 x 1
                  4740:  [ '4740', None ],     # satellite dish 2 x 2
