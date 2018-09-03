@@ -55,17 +55,13 @@ def xml4_parse_scene( scene_tree ):
 def lxml_parse_bricks( bricks_tree ):
     bricks = []
     for ebrick in bricks_tree:
-        print( ebrick.tag, ebrick.attrib )
         attr = ebrick.attrib
         part = ebrick.find( 'Part' )
         material = part.attrib['materials']
         attr['materialID'] = material.split(',',maxsplit=1)[0]
-        print( part.attrib )
-
         attr['decoration'] = part.attrib.get( 'decoration', '-1' )
         bone = part.find( 'Bone')
         attr['transformation'] = bone.attrib['transformation']
-        print( attr )
         brick = Brick( attr )
         bricks.append( brick )
 

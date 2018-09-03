@@ -104,6 +104,7 @@ object{
     LDXSeamMatrix(28, 10, 64, 0, 1, -18)
 
     scale 1/25.
-    //rotate x*-90
-    //rotate z*-90
+    rotate x*180
+    rotate y*180
+    rotate z*90
 }
