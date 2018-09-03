@@ -148,6 +148,7 @@ known_bricks = { 2357:  [ '2357', None ],     # brick 2 x 2 corner
                  2431:  [ '2431', None ],     # flat tile 1 x 4
                  3004:  [ '3004', None ],     # brick 1 x 2
                  3005:  [ '3005', None ],     # brick 1 x 1
+                 3008:  [ '3008', None ],     # brick 1 x 8
                  3009:  [ '3009', None ],     # brick 1 x 6
                  3010:  [ '3010', None ],     # brick 1 x 4
                  3020:  [ '3020', None ],     # plate 2 x 4
@@ -161,6 +162,7 @@ known_bricks = { 2357:  [ '2357', None ],     # brick 2 x 2 corner
                  3070:  [ '3070', None ],     # flat tile 1 x 1
                  3622:  [ '3622', None ],     # brick 1 x 3
                  3623:  [ '3623', None ],     # plate 1 x 3
+                 3660:  [ '3660', None ],     # slope brick 45 2 x 2 inverted
                  3666:  [ '3666', None ],     # plate 1 x 6
                  3710:  [ '3710', None ],     # plate 1 x 4
                  3811:  [ '3811', None ],     # base 32 x 32 plate
@@ -170,6 +172,7 @@ known_bricks = { 2357:  [ '2357', None ],     # brick 2 x 2 corner
                  4740:  [ '4740', None ],     # satellite dish 2 x 2
                  6098:  [ '3867', None ],     # base 16 x 16 plate
                  6141:  [ '6141', None ],     # plate 1 x 1 round
+                 6215:  [ '6215', None ],     # brick 2 x 3 with curved top
                  6636:  [ '6636', None ],     # flat tile 1 x 6
                  14719: [ '14719', None ],    # flat tile 2 x 2 corner
                  87087: [ '87087', None ],    # brick 1 x 1 with stud on 1 side
