@@ -179,13 +179,22 @@ known_bricks = { 2357:  [ '2357', None ],     # brick 2 x 2 corner
 
 
 class Brick( object ):
-    def __init__( self, adict ):
+    def __init__( self, adicts ):
+        if isinstance( adicts, list ):
+            for adict in adicts:
+                self._set_attributes( adict )
+        else:
+            self._set_attributes( adicts )
+
+
+    def _set_attributes( self, adict ):
         for name, value in adict.items():
             if name in ( 'refID', 'designID', 'materialID', 'itemNos'):
                 setattr( self, name, int( value ) )
+            elif name in ( 'transformation', 'decoration' ):
+                setattr( self, name, value )
             else:
                 setattr( self, name, float( value ) )
-
 
     def __str__( self ):
         return 'designID= {:>5} materialID= {:>3} itemNos= {:>7}'.format( self.designID,
@@ -256,11 +265,14 @@ class Brick( object ):
             else:
                 obj = objs[0]
 
-            ax = self.ax * self.angle
-            ay = self.ay * self.angle
-            az = self.az * self.angle
-            obj.rotate = [ax,ay,az]
-            obj.translate = [self.tx,self.ty,self.tz]
+            if 'transformation' in self.__dict__:
+                obj.full_matrix = self.transformation
+            else:
+                ax = self.ax * self.angle
+                ay = self.ay * self.angle
+                az = self.az * self.angle
+                obj.rotate = [ax,ay,az]
+                obj.translate = [self.tx,self.ty,self.tz]
 
             # now apply the macros
             obj.macros =  'L_Transform( {},{},{},{},{},{} )'.format( defs['width'],

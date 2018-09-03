@@ -7,13 +7,14 @@ test_pyldd.py
 Author: Oliver Cordes
 
 History:
+ 2018-09-03: move from lxml/lxml4 files to lxf files
  2018-07-27: start project
 
 
 """
 
 
-from  pyldd.files import read_ldd_xml_file
+from  pyldd.files import read_ldd_file
 
 import sys
 import getopt
@@ -49,7 +50,7 @@ if len( args ) < 1:
     sys.exit( 2 )
 
 # now read the ldd xml file
-lego_scene = read_ldd_xml_file( args[0] )
+lego_scene = read_ldd_file( args[0] )
 print( 'Scene contains {} LEGO bricks'.format( lego_scene.nr_bricks ) )
 
 for o, a in opts:
