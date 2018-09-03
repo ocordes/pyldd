@@ -1,0 +1,16 @@
+# brick 2 x 4
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=brick 2 x 4
+type=brick
+file=lg_3001
+width=3
+length=1
+depth=2/3
+sx=1
+sy=1
+sz=1
+parts=1
+part0=lg_3001
+text0=n
