@@ -187,8 +187,9 @@ known_bricks = { 2357:  [ '2357', None ],     # brick 2 x 2 corner
                  44237: [ '44237', None ],    # brick 2 x 6
                  87087: [ '87087', None ],    # brick 1 x 1 with stud on 1 side
                  93273: [ '93273', None ],    # plate with bow 1 x 4 x 2/3
-                 92946: [ '92946', None ] }   # roof tile 1 x 2 45° W 1/3 Plate
-
+                 92946: [ '92946', None ],    # roof tile 1 x 2 45° W 1/3 Plate
+                 98283: [ '98283', None ]     # brick 1 x 2 with embossed bricks
+}
 
 
 class Brick( object ):
