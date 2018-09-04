@@ -164,10 +164,12 @@ known_bricks = { 2357:  [ '2357', None ],     # brick 2 x 2 corner
                  3028:  [ '3028', None ],     # plate 6 x 12
                  3029:  [ '3029', None ],     # plate 4 x 12
                  3035:  [ '3035', None ],     # plate 4 x 8
+                 3036:  [ '3036', None ],     # plate 6 x 8
                  3040:  [ '3040', None ],     # roof tile 1 x 2 / 45°
                  3069:  [ '3069', None ],     # flat tile 1 x 2
                  3062:  [ '3062', None ],     # brick 1 x 1 round open stud
                  3070:  [ '3070', None ],     # flat tile 1 x 1
+                 3460:  [ '3460', None ],     # plate 1 x 8
                  3622:  [ '3622', None ],     # brick 1 x 3
                  3623:  [ '3623', None ],     # plate 1 x 3
                  3660:  [ '3660', None ],     # slope brick 45 2 x 2 inverted
@@ -177,6 +179,7 @@ known_bricks = { 2357:  [ '2357', None ],     # brick 2 x 2 corner
                  3900:  [ '3900', None ],     # minifig signal holder (stop sign)
                  4162:  [ '4162', None ],     # flat tile 1 x 8
                  4287:  [ '4287', None ],     # slope brick 33 3 x 1 inverted
+                 4477:  [ '4477', None ],     # plate 1 x 10
                  4589:  [ '4589', None ],     # nose cone small 1 x 1
                  4740:  [ '4740', None ],     # satellite dish 2 x 2
                  6098:  [ '3867', None ],     # base 16 x 16 plate
@@ -184,6 +187,7 @@ known_bricks = { 2357:  [ '2357', None ],     # brick 2 x 2 corner
                  6215:  [ '6215', None ],     # brick 2 x 3 with curved top
                  6636:  [ '6636', None ],     # flat tile 1 x 6
                  14719: [ '14719', None ],    # flat tile 2 x 2 corner
+                 41539: [ '41539', None ],    # plate 8 x 8
                  44237: [ '44237', None ],    # brick 2 x 6
                  87087: [ '87087', None ],    # brick 1 x 1 with stud on 1 side
                  93273: [ '93273', None ],    # plate with bow 1 x 4 x 2/3
