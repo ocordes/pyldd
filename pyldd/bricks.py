@@ -189,6 +189,7 @@ known_bricks = { 2357:  [ '2357', None ],     # brick 2 x 2 corner
                  14719: [ '14719', None ],    # flat tile 2 x 2 corner
                  41539: [ '41539', None ],    # plate 8 x 8
                  44237: [ '44237', None ],    # brick 2 x 6
+                 60594: [ '60594', None ],    # window 1 x 4 x 3 without shutter tabs
                  87087: [ '87087', None ],    # brick 1 x 1 with stud on 1 side
                  93273: [ '93273', None ],    # plate with bow 1 x 4 x 2/3
                  92946: [ '92946', None ],    # roof tile 1 x 2 45° W 1/3 Plate

@@ -278,3 +278,42 @@ matrix <aw,0,0,0,ah,0,0,0,ad,ax,ay,az>
                 matrix <2,0,0,0,1,0,0,0,2,0,-4,0>
         }
 }
+
+
+#declare LDX_3_dash_4cyli_dot_dat_in_part = cylinder // Cylinder 0.75
+{
+        <0,0,0>,<0,1,0>,1 open
+        clipped_by
+        {
+                union
+                {
+                        plane
+                        {
+                                <0,0,-1>,0
+                        }
+                        plane
+                        {
+                                <1,0,0>,0
+                        }
+                }
+        }
+}
+
+#declare LDX_3_dash_4disc_dot_dat_in_part = disc // Disc 0.75
+{
+        <0,0,0>,<0,1,0>,1
+        clipped_by
+        {
+                union
+                {
+                        plane
+                        {
+                                <0,0,-1>,0
+                        }
+                        plane
+                        {
+                                <1,0,0>,0
+                        }
+                }
+        }
+}
