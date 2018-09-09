@@ -285,5 +285,5 @@ union {
           scale 1/25.
           rotate x*-90
           //rotate y*180
-          rotate z*90
+          rotate z*-90
 }

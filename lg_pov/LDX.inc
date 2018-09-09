@@ -537,3 +537,299 @@ matrix <aw,0,0,0,ah,0,0,0,ad,ax,ay,az>
                 }
         }
 }
+
+
+#declare LDX_2_dash_4cylo_dot_dat_in_part = union {
+// Cylinder Open 0.5
+// Name: 2-4cylo.dat
+// Author: Max Martin Richter [MMR1988]
+// !LDRAW_ORG Primitive UPDATE 2010-03
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2010-12-31 [PTadmin] Official Update 2010-03
+        object {
+                LDX_2_dash_4cyli_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+}
+
+
+#declare LDX_1_dash_4cylo_dot_dat_in_part = union {
+// Cylinder Open 0.25
+// Name: 1-4cylo.dat
+// Author: Max Martin Richter [MMR1988]
+// !LDRAW_ORG Primitive UPDATE 2010-03
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2010-12-31 [PTadmin] Official Update 2010-03
+        object {
+                LDX_1_dash_4cyli_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+}
+
+
+#declare LDX_2_dash_4ring2_dot_dat_in_part = disc // Ring 0.5
+{
+        <0,0,0>,<0,1,0>,3,2
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+        }
+}
+
+
+#declare LDX_1_dash_4chrd_dot_dat_in_part = disc // Disc 0.25
+{
+        <0,0,0>,<0,1,0>,1
+        clipped_by
+        {
+                plane
+                {
+                        <-1,0,-0.99999999999999988898>,-0.70710676908493041992
+                }
+        }
+}
+
+
+#declare LDX_3_dash_8cyli_dot_dat_in_part = cylinder // Cylinder 0.375
+{
+        <0,0,0>,<0,1,0>,1 open
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.70710678118654768376,0,-0.70710678118654746172>,0
+                }
+        }
+}
+
+
+#declare LDX_3_dash_8ndis_dot_dat_in_part = disc // Not-Disc 0.375
+{
+        <0,0,0>,<0,1,0>,2,1
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.70710678118654768376,0,-0.70710678118654746172>,0
+                }
+                box
+                {
+                        <-1,-1,-1>,<1,1,1>
+                }
+        }
+}
+
+
+#declare LDX_stud9_dot_dat_in_part = union {
+// Stud Open with Small Holes
+// Name: stud9.dat
+// Author: Ildefonso Zanette [izanette]
+// !LDRAW_ORG Unofficial_Primitive
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2002-12-11 [cwdee]   Made BFC compliant
+// !HISTORY 2010-04-05 [PTadmin] Official Update 2010-01
+// !HISTORY 2018-01-20 [MagFors] Made holes for the door hinges
+        object {
+                LDX_2_dash_4cylo_dot_dat_in_part
+                matrix <0,0,6,0,4,0,-6,0,0,0,-4,0>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_4_dash_4cylo_dot_dat_in_part
+                matrix <0,0,2,0,4,0,-2,0,0,0,-4,0>
+        }
+        object {
+                LDX_4_dash_4ring1_dot_dat_in_part
+                matrix <0,0,2,0,1,0,-2,0,0,0,-4,0>
+        }
+        object {
+                LDX_2_dash_4ring2_dot_dat_in_part
+                matrix <0,0,2,0,1,0,-2,0,0,0,-4,0>
+        }
+        object {
+                LDX_2_dash_4ndis_dot_dat_in_part
+                matrix <0,0,4,0,1,0,4,0,0,0,-4,0>
+        }
+        object {
+                LDX_1_dash_4cylo_dot_dat_in_part
+                matrix <4.24264,0,-4.24264,0,4,0,4.24264,0,4.24264,0,-4,0>
+        }
+        object {
+                LDX_1_dash_4chrd_dot_dat_in_part
+                matrix <4.24264,0,-4.24264,0,1,0,4.24264,0,4.24264,0,-4,0>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_3_dash_8cyli_dot_dat_in_part
+                matrix <-2,0,0,0,4,0,0,0,-2,2,-4,6>
+        }
+        object {
+                LDX_3_dash_8ndis_dot_dat_in_part
+                matrix <-2,0,0,0,1,0,0,0,-2,2,-4,6>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_3_dash_8cyli_dot_dat_in_part
+                matrix <-2,0,0,0,4,0,0,0,2,2,-4,-6>
+        }
+        object {
+                LDX_3_dash_8ndis_dot_dat_in_part
+                matrix <-2,0,0,0,1,0,0,0,2,2,-4,-6>
+        }
+}
+
+
+#declare LDX_2_dash_4ring4_dot_dat_in_part = disc // Ring 0.5
+{
+        <0,0,0>,<0,1,0>,5,4
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+        }
+}
+
+
+#declare LDX_1_dash_8cyli_dot_dat_in_part = cylinder // Cylinder 0.125
+{
+        <0,0,0>,<0,1,0>,1 open
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.70710678118654746172,0,0.70710678118654757274>,0
+                }
+        }
+}
+
+
+
+#declare LDX_1_dash_8cylo_dot_dat_in_part = union {
+// Cylinder Open 0.125
+// Name: 1-8cylo.dat
+// Author: Tim Gould [timgould]
+// !LDRAW_ORG Primitive UPDATE 2012-03
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2012-12-28 [PTadmin] Official Update 2012-03
+        object {
+                LDX_1_dash_8cyli_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+}
+
+
+#declare LDX_1_dash_8ndis_dot_dat_in_part = disc // Not-Disc 0.125
+{
+        <0,0,0>,<0,1,0>,2,1
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.70710678118654746172,0,0.70710678118654757274>,0
+                }
+                box
+                {
+                        <-1,-1,-1>,<1,1,1>
+                }
+        }
+}
+
+
+#declare LDX_1_dash_8chrd_dot_dat_in_part = disc // Disc 0.125
+{
+        <0,0,0>,<0,1,0>,1
+        clipped_by
+        {
+                plane
+                {
+                        <-0.70710678118654746172,0,-0.29289321881345242726>,-0.92387950420379638672
+                }
+        }
+}
+
+
+#declare LDX_2_dash_4cylc_dot_dat_in_part = union {
+// Cylinder Closed 0.5
+// Name: 2-4cylc.dat
+// Author: Alex Taylor [anathema]
+// !LDRAW_ORG Primitive UPDATE 2009-02
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2009-09-03 [PTadmin] Official Update 2009-02
+        object {
+                LDX_2_dash_4disc_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+        object {
+                LDX_2_dash_4cyli_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+}
+
+
+#declare LDX_1_dash_8sphe_dot_dat_in_part = sphere // Sphere .125
+{
+        <0,0,0>,1
+        clipped_by
+        {
+                box
+                {
+                        <0,0,0>,<2,2,2>
+                }
+        }
+}
+
+
+#declare LDX_4_dash_8sphe_dot_dat_in_part = union {
+// Sphere 0.5
+// Name: 4-8sphe.dat
+// Author: James Jessiman
+// !LDRAW_ORG Primitive UPDATE 2003-02
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2002-08-31 [izanette] Modified with WINDZ for BFC compliance
+// !HISTORY 2003-08-01 [PTadmin] Official Update 2003-02
+// !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement
+// !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01
+        object {
+                LDX_1_dash_8sphe_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+        object {
+                LDX_1_dash_8sphe_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,-1,0,0,0>
+        }
+        object {
+                LDX_1_dash_8sphe_dot_dat_in_part
+                matrix <-1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+        object {
+                LDX_1_dash_8sphe_dot_dat_in_part
+                matrix <-1,0,0,0,1,0,0,0,-1,0,0,0>
+        }
+}

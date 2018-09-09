@@ -1,0 +1,16 @@
+# glass for window 1 x 2 x 2 without sill
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=glass for window 1 x 2 x 2 without sill
+type=brick
+file=lg_60601
+width=1
+length=-1
+depth=5/3
+sx=1
+sy=1
+sz=1
+parts=1
+part0=lg_60601
+text0=n

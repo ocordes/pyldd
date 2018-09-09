@@ -48,33 +48,33 @@ color_table = {    1: 'lg_white',
 		         126: 'lg_bright_purple',
                  127: 'lg_pearl_gold',
 		         128: 'lg_earth_orange',
-		 129: 'lg_glitter_trans_purple',  # missing
-		 132: 'lg_speckle_black_silver',  # missing
-		 135: 'lg_sand_blue',
-		 136: 'lg_sand_purple',
-		 138: 'lg_dark_tan',
-		 139: 'lg_pearl_copper',
-		 140: 'lg_dark_blue',
-		 141: 'lg_dark_green',
-		 143: 'lg_clear_blue',
-		 145: 'lg_pearl_blue',
-		 151: 'lg_sand_green',
-		 153: 'lg_sand_red',
-		 154: 'lg_dark_red',
-		 157: 'lg_clear_neon_yellow',
-		 179: 'lg_pearl_grey',          # light?
-		  18: 'lg_flesh',
-		 182: 'lg_clear_neon_orange',
-		 183: 'lg_pearl_white',
-		 187: 'lg_brown',
-		 191: 'lg_light_orange',
-		 192: 'lg_reddish_brown',
-		 194: 'lg_bluish_grey',
+		         129: 'lg_glitter_trans_purple',  # missing
+		         132: 'lg_speckle_black_silver',  # missing
+		         135: 'lg_sand_blue',
+		         136: 'lg_sand_purple',
+		         138: 'lg_dark_tan',
+		         139: 'lg_pearl_copper',
+		         140: 'lg_dark_blue',
+		         141: 'lg_dark_green',
+		         143: 'lg_clear_blue',
+		         145: 'lg_pearl_blue',
+		         151: 'lg_sand_green',
+		         153: 'lg_sand_red',
+		         154: 'lg_dark_red',
+		         157: 'lg_clear_neon_yellow',
+		         179: 'lg_pearl_grey',          # light?
+		          18: 'lg_flesh',
+		         182: 'lg_clear_neon_orange',
+		         183: 'lg_pearl_white',
+		         187: 'lg_brown',
+		         191: 'lg_light_orange',
+		         192: 'lg_reddish_brown',
+		         194: 'lg_bluish_grey',
                  195: 'lg_violet_blue',
-		 196: 'lg_royal_blue',       # dark ?
-		   2: 'lg_grey',             # light ?
-		  20: 'lg_milky_white',
-		 200: 'lg_metallic_green',   # missing
+		         196: 'lg_royal_blue',       # dark ?
+		           2: 'lg_grey',             # light ?
+		          20: 'lg_milky_white',
+		         200: 'lg_metallic_green',   # missing
 		 208: 'lg_very_light_bluish_grey',
 		  21: 'lg_red',
 		 212: 'lg_light_blue',
@@ -188,12 +188,16 @@ known_bricks = { 2357:  [ '2357', None ],     # brick 2 x 2 corner
                  6215:  [ '6215', None ],     # brick 2 x 3 with curved top
                  6636:  [ '6636', None ],     # flat tile 1 x 6
                  14719: [ '14719', None ],    # flat tile 2 x 2 corner
+                 30179: [ '30179', None ],    # door 1 x 4 x 6 framte type 1
                  41539: [ '41539', None ],    # plate 8 x 8
                  44237: [ '44237', None ],    # brick 2 x 6
                  60592: [ '60592', None ],    # window  1 x 2 x 2 without sill
                  60594: [ '60594', None ],    # window 1 x 4 x 3 without shutter tabs
+                 60601: [ '60601', None ],    # glass for window 1 x 2 x 2 without sill
                  60603: [ '60603', None ],    # glass for window 1 x 4 x 3 opening
                  60608: [ '60608', None ],    # window 1 x 2 x 3 pane with thick corner tabs
+                 60616: [ '60616', None ],    # door 1 x 4 x 6 smooth with square handle plinth
+                 60623: [ '60623', None ],    # door 1 x 4 x 6 with 4 panes and stud handle
                  87087: [ '87087', None ],    # brick 1 x 1 with stud on 1 side
                  93273: [ '93273', None ],    # plate with bow 1 x 4 x 2/3
                  92946: [ '92946', None ],    # roof tile 1 x 2 45° W 1/3 Plate
