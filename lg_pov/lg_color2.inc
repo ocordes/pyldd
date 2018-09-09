@@ -342,6 +342,29 @@
  finish { lg_transparent_finish }
 }
 
+
+// 40 
+#declare lg_clear = texture {
+ pigment { rgb <252/255, 252/255, 252/255>
+  #if (lg_quality > 1)
+   filter 0.9
+  #end
+ }
+ normal { lg_normal }
+ finish { lg_transparent_finish }
+}
+
+// 111
+#declare lg_clear_black = texture {
+ pigment { rgb <99/255,95/255,82/255> 
+  #if (lg_quality > 1)
+    filter 0.9
+  #end
+ }
+ normal { lg_normal }
+ finish { lg_transparent_finish }
+}
+
 #declare lg_clear_light_blue = texture {
  pigment { rgb <193/255, 223/255, 240/255>
   #if (lg_quality > 1)

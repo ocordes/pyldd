@@ -35,19 +35,19 @@ color_table = {    1: 'lg_white',
 		         110: 'lg_violet_blue',
 		         111: 'lg_clear_brown',
 		         112: 'lg_royal_blue',
-		 113: 'lg_clear_pink',
-		 114: 'lg_glitter_trans_dark_pink',   # missing
-		 115: 'lg_lime',
-		 116: 'lg_light_turquoise',  # missing
-		 117: 'lg_trans_glitter',    # missing
-		 118: 'lg_aqua',             # missing
-		 119: 'lg_lime',
-		  12: 'lg_light_orange',
-		 120: 'lg_light_green',
-		 124: 'lg_magenta',
-		 126: 'lg_bright_purple',
+		         113: 'lg_clear_pink',
+		         114: 'lg_glitter_trans_dark_pink',   # missing
+		         115: 'lg_lime',
+		         116: 'lg_light_turquoise',  # missing
+		         117: 'lg_trans_glitter',    # missing
+		         118: 'lg_aqua',             # missing
+		         119: 'lg_lime',
+		          12: 'lg_light_orange',
+		         120: 'lg_light_green',
+		         124: 'lg_magenta',
+		         126: 'lg_bright_purple',
                  127: 'lg_pearl_gold',
-		 128: 'lg_earth_orange',
+		         128: 'lg_earth_orange',
 		 129: 'lg_glitter_trans_purple',  # missing
 		 132: 'lg_speckle_black_silver',  # missing
 		 135: 'lg_sand_blue',
@@ -124,6 +124,7 @@ color_table = {    1: 'lg_white',
 		  37: 'lg_bright_green',
 		  38: 'lg_dark_orange',
 		   4: 'lg_salmon',
+          40: 'lg_clear',
 		  42: 'lg_clear_light_blue',
 		  43: 'lg_clear_blue',
 		  44: 'lg_clear_yellow',
@@ -189,8 +190,9 @@ known_bricks = { 2357:  [ '2357', None ],     # brick 2 x 2 corner
                  14719: [ '14719', None ],    # flat tile 2 x 2 corner
                  41539: [ '41539', None ],    # plate 8 x 8
                  44237: [ '44237', None ],    # brick 2 x 6
-                 60592: [ '60592', None ],    # window  1 x  2 x  2 without sill
+                 60592: [ '60592', None ],    # window  1 x 2 x 2 without sill
                  60594: [ '60594', None ],    # window 1 x 4 x 3 without shutter tabs
+                 60603: [ '60603', None ],    # glass for window 1 x 4 x 3 opening
                  60608: [ '60608', None ],    # window 1 x 2 x 3 pane with thick corner tabs
                  87087: [ '87087', None ],    # brick 1 x 1 with stud on 1 side
                  93273: [ '93273', None ],    # plate with bow 1 x 4 x 2/3
