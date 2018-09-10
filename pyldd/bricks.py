@@ -143,11 +143,13 @@ color_table = {    1: 'lg_white',
 
 
 
-known_bricks = { 2357:  [ '2357', None ],     # brick 2 x 2 corner
+known_bricks = { 2356:  [ '2356', None ],     # brick 4 x 6
+                 2357:  [ '2357', None ],     # brick 2 x 2 corner
                  2412:  [ '2412', None ],     # tile 1 x 2 grille without groove
                  2420:  [ '2420', None ],     # plate 2 x 2 corner
                  2431:  [ '2431', None ],     # flat tile 1 x 4
                  2454:  [ '2454', None ],     # brick 1 x 2 x 5
+                 2877:  [ '2877', None ],     # brick 1 x 2 with grille
                  3001:  [ '3001', None ],     # brick 2 x 4
                  3002:  [ '3002', None ],     # brick 2 x 3
                  3003:  [ '3003', None ],     # brick 2 x 2
@@ -170,6 +172,7 @@ known_bricks = { 2357:  [ '2357', None ],     # brick 2 x 2 corner
                  3069:  [ '3069', None ],     # flat tile 1 x 2
                  3062:  [ '3062', None ],     # brick 1 x 1 round open stud
                  3070:  [ '3070', None ],     # flat tile 1 x 1
+                 3245:  [ '3245', None ],     # brick 1 x 2 x 2
                  3460:  [ '3460', None ],     # plate 1 x 8
                  3470:  [ '3470', None ],     # plant tree oval 4 x 4 x 6
                  3622:  [ '3622', None ],     # brick 1 x 3
@@ -179,6 +182,9 @@ known_bricks = { 2357:  [ '2357', None ],     # brick 2 x 2 corner
                  3710:  [ '3710', None ],     # plate 1 x 4
                  3811:  [ '3811', None ],     # base 32 x 32 plate
                  3900:  [ '3900', None ],     # minifig signal holder (stop sign)
+                 3940:  [ '3940', None ],     # space stand 2 x 2 x 2
+                 3941:  [ '3941', None ],     # brick 2 x 2 round
+                 3942:  [ '3942', None ],     # cone 2 x 2 x 2 open stud
                  4162:  [ '4162', None ],     # flat tile 1 x 8
                  4287:  [ '4287', None ],     # slope brick 33 3 x 1 inverted
                  4477:  [ '4477', None ],     # plate 1 x 10
@@ -186,11 +192,16 @@ known_bricks = { 2357:  [ '2357', None ],     # brick 2 x 2 corner
                  4740:  [ '4740', None ],     # satellite dish 2 x 2
                  6098:  [ '3867', None ],     # base 16 x 16 plate
                  6141:  [ '6141', None ],     # plate 1 x 1 round
+                 6143:  [ '3941', None ],     # brick 2 x 2 round
                  6215:  [ '6215', None ],     # brick 2 x 3 with curved top
                  6636:  [ '6636', None ],     # flat tile 1 x 6
                  14719: [ '14719', None ],    # flat tile 2 x 2 corner
+                 30136: [ '30136', None ],    # log brick 1 x 2
+                 30137: [ '30137', None ],    # log brick 1 x 4
+                 30145: [ '30145', None ],    # brick 2 x 2 x 3
                  30179: [ '30179', None ],    # door 1 x 4 x 6 framte type 1
                  41539: [ '41539', None ],    # plate 8 x 8
+                 44042: [ '2356', None ],     # brick 4 x 6
                  44237: [ '44237', None ],    # brick 2 x 6
                  60592: [ '60592', None ],    # window  1 x 2 x 2 without sill
                  60594: [ '60594', None ],    # window 1 x 4 x 3 without shutter tabs
