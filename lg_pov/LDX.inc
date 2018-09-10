@@ -833,3 +833,107 @@ matrix <aw,0,0,0,ah,0,0,0,ad,ax,ay,az>
                 matrix <-1,0,0,0,1,0,0,0,-1,0,0,0>
         }
 }
+
+
+#declare LDX_4_dash_4ring3_dot_dat_in_part = disc // Ring 1
+{
+        <0,0,0>,<0,1,0>,4,3
+}
+
+
+#declare LDX_stud4_dot_dat_in_part = union {
+// Stud Tube Open
+// Name: stud4.dat
+// Author: James Jessiman
+// !LDRAW_ORG Primitive UPDATE 2009-02
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 1999-07-05 [PTadmin] Official Update 1999-05
+// !HISTORY 2002-04-04 [sbliss] Modified for BFC compliance
+// !HISTORY 2002-04-25 [PTadmin] Official Update 2002-02
+// !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement
+// !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01
+// !HISTORY 2009-06-21 [cwdee] Update ring references to 4-4ring
+// !HISTORY 2009-09-03 [PTadmin] Official Update 2009-02
+// BFC INVERTNEXT
+        object {
+                LDX_4_dash_4cyli_dot_dat_in_part
+                matrix <6,0,0,0,4,0,0,0,6,0,-4,0>
+        }
+        object {
+                LDX_4_dash_4cyli_dot_dat_in_part
+                matrix <8,0,0,0,4,0,0,0,8,0,-4,0>
+        }
+        object {
+                LDX_4_dash_4ring3_dot_dat_in_part
+                matrix <2,0,0,0,1,0,0,0,2,0,-4,0>
+        }
+}
+
+
+#declare LDX_4_dash_4ring5_dot_dat_in_part = disc // Ring 1
+{
+        <0,0,0>,<0,1,0>,6,5
+}
+
+
+#declare LDX_4_dash_4cylc_dot_dat_in_part = union {
+// Cylinder Closed 1.0
+// Name: 4-4cylc.dat
+// Author: Alex Taylor [anathema]
+// !LDRAW_ORG Primitive UPDATE 2009-02
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2008-12-29 [cwdee] Removed one disc
+// !HISTORY 2009-09-03 [PTadmin] Official Update 2009-02
+        object {
+                LDX_4_dash_4disc_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+        object {
+                LDX_4_dash_4cyli_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+}
+
+
+#declare LDX_t02i4000_dot_dat_in_part = torus // Torus 0.5
+{
+        1,0.40000000596046447754
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                cylinder
+                {
+                        <0,0,0>,<0,1,0>,1               }
+        }
+}
+
+
+#declare LDX_t04o2000_dot_dat_in_part = torus // Torus 0.25
+{
+        1,0.20000000298023223877
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-1,0,0>,0
+                }
+                difference
+                {
+                        cylinder
+                        {
+                                <0,0,0>,<0,1,0>,2                       }
+                        cylinder
+                        {
+                                <0,0,0>,<0,1,0>,1                       }
+                }
+        }
+}
