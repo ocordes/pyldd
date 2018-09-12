@@ -169,6 +169,7 @@ known_bricks = { 2356:  [ '2356', None ],     # brick 4 x 6
                  3035:  [ '3035', None ],     # plate 4 x 8
                  3036:  [ '3036', None ],     # plate 6 x 8
                  3040:  [ '3040', None ],     # roof tile 1 x 2 / 45°
+                 3063:  [ '3063', None ],     # brick 2 x 2 corner round
                  3069:  [ '3069', None ],     # flat tile 1 x 2
                  3062:  [ '3062', None ],     # brick 1 x 1 round open stud
                  3070:  [ '3070', None ],     # flat tile 1 x 1
@@ -186,6 +187,7 @@ known_bricks = { 2356:  [ '2356', None ],     # brick 4 x 6
                  3940:  [ '3940', None ],     # space stand 2 x 2 x 2
                  3941:  [ '3941', None ],     # brick 2 x 2 round
                  3942:  [ '3942', None ],     # cone 2 x 2 x 2 open stud
+                 4079:  [ '4079', None ],     # town seat 2 x 2
                  4083:  [ '4083', None ],     # bar 1 x 4 x 2
                  4162:  [ '4162', None ],     # flat tile 1 x 8
                  4287:  [ '4287', None ],     # slope brick 33 3 x 1 inverted
@@ -198,6 +200,7 @@ known_bricks = { 2356:  [ '2356', None ],     # brick 4 x 6
                  6215:  [ '6215', None ],     # brick 2 x 3 with curved top
                  6636:  [ '6636', None ],     # flat tile 1 x 6
                  14719: [ '14719', None ],    # flat tile 2 x 2 corner
+                 30055: [ '30055', None ],    # fence 1 x 4 x 2 spindled
                  30136: [ '30136', None ],    # log brick 1 x 2
                  30137: [ '30137', None ],    # log brick 1 x 4
                  30145: [ '30145', None ],    # brick 2 x 2 x 3
