@@ -1,0 +1,16 @@
+# plant tree pyramidal 4 x 4 x 6.667 type 1
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=plant tree pyramidal 4 x 4 x 6.667 type 1
+type=brick
+file=lg_3471
+width=1
+length=1
+depth=0
+sx=1
+sy=1
+sz=1
+parts=1
+part0=lg_3471
+text0=n

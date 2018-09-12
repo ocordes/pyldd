@@ -177,6 +177,7 @@ known_bricks = { 2356:  [ '2356', None ],     # brick 4 x 6
                  3245:  [ '3245', None ],     # brick 1 x 2 x 2
                  3460:  [ '3460', None ],     # plate 1 x 8
                  3470:  [ '3470', None ],     # plant tree oval 4 x 4 x 6
+                 3471:  [ '3471', None ],     # plant tree pyramidal 4 x 4 x 6.667 type 1
                  3622:  [ '3622', None ],     # brick 1 x 3
                  3623:  [ '3623', None ],     # plate 1 x 3
                  3660:  [ '3660', None ],     # slope brick 45 2 x 2 inverted
