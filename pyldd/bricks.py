@@ -257,9 +257,10 @@ class Brick( object ):
                                                                     self.itemNos )
 
 
-    def load_brick_data( self, brickname ):
+    def load_brick_data( self, brickname, verbose=True ):
         filename = os.path.join( brick_data_dir, '{}.dat'.format( brickname ) )
-        print( 'loading brick data \'{}\' ...'.format( filename ) )
+        if verbose:
+            print( 'loading brick data \'{}\' ...'.format( filename ) )
 
         try:
             f = open( filename, 'r' )
@@ -312,6 +313,8 @@ class Brick( object ):
                     obj.set_texture( '{} {}'.format( color,
                                                     #'normal { bumps 0.3 scale 0.02 }' ) )
                                                     'normal { bumps 0.1 scale 2 }' ) )
+                elif parts[1] == 's':
+                    pass
                 objs.append( obj )
             if len( objs ) > 1:
                 u = PovCSGUnion( comment=descr )
@@ -340,3 +343,24 @@ class Brick( object ):
         else:
             print( 'Brick with designID={} not implemented!'.format( self.designID ) )
         return None, None
+
+
+
+def list_known_bricks( tosort ):
+    list_of_bricks = []
+    for brick in known_bricks:
+        b = Brick( {} )
+        defs = b.load_brick_data( known_bricks[brick][0], verbose=False )
+        descr = defs.get( 'descr', 'unknown brick' )
+        e = ( brick, descr )
+        list_of_bricks.append( e )
+
+    if tosort == 'names':
+        items = sorted( list_of_bricks, key=lambda e: e[1])
+    else:
+        items = sorted( list_of_bricks, key=lambda e: e[0])
+    #items = list_of_bricks
+
+    print( '#{} known brick numbers:'.format( len(known_bricks) ) )
+    for i in items:
+        print( '  # {:>6} : {}'.format( i[0], i[1]) )
