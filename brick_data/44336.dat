@@ -1,0 +1,16 @@
+# baseplate 32 x 32 road 6-stud straight
+#
+# Oliver Cordes 2018-08-06
+#
+descr=baseplate 32 x 32 road 6-stud straight
+type=baseplate
+file=lg_44336
+width=31
+length=31
+depth=-1/3
+sx=1
+sy=1
+sz=1
+parts=1
+part0=lg_44336
+text0=n

@@ -72,6 +72,7 @@ color_table = {    1: 'lg_white',
 		         194: 'lg_bluish_grey',
                  195: 'lg_violet_blue',
 		         196: 'lg_royal_blue',       # dark ?
+                 199: 'lg_dark_bluish_grey',
 		           2: 'lg_grey',             # light ?
 		          20: 'lg_milky_white',
 		         200: 'lg_metallic_green',   # missing
@@ -183,6 +184,7 @@ known_bricks = { 2356:  [ '2356', None ],     # brick 4 x 6
                  3660:  [ '3660', None ],     # slope brick 45 2 x 2 inverted
                  3666:  [ '3666', None ],     # plate 1 x 6
                  3710:  [ '3710', None ],     # plate 1 x 4
+                 3754:  [ '3754', None ],     # brick 1 x 6 x 5
                  3811:  [ '3811', None ],     # base 32 x 32 plate
                  3900:  [ '3900', None ],     # minifig signal holder (stop sign)
                  3940:  [ '3940', None ],     # space stand 2 x 2 x 2
@@ -191,6 +193,8 @@ known_bricks = { 2356:  [ '2356', None ],     # brick 4 x 6
                  4079:  [ '4079', None ],     # town seat 2 x 2
                  4083:  [ '4083', None ],     # bar 1 x 4 x 2
                  4162:  [ '4162', None ],     # flat tile 1 x 8
+                 4201:  [ '4201', None ],     # brick 8 x 8
+                 4202:  [ '4202', None ],     # brick 4 x 12
                  4287:  [ '4287', None ],     # slope brick 33 3 x 1 inverted
                  4477:  [ '4477', None ],     # plate 1 x 10
                  4589:  [ '4589', None ],     # nose cone small 1 x 1
@@ -198,17 +202,23 @@ known_bricks = { 2356:  [ '2356', None ],     # brick 4 x 6
                  6098:  [ '3867', None ],     # base 16 x 16 plate
                  6141:  [ '6141', None ],     # plate 1 x 1 round
                  6143:  [ '3941', None ],     # brick 2 x 2 round
+                 6212:  [ '6212', None ],     # brick 4 x 10
+                 6213:  [ '6213', None ],     # brick 2 x 6 x 3
                  6215:  [ '6215', None ],     # brick 2 x 3 with curved top
                  6636:  [ '6636', None ],     # flat tile 1 x 6
                  14719: [ '14719', None ],    # flat tile 2 x 2 corner
                  30055: [ '30055', None ],    # fence 1 x 4 x 2 spindled
                  30136: [ '30136', None ],    # log brick 1 x 2
                  30137: [ '30137', None ],    # log brick 1 x 4
+                 30144: [ '30144', None ],    # brick 2 x 4 x 3
                  30145: [ '30145', None ],    # brick 2 x 2 x 3
                  30179: [ '30179', None ],    # door 1 x 4 x 6 framte type 1
                  41539: [ '41539', None ],    # plate 8 x 8
+                 43802: [ '4201', None ],     # brick 8 x 8
                  44042: [ '2356', None ],     # brick 4 x 6
                  44237: [ '44237', None ],    # brick 2 x 6
+                 44336: [ '44336', None ],    # baseplate 32 x 32 road 6-stud straight
+                 60033: [ '4202', None ],     # brick 4 x 12
                  60592: [ '60592', None ],    # window  1 x 2 x 2 without sill
                  60594: [ '60594', None ],    # window 1 x 4 x 3 without shutter tabs
                  60601: [ '60601', None ],    # glass for window 1 x 2 x 2 without sill

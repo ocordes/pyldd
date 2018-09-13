@@ -937,3 +937,225 @@ matrix <aw,0,0,0,ah,0,0,0,ad,ax,ay,az>
                 }
         }
 }
+
+
+#declare LDX_1_dash_4disc_dot_dat_in_part = disc // Disc 0.25
+{
+        <0,0,0>,<0,1,0>,1
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-1,0,0>,0
+                }
+        }
+}
+
+
+#declare LDX_stug_dash_3x3_dot_dat_in_part = union {
+// Stud Group  3 x  3
+// Name: stug-3x3.dat
+// Author: Steve Bliss [sbliss]
+// !LDRAW_ORG Primitive UPDATE 2011-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2005-12-28 [PTadmin] Official Update 2005-01
+// !HISTORY 2007-05-04 [PTadmin] Header formatted for Contributor Agreement
+// !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01
+// !HISTORY 2011-07-01 [PTadmin] Renamed from stug3
+// !HISTORY 2011-07-25 [PTadmin] Official Update 2011-01
+        object {
+                lg_knob
+                matrix <0,0,-25,-25,0,0,0,-25,0,0,0,0>
+                matrix <1,0,0,0,1,0,0,0,1,-20,0,-20>
+        }
+        object {
+                lg_knob
+                matrix <0,0,-25,-25,0,0,0,-25,0,0,0,0>
+                matrix <1,0,0,0,1,0,0,0,1,-20,0,0>
+        }
+        object {
+                lg_knob
+                matrix <0,0,-25,-25,0,0,0,-25,0,0,0,0>
+                matrix <1,0,0,0,1,0,0,0,1,-20,0,20>
+        }
+        object {
+                lg_knob
+                matrix <0,0,-25,-25,0,0,0,-25,0,0,0,0>
+                matrix <1,0,0,0,1,0,0,0,1,0,0,-20>
+        }
+        object {
+                lg_knob
+                matrix <0,0,-25,-25,0,0,0,-25,0,0,0,0>
+                matrix <1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+        object {
+                lg_knob
+                matrix <0,0,-25,-25,0,0,0,-25,0,0,0,0>
+                matrix <1,0,0,0,1,0,0,0,1,0,0,20>
+        }
+        object {
+                lg_knob
+                matrix <0,0,-25,-25,0,0,0,-25,0,0,0,0>
+                matrix <1,0,0,0,1,0,0,0,1,20,0,-20>
+        }
+        object {
+                lg_knob
+                matrix <0,0,-25,-25,0,0,0,-25,0,0,0,0>
+                matrix <1,0,0,0,1,0,0,0,1,20,0,0>
+        }
+        object {
+                lg_knob
+                matrix <0,0,-25,-25,0,0,0,-25,0,0,0,0>
+                matrix <1,0,0,0,1,0,0,0,1,20,0,20>
+        }
+}
+
+
+#declare LDX_stug_dash_6x6_dot_dat_in_part = union {
+// Stud Group  6 x  6
+// Name: stug-6x6.dat
+// Author: Tore Eriksson [Tore_Eriksson]
+// !LDRAW_ORG Primitive UPDATE 2011-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2005-12-28 [PTadmin] Official Update 2005-01
+// !HISTORY 2007-05-04 [PTadmin] Header formatted for Contributor Agreement
+// !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01
+// !HISTORY 2011-07-01 [PTadmin] Renamed from stug6
+// !HISTORY 2011-07-25 [PTadmin] Official Update 2011-01
+        object {
+                LDX_stug_dash_3x3_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,-30,0,-30>
+        }
+        object {
+                LDX_stug_dash_3x3_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,-30,0,30>
+        }
+        object {
+                LDX_stug_dash_3x3_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,30,0,30>
+        }
+        object {
+                LDX_stug_dash_3x3_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,30,0,-30>
+        }
+}
+
+
+#declare LDX_stug6_dot_dat_in_part = union {
+// ~Moved to stug-6x6
+// Name: stug6.dat
+// Author: [PTadmin]
+// !LDRAW_ORG Primitive UPDATE 2011-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2011-07-25 [PTadmin] Official Update 2011-01
+// // Stud Group  6 x  6
+        object {
+                LDX_stug_dash_6x6_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+}
+
+
+#declare LDX_s_slash_3811s01_dot_dat_in_part = union {
+// ~Baseplate 32 x 32 without Top Surface
+// Name: s\3811s01.dat
+// Author: Mark Kennedy [mkennedy]
+// !LDRAW_ORG Subpart UPDATE 2004-02
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CW
+// !HISTORY 2004-04-22 [PTadmin] Official Update 2004-02
+// !HISTORY 2007-08-31 [PTadmin] Header formatted for Contributor Agreement
+// !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01
+        object {
+                LDX_1_dash_4disc_dot_dat_in_part
+                matrix <4,0,0,0,-1,0,0,0,4,316,4,316>
+        }
+        object {
+                LDX_1_dash_4disc_dot_dat_in_part
+                matrix <-4,0,0,0,-1,0,0,0,4,-316,4,316>
+        }
+        object {
+                LDX_1_dash_4disc_dot_dat_in_part
+                matrix <-4,0,0,0,-1,0,0,0,-4,-316,4,-316>
+        }
+        object {
+                LDX_1_dash_4disc_dot_dat_in_part
+                matrix <4,0,0,0,-1,0,0,0,-4,316,4,-316>
+        }
+        object {
+                LDX_1_dash_4cyli_dot_dat_in_part
+                matrix <4,0,0,0,4,0,0,0,4,316,0,316>
+        }
+        object {
+                LDX_1_dash_4cyli_dot_dat_in_part
+                matrix <-4,0,0,0,4,0,0,0,4,-316,0,316>
+        }
+        object {
+                LDX_1_dash_4cyli_dot_dat_in_part
+                matrix <-4,0,0,0,4,0,0,0,-4,-316,0,-316>
+        }
+        object {
+                LDX_1_dash_4cyli_dot_dat_in_part
+                matrix <4,0,0,0,4,0,0,0,-4,316,0,-316>
+        }
+}
+
+
+#declare LDX_stug_dash_2x2_dot_dat_in_part = union {
+// Stud Group  2 x  2
+// Name: stug-2x2.dat
+// Author: Steffen [Steffen]
+// !LDRAW_ORG Primitive UPDATE 2012-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2005-12-28 [PTadmin] Official Update 2005-01
+// !HISTORY 2007-05-04 [PTadmin] Header formatted for Contributor Agreement
+// !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01
+// !HISTORY 2011-07-01 [PTadmin] Renamed from stug2
+// !HISTORY 2011-07-25 [PTadmin] Official Update 2011-01
+// !HISTORY 2012-02-16 [Philo] Changed to CCW
+// !HISTORY 2012-03-30 [PTadmin] Official Update 2012-01
+        object {
+                lg_knob
+                matrix <0,0,-25,-25,0,0,0,-25,0,0,0,0>
+                matrix <1,0,0,0,1,0,0,0,1,-10,0,-10>
+        }
+        object {
+                lg_knob
+                matrix <0,0,-25,-25,0,0,0,-25,0,0,0,0>
+                matrix <1,0,0,0,1,0,0,0,1,10,0,-10>
+        }
+        object {
+                lg_knob
+                matrix <0,0,-25,-25,0,0,0,-25,0,0,0,0>
+                matrix <1,0,0,0,1,0,0,0,1,-10,0,10>
+        }
+        object {
+                lg_knob
+                matrix <0,0,-25,-25,0,0,0,-25,0,0,0,0>
+                matrix <1,0,0,0,1,0,0,0,1,10,0,10>
+        }
+}
+
+
+#declare LDX_stug2_dot_dat_in_part = union {
+// ~Moved to stug-2x2
+// Name: stug2.dat
+// Author: [PTadmin]
+// !LDRAW_ORG Primitive UPDATE 2011-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2011-07-25 [PTadmin] Official Update 2011-01
+// // Stud Group  2 x  2
+        object {
+                LDX_stug_dash_2x2_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+}

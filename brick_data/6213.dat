@@ -1,0 +1,16 @@
+# brick 2 x 6 x 3
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=brick 2 x 6 x 3
+type=brick
+file=lg_6213
+width=5
+length=1
+depth=8/3
+sx=1
+sy=1
+sz=1
+parts=1
+part0=lg_6213
+text0=n
