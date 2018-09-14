@@ -142,11 +142,45 @@
   }
 }
 
-//}
 
-//#declare lg_44336_color_style_3 = object{
-//
-//}
+#declare lg_44336_color_style_3 = union{
+  #declare COUNTER=0;
+  #while (COUNTER<4)
+  box{
+      <-LG_KNOB_RADIUS,(COUNTER*(5+3)+1.5-16)*LG_BRICK_WIDTH,0>,
+      <+LG_KNOB_RADIUS,(COUNTER*(5+3)+1.5-16+5)*LG_BRICK_WIDTH,LG_E>
+      texture{
+              lg_white
+              normal { bumps 0.1 scale 2 }
+      }
+  }
+  #declare COUNTER=COUNTER+1;
+  #end
+  #declare COUNTER=0;
+  #while (COUNTER<13)
+  box{
+      <-9*LG_BRICK_WIDTH,(COUNTER*(1.5+0.5)+0.5-16)*LG_BRICK_WIDTH,0>,
+      <-9*LG_BRICK_WIDTH-2*LG_KNOB_RADIUS,(COUNTER*(1.5+0.5)+0.5-16+1.5)*LG_BRICK_WIDTH,LG_E>
+      texture{
+              lg_white
+              normal { bumps 0.1 scale 2 }
+      }
+  }
+  #declare COUNTER=COUNTER+1;
+  #end
+  #declare COUNTER=0;
+  #while (COUNTER<13)
+  box{
+      <9*LG_BRICK_WIDTH,(-COUNTER*(1.5+0.5)-0.5+16)*LG_BRICK_WIDTH,0>,
+      <9*LG_BRICK_WIDTH-2*LG_KNOB_RADIUS,(-COUNTER*(1.5+0.5)-0.5+16-1.5)*LG_BRICK_WIDTH,LG_E>
+      texture{
+              lg_white
+              normal { bumps 0.1 scale 2 }
+      }
+  }
+  #declare COUNTER=COUNTER+1;
+  #end
+}
 
 
 #declare lg_44336 = union{
@@ -160,7 +194,8 @@
          object{ lg_44336_color_style_2 }
         #break
        #case(3)
-         lg_44336base6
+         object{ lg_44336base6 }
+         object{ lg_44336_color_style_3 }
         #break
       #end
 }
