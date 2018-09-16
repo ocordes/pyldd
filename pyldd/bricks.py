@@ -186,6 +186,7 @@ known_bricks = { 2356:  [ '2356', None ],     # brick 4 x 6
                  3710:  [ '3710', None ],     # plate 1 x 4
                  3754:  [ '3754', None ],     # brick 1 x 6 x 5
                  3811:  [ '3811', None ],     # base 32 x 32 plate
+                 3832:  [ '3832', None ],     # plate 2 x 10
                  3900:  [ '3900', None ],     # minifig signal holder (stop sign)
                  3940:  [ '3940', None ],     # space stand 2 x 2 x 2
                  3941:  [ '3941', None ],     # brick 2 x 2 round
@@ -195,6 +196,7 @@ known_bricks = { 2356:  [ '2356', None ],     # brick 4 x 6
                  4162:  [ '4162', None ],     # flat tile 1 x 8
                  4201:  [ '4201', None ],     # brick 8 x 8
                  4202:  [ '4202', None ],     # brick 4 x 12
+                 4282:  [ '4282', None ],     # plate 2 x 16
                  4287:  [ '4287', None ],     # slope brick 33 3 x 1 inverted
                  4477:  [ '4477', None ],     # plate 1 x 10
                  4589:  [ '4589', None ],     # nose cone small 1 x 1
