@@ -198,6 +198,7 @@ known_bricks = { 2356:  [ '2356', None ],     # brick 4 x 6
                  4202:  [ '4202', None ],     # brick 4 x 12
                  4282:  [ '4282', None ],     # plate 2 x 16
                  4287:  [ '4287', None ],     # slope brick 33 3 x 1 inverted
+                 4204:  [ '4204', None ],     # brick 8 x 16
                  4477:  [ '4477', None ],     # plate 1 x 10
                  4589:  [ '4589', None ],     # nose cone small 1 x 1
                  4740:  [ '4740', None ],     # satellite dish 2 x 2
@@ -207,9 +208,12 @@ known_bricks = { 2356:  [ '2356', None ],     # brick 4 x 6
                  6212:  [ '6212', None ],     # brick 4 x 10
                  6213:  [ '6213', None ],     # brick 2 x 6 x 3
                  6215:  [ '6215', None ],     # brick 2 x 3 with curved top
+                 6564:  [ '6564', None ],     # wedge 3 x 2 right
+                 6565:  [ '6565', None ],     # wedge 3 x 2 left
                  6636:  [ '6636', None ],     # flat tile 1 x 6
                  14719: [ '14719', None ],    # flat tile 2 x 2 corner
                  30055: [ '30055', None ],    # fence 1 x 4 x 2 spindled
+                 30072: [ '30072', None ],    # brick 12 x 24
                  30136: [ '30136', None ],    # log brick 1 x 2
                  30137: [ '30137', None ],    # log brick 1 x 4
                  30144: [ '30144', None ],    # brick 2 x 4 x 3
@@ -217,6 +221,7 @@ known_bricks = { 2356:  [ '2356', None ],     # brick 4 x 6
                  30179: [ '30179', None ],    # door 1 x 4 x 6 framte type 1
                  41539: [ '41539', None ],    # plate 8 x 8
                  43802: [ '4201', None ],     # brick 8 x 8
+                 44041: [ '4204', None ],     # brick 8 x 16
                  44042: [ '2356', None ],     # brick 4 x 6
                  44237: [ '44237', None ],    # brick 2 x 6
                  44336: [ '44336', None ],    # baseplate 32 x 32 road 6-stud straight
@@ -228,6 +233,7 @@ known_bricks = { 2356:  [ '2356', None ],     # brick 4 x 6
                  60608: [ '60608', None ],    # window 1 x 2 x 3 pane with thick corner tabs
                  60616: [ '60616', None ],    # door 1 x 4 x 6 smooth with square handle plinth
                  60623: [ '60623', None ],    # door 1 x 4 x 6 with 4 panes and stud handle
+                 85080: [ '3063', None ],     # brick 2 x 2 corner round ?? LEGO has a different description but looks similar
                  87087: [ '87087', None ],    # brick 1 x 1 with stud on 1 side
                  93273: [ '93273', None ],    # plate with bow 1 x 4 x 2/3
                  92946: [ '92946', None ],    # roof tile 1 x 2 45° W 1/3 Plate

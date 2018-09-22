@@ -228,6 +228,7 @@ union {
   translate <-LG_BRICK_WIDTH, LG_BRICK_WIDTH/2, 0>
  }
  matrix <1, 0, 0, 0, -1, 0, 0, 0, 1, 0, 0, 0>
+ rotate <0,0,90>
 }
 
 #declare lg_6564_clear =

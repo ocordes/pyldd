@@ -101,7 +101,7 @@
 
 // 4
 #declare lg_red = texture {
- pigment { rgb <196/255, 0/255, 38/255> }
+ pigment { rgb <201/255, 0/255, 9/255> }
  finish { lg_solid_finish }
 }
 

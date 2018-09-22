@@ -1,0 +1,16 @@
+# wedge 3 x 2 left
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=wedge 3 x 2 left
+type=brick
+file=lg_6565
+width=2
+length=-1
+depth=2/3
+sx=1
+sy=1
+sz=-1
+parts=1
+part0=lg_6565
+text0=n
