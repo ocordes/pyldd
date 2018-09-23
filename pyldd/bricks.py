@@ -219,6 +219,7 @@ known_bricks = { 2356:  [ '2356', None ],     # brick 4 x 6
                  30144: [ '30144', None ],    # brick 2 x 4 x 3
                  30145: [ '30145', None ],    # brick 2 x 2 x 3
                  30179: [ '30179', None ],    # door 1 x 4 x 6 framte type 1
+                 30367: [ '30367', None ],    # cylinder 2 x 2 with dome top with blocked stud, R2-D2
                  41539: [ '41539', None ],    # plate 8 x 8
                  43802: [ '4201', None ],     # brick 8 x 8
                  44041: [ '4204', None ],     # brick 8 x 16

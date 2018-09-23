@@ -1159,3 +1159,98 @@ matrix <aw,0,0,0,ah,0,0,0,ad,ax,ay,az>
                 matrix <1,0,0,0,1,0,0,0,1,0,0,0>
         }
 }
+
+
+#declare LDX_1_dash_8cyli_dot_DAT_in_part = cylinder // Cylinder 0.125
+{
+        <0,0,0>,<0,1,0>,1 open
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.70710678118654746172,0,0.70710678118654757274>,0
+                }
+        }
+}
+
+
+#declare LDX_STUD4A_dot_dat_in_part = union {
+// Stud Tube Open without Base Edges
+// Name: stud4a.dat
+// Author: James Jessiman
+// !LDRAW_ORG Primitive UPDATE 2009-02
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 1999-07-05 [PTadmin] Official Update 1999-05
+// !HISTORY 2002-04-04 [sbliss] Modified for BFC compliance
+// !HISTORY 2002-04-25 [PTadmin] Official Update 2002-02
+// !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement
+// !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01
+// !HISTORY 2009-06-21 [cwdee] Update ring references to 4-4ring
+// !HISTORY 2009-09-03 [PTadmin] Official Update 2009-02
+// BFC INVERTNEXT
+        object {
+                LDX_4_dash_4cyli_dot_dat_in_part
+                matrix <6,0,0,0,4,0,0,0,6,0,-4,0>
+        }
+        object {
+                LDX_4_dash_4cyli_dot_dat_in_part
+                matrix <8,0,0,0,4,0,0,0,8,0,-4,0>
+        }
+        object {
+                LDX_4_dash_4ring3_dot_dat_in_part
+                matrix <2,0,0,0,1,0,0,0,2,0,-4,0>
+        }
+}
+
+
+#declare LDX_3_dash_16cyli_dot_dat_in_part = cylinder // Cylinder 0.1875
+{
+        <0,0,0>,<0,1,0>,1 open
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.92387953251128673848,0,0.38268343236508983729>,0
+                }
+        }
+}
+
+
+#declare LDX_filstud3_dot_dat_in_part = union {
+// Stud Filler with 3 Ribs for Hollow Studs
+// Name: filstud3.dat
+// Author: Magnus Forsberg [MagFors]
+// !LDRAW_ORG Primitive UPDATE 2012-03
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2012-12-28 [PTadmin] Official Update 2012-03
+// //
+// BFC INVERTNEXT
+// BFC INVERTNEXT
+// BFC INVERTNEXT
+// BFC INVERTNEXT
+        object {
+                LDX_3_dash_16cyli_dot_dat_in_part
+                matrix <4,0,0,0,4,0,0,0,4,0,0,0>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_3_dash_16cyli_dot_dat_in_part
+                matrix <-1.5307,0,3.6955,0,4,0,-3.6955,0,-1.5307,0,0,0>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_1_dash_4cyli_dot_dat_in_part
+                matrix <-2.8284,0,-2.8284,0,4,0,2.8284,0,-2.8284,0,0,0>
+        }
+// //
+}
