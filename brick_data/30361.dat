@@ -1,0 +1,16 @@
+# cylinder 2 x 2 x 2 robot body
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=cylinder 2 x 2 x 2 robot body
+type=brick
+file=lg_30361
+width=1
+length=1
+depth=1
+sx=1
+sy=1
+sz=1
+parts=1
+part0=lg_30361
+text0=n

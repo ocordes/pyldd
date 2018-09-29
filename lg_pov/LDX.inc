@@ -1254,3 +1254,73 @@ matrix <aw,0,0,0,ah,0,0,0,ad,ax,ay,az>
         }
 // //
 }
+
+
+#declare LDX_4_dash_4ring9_dot_dat_in_part = disc // Ring 1
+{
+        <0,0,0>,<0,1,0>,10,9
+}
+
+
+#declare LDX_4_dash_4rin15_dot_dat_in_part = disc // Ring 1
+{
+        <0,0,0>,<0,1,0>,16,15
+}
+
+
+#declare LDX_1_dash_4ring2_dot_dat_in_part = disc // Ring 0.25
+{
+        <0,0,0>,<0,1,0>,3,2
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-1,0,0>,0
+                }
+        }
+}
+
+
+#declare LDX_stud6_dot_dat_in_part = union {
+// Stud Open For Round 2x2 Parts
+// Name: stud6.dat
+// Author: Steve Bliss [sbliss]
+// !LDRAW_ORG Primitive UPDATE 2012-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2000-09-30 [PTadmin] Official Update 2000-02
+// !HISTORY 2002-04-04 [sbliss] Modified for BFC compliance
+// !HISTORY 2002-04-25 [PTadmin] Official Update 2002-02
+// !HISTORY 2002-08-27 [mkennedy] Changed top polygons to 3-4ring2
+// !HISTORY 2002-11-30 [sbliss] Replaced 3-4ring2 with 1-4ring2's
+// !HISTORY 2003-08-01 [PTadmin] Official Update 2003-02
+// !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement
+// !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01
+// !HISTORY 2012-02-16 [Philo] Changed to CCW
+// !HISTORY 2012-03-30 [PTadmin] Official Update 2012-01
+// BFC INVERTNEXT
+        object {
+                LDX_4_dash_4cyli_dot_dat_in_part
+                matrix <4,0,0,0,4,0,0,0,4,0,-4,0>
+        }
+        object {
+                LDX_1_dash_4ring2_dot_dat_in_part
+                matrix <0,0,2,0,1,0,-2,0,0,0,-4,0>
+        }
+        object {
+                LDX_1_dash_4ring2_dot_dat_in_part
+                matrix <-2,0,0,0,1,0,0,0,-2,0,-4,0>
+        }
+        object {
+                LDX_1_dash_4ring2_dot_dat_in_part
+                matrix <0,0,-2,0,1,0,2,0,0,0,-4,0>
+        }
+        object {
+                LDX_3_dash_4cyli_dot_dat_in_part
+                matrix <0,0,6,0,4,0,-6,0,0,0,-4,0>
+        }
+}

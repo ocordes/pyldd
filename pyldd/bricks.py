@@ -150,6 +150,7 @@ known_bricks = { 2356:  [ '2356', None ],     # brick 4 x 6
                  2420:  [ '2420', None ],     # plate 2 x 2 corner
                  2431:  [ '2431', None ],     # flat tile 1 x 4
                  2454:  [ '2454', None ],     # brick 1 x 2 x 5
+                 2462:  [ '2462', None ],     # brick 3 x 3 facet
                  2877:  [ '2877', None ],     # brick 1 x 2 with grille
                  3001:  [ '3001', None ],     # brick 2 x 4
                  3002:  [ '3002', None ],     # brick 2 x 3
@@ -171,8 +172,8 @@ known_bricks = { 2356:  [ '2356', None ],     # brick 4 x 6
                  3036:  [ '3036', None ],     # plate 6 x 8
                  3040:  [ '3040', None ],     # roof tile 1 x 2 / 45°
                  3063:  [ '3063', None ],     # brick 2 x 2 corner round
-                 3069:  [ '3069', None ],     # flat tile 1 x 2
                  3062:  [ '3062', None ],     # brick 1 x 1 round open stud
+                 3069:  [ '3069', None ],     # tile 1 x 2 with groove
                  3070:  [ '3070', None ],     # flat tile 1 x 1
                  3185:  [ '3185', None ],     # fence 1 x 4 x 2
                  3245:  [ '3245', None ],     # brick 1 x 2 x 2
@@ -219,8 +220,11 @@ known_bricks = { 2356:  [ '2356', None ],     # brick 4 x 6
                  30144: [ '30144', None ],    # brick 2 x 4 x 3
                  30145: [ '30145', None ],    # brick 2 x 2 x 3
                  30179: [ '30179', None ],    # door 1 x 4 x 6 framte type 1
+                 30361: [ '30361', None ],    # cylinder 2 x 2 x 2 robot body
                  30367: [ '30367', None ],    # cylinder 2 x 2 with dome top with blocked stud, R2-D2
                  41539: [ '41539', None ],    # plate 8 x 8
+                 41767: [ '41767', None ],    # wedge 4 x 2 right
+                 41768: [ '41768', None ],    # wedge 4 x 2 left
                  43802: [ '4201', None ],     # brick 8 x 8
                  44041: [ '4204', None ],     # brick 8 x 16
                  44042: [ '2356', None ],     # brick 4 x 6
@@ -236,6 +240,7 @@ known_bricks = { 2356:  [ '2356', None ],     # brick 4 x 6
                  60623: [ '60623', None ],    # door 1 x 4 x 6 with 4 panes and stud handle
                  85080: [ '3063', None ],     # brick 2 x 2 corner round ?? LEGO has a different description but looks similar
                  87087: [ '87087', None ],    # brick 1 x 1 with stud on 1 side
+                 87620: [ '87620', None ],    # 2 x 2 facet
                  93273: [ '93273', None ],    # plate with bow 1 x 4 x 2/3
                  92946: [ '92946', None ],    # roof tile 1 x 2 45° W 1/3 Plate
                  98283: [ '98283', None ]     # brick 1 x 2 with embossed bricks

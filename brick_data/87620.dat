@@ -1,0 +1,16 @@
+# 2 x 2 facet
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=2 x 2 facet
+type=brick
+file=lg_87620
+width=1
+length=-1
+depth=2/3
+sx=1
+sy=1
+sz=-1
+parts=1
+part0=lg_87620
+text0=n
