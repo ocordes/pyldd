@@ -195,6 +195,8 @@ union {
   }  
  }
  translate <-0.5*LG_BRICK_WIDTH, -LG_BRICK_WIDTH, -LG_BRICK_HEIGHT>
+
+ rotate z*90
 }
 
 #declare lg_3048_clear = 
@@ -437,6 +439,8 @@ difference {
   <LG_CORNER_SPACE, WIDTH*LG_BRICK_WIDTH,LG_BRICK_HEIGHT>
  }
  translate <-0.5*LG_BRICK_WIDTH, -LG_BRICK_WIDTH, -LG_BRICK_HEIGHT>
+
+ rotate z*90
 }
 
 #end

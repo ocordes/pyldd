@@ -2,7 +2,7 @@
 #
 # Oliver Cordes 2018-08-06
 # 
-descr=brick 3 x 3 faet
+descr=brick 3 x 3 facet
 type=brick
 file=lg_2462
 width=2
