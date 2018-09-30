@@ -251,7 +251,8 @@ union {
   }
  }
  translate <-0.5*LG_BRICK_WIDTH, -LG_BRICK_WIDTH, -LG_BRICK_HEIGHT>
- rotate <0,0,180>
+ //rotate <0,0,180>
+ rotate <0,0,90>
 }
 
 #declare lg_3049b_clear = 
@@ -488,7 +489,8 @@ merge {
   }
  }
  translate <-0.5*LG_BRICK_WIDTH, -LG_BRICK_WIDTH, -LG_BRICK_HEIGHT>
- rotate <0,0,180>
+ //rotate <0,0,180>
+ rotate <0,0,90>
 }
 
 #declare lg_3049b_slope =
@@ -520,7 +522,8 @@ difference {
   }
  }
  translate <-0.5*LG_BRICK_WIDTH, -LG_BRICK_WIDTH, -LG_BRICK_HEIGHT>
- rotate <0,0,180>
+ //rotate <0,0,180>
+ rotate <0,0,90>
 }
 
 #end

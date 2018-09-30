@@ -19,6 +19,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  2412:  [ '2412', None ],     # tile 1 x 2 grille without groove
                  2420:  [ '2420', None ],     # plate 2 x 2 corner
                  2431:  [ '2431', None ],     # flat tile 1 x 4
+                 2449:  [ '2449', None ],     # slope brick 75 2 x 1 x 3 inverted
                  2454:  [ '2454', None ],     # brick 1 x 2 x 5
                  2462:  [ '2462', None ],     # brick 3 x 3 facet
                  2577:  [ '2577', None ],     # brick 4 x 4 with round corner
@@ -41,18 +42,23 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  3029:  [ '3029', None ],     # plate 4 x 12
                  3035:  [ '3035', None ],     # plate 4 x 8
                  3036:  [ '3036', None ],     # plate 6 x 8
+                 3037:  [ '3037', None ],     # slope brick 45 2 x 4
+                 3038:  [ '3038', None ],     # slope brick 45 2 x 3
                  3039:  [ '3039', None ],     # slope brick 45 2 x 2
                  3040:  [ '3040', None ],     # roof tile 1 x 2 / 45°
+                 3041:  [ '3041', None ],     # slope brick 45 2 x 4 double
                  3044:  [ '3044', None ],     # slope brick 45 2 x 1 double
                  3045:  [ '3045', None ],     # slope brick 45 2 x 2 double convex
                  3046:  [ '3046', None ],     # slope brick 45 2 x 2 double concave
                  3048:  [ '3048', None ],     # slope brick 45 1 x 2 triple
+                 3049:  [ '3049', None ],     # slope brick 45 1 x 2 double / inverted with center stud
                  3063:  [ '3063', None ],     # brick 2 x 2 corner round
                  3062:  [ '3062', None ],     # brick 1 x 1 round open stud
                  3069:  [ '3069', None ],     # tile 1 x 2 with groove
                  3070:  [ '3070', None ],     # flat tile 1 x 1
                  3185:  [ '3185', None ],     # fence 1 x 4 x 2
                  3245:  [ '3245', None ],     # brick 1 x 2 x 2
+                 3298:  [ '3298', None ],     # slope brick 33 3 x 2
                  3300:  [ '3300', None ],     # slope brick 33 2 x 2 double
                  3460:  [ '3460', None ],     # plate 1 x 8
                  3470:  [ '3470', None ],     # plant tree oval 4 x 4 x 6
@@ -62,6 +68,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  3660:  [ '3660', None ],     # slope brick 45 2 x 2 inverted
                  3665:  [ '3665', None ],     # slope brick 45 2 x 1 inverted
                  3666:  [ '3666', None ],     # plate 1 x 6
+                 3676:  [ '3676', None ],     # slope brick 45 2x 2 inverted double convex
                  3710:  [ '3710', None ],     # plate 1 x 4
                  3754:  [ '3754', None ],     # brick 1 x 6 x 5
                  3811:  [ '3811', None ],     # base 32 x 32 plate
@@ -79,6 +86,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  4282:  [ '4282', None ],     # plate 2 x 16
                  4286:  [ '4286', None ],     # slope brick 33 3 x 1
                  4287:  [ '4287', None ],     # slope brick 33 3 x 1 inverted
+                 4460:  [ '4460', None ],     # slope brick 75 2 x 1 x 3
                  4477:  [ '4477', None ],     # plate 1 x 10
                  4589:  [ '4589', None ],     # nose cone small 1 x 1
                  4740:  [ '4740', None ],     # satellite dish 2 x 2
@@ -114,7 +122,9 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  44336: [ '44336', None ],    # baseplate 32 x 32 road 6-stud straight
                  48092: [ '48092', None ],    # brick 4 x 4 corner round
                  50746: [ '50746', None ],    # slope tile 30 1 x 1 x 2/3
+                 52501: [ '52501', None ],    # slope brick 45 6 x 1 inverted double
                  60033: [ '4202', None ],     # brick 4 x 12
+                 60477: [ '60477', None ],    # slope brick 18 4 x 1
                  60481: [ '60481', None ],    # slope brick 65 2 x 1 x 2
                  60592: [ '60592', None ],    # window  1 x 2 x 2 without sill
                  60594: [ '60594', None ],    # window 1 x 4 x 3 without shutter tabs
