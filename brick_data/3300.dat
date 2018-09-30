@@ -1,0 +1,18 @@
+# slope brick 33 2 x 2 double
+#
+# Oliver Cordes 2018-09-30
+# 
+descr=slope brick 33 2 x 2 double
+type=brick
+file=lg_3300
+width=1
+length=1
+depth=2/3
+sx=1
+sy=1
+sz=1
+parts=2
+part0=lg_3300
+text0=n
+part1=lg_3300_slope
+text1=r

@@ -41,7 +41,11 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  3029:  [ '3029', None ],     # plate 4 x 12
                  3035:  [ '3035', None ],     # plate 4 x 8
                  3036:  [ '3036', None ],     # plate 6 x 8
+                 3039:  [ '3039', None ],     # slope brick 45 2 x 2
                  3040:  [ '3040', None ],     # roof tile 1 x 2 / 45°
+                 3044:  [ '3044', None ],     # slope brick 45 2 x 1 double
+                 3045:  [ '3045', None ],     # slope brick 45 2 x 2 double convex
+                 3046:  [ '3046', None ],     # slope brick 45 2 x 2 double concave
                  3048:  [ '3048', None ],     # slope brick 45 1 x 2 triple
                  3063:  [ '3063', None ],     # brick 2 x 2 corner round
                  3062:  [ '3062', None ],     # brick 1 x 1 round open stud
@@ -49,6 +53,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  3070:  [ '3070', None ],     # flat tile 1 x 1
                  3185:  [ '3185', None ],     # fence 1 x 4 x 2
                  3245:  [ '3245', None ],     # brick 1 x 2 x 2
+                 3300:  [ '3300', None ],     # slope brick 33 2 x 2 double
                  3460:  [ '3460', None ],     # plate 1 x 8
                  3470:  [ '3470', None ],     # plant tree oval 4 x 4 x 6
                  3471:  [ '3471', None ],     # plant tree pyramidal 4 x 4 x 6.667 type 1
@@ -110,6 +115,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  48092: [ '48092', None ],    # brick 4 x 4 corner round
                  50746: [ '50746', None ],    # slope tile 30 1 x 1 x 2/3
                  60033: [ '4202', None ],     # brick 4 x 12
+                 60481: [ '60481', None ],    # slope brick 65 2 x 1 x 2
                  60592: [ '60592', None ],    # window  1 x 2 x 2 without sill
                  60594: [ '60594', None ],    # window 1 x 4 x 3 without shutter tabs
                  60601: [ '60601', None ],    # glass for window 1 x 2 x 2 without sill
@@ -118,6 +124,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  60616: [ '60616', None ],    # door 1 x 4 x 6 smooth with square handle plinth
                  60623: [ '60623', None ],    # door 1 x 4 x 6 with 4 panes and stud handle
                  85080: [ '3063', None ],     # brick 2 x 2 corner round ?? LEGO has a different description but looks similar
+                 85984: [ '85984', None ],    # Slope Tile 30 2 x 1 x 2/3
                  87087: [ '87087', None ],    # brick 1 x 1 with stud on 1 side
                  87620: [ '87620', None ],    # 2 x 2 facet
                  93273: [ '93273', None ],    # plate with bow 1 x 4 x 2/3

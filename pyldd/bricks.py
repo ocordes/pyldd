@@ -5,6 +5,10 @@ pyldd/bricks.py
 Author: Oliver Cordes
 
 History:
+ 2018-09-30:
+   - split colors and known bricks into seperate files
+   - start to create a special object for each brick
+      -> figures, doors etc.
  2018-08-31: add more bricks
  2018-07-27: start project
 
@@ -17,12 +21,11 @@ from pypovlib.pypovtextures import *
 
 import sys, os
 
-
+from pyldd.povbricks import *
 from pyldd.bricks_data import *
 from pyldd.colors import *
 
 brick_data_dir = 'brick_data'
-
 
 
 class Brick( object ):
@@ -98,7 +101,9 @@ class Brick( object ):
             descr = defs.get( 'descr', 'unknown brick' )
             for parts in defs['parts']:
                 macro = parts[0]
-                obj = PovCSGMacro( '#%i %s' % ( self.refID, descr), macrocmd=macro )
+                # create special object for the bricks, static one, doors, figures etc.
+                obj = PovSimpleBrick( self.refID, descr, macro )
+                #obj = PovCSGMacro( '#%i %s' % ( self.refID, descr), macrocmd=macro )
                 if parts[1] == 'n':
                     obj.set_texture( color )
                 elif parts[1] == 'r':
