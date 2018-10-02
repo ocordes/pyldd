@@ -69,7 +69,10 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  3665:  [ '3665', None ],     # slope brick 45 2 x 1 inverted
                  3666:  [ '3666', None ],     # plate 1 x 6
                  3676:  [ '3676', None ],     # slope brick 45 2x 2 inverted double convex
+                 3678:  [ '3678', None ],     # slope brick 65 2 x 2 x 2
+                 3688:  [ '3688', None ],     # slope brick 75 2 x 2 x 2 quad. convex
                  3710:  [ '3710', None ],     # plate 1 x 4
+                 3747:  [ '3747', None ],     # slope brick 33 3 x 2 inverted
                  3754:  [ '3754', None ],     # brick 1 x 6 x 5
                  3811:  [ '3811', None ],     # base 32 x 32 plate
                  3832:  [ '3832', None ],     # plate 2 x 10
