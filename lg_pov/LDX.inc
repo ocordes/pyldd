@@ -7,6 +7,9 @@
 // created by LDView 4.2.1.1
 
 // some constants
+
+#declare LDXQual = 3;   // Quality (0 = Bounding Box; 1 = No Refraction; 2 = Normal; 3 = Stud Logos)
+
 #declare LDXSW = 0.5;
 
 #macro LDXSeamMatrix(Width, Height, Depth, CenterX, CenterY, CenterZ)
@@ -1322,5 +1325,326 @@ matrix <aw,0,0,0,ah,0,0,0,ad,ax,ay,az>
         object {
                 LDX_3_dash_4cyli_dot_dat_in_part
                 matrix <0,0,6,0,4,0,-6,0,0,0,-4,0>
+        }
+}
+
+
+#declare LDX_axlehole_dot_dat_in_part = union {
+// Technic Axle Hole Closed
+// Name: axlehole.dat
+// Author: James Jessiman
+// !LDRAW_ORG Primitive UPDATE 2005-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2000-04-23 [sbliss] Added conditional edges along outermost diameters
+// !HISTORY 2000-05-07 [PTadmin] Official Update 2000-01
+// !HISTORY 2002-05-08 [OrionP] Made BFC compliant
+// !HISTORY 2002-08-18 [PTadmin] Official Update 2002-04
+// !HISTORY 2002-11-08 [OrionP] Adjusted fit and precision
+// !HISTORY 2003-03-12 [PTadmin] Official Update 2003-01
+// !HISTORY 2005-05-15 [guyvivan] Use 1-8chrd.dat primitive and made BFC'ed CCW
+// !HISTORY 2005-12-28 [PTadmin] Official Update 2005-01
+// !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement
+// !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01
+        object {
+                LDX_1_dash_8chrd_dot_dat_in_part
+                matrix <5.54328,0,2.2961,0,1,0,-2.2961,0,5.54328,0,0,0>
+        }
+        object {
+                LDX_1_dash_8chrd_dot_dat_in_part
+                matrix <-2.2961,0,5.54328,0,1,0,-5.54328,0,-2.2961,0,0,0>
+        }
+        object {
+                LDX_1_dash_8chrd_dot_dat_in_part
+                matrix <-5.54328,0,-2.2961,0,1,0,2.2961,0,-5.54328,0,0,0>
+        }
+        object {
+                LDX_1_dash_8chrd_dot_dat_in_part
+                matrix <2.2961,0,-5.54328,0,1,0,5.54328,0,2.2961,0,0,0>
+        }
+        object {
+                LDX_1_dash_8chrd_dot_dat_in_part
+                matrix <5.54328,0,-2.2961,0,-1,0,-2.2961,0,-5.54328,0,1,0>
+        }
+        object {
+                LDX_1_dash_8chrd_dot_dat_in_part
+                matrix <-2.2961,0,-5.54328,0,-1,0,-5.54328,0,2.2961,0,1,0>
+        }
+        object {
+                LDX_1_dash_8chrd_dot_dat_in_part
+                matrix <-5.54328,0,2.2961,0,-1,0,2.2961,0,5.54328,0,1,0>
+        }
+        object {
+                LDX_1_dash_8chrd_dot_dat_in_part
+                matrix <2.2961,0,5.54328,0,-1,0,5.54328,0,-2.2961,0,1,0>
+        }
+}
+
+
+#declare LDX_stud4a_dot_dat_in_part = union {
+// Stud Tube Open without Base Edges
+// Name: stud4a.dat
+// Author: James Jessiman
+// !LDRAW_ORG Primitive UPDATE 2009-02
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 1999-07-05 [PTadmin] Official Update 1999-05
+// !HISTORY 2002-04-04 [sbliss] Modified for BFC compliance
+// !HISTORY 2002-04-25 [PTadmin] Official Update 2002-02
+// !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement
+// !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01
+// !HISTORY 2009-06-21 [cwdee] Update ring references to 4-4ring
+// !HISTORY 2009-09-03 [PTadmin] Official Update 2009-02
+// BFC INVERTNEXT
+        object {
+                LDX_4_dash_4cyli_dot_dat_in_part
+                matrix <6,0,0,0,4,0,0,0,6,0,-4,0>
+        }
+        object {
+                LDX_4_dash_4cyli_dot_dat_in_part
+                matrix <8,0,0,0,4,0,0,0,8,0,-4,0>
+        }
+        object {
+                LDX_4_dash_4ring3_dot_dat_in_part
+                matrix <2,0,0,0,1,0,0,0,2,0,-4,0>
+        }
+}
+
+
+#declare LDX_3_dash_8ring2_dot_dat_in_part = disc // Ring 0.375
+{
+        <0,0,0>,<0,1,0>,3,2
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.70710678118654768376,0,-0.70710678118654746172>,0
+                }
+        }
+}
+
+
+#declare LDX_3_dash_8rin12_dot_dat_in_part = disc // Ring 0.375
+{
+        <0,0,0>,<0,1,0>,13,12
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.70710678118654768376,0,-0.70710678118654746172>,0
+                }
+        }
+}
+
+
+#declare LDX_4_dash_4cyls_dot_dat_in_part = cylinder // Sloped Cylinder 1
+{
+        <0,0,0>,<0,2,0>,1 open
+        clipped_by
+        {
+                plane
+                {
+                        <1,1,0>,0.70710678118654757274
+                }
+        }
+}
+
+
+#declare LDX_stud2s_dot_dat_in_part = union {
+// Stud Tube Open Sliced
+// Name: stud2s.dat
+// Author: Dee Earley [DeannaEarley]
+// !LDRAW_ORG Primitive UPDATE 2009-03
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2006-02-20 [guyvivan] Adjust precision
+// !HISTORY 2009-12-29 [PTadmin] Official Update 2009-03
+        object {
+                LDX_4_dash_4cyls_dot_dat_in_part
+                matrix <6,0,0,0,1,0,0,0,6,0,0,0>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_4_dash_4cyls_dot_dat_in_part
+                matrix <4,0,0,0,0.667,0,0,0,4,0,0.333,0>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_4_dash_4cyli_dot_dat_in_part
+                matrix <4,0,0,0,0.333,0,0,0,4,0,0,0>
+        }
+}
+
+
+#declare LDX_connect_dot_dat_in_part = union {
+// Technic Pin 1.0 with Base Collar
+// Name: connect.dat
+// Author: James Jessiman
+// !LDRAW_ORG Primitive UPDATE 2010-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2002-06-30 [OrionP] Applied lip code from connect5.dat
+// !HISTORY 2002-07-03 [sbliss] Made BFC compliant, replaced quads with ring3
+// !HISTORY 2002-08-18 [PTadmin] Official Update 2002-04
+// !HISTORY 2004-12-18 [guyvivan] Improve holes and use more primitives
+// !HISTORY 2005-12-28 [PTadmin] Official Update 2005-01
+// !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement
+// !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01
+// !HISTORY 2010-01-15 [cwdee] Update ring3 to 4-4ring3
+// !HISTORY 2010-02-19 [Philo] Added condlines
+// !HISTORY 2010-04-05 [PTadmin] Official Update 2010-01
+        object {
+                LDX_4_dash_4cyli_dot_dat_in_part
+                matrix <6,0,0,0,9.5,0,0,0,6,0,-11.5,0>
+        }
+        object {
+                LDX_3_dash_8cyli_dot_dat_in_part
+                matrix <-5.54328,0,-2.2961,0,6.5,0,2.2961,0,-5.54328,0,-18,0>
+        }
+        object {
+                LDX_3_dash_8cyli_dot_dat_in_part
+                matrix <5.54328,0,2.2961,0,6.5,0,-2.2961,0,5.54328,0,-18,0>
+        }
+        object {
+                LDX_3_dash_8cyli_dot_dat_in_part
+                matrix <6.00522,0,2.48744,0,2,0,-2.48744,0,6.00522,0,-20,0>
+        }
+        object {
+                LDX_3_dash_8cyli_dot_dat_in_part
+                matrix <-6.00522,0,-2.48744,0,2,0,2.48744,0,-6.00522,0,-20,0>
+        }
+        object {
+                LDX_4_dash_4cyli_dot_dat_in_part
+                matrix <8,0,0,0,2,0,0,0,8,0,-2,0>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_4_dash_4cyli_dot_dat_in_part
+                matrix <4,0,0,0,11.5,0,0,0,4,0,-11.5,0>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_3_dash_8cyli_dot_dat_in_part
+                matrix <3.69552,0,1.53073,0,8.5,0,-1.53073,0,3.69552,0,-20,0>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_3_dash_8cyli_dot_dat_in_part
+                matrix <-3.69552,0,-1.53073,0,8.5,0,1.53073,0,-3.69552,0,-20,0>
+        }
+        object {
+                LDX_4_dash_4ring3_dot_dat_in_part
+                matrix <2,0,0,0,1,0,0,0,2,0,-2,0>
+        }
+        object {
+                LDX_3_dash_8ring2_dot_dat_in_part
+                matrix <1.84776,0,0.76537,0,1,0,-0.76537,0,1.84776,0,-20,0>
+        }
+        object {
+                LDX_3_dash_8ring2_dot_dat_in_part
+                matrix <-1.84776,0,-0.76537,0,1,0,0.76537,0,-1.84776,0,-20,0>
+        }
+        object {
+                LDX_3_dash_8rin12_dot_dat_in_part
+                matrix <0.46194,0,0.19134,0,-1,0,-0.19134,0,0.46194,0,-18,0>
+        }
+        object {
+                LDX_3_dash_8rin12_dot_dat_in_part
+                matrix <-0.46194,0,-0.19134,0,-1,0,0.19134,0,-0.46194,0,-18,0>
+        }
+        object {
+                LDX_3_dash_8rin12_dot_dat_in_part
+                matrix <0.46194,0,0.19134,0,1,0,-0.19134,0,0.46194,0,-20,0>
+        }
+        object {
+                LDX_3_dash_8rin12_dot_dat_in_part
+                matrix <-0.46194,0,-0.19134,0,1,0,0.19134,0,-0.46194,0,-20,0>
+        }
+        object {
+                LDX_1_dash_4ndis_dot_dat_in_part
+                matrix <0,1,0,1,0,0,0.199,0,1,-6,-12.5,0>
+        }
+        object {
+                LDX_1_dash_4ndis_dot_dat_in_part
+                matrix <0,1,0,1,0,0,0.199,0,-1,-6,-12.5,0>
+        }
+        object {
+                LDX_1_dash_4ndis_dot_dat_in_part
+                matrix <0,1,0,-1,0,0,-0.199,0,-1,6,-12.5,0>
+        }
+        object {
+                LDX_1_dash_4ndis_dot_dat_in_part
+                matrix <0,1,0,-1,0,0,-0.199,0,1,6,-12.5,0>
+        }
+        object {
+                LDX_1_dash_4ndis_dot_dat_in_part
+                matrix <0,1,0,-1,0,0,0.199,0,1,-4,-12.5,0>
+        }
+        object {
+                LDX_1_dash_4ndis_dot_dat_in_part
+                matrix <0,1,0,-1,0,0,0.199,0,-1,-4,-12.5,0>
+        }
+        object {
+                LDX_1_dash_4ndis_dot_dat_in_part
+                matrix <0,1,0,1,0,0,-0.199,0,-1,4,-12.5,0>
+        }
+        object {
+                LDX_1_dash_4ndis_dot_dat_in_part
+                matrix <0,1,0,1,0,0,-0.199,0,1,4,-12.5,0>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_1_dash_4cyli_dot_dat_in_part
+                matrix <0,1,0,2,0,0,0.199,0,1,-6,-12.5,0>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_1_dash_4cyli_dot_dat_in_part
+                matrix <0,1,0,2,0,0,0.199,0,-1,-6,-12.5,0>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_1_dash_4cyli_dot_dat_in_part
+                matrix <0,1,0,-2,0,0,-0.199,0,-1,6,-12.5,0>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_1_dash_4cyli_dot_dat_in_part
+                matrix <0,1,0,-2,0,0,-0.199,0,1,6,-12.5,0>
+        }
+// //
+}
+
+
+#declare LDX_peghole_dot_dat_in_part = union {
+// Peg Hole End
+// Name: peghole.dat
+// Author: James Jessiman
+// !LDRAW_ORG Primitive UPDATE 2010-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2002-05-01 [mkennedy] replace code with ring3
+// !HISTORY 2002-05-01 [sbliss] BFC
+// !HISTORY 2002-06-11 [PTadmin] Official Update 2002-03
+// !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement
+// !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01
+// !HISTORY 2010-01-14 [cwdee] Update ring3 to 4-4ring3
+// !HISTORY 2010-04-05 [PTadmin] Official Update 2010-01
+        object {
+                LDX_4_dash_4ring3_dot_dat_in_part
+                matrix <2,0,0,0,1,0,0,0,2,0,2,0>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_4_dash_4cyli_dot_dat_in_part
+                matrix <8,0,0,0,2,0,0,0,8,0,0,0>
         }
 }

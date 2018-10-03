@@ -1,0 +1,18 @@
+# slope brick 45 4 x 4 inverted double
+#
+# Oliver Cordes 2018-09-30
+# 
+descr=slope brick 45 4 x 4 inverted double
+type=brick
+file=lg_4854
+width=3
+length=1
+depth=2/3
+sx=1
+sy=1
+sz=-1
+parts=2
+part0=lg_4854
+text0=n
+part1=lg_4854_slope
+text0=r

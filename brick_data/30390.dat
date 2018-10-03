@@ -1,0 +1,16 @@
+# slope brick 45 2 x 4 inverted double with pins
+#
+# Oliver Cordes 2018-09-30
+# 
+descr=slope brick 45 2 x 4 inverted double with pins
+type=brick
+file=lg_30390
+width=1
+length=1
+depth=2/3
+sx=1
+sy=1
+sz=-1
+parts=1
+part0=lg_30390
+text0=n

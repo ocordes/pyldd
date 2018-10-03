@@ -1,0 +1,18 @@
+# slope brick 45 4 x 4 inverted double holes
+#
+# Oliver Cordes 2018-09-30
+# 
+descr=slope brick 45 4 x 4 inverted double with holes
+type=brick
+file=lg_72454
+width=3
+length=1
+depth=2/3
+sx=1
+sy=1
+sz=-1
+parts=2
+part0=lg_72454
+text0=n
+part1=lg_72454_slope
+text0=r

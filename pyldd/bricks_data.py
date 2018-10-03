@@ -92,10 +92,14 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  4282:  [ '4282', None ],     # plate 2 x 16
                  4286:  [ '4286', None ],     # slope brick 33 3 x 1
                  4287:  [ '4287', None ],     # slope brick 33 3 x 1 inverted
+                 4445:  [ '4445', None ],     # slope brick 45 2 x 8
                  4460:  [ '4460', None ],     # slope brick 75 2 x 1 x 3
                  4477:  [ '4477', None ],     # plate 1 x 10
+                 4509:  [ '4509', None ],     # train roof 33 6 x 6 double
+                 4515:  [ '4515', None ],     # slope brick 10 6 x 8
                  4589:  [ '4589', None ],     # nose cone small 1 x 1
                  4740:  [ '4740', None ],     # satellite dish 2 x 2
+                 4854:  [ '4854', None ],     # slope brick 45 4 x 4 inverted double
                  4861:  [ '4861', None ],     # slope brick 45 3 x 4 double / 33 slope
                  4871:  [ '4871', None ],     # slope brick 45 4 x 2 inverted double
                  6098:  [ '3867', None ],     # base 16 x 16 plate
@@ -110,6 +114,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  6636:  [ '6636', None ],     # flat tile 1 x 6
                  14719: [ '14719', None ],    # flat tile 2 x 2 corner
                  15571: [ '3048', None ],     # slope brick 45 1 x 2 triple
+                 15647: [ '30390', None ],    # slope brick 45 2 x 4 inverted double with pins
                  30055: [ '30055', None ],    # fence 1 x 4 x 2 spindled
                  30072: [ '30072', None ],    # brick 12 x 24
                  30136: [ '30136', None ],    # log brick 1 x 2
@@ -117,9 +122,12 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  30144: [ '30144', None ],    # brick 2 x 4 x 3
                  30145: [ '30145', None ],    # brick 2 x 2 x 3
                  30179: [ '30179', None ],    # door 1 x 4 x 6 framte type 1
+                 30183: [ '30183', None ],    # slope brick 45 6 x 4 inverted double with hole
                  30361: [ '30361', None ],    # cylinder 2 x 2 x 2 robot body
                  30363: [ '30363', None ],    # slope brick 18 4 x 2
                  30367: [ '30367', None ],    # cylinder 2 x 2 with dome top with blocked stud, R2-D2
+                 30373: [ '30373', None ],    # slope brick 65 6 x 6 x 2 inverted quadruple
+                 30390: [ '30390', None ],    # slope brick 45 4 x 2 double inverted with pins
                  30499: [ '3684', None ],     # slope brick 75 2 x 2 x 3
                  30505: [ '30505', None ],    # brick 3 x 3 without corner
                  41539: [ '41539', None ],    # plate 8 x 8
@@ -134,6 +142,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  50746: [ '50746', None ],    # slope tile 30 1 x 1 x 2/3
                  52501: [ '52501', None ],    # slope brick 45 6 x 1 inverted double
                  60033: [ '4202', None ],     # brick 4 x 12
+                 60219: [ '60219', None ],    # slope brick 45 6 x 4 inverted double with open center and 3 holes
                  60477: [ '60477', None ],    # slope brick 18 4 x 1
                  60481: [ '60481', None ],    # slope brick 65 2 x 1 x 2
                  60592: [ '60592', None ],    # window  1 x 2 x 2 without sill
@@ -143,6 +152,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  60608: [ '60608', None ],    # window 1 x 2 x 3 pane with thick corner tabs
                  60616: [ '60616', None ],    # door 1 x 4 x 6 smooth with square handle plinth
                  60623: [ '60623', None ],    # door 1 x 4 x 6 with 4 panes and stud handle
+                 72454: [ '72454', None ],    # slope brick 45 4 x 4 inverted double with holes
                  85080: [ '3063', None ],     # brick 2 x 2 corner round ?? LEGO has a different description but looks similar
                  85984: [ '85984', None ],    # Slope Tile 30 2 x 1 x 2/3
                  87087: [ '87087', None ],    # brick 1 x 1 with stud on 1 side
