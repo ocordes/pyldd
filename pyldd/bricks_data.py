@@ -58,6 +58,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  3070:  [ '3070', None ],     # flat tile 1 x 1
                  3185:  [ '3185', None ],     # fence 1 x 4 x 2
                  3245:  [ '3245', None ],     # brick 1 x 2 x 2
+                 3297:  [ '3297', None ],     # slope brick 33 3 x 4
                  3298:  [ '3298', None ],     # slope brick 33 3 x 2
                  3300:  [ '3300', None ],     # slope brick 33 2 x 2 double
                  3460:  [ '3460', None ],     # plate 1 x 8
@@ -70,6 +71,8 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  3666:  [ '3666', None ],     # plate 1 x 6
                  3676:  [ '3676', None ],     # slope brick 45 2x 2 inverted double convex
                  3678:  [ '3678', None ],     # slope brick 65 2 x 2 x 2
+                 3684:  [ '3684', None ],     # slope brick 75 2 x 2 x 3
+                 3685:  [ '3685', None ],     # slope brick 75 2 x 2 x 3 double convex
                  3688:  [ '3688', None ],     # slope brick 75 2 x 2 x 2 quad. convex
                  3710:  [ '3710', None ],     # plate 1 x 4
                  3747:  [ '3747', None ],     # slope brick 33 3 x 2 inverted
@@ -93,6 +96,8 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  4477:  [ '4477', None ],     # plate 1 x 10
                  4589:  [ '4589', None ],     # nose cone small 1 x 1
                  4740:  [ '4740', None ],     # satellite dish 2 x 2
+                 4861:  [ '4861', None ],     # slope brick 45 3 x 4 double / 33 slope
+                 4871:  [ '4871', None ],     # slope brick 45 4 x 2 inverted double
                  6098:  [ '3867', None ],     # base 16 x 16 plate
                  6141:  [ '6141', None ],     # plate 1 x 1 round
                  6143:  [ '3941', None ],     # brick 2 x 2 round
@@ -113,7 +118,9 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  30145: [ '30145', None ],    # brick 2 x 2 x 3
                  30179: [ '30179', None ],    # door 1 x 4 x 6 framte type 1
                  30361: [ '30361', None ],    # cylinder 2 x 2 x 2 robot body
+                 30363: [ '30363', None ],    # slope brick 18 4 x 2
                  30367: [ '30367', None ],    # cylinder 2 x 2 with dome top with blocked stud, R2-D2
+                 30499: [ '3684', None ],     # slope brick 75 2 x 2 x 3
                  30505: [ '30505', None ],    # brick 3 x 3 without corner
                  41539: [ '41539', None ],    # plate 8 x 8
                  41767: [ '41767', None ],    # wedge 4 x 2 right
