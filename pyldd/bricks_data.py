@@ -24,6 +24,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  2462:  [ '2462', None ],     # brick 3 x 3 facet
                  2577:  [ '2577', None ],     # brick 4 x 4 with round corner
                  2877:  [ '2877', None ],     # brick 1 x 2 with grille
+                 2921:  [ '2921', None ],     # brick 1 x 1 with handle
                  3001:  [ '3001', None ],     # brick 2 x 4
                  3002:  [ '3002', None ],     # brick 2 x 3
                  3003:  [ '3003', None ],     # brick 2 x 2
@@ -83,6 +84,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  3940:  [ '3940', None ],     # space stand 2 x 2 x 2
                  3941:  [ '3941', None ],     # brick 2 x 2 round
                  3942:  [ '3942', None ],     # cone 2 x 2 x 2 open stud
+                 4070:  [ '4070', None ],     # brick 1 x 1 x 1 with vertical stud (headlight brick)
                  4079:  [ '4079', None ],     # town seat 2 x 2
                  4083:  [ '4083', None ],     # bar 1 x 4 x 2
                  4162:  [ '4162', None ],     # flat tile 1 x 8
@@ -123,6 +125,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  30145: [ '30145', None ],    # brick 2 x 2 x 3
                  30179: [ '30179', None ],    # door 1 x 4 x 6 framte type 1
                  30183: [ '30183', None ],    # slope brick 45 6 x 4 inverted double with hole
+                 30241: [ '30241', None ],    # brick 1 x 1 with clip vertical
                  30361: [ '30361', None ],    # cylinder 2 x 2 x 2 robot body
                  30363: [ '30363', None ],    # slope brick 18 4 x 2
                  30367: [ '30367', None ],    # cylinder 2 x 2 with dome top with blocked stud, R2-D2
@@ -138,11 +141,14 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  44042: [ '2356', None ],     # brick 4 x 6
                  44237: [ '44237', None ],    # brick 2 x 6
                  44336: [ '44336', None ],    # baseplate 32 x 32 road 6-stud straight
+                 47905: [ '47905', None ],    # brick 1 x 1 with studs on the two opposite sides
+                 47974: [ '47974', None ],    # brick 4 x 8 round half circle
                  48092: [ '48092', None ],    # brick 4 x 4 corner round
                  50746: [ '50746', None ],    # slope tile 30 1 x 1 x 2/3
                  52501: [ '52501', None ],    # slope brick 45 6 x 1 inverted double
                  60033: [ '4202', None ],     # brick 4 x 12
                  60219: [ '60219', None ],    # slope brick 45 6 x 4 inverted double with open center and 3 holes
+                 60475: [ '30241', None ],    # brick 1 x 1 with clip vertical
                  60477: [ '60477', None ],    # slope brick 18 4 x 1
                  60481: [ '60481', None ],    # slope brick 65 2 x 1 x 2
                  60592: [ '60592', None ],    # window  1 x 2 x 2 without sill
@@ -159,5 +165,6 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  87620: [ '87620', None ],    # 2 x 2 facet
                  93273: [ '93273', None ],    # plate with bow 1 x 4 x 2/3
                  92946: [ '92946', None ],    # roof tile 1 x 2 45° W 1/3 Plate
+                 95188: [ '95188', None ],    # brick 6 x 6 corner round with slope 33
                  98283: [ '98283', None ]     # brick 1 x 2 with embossed bricks
 }

@@ -1648,3 +1648,221 @@ matrix <aw,0,0,0,ah,0,0,0,ad,ax,ay,az>
                 matrix <8,0,0,0,2,0,0,0,8,0,0,0>
         }
 }
+
+
+#declare LDX_48_slash_1_dash_4disc_dot_dat_in_part = disc // Disc 0.25
+{
+        <0,0,0>,<0,1,0>,1
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-1,0,0>,0
+                }
+        }
+}
+
+
+#declare LDX_3_dash_8chrd_dot_dat_in_part = disc // Disc 0.375
+{
+        <0,0,0>,<0,1,0>,1
+        clipped_by
+        {
+                plane
+                {
+                        <-0.70710678118654757274,0,-1.70710678118654746172>,-0.3826834559440612793
+                }
+        }
+}
+
+
+#declare LDX_1_dash_8ring3_dot_dat_in_part = disc // Ring 0.125
+{
+        <0,0,0>,<0,1,0>,4,3
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.70710678118654746172,0,0.70710678118654757274>,0
+                }
+        }
+}
+
+
+#declare LDX_stud4f4n_dot_dat_in_part = union {
+// Stud Tube Open with  4 Fillets Narrow
+// Name: stud4f4n.dat
+// Author: William Howard [WilliamH]
+// !LDRAW_ORG Primitive UPDATE 2012-02
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2012-04-06 [MagFors] subfiled fillet
+// !HISTORY 2012-08-09 [PTadmin] Official Update 2012-02
+// BFC INVERTNEXT
+        object {
+                LDX_4_dash_4cyli_dot_dat_in_part
+                matrix <6,0,0,0,4,0,0,0,-6,0,-4,0>
+        }
+        object {
+                LDX_1_dash_8cyli_dot_DAT_in_part
+                matrix <7.3912,0,-3.0616,0,4,0,-3.0616,0,-7.3912,0,-4,0>
+        }
+        object {
+                LDX_1_dash_8cyli_dot_DAT_in_part
+                matrix <-3.0616,0,-7.3912,0,4,0,-7.3912,0,3.0616,0,-4,0>
+        }
+        object {
+                LDX_1_dash_8cyli_dot_DAT_in_part
+                matrix <-7.3912,0,3.0616,0,4,0,3.0616,0,7.3912,0,-4,0>
+        }
+        object {
+                LDX_1_dash_8cyli_dot_DAT_in_part
+                matrix <3.0616,0,7.3912,0,4,0,7.3912,0,-3.0616,0,-4,0>
+        }
+        object {
+                LDX_1_dash_8ring3_dot_dat_in_part
+                matrix <1.8478,0,-0.7654,0,1,0,-0.7654,0,-1.8478,0,-4,0>
+        }
+        object {
+                LDX_1_dash_8ring3_dot_dat_in_part
+                matrix <-0.7654,0,-1.8478,0,1,0,-1.8478,0,0.7654,0,-4,0>
+        }
+        object {
+                LDX_1_dash_8ring3_dot_dat_in_part
+                matrix <-1.8478,0,0.7654,0,1,0,0.7654,0,1.8478,0,-4,0>
+        }
+        object {
+                LDX_1_dash_8ring3_dot_dat_in_part
+                matrix <0.7654,0,1.8478,0,1,0,1.8478,0,-0.7654,0,-4,0>
+        }
+}
+
+
+#declare LDX_48_slash_1_dash_4con2_dot_dat_in_part = cone // Cone 0.25
+{
+        <0,0,0>,3,<0,1,0>,2 open
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-1,0,0>,0
+                }
+        }
+}
+
+
+#declare LDX_48_slash_1_dash_4ring7_dot_dat_in_part = disc // Ring 0.25
+{
+        <0,0,0>,<0,1,0>,8,7
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-1,0,0>,0
+                }
+        }
+}
+
+
+#declare LDX_48_slash_5_dash_24rin7_dot_dat_in_part = disc // Ring 0.208333
+{
+        <0,0,0>,<0,1,0>,8,7
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.96592581821160528044,0,0.25881907524802133524>,0
+                }
+        }
+}
+
+
+#declare LDX_48_slash_5_dash_24ri20_dot_dat_in_part = disc // Ring 0.208333
+{
+        <0,0,0>,<0,1,0>,21,20
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.96592581821160528044,0,0.25881907524802133524>,0
+                }
+        }
+}
+
+
+#declare LDX_48_slash_5_dash_24ri28_dot_dat_in_part = disc // Ring 0.208333
+{
+        <0,0,0>,<0,1,0>,29,28
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.96592581821160528044,0,0.25881907524802133524>,0
+                }
+        }
+}
+
+
+#declare LDX_48_slash_5_dash_24ri29_dot_dat_in_part = disc // Ring 0.208333
+{
+        <0,0,0>,<0,1,0>,30,29
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.96592581821160528044,0,0.25881907524802133524>,0
+                }
+        }
+}
+
+
+#declare LDX_3_dash_4ring3_dot_dat_in_part = disc // Ring 0.75
+{
+        <0,0,0>,<0,1,0>,4,3
+        clipped_by
+        {
+                union
+                {
+                        plane
+                        {
+                                <0,0,-1>,0
+                        }
+                        plane
+                        {
+                                <1,0,0>,0
+                        }
+                }
+        }
+}
