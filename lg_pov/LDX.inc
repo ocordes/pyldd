@@ -1866,3 +1866,184 @@ matrix <aw,0,0,0,ah,0,0,0,ad,ax,ay,az>
                 }
         }
 }
+
+
+#declare LDX_48_slash_2_dash_4ring4_dot_dat_in_part = disc // Ring 0.5
+{
+        <0,0,0>,<0,1,0>,5,4
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+        }
+}
+
+
+#declare LDX_48_slash_4_dash_4cyli_dot_dat_in_part = cylinder // Cylinder 1
+{
+        <0,0,0>,<0,1,0>,1 open
+}
+
+
+#declare LDX_48_slash_1_dash_6cyli_dot_dat_in_part = cylinder // Cylinder 0.166667
+{
+        <0,0,0>,<0,1,0>,1 open
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.8660254193888975438,0,0.49999997297228343518>,0
+                }
+        }
+}
+
+
+#declare LDX_48_slash_5_dash_24rin9_dot_dat_in_part = disc // Ring 0.208333
+{
+        <0,0,0>,<0,1,0>,10,9
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.96592581821160528044,0,0.25881907524802133524>,0
+                }
+        }
+}
+
+
+#declare LDX_48_slash_1_dash_8ring5_dot_dat_in_part = disc // Ring 0.125
+{
+        <0,0,0>,<0,1,0>,6,5
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.70710678118654746172,0,0.70710678118654757274>,0
+                }
+        }
+}
+
+
+#declare LDX_48_slash_1_dash_8cyli_dot_dat_in_part = cylinder // Cylinder 0.125
+{
+        <0,0,0>,<0,1,0>,1 open
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.70710678118654746172,0,0.70710678118654757274>,0
+                }
+        }
+}
+
+
+#declare LDX_48_slash_2_dash_4disc_dot_dat_in_part = disc // Disc 0.5
+{
+        <0,0,0>,<0,1,0>,1
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+        }
+}
+
+
+#declare LDX_48_slash_4_dash_4rin10_dot_dat_in_part = disc // Ring 1
+{
+        <0,0,0>,<0,1,0>,11,10
+}
+
+
+#declare LDX_3_dash_4ndis_dot_dat_in_part = disc // Not-Disc 0.75
+{
+        <0,0,0>,<0,1,0>,2,1
+        clipped_by
+        {
+                union
+                {
+                        plane
+                        {
+                                <0,0,-1>,0
+                        }
+                        plane
+                        {
+                                <1,0,0>,0
+                        }
+                }
+                box
+                {
+                        <-1,-1,-1>,<1,1,1>
+                }
+        }
+}
+
+
+#declare LDX_48_slash_1_dash_16cyli_dot_dat_in_part = cylinder // Cylinder 0.0625
+{
+        <0,0,0>,<0,1,0>,1 open
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.38268343236508972627,0,0.92387953251128673848>,0
+                }
+        }
+}
+
+
+#declare LDX_48_slash_1_dash_6rin13_dot_dat_in_part = disc // Ring 0.166667
+{
+        <0,0,0>,<0,1,0>,14,13
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.8660254193888975438,0,0.49999997297228343518>,0
+                }
+        }
+}
+
+
+#declare LDX_48_slash_1_dash_6rin14_dot_dat_in_part = disc // Ring 0.166667
+{
+        <0,0,0>,<0,1,0>,15,14
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.8660254193888975438,0,0.49999997297228343518>,0
+                }
+        }
+}

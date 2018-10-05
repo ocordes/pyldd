@@ -126,6 +126,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  30179: [ '30179', None ],    # door 1 x 4 x 6 framte type 1
                  30183: [ '30183', None ],    # slope brick 45 6 x 4 inverted double with hole
                  30241: [ '30241', None ],    # brick 1 x 1 with clip vertical
+                 30360: [ '30360', None ],    # cylinder 3 x 6 x 2 2/3 horizontal
                  30361: [ '30361', None ],    # cylinder 2 x 2 x 2 robot body
                  30363: [ '30363', None ],    # slope brick 18 4 x 2
                  30367: [ '30367', None ],    # cylinder 2 x 2 with dome top with blocked stud, R2-D2
