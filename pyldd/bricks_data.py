@@ -91,6 +91,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  4201:  [ '4201', None ],     # brick 8 x 8
                  4202:  [ '4202', None ],     # brick 4 x 12
                  4204:  [ '4204', None ],     # brick 8 x 16
+                 4216:  [ '4216', None ],     # brick 1 x 2 with groove
                  4282:  [ '4282', None ],     # plate 2 x 16
                  4286:  [ '4286', None ],     # slope brick 33 3 x 1
                  4287:  [ '4287', None ],     # slope brick 33 3 x 1 inverted
@@ -100,6 +101,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  4509:  [ '4509', None ],     # train roof 33 6 x 6 double
                  4515:  [ '4515', None ],     # slope brick 10 6 x 8
                  4589:  [ '4589', None ],     # nose cone small 1 x 1
+                 4733:  [ '4733', None ],     # brick 1 x 1 with studs on sides
                  4740:  [ '4740', None ],     # satellite dish 2 x 2
                  4854:  [ '4854', None ],     # slope brick 45 4 x 4 inverted double
                  4861:  [ '4861', None ],     # slope brick 45 3 x 4 double / 33 slope
@@ -129,11 +131,14 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  30360: [ '30360', None ],    # cylinder 3 x 6 x 2 2/3 horizontal
                  30361: [ '30361', None ],    # cylinder 2 x 2 x 2 robot body
                  30363: [ '30363', None ],    # slope brick 18 4 x 2
+                 30364: [ '30364', None ],    # brick 1 x 2 locking with 1 finger on end
+                 30365: [ '30365', None ],    # brick 1 x 2 locking with 2 fingers on end
                  30367: [ '30367', None ],    # cylinder 2 x 2 with dome top with blocked stud, R2-D2
                  30373: [ '30373', None ],    # slope brick 65 6 x 6 x 2 inverted quadruple
                  30390: [ '30390', None ],    # slope brick 45 4 x 2 double inverted with pins
                  30499: [ '3684', None ],     # slope brick 75 2 x 2 x 3
                  30505: [ '30505', None ],    # brick 3 x 3 without corner
+                 30540: [ '30540', None ],    # hinge brick 1 x 2 locking with 2 fingers horizontal on end
                  41539: [ '41539', None ],    # plate 8 x 8
                  41767: [ '41767', None ],    # wedge 4 x 2 right
                  41768: [ '41768', None ],    # wedge 4 x 2 left
@@ -147,6 +152,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  48092: [ '48092', None ],    # brick 4 x 4 corner round
                  50746: [ '50746', None ],    # slope tile 30 1 x 1 x 2/3
                  52501: [ '52501', None ],    # slope brick 45 6 x 1 inverted double
+                 58846: [ '58846', None ],    # brick 10 x 10 corner round with tapered edge and cutout
                  60033: [ '4202', None ],     # brick 4 x 12
                  60219: [ '60219', None ],    # slope brick 45 6 x 4 inverted double with open center and 3 holes
                  60475: [ '30241', None ],    # brick 1 x 1 with clip vertical

@@ -2047,3 +2047,37 @@ matrix <aw,0,0,0,ah,0,0,0,ad,ax,ay,az>
                 }
         }
 }
+
+
+#declare LDX_48_slash_1_dash_4con4_dot_dat_in_part = cone // Cone 0.25
+{
+        <0,0,0>,5,<0,1,0>,4 open
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-1,0,0>,0
+                }
+        }
+}
+
+
+#declare LDX_48_slash_1_dash_4rin15_dot_dat_in_part = disc // Ring 0.25
+{
+        <0,0,0>,<0,1,0>,16,15
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-1,0,0>,0
+                }
+        }
+}
