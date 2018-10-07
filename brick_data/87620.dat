@@ -1,8 +1,8 @@
-# 2 x 2 facet
+# brick 2 x 2 facet
 #
 # Oliver Cordes 2018-08-06
 # 
-descr=2 x 2 facet
+descr=brick 2 x 2 facet
 type=brick
 file=lg_87620
 width=1

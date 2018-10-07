@@ -173,7 +173,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  85984: [ '85984', None ],    # Slope Tile 30 2 x 1 x 2/3
                  87087: [ '87087', None ],    # brick 1 x 1 with stud on 1 side
                  87559: [ '87559', None ],    # brick round corner 6 x 6 x 2
-                 87620: [ '87620', None ],    # 2 x 2 facet
+                 87620: [ '87620', None ],    # brick 2 x 2 facet
                  93273: [ '93273', None ],    # plate with bow 1 x 4 x 2/3
                  92946: [ '92946', None ],    # roof tile 1 x 2 45° W 1/3 Plate
                  95188: [ '95188', None ],    # brick 6 x 6 corner round with slope 33
