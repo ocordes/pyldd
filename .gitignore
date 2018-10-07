@@ -102,3 +102,14 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# some temporary files
+/Einrichtung1.ldr
+/Einrichtung1.lxf
+/Einrichtung1.pov
+/Haus_test2.lxf
+/Haus_test2.pov
+/Strassen1.lxf
+/Strassen1.pov
+/lg_pov/Einrichtung1.pov
+*.inc2

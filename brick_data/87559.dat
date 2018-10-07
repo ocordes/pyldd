@@ -1,0 +1,16 @@
+# brick corner round 6 x 6 x 2
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=brick corner round 6 x 6 x 2r
+type=brick
+file=lg_87559
+width=11
+length=-1
+depth=5/3
+sx=-1
+sy=1
+sz=-1
+parts=1
+part0=lg_87559
+text0=n

@@ -2081,3 +2081,232 @@ matrix <aw,0,0,0,ah,0,0,0,ad,ax,ay,az>
                 }
         }
 }
+
+
+#declare LDX_3_dash_16chrd_dot_dat_in_part = disc // Disc 0.1875
+{
+        <0,0,0>,<0,1,0>,1
+        clipped_by
+        {
+                plane
+                {
+                        <-0.92387953251128673848,0,-0.61731656763491016271>,-0.83146959543228149414
+                }
+        }
+}
+
+
+#declare LDX_1_dash_16chrd_dot_dat_in_part = disc // Disc 0.0625
+{
+        <0,0,0>,<0,1,0>,1
+        clipped_by
+        {
+                plane
+                {
+                        <-0.38268343236508978178,0,-0.07612046748871326152>,-0.98078525066375732422
+                }
+        }
+}
+
+
+#declare LDX_3_dash_16rin4_dot_dat_in_part = disc // Ring 0.1875
+{
+        <0,0,0>,<0,1,0>,5,4
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.92387953251128673848,0,0.38268343236508983729>,0
+                }
+        }
+}
+
+
+#declare LDX_1_dash_16rin4_dot_dat_in_part = disc // Ring 0.0625
+{
+        <0,0,0>,<0,1,0>,5,4
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.38268343236508972627,0,0.92387953251128673848>,0
+                }
+        }
+}
+
+
+#declare LDX_stug_dash_1x3_dot_dat_in_part = union {
+// Stud Group  1 x  3
+// Name: stug-1x3.dat
+// Author: Steffen [Steffen]
+// !LDRAW_ORG Primitive UPDATE 2012-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2012-03-30 [PTadmin] Official Update 2012-01
+        object {
+                lg_knob
+                matrix <0,0,-25,-25,0,0,0,-25,0,0,0,0>
+                matrix <1,0,0,0,1,0,0,0,1,-20,0,0>
+        }
+        object {
+                lg_knob
+                matrix <0,0,-25,-25,0,0,0,-25,0,0,0,0>
+                matrix <1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+        object {
+                lg_knob
+                matrix <0,0,-25,-25,0,0,0,-25,0,0,0,0>
+                matrix <1,0,0,0,1,0,0,0,1,20,0,0>
+        }
+}
+
+
+#declare LDX_stug_dash_3x1_dot_dat_in_part = union {
+// Stud Group  3 x  1
+// Name: stug-3x1.dat
+// Author: Magnus Forsberg [MagFors]
+// !LDRAW_ORG Primitive UPDATE 2012-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2012-03-30 [PTadmin] Official Update 2012-01
+        object {
+                lg_knob
+                matrix <0,0,-25,-25,0,0,0,-25,0,0,0,0>
+                matrix <1,0,0,0,1,0,0,0,1,0,0,20>
+        }
+        object {
+                lg_knob
+                matrix <0,0,-25,-25,0,0,0,-25,0,0,0,0>
+                matrix <1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+        object {
+                lg_knob
+                matrix <0,0,-25,-25,0,0,0,-25,0,0,0,0>
+                matrix <1,0,0,0,1,0,0,0,1,0,0,-20>
+        }
+}
+
+
+#declare LDX_stug3_dash_1x3_dot_dat_in_part = union {
+// Stud Tube Solid Group  1 x  3
+// Name: stug3-1x3.dat
+// Author: Steffen [Steffen]
+// !LDRAW_ORG Primitive UPDATE 2012-02
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2012-08-09 [PTadmin] Official Update 2012-02
+        object {
+                LDX_stud3_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,-20,0,0>
+        }
+        object {
+                LDX_stud3_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+        object {
+                LDX_stud3_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,20,0,0>
+        }
+}
+
+
+#declare LDX_1_dash_8ring4_dot_dat_in_part = disc // Ring 0.125
+{
+        <0,0,0>,<0,1,0>,5,4
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.70710678118654746172,0,0.70710678118654757274>,0
+                }
+        }
+}
+
+
+#declare LDX_48_slash_t08o5000_dot_dat_in_part = torus // Torus 0.125
+{
+        1,0.5
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.70710678118654746172,0,0.70710678118654757274>,0
+                }
+                difference
+                {
+                        cylinder
+                        {
+                                <0,0,0>,<0,1,0>,2                       }
+                        cylinder
+                        {
+                                <0,0,0>,<0,1,0>,1                       }
+                }
+        }
+}
+
+
+#declare LDX_1_dash_4ring3_dot_dat_in_part = disc // Ring 0.25
+{
+        <0,0,0>,<0,1,0>,4,3
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-1,0,0>,0
+                }
+        }
+}
+
+
+#declare LDX_48_slash_5_dash_48cyli_dot_dat_in_part = cylinder // Cylinder 0.104167
+{
+        <0,0,0>,<0,1,0>,1 open
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.60876141662887051087,0,0.79335334979062810401>,0
+                }
+        }
+}
+
+
+#declare LDX_48_slash_1_dash_8ring3_dot_dat_in_part = disc // Ring 0.125
+{
+        <0,0,0>,<0,1,0>,4,3
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.70710678118654746172,0,0.70710678118654757274>,0
+                }
+        }
+}

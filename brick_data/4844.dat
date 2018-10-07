@@ -1,0 +1,16 @@
+# boat mast base 4 x 4 x 9 with top notches
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=boat mast base 4 x 4 x 9 with top notches
+type=brick
+file=lg_4844
+width=3
+length=3
+depth=0
+sx=1
+sy=1
+sz=-1
+parts=1
+part0=lg_4844
+text0=n

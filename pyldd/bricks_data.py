@@ -103,9 +103,11 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  4589:  [ '4589', None ],     # nose cone small 1 x 1
                  4733:  [ '4733', None ],     # brick 1 x 1 with studs on sides
                  4740:  [ '4740', None ],     # satellite dish 2 x 2
+                 4844:  [ '4844', None ],     # boat mast base 4 x 4 x 9 with top notches
                  4854:  [ '4854', None ],     # slope brick 45 4 x 4 inverted double
                  4861:  [ '4861', None ],     # slope brick 45 3 x 4 double / 33 slope
                  4871:  [ '4871', None ],     # slope brick 45 4 x 2 inverted double
+                 6066:  [ '6066', None ],     # castle turrent top 4 x 8 x 2 1/3
                  6098:  [ '3867', None ],     # base 16 x 16 plate
                  6141:  [ '6141', None ],     # plate 1 x 1 round
                  6143:  [ '3941', None ],     # brick 2 x 2 round
@@ -126,6 +128,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  30144: [ '30144', None ],    # brick 2 x 4 x 3
                  30145: [ '30145', None ],    # brick 2 x 2 x 3
                  30179: [ '30179', None ],    # door 1 x 4 x 6 framte type 1
+                 30181: [ '30181', None ],    # brick 4 x 10 with cut corners
                  30183: [ '30183', None ],    # slope brick 45 6 x 4 inverted double with hole
                  30241: [ '30241', None ],    # brick 1 x 1 with clip vertical
                  30360: [ '30360', None ],    # cylinder 3 x 6 x 2 2/3 horizontal
@@ -169,6 +172,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  85080: [ '3063', None ],     # brick 2 x 2 corner round ?? LEGO has a different description but looks similar
                  85984: [ '85984', None ],    # Slope Tile 30 2 x 1 x 2/3
                  87087: [ '87087', None ],    # brick 1 x 1 with stud on 1 side
+                 87559: [ '87559', None ],    # brick round corner 6 x 6 x 2
                  87620: [ '87620', None ],    # 2 x 2 facet
                  93273: [ '93273', None ],    # plate with bow 1 x 4 x 2/3
                  92946: [ '92946', None ],    # roof tile 1 x 2 45° W 1/3 Plate
