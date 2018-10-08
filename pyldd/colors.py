@@ -103,7 +103,7 @@ color_table = {    1: 'lg_white',
 		 315: 'lg_flat_silver',   # missing
 		 316: 'lg_pearl_dark_grey',  # missing
 		 321: 'lg_dark_azure',  # missing
-		 322: 'lg_medium_azure', # missing
+		 322: 'lg_medium_azure', 
 		 323: 'lg_light_aqua', # missing
 		 324: 'lg_medium_lavender', # missing
 		 325: 'lg_lavender', # missing

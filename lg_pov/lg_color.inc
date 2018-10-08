@@ -543,6 +543,12 @@
  finish { lg_solid_finish }
 }
 
+// 322
+#declare lg_medium_azure = texture {
+ pigment { rgb <54/255,174/255,191/255> }
+ finish { lg_solid_finish }
+}
+
 // 999
 #declare lg_undefined = texture {
  pigment { rgb <0.5, 0.7, 0.9> }
