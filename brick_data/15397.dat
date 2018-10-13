@@ -5,9 +5,9 @@
 descr=plate 3 x 3 cross
 type=plate
 file=lg_15397
-width=1
-length=1
-depth=2
+width=4
+length=0
+depth=0
 sx=1
 sy=1
 sz=1

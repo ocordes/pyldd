@@ -123,7 +123,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  6565:  [ '6565', None ],     # wedge 3 x 2 left
                  6636:  [ '6636', None ],     # flat tile 1 x 6
                  14719: [ '14719', None ],    # flat tile 2 x 2 corner
-                 15397: [ '15397', None ],    # plate 3 x 3 cross 
+                 15397: [ '15397', None ],    # plate 3 x 3 cross
                  15571: [ '3048', None ],     # slope brick 45 1 x 2 triple
                  15573: [ '3794', None ],     # plate 1 x 2 with stud
                  15647: [ '30390', None ],    # slope brick 45 2 x 4 inverted double with pins
@@ -184,6 +184,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  87580: [ '87580', None ],    # plate 2 x 2 with stud
                  87620: [ '87620', None ],    # brick 2 x 2 facet
                  93273: [ '93273', None ],    # plate with bow 1 x 4 x 2/3
+                 92593: [ '92593', None ],    # plate 1 x 4 with 2 knobs
                  92946: [ '92946', None ],    # roof tile 1 x 2 45° W 1/3 Plate
                  95188: [ '95188', None ],    # brick 6 x 6 corner round with slope 33
                  98283: [ '98283', None ]     # brick 1 x 2 with embossed bricks
