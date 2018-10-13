@@ -23,6 +23,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  2454:  [ '2454', None ],     # brick 1 x 2 x 5
                  2462:  [ '2462', None ],     # brick 3 x 3 facet
                  2577:  [ '2577', None ],     # brick 4 x 4 with round corner
+                 2639:  [ '2639', None ],     # plate 4 x 4 corner
                  2877:  [ '2877', None ],     # brick 1 x 2 with grille
                  2921:  [ '2921', None ],     # brick 1 x 1 with handle
                  3001:  [ '3001', None ],     # brick 2 x 4
@@ -42,6 +43,8 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  3024:  [ '3024', None ],     # plate 1 x 1
                  3028:  [ '3028', None ],     # plate 6 x 12
                  3029:  [ '3029', None ],     # plate 4 x 12
+                 3031:  [ '3031', None ],     # plate 4 x 4
+                 3034:  [ '3034', None ],     # plate 2 x 8
                  3035:  [ '3035', None ],     # plate 4 x 8
                  3036:  [ '3036', None ],     # plate 6 x 8
                  3037:  [ '3037', None ],     # slope brick 45 2 x 4
@@ -115,6 +118,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  6098:  [ '3867', None ],     # base 16 x 16 plate
                  6141:  [ '6141', None ],     # plate 1 x 1 round
                  6143:  [ '3941', None ],     # brick 2 x 2 round
+                 6179:  [ '6179', None ],     # plate 4 x 4 with studs on edges
                  6212:  [ '6212', None ],     # brick 4 x 10
                  6213:  [ '6213', None ],     # brick 2 x 6 x 3
                  6215:  [ '6215', None ],     # brick 2 x 3 with curved top
@@ -166,6 +170,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  60219: [ '60219', None ],    # slope brick 45 6 x 4 inverted double with open center and 3 holes
                  60475: [ '30241', None ],    # brick 1 x 1 with clip vertical
                  60477: [ '60477', None ],    # slope brick 18 4 x 1
+                 60479: [ '60479', None ],    # plate 1 x 12
                  60481: [ '60481', None ],    # slope brick 65 2 x 1 x 2
                  60592: [ '60592', None ],    # window  1 x 2 x 2 without sill
                  60594: [ '60594', None ],    # window 1 x 4 x 3 without shutter tabs
@@ -183,6 +188,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  87559: [ '87559', None ],    # brick round corner 6 x 6 x 2
                  87580: [ '87580', None ],    # plate 2 x 2 with stud
                  87620: [ '87620', None ],    # brick 2 x 2 facet
+                 88646: [ '88646', None ],    # plate 3 x 4 with 4 knobs
                  93273: [ '93273', None ],    # plate with bow 1 x 4 x 2/3
                  92593: [ '92593', None ],    # plate 1 x 4 with 2 knobs
                  92946: [ '92946', None ],    # roof tile 1 x 2 45° W 1/3 Plate

@@ -1,0 +1,16 @@
+# Plate 2 x 8
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=plate 2 x 8
+type=plate
+file=lg_3034
+width=7
+length=1
+depth=0
+sx=1
+sy=1
+sz=1
+parts=1
+part0=lg_3034
+text0=n
