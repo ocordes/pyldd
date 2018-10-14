@@ -368,6 +368,7 @@ union {
    <-0.5, -0.6, -2*LG_PLATE_HEIGHT-LG_E>
   }
  }
+ rotate z*-90
 } 
 
 #declare lg_4488_clear = 

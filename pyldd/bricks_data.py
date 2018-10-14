@@ -116,6 +116,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  4445:  [ '4445', None ],     # slope brick 45 2 x 8
                  4460:  [ '4460', None ],     # slope brick 75 2 x 1 x 3
                  4477:  [ '4477', None ],     # plate 1 x 10
+                 4488:  [ '4488', None ],     # plate 2 x 2 with wheel holder
                  4509:  [ '4509', None ],     # train roof 33 6 x 6 double
                  4515:  [ '4515', None ],     # slope brick 10 6 x 8
                  4589:  [ '4589', None ],     # nose cone small 1 x 1
@@ -125,6 +126,8 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  4854:  [ '4854', None ],     # slope brick 45 4 x 4 inverted double
                  4861:  [ '4861', None ],     # slope brick 45 3 x 4 double / 33 slope
                  4871:  [ '4871', None ],     # slope brick 45 4 x 2 inverted double
+                 6014:  [ '6014' ,None ],     # wheel wide
+                 6015:  [ '6015', None ],     # tyre wide
                  6066:  [ '6066', None ],     # castle turrent top 4 x 8 x 2 1/3
                  6098:  [ '3867', None ],     # base 16 x 16 plate
                  6141:  [ '6141', None ],     # plate 1 x 1 round

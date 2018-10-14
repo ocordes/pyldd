@@ -1,0 +1,16 @@
+# wheel wide
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=wheel wide
+type=wheel
+file=lg_6014
+width=0
+length=1
+depth=-1/3
+sx=1
+sy=1
+sz=1
+parts=1
+part0=lg_6014
+text0=n
