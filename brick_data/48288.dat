@@ -1,0 +1,16 @@
+# tile 8 x 16
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=tile 8 x 16
+type=brick
+file=lg_48288
+width=15
+length=7
+depth=2/3
+sx=1
+sy=1
+sz=1
+parts=1
+part0=lg_48288
+text0=n

@@ -1,0 +1,16 @@
+# plate 4 x 6 with studs on edges
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=plate 4 x 6 with studs on edges
+type=plate
+file=lg_6180
+width=5
+length=3
+depth=0
+sx=1
+sy=1
+sz=-1
+parts=1
+part0=lg_6180
+text0=n
