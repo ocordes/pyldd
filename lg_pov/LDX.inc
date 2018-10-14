@@ -2310,3 +2310,33 @@ matrix <aw,0,0,0,ah,0,0,0,ad,ax,ay,az>
                 }
         }
 }
+
+
+#declare LDX_4_dash_4rin24_dot_dat_in_part = disc // Ring 1
+{
+        <0,0,0>,<0,1,0>,25,24
+}
+
+
+#declare LDX_4_dash_4rin10_dot_dat_in_part = disc // Ring 1
+{
+        <0,0,0>,<0,1,0>,11,10
+}
+
+
+#declare LDX_4_dash_4rin22_dot_dat_in_part = disc // Ring 1
+{
+        <0,0,0>,<0,1,0>,23,22
+}
+
+
+#declare LDX_4_dash_4rin31_dot_dat_in_part = disc // Ring 1
+{
+        <0,0,0>,<0,1,0>,32,31
+}
+
+
+#declare LDX_4_dash_4ring4_dot_dat_in_part = disc // Ring 1
+{
+        <0,0,0>,<0,1,0>,5,4
+}

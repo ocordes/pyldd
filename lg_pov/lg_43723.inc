@@ -221,6 +221,7 @@ union {
   rotate <0, 0, -90>
   translate <-LG_BRICK_WIDTH, LG_BRICK_WIDTH/2, 0>
  }
+ rotate z*90
 }
 
 #declare lg_43723_clear =

@@ -244,6 +244,7 @@ union {
   translate <-1.5*LG_BRICK_WIDTH, LG_BRICK_WIDTH/2, 0>
  }
  scale <1, -1, 1>
+ rotate z*90
 }
 
 #declare lg_41769_clear =

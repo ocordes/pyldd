@@ -1,0 +1,16 @@
+# wedge plate 3 x 4 with stud notches
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=wedge plate 3 x 4 with stud notches
+type=plate
+file=lg_48183
+width=3
+length=3
+depth=0
+sx=1
+sy=1
+sz=-1
+parts=1
+part0=lg_48183
+text0=n

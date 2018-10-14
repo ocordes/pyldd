@@ -243,6 +243,7 @@ union {
    }
   }
  }
+ rotate z*-90
 }
 
 #declare lg_48183_clear =

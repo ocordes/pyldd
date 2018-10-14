@@ -1,0 +1,16 @@
+# plate 2 x 2 round
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=plate 2 x 2 round
+type=plate
+file=lg_4032
+width=1
+length=1
+depth=0
+sx=1
+sy=1
+sz=1
+parts=1
+part0=lg_4032
+text0=n

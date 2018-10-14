@@ -1,0 +1,16 @@
+# wing 2 x 4
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=wing 2 x 4
+type=plate
+file=lg_51739
+width=3
+length=-1
+depth=0
+sx=1
+sy=1
+sz=-1
+parts=1
+part0=lg_51739
+text0=n

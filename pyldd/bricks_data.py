@@ -16,15 +16,18 @@ History:
 known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  2356:  [ '2356', None ],     # brick 4 x 6
                  2357:  [ '2357', None ],     # brick 2 x 2 corner
+                 2376:  [ '2376', None ],     # tile 2 x 2 round with lifting ring
                  2412:  [ '2412', None ],     # tile 1 x 2 grille without groove
                  2420:  [ '2420', None ],     # plate 2 x 2 corner
                  2431:  [ '2431', None ],     # flat tile 1 x 4
                  2445:  [ '2445', None ],     # plate 2 x 12
                  2449:  [ '2449', None ],     # slope brick 75 2 x 1 x 3 inverted
+                 2450:  [ '2450', None ],     # plate 3 x 3 without corner
                  2454:  [ '2454', None ],     # brick 1 x 2 x 5
                  2462:  [ '2462', None ],     # brick 3 x 3 facet
                  2577:  [ '2577', None ],     # brick 4 x 4 with round corner
                  2639:  [ '2639', None ],     # plate 4 x 4 corner
+                 2654:  [ '2654', None ],     # boot stud 2 x 2
                  2877:  [ '2877', None ],     # brick 1 x 2 with grille
                  2921:  [ '2921', None ],     # brick 1 x 1 with handle
                  3001:  [ '3001', None ],     # brick 2 x 4
@@ -97,9 +100,11 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  3940:  [ '3940', None ],     # space stand 2 x 2 x 2
                  3941:  [ '3941', None ],     # brick 2 x 2 round
                  3942:  [ '3942', None ],     # cone 2 x 2 x 2 open stud
+                 4032:  [ '4032', None ],     # plate 2 x 2 round
                  4070:  [ '4070', None ],     # brick 1 x 1 x 1 with vertical stud (headlight brick)
                  4079:  [ '4079', None ],     # town seat 2 x 2
                  4083:  [ '4083', None ],     # bar 1 x 4 x 2
+                 4150:  [ '4150', None ],     # tile 2 x 2 round
                  4162:  [ '4162', None ],     # flat tile 1 x 8
                  4201:  [ '4201', None ],     # brick 8 x 8
                  4202:  [ '4202', None ],     # brick 4 x 12
@@ -137,6 +142,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  6576:  [ '6576', None ],     # plate 4 x 8 with studs in center
                  6636:  [ '6636', None ],     # flat tile 1 x 6
                  14719: [ '14719', None ],    # flat tile 2 x 2 corner
+                 14769: [ '4150', None ],     # tile 2 x 2 round
                  15397: [ '15397', None ],    # plate 3 x 3 cross
                  15571: [ '3048', None ],     # slope brick 45 1 x 2 triple
                  15573: [ '3794', None ],     # plate 1 x 2 with stud
@@ -151,6 +157,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  30181: [ '30181', None ],    # brick 4 x 10 with cut corners
                  30183: [ '30183', None ],    # slope brick 45 6 x 4 inverted double with hole
                  30241: [ '30241', None ],    # brick 1 x 1 with clip vertical
+                 30357: [ '30357', None ],    # plate 3 x 3 corner round
                  30360: [ '30360', None ],    # cylinder 3 x 6 x 2 2/3 horizontal
                  30361: [ '30361', None ],    # cylinder 2 x 2 x 2 robot body
                  30363: [ '30363', None ],    # slope brick 18 4 x 2
@@ -165,6 +172,10 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  41539: [ '41539', None ],    # plate 8 x 8
                  41767: [ '41767', None ],    # wedge 4 x 2 right
                  41768: [ '41768', None ],    # wedge 4 x 2 left
+                 41769: [ '41769', None ],    # wedge plate 4 x 2 right
+                 41770: [ '41770', None ],    # wedge plate 4 x 2 left
+                 43722: [ '43722', None ],    # wedge plate 3 x 2 right
+                 43723: [ '43723', None ],    # wedge plate 3 x 2 left
                  43802: [ '4201', None ],     # brick 8 x 8
                  44041: [ '4204', None ],     # brick 8 x 16
                  44042: [ '2356', None ],     # brick 4 x 6
@@ -173,8 +184,10 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  47905: [ '47905', None ],    # brick 1 x 1 with studs on the two opposite sides
                  47974: [ '47974', None ],    # brick 4 x 8 round half circle
                  48092: [ '48092', None ],    # brick 4 x 4 corner round
+                 48183: [ '48183', None ],    # wedge plate 3 x 4 with stud notches
                  48288: [ '48288', None ],    # tile 8 x 16
                  50746: [ '50746', None ],    # slope tile 30 1 x 1 x 2/3
+                 51739: [ '51739', None ],    # wing 2 x 4
                  52501: [ '52501', None ],    # slope brick 45 6 x 1 inverted double
                  58846: [ '58846', None ],    # brick 10 x 10 corner round with tapered edge and cutout
                  60033: [ '4202', None ],     # brick 4 x 12
@@ -193,6 +206,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  63864: [ '63864', None ],    # flat tile 1 x 3
                  64799: [ '64799', None ],    # frame plate 4 x 4
                  72454: [ '72454', None ],    # slope brick 45 4 x 4 inverted double with holes
+                 74698: [ '2376', None ],     # tile 2 x 2 round with lifting ring
                  85080: [ '3063', None ],     # brick 2 x 2 corner round ?? LEGO has a different description but looks similar
                  85984: [ '85984', None ],    # Slope Tile 30 2 x 1 x 2/3
                  87087: [ '87087', None ],    # brick 1 x 1 with stud on 1 side
@@ -201,7 +215,9 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  87580: [ '87580', None ],    # plate 2 x 2 with stud
                  87620: [ '87620', None ],    # brick 2 x 2 facet
                  88646: [ '88646', None ],    # plate 3 x 4 with 4 knobs
+                 90194: [ '48183', None ],    # wedge plate 3 x 4 with stud notches
                  90498: [ '48288', None ],    # tile 8 x 16
+                 91049: [ '91049', None ],    # plate 1.5 x 1.5 x 2/3 round
                  91988: [ '91988', None ],    # plate 2 x 14
                  92438: [ '92438', None ],    # plate 8 x 16
                  92593: [ '92593', None ],    # plate 1 x 4 with 2 knobs
