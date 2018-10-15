@@ -75,6 +75,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  3297:  [ '3297', None ],     # slope brick 33 3 x 4
                  3298:  [ '3298', None ],     # slope brick 33 3 x 2
                  3300:  [ '3300', None ],     # slope brick 33 2 x 2 double
+                 3307:  [ '3307', None ],     # arch 1 x 6 x 2
                  3456:  [ '3456', None ],     # plate 6 x 14
                  3460:  [ '3460', None ],     # plate 1 x 8
                  3470:  [ '3470', None ],     # plant tree oval 4 x 4 x 6
@@ -113,12 +114,17 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  4282:  [ '4282', None ],     # plate 2 x 16
                  4286:  [ '4286', None ],     # slope brick 33 3 x 1
                  4287:  [ '4287', None ],     # slope brick 33 3 x 1 inverted
+                 4345:  [ '4345', None ],     # mail box 2 x 2 x 2 open studs
+                 4346:  [ '4346', None ],     # mail box 2 x 2 x 2 door
                  4445:  [ '4445', None ],     # slope brick 45 2 x 8
                  4460:  [ '4460', None ],     # slope brick 75 2 x 1 x 3
                  4477:  [ '4477', None ],     # plate 1 x 10
                  4488:  [ '4488', None ],     # plate 2 x 2 with wheel holder
+                 4490:  [ '4490', None ],     # arch 1 x 3
                  4509:  [ '4509', None ],     # train roof 33 6 x 6 double
                  4515:  [ '4515', None ],     # slope brick 10 6 x 8
+                 4532:  [ '4532', None ],     # cupboard 2 x 3 x 2
+                 4536:  [ '4536', None ],     # cupboard 2 x 3 x 2 drawer
                  4589:  [ '4589', None ],     # nose cone small 1 x 1
                  4733:  [ '4733', None ],     # brick 1 x 1 with studs on sides
                  4740:  [ '4740', None ],     # satellite dish 2 x 2
@@ -129,6 +135,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  6014:  [ '6014' ,None ],     # wheel wide
                  6015:  [ '6015', None ],     # tyre wide
                  6066:  [ '6066', None ],     # castle turrent top 4 x 8 x 2 1/3
+                 6091:  [ '6091', None ],     # brick 2 x 1 x 1 & 1/3 with curved top
                  6098:  [ '3867', None ],     # base 16 x 16 plate
                  6141:  [ '6141', None ],     # plate 1 x 1 round
                  6143:  [ '3941', None ],     # brick 2 x 2 round
@@ -222,6 +229,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  90498: [ '48288', None ],    # tile 8 x 16
                  91049: [ '91049', None ],    # plate 1.5 x 1.5 x 2/3 round
                  91988: [ '91988', None ],    # plate 2 x 14
+                 92410: [ '92410', None ],    # cupboard 2 x 3 x 2 open studs
                  92438: [ '92438', None ],    # plate 8 x 16
                  92593: [ '92593', None ],    # plate 1 x 4 with 2 knobs
                  92946: [ '92946', None ],    # roof tile 1 x 2 45° W 1/3 Plate
