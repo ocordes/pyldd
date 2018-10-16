@@ -1,0 +1,16 @@
+# slope brick curved 3 x 1
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=slope brick curved 3 x 1
+type=brick
+file=lg_50950
+width=2
+length=0
+depth=1/3
+sx=1
+sy=1
+sz=1
+parts=1
+part0=lg_50950
+text0=n

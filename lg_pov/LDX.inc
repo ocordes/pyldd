@@ -2340,3 +2340,18 @@ matrix <aw,0,0,0,ah,0,0,0,ad,ax,ay,az>
 {
         <0,0,0>,<0,1,0>,5,4
 }
+
+
+#declare LDX_3_dash_16cylo_dot_dat_in_part = union {
+// Cylinder Open 0.1875
+// Name: 3-16cylo.dat
+// Author: J.C. Tchang [tchang]
+// !LDRAW_ORG Primitive UPDATE 2013-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2013-07-21 [PTadmin] Official Update 2013-01
+        object {
+                LDX_3_dash_16cyli_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+}

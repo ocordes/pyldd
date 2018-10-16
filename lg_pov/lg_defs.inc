@@ -532,4 +532,8 @@ cylinder {
  (0.125)
 }
 
+
+#declare L3LDrawToLgeo = transform { matrix <0,-LG_BRICK_WIDTH/20,0, 0,0,-LG_BRICK_HEIGHT/24, -LG_BRICK_WIDTH/20,0,0, 0,0,4*LG_BRICK_HEIGHT/24> }
+#declare L3LgeoToLDraw = transform { matrix <0,0,-20/LG_BRICK_WIDTH, -20/LG_BRICK_WIDTH,0,0, 0,-24/LG_BRICK_HEIGHT,0, 0,0,0> }
+
 #end

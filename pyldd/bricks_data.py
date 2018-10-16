@@ -151,8 +151,11 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  6565:  [ '6565', None ],     # wedge 3 x 2 left
                  6576:  [ '6576', None ],     # plate 4 x 8 with studs in center
                  6636:  [ '6636', None ],     # flat tile 1 x 6
+                 10314: [ '10314', None ],    # brick 1 x 4 x 1.333 with curved top without understuds
+                 11477: [ '11477', None ],    # slope brick curved 2 x 1
                  14719: [ '14719', None ],    # flat tile 2 x 2 corner
                  14769: [ '4150', None ],     # tile 2 x 2 round
+                 15068: [ '15068', None ],    # slope brick curved 2 x 2 x 2/3
                  15397: [ '15397', None ],    # plate 3 x 3 cross
                  15571: [ '3048', None ],     # slope brick 45 1 x 2 triple
                  15573: [ '3794', None ],     # plate 1 x 2 with stud
@@ -197,6 +200,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  48183: [ '48183', None ],    # wedge plate 3 x 4 with stud notches
                  48288: [ '48288', None ],    # tile 8 x 16
                  50746: [ '50746', None ],    # slope tile 30 1 x 1 x 2/3
+                 50950: [ '50950', None ],    # slope brick curved 3 x 1
                  51739: [ '51739', None ],    # wing 2 x 4
                  52501: [ '52501', None ],    # slope brick 45 6 x 1 inverted double
                  58846: [ '58846', None ],    # brick 10 x 10 corner round with tapered edge and cutout
