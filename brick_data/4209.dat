@@ -1,0 +1,16 @@
+# hose reel 2 x 4 x 2 holder
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=hose reel 2 x 4 x 2 holder
+type=brick
+file=lg_4209
+width=3
+length=1
+depth=5/3
+sx=1
+sy=1
+sz=-1
+parts=1
+part0=lg_4209
+text0=n

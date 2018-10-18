@@ -107,9 +107,11 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  4083:  [ '4083', None ],     # bar 1 x 4 x 2
                  4150:  [ '4150', None ],     # tile 2 x 2 round
                  4162:  [ '4162', None ],     # flat tile 1 x 8
+                 4175:  [ '4175', None ],     # plate 1 x 2 with ladder
                  4201:  [ '4201', None ],     # brick 8 x 8
                  4202:  [ '4202', None ],     # brick 4 x 12
                  4204:  [ '4204', None ],     # brick 8 x 16
+                 4209:  [ '4209', None ],     # hose reel 2 x 4 x 2 holder
                  4216:  [ '4216', None ],     # brick 1 x 2 with groove
                  4282:  [ '4282', None ],     # plate 2 x 16
                  4286:  [ '4286', None ],     # slope brick 33 3 x 1
@@ -124,6 +126,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  4509:  [ '4509', None ],     # train roof 33 6 x 6 double
                  4515:  [ '4515', None ],     # slope brick 10 6 x 8
                  4532:  [ '4532', None ],     # cupboard 2 x 3 x 2
+                 4533:  [ '4533', None ],     # cupboard 2 x 3 x 2 door
                  4536:  [ '4536', None ],     # cupboard 2 x 3 x 2 drawer
                  4589:  [ '4589', None ],     # nose cone small 1 x 1
                  4733:  [ '4733', None ],     # brick 1 x 1 with studs on sides

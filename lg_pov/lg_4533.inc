@@ -158,6 +158,7 @@ union {
   }
   translate <-3*LG_BRICK_WIDTH+2.5*LG_TOP_HEIGHT+1.5*LG_WALL_WIDTH, -0.12, -2.5*LG_PLATE_HEIGHT+LG_TOP_HEIGHT/2>
  }
+ rotate z*90
 }
 
 #declare lg_4533_clear =
