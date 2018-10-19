@@ -275,16 +275,16 @@ union {
     <-LG_BRICK_WIDTH/2+0.08, -2*LG_BRICK_WIDTH+0.08, LG_E>,
     <-LG_BRICK_WIDTH/2-LG_E, -2*LG_BRICK_WIDTH-LG_E, -LG_WALL_WIDTH-LG_E>
    }
-   sphere {
-    <0, LG_BRICK_WIDTH/2, 0>,
-    LG_WALL_WIDTH
-    scale <1, 1, 0.5>
-   } 
-   sphere {
-    <0, -LG_BRICK_WIDTH/2, 0>,
-    LG_WALL_WIDTH
-    scale <1, 1, 0.5>
-   } 
+   //sphere {
+   // <0, LG_BRICK_WIDTH/2, 0>,
+   // LG_WALL_WIDTH
+   // scale <1, 1, 0.5>
+   //} 
+   //sphere {
+   // <0, -LG_BRICK_WIDTH/2, 0>,
+   // LG_WALL_WIDTH
+   // scale <1, 1, 0.5>
+   //} 
   }
  }
 }

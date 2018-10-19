@@ -56,14 +56,17 @@ def lxml_parse_bricks( bricks_tree ):
     bricks = []
     for ebrick in bricks_tree:
         attr = ebrick.attrib
-        part = ebrick.find( 'Part' )
-        material = part.attrib['materials']
-        attr['materialID'] = material.split(',',maxsplit=1)[0]
-        attr['decoration'] = part.attrib.get( 'decoration', '-1' )
-        bone = part.find( 'Bone')
-        attr['transformation'] = bone.attrib['transformation']
-        brick = Brick( attr )
-        bricks.append( brick )
+        # some bricks are consists of several small bricks
+        parts = ebrick.findall( 'Part')
+        for part in parts:
+            material = part.attrib['materials']
+            attr['designID'] = part.attrib['designID']
+            attr['materialID'] = material.split(',',maxsplit=1)[0]
+            attr['decoration'] = part.attrib.get( 'decoration', '-1' )
+            bone = part.find( 'Bone')
+            attr['transformation'] = bone.attrib['transformation']
+            brick = Brick( attr )
+            bricks.append( brick )
 
     return bricks
 

@@ -96,6 +96,8 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  3794:  [ '3794', None ],     # plate 1 x 2 with stud
                  3795:  [ '3795', None ],     # plate 2 x 6
                  3811:  [ '3811', None ],     # base 32 x 32 plate
+                 3828:  [ '3828', None ],     # car steering wheel
+                 3829:  [ '3829', None ],     # car steering wheel stand
                  3832:  [ '3832', None ],     # plate 2 x 10
                  3900:  [ '3900', None ],     # minifig signal holder (stop sign)
                  3940:  [ '3940', None ],     # space stand 2 x 2 x 2
@@ -159,6 +161,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  14719: [ '14719', None ],    # flat tile 2 x 2 corner
                  14769: [ '4150', None ],     # tile 2 x 2 round
                  15068: [ '15068', None ],    # slope brick curved 2 x 2 x 2/3
+                 15332: [ '15332', None ],    # fence 1 x 4 x 2 with 4 knobs
                  15397: [ '15397', None ],    # plate 3 x 3 cross
                  15571: [ '3048', None ],     # slope brick 45 1 x 2 triple
                  15573: [ '3794', None ],     # plate 1 x 2 with stud
@@ -197,6 +200,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  44042: [ '2356', None ],     # brick 4 x 6
                  44237: [ '44237', None ],    # brick 2 x 6
                  44336: [ '44336', None ],    # baseplate 32 x 32 road 6-stud straight
+                 45677: [ '45677', None ],    # wedge 4 x 4 x 2/3 curved
                  47905: [ '47905', None ],    # brick 1 x 1 with studs on the two opposite sides
                  47974: [ '47974', None ],    # brick 4 x 8 round half circle
                  48092: [ '48092', None ],    # brick 4 x 4 corner round
@@ -205,6 +209,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  50746: [ '50746', None ],    # slope tile 30 1 x 1 x 2/3
                  50950: [ '50950', None ],    # slope brick curved 3 x 1
                  51739: [ '51739', None ],    # wing 2 x 4
+                 52031: [ '52031', None ],    # wedge 4 x 6 x 2/3 curved
                  52501: [ '52501', None ],    # slope brick 45 6 x 1 inverted double
                  58846: [ '58846', None ],    # brick 10 x 10 corner round with tapered edge and cutout
                  60033: [ '4202', None ],     # brick 4 x 12

@@ -1,0 +1,16 @@
+# car steering wheel
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=car steering wheel
+type=brick
+file=lg_3828
+width=0
+length=-3.5/6
+depth=-1/6
+sx=1
+sy=1
+sz=1
+parts=1
+part0=lg_3828
+text0=n
