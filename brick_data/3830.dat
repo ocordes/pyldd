@@ -1,0 +1,16 @@
+# hinge brick 1 x 4 top
+#
+# Oliver Cordes 2018-08-06
+#
+descr=hinge brick 1 x 4 top
+type=hinge
+file=lg_3830
+width=-1
+length=-1
+depth=2/3
+sx=1
+sy=1
+sz=-1
+parts=1
+part0=lg_3830
+text0=n

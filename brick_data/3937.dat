@@ -1,0 +1,16 @@
+# hinge 1 x 2 base
+#
+# Oliver Cordes 2018-08-06
+#
+descr=hinge 1 x 2 base
+type=hinge
+file=lg_3937
+width=1
+length=0
+depth=2/3
+sx=1
+sy=1
+sz=-1
+parts=1
+part0=lg_3937
+text0=n

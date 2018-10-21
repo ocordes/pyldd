@@ -1,0 +1,16 @@
+# space positioning rockets
+#
+# Oliver Cordes 2018-08-06
+#
+descr=space positioning rockets
+type=brick
+file=lg_3963
+width=0
+length=0
+depth=2/3
+sx=1
+sy=1
+sz=-1
+parts=1
+part0=lg_3963
+text0=n

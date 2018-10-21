@@ -252,6 +252,7 @@ union {
   LG_CORNER_SPACE
   translate <-(LENGTH-0.5)*LG_BRICK_WIDTH+LG_WALL_WIDTH+0.09, LG_BRICK_WIDTH/2+0.2-LG_CORNER_SPACE, -HEIGHT/2*LG_BRICK_HEIGHT>
  }
+ rotate z*90
 }
 
 #declare lg_3821_clear = 
@@ -490,6 +491,7 @@ merge {
   LG_CORNER_SPACE
   translate <-(LENGTH-0.5)*LG_BRICK_WIDTH+LG_WALL_WIDTH+0.09, LG_BRICK_WIDTH/2+0.2-LG_CORNER_SPACE, -HEIGHT/2*LG_BRICK_HEIGHT>
  }
+ rotate z*90
 }
 
 #end

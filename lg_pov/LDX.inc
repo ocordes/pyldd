@@ -2355,3 +2355,101 @@ matrix <aw,0,0,0,ah,0,0,0,ad,ax,ay,az>
                 matrix <1,0,0,0,1,0,0,0,1,0,0,0>
         }
 }
+
+
+#declare LDX_2_dash_4chrd_dot_dat_in_part = disc // Disc 0.5
+{
+        <0,0,0>,<0,1,0>,1
+        clipped_by
+        {
+                plane
+                {
+                        <-0.00000000000000012246,0,-2>,-0.00000000000000006123
+                }
+        }
+}
+
+
+#declare LDX_stug_dash_2x1_dot_dat_in_part = union {
+// Stud Group  2 x  1
+// Name: stug-2x1.dat
+// Author: Magnus Forsberg [MagFors]
+// !LDRAW_ORG Primitive UPDATE 2011-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2011-07-25 [PTadmin] Official Update 2011-01
+        object {
+                lg_knob
+                matrix <0,0,-25,-25,0,0,0,-25,0,0,0,0>
+                matrix <1,0,0,0,1,0,0,0,1,0,0,10>
+        }
+        object {
+                lg_knob
+                matrix <0,0,-25,-25,0,0,0,-25,0,0,0,0>
+                matrix <1,0,0,0,1,0,0,0,1,0,0,-10>
+        }
+}
+
+
+#declare LDX_STUD4H_dot_dat_in_part = union {
+// Stud Tube Open with Extended Hole
+// Name: stud4h.dat
+// Author: Tim Gould [timgould]
+// !LDRAW_ORG Primitive UPDATE 2012-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2012-02-07 [timgould] Modified from stud4.dat
+// !HISTORY 2012-03-30 [PTadmin] Official Update 2012-01
+// BFC INVERTNEXT
+        object {
+                LDX_4_dash_4cyli_dot_dat_in_part
+                matrix <6,0,0,0,8,0,0,0,6,0,-4,0>
+        }
+        object {
+                LDX_4_dash_4cyli_dot_dat_in_part
+                matrix <8,0,0,0,4,0,0,0,8,0,-4,0>
+        }
+        object {
+                LDX_4_dash_4ring3_dot_dat_in_part
+                matrix <2,0,0,0,1,0,0,0,2,0,-4,0>
+        }
+}
+
+
+#declare LDX_4_dash_4ring8_dot_dat_in_part = disc // Ring 1
+{
+        <0,0,0>,<0,1,0>,9,8
+}
+
+
+#declare LDX_connhole_dot_dat_in_part = union {
+// Technic Connector Hole Long
+// Name: connhole.dat
+// Author: Thomas Woelk [t.woelk]
+// !LDRAW_ORG Primitive UPDATE 2009-02
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2005-07-09 [mikeheide] use 4-4ring8 primitive
+// !HISTORY 2009-09-03 [PTadmin] Official Update 2009-02
+        object {
+                LDX_peghole_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,0,-10,0>
+        }
+        object {
+                LDX_peghole_dot_dat_in_part
+                matrix <1,0,0,0,-1,0,0,0,1,0,10,0>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_4_dash_4cyli_dot_dat_in_part
+                matrix <6,0,0,0,16,0,0,0,6,0,-8,0>
+        }
+        object {
+                LDX_4_dash_4ring8_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,0,-10,0>
+        }
+        object {
+                LDX_4_dash_4ring8_dot_dat_in_part
+                matrix <1,0,0,0,-1,0,0,0,-1,0,10,0>
+        }
+}
