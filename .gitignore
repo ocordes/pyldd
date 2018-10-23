@@ -114,5 +114,7 @@ venv.bak/
 /60117_Car.*
 /lg_pov/Einrichtung1.pov
 *.inc2
-IMAGE100.LXFML
+IMAGE100.LXFML*
 *.swp
+/check_vertical.sh
+/test_vertical.*

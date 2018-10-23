@@ -1,10 +1,10 @@
-# slope tile 30 1 x 1 x 2/3
+# plate 1 x 1 with clip vertical
 #
 # Oliver Cordes 2018-08-06
 # 
-descr=slope tile 30 1 x 1 x 2/3
+descr=plate 1 x 1 with clip vertical
 type=brick
-file=lg_50746
+file=lg_4085
 width=0
 length=0
 depth=0
@@ -12,5 +12,5 @@ sx=1
 sy=1
 sz=-1
 parts=1
-part0=lg_50746
+part0=lg_4085
 text0=n
