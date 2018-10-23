@@ -225,6 +225,7 @@ known_bricks = { #2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  #48092: [ '48092', None ],    # brick 4 x 4 corner round
                  #48183: [ '48183', None ],    # wedge plate 3 x 4 with stud notches
                  #48288: [ '48288', None ],    # tile 8 x 16
+                 50745: [ '50745', None ],    # car mudguard 4 x 2.5 x 2
                  50746: [ '50746', None ],    # slope tile 30 1 x 1 x 2/3
                  #50950: [ '50950', None ],    # slope brick curved 3 x 1
                  #51739: [ '51739', None ],    # wing 2 x 4
