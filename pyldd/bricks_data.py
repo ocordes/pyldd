@@ -104,6 +104,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  3811:  [ '3811', None ],     # base 32 x 32 plate
                  3821:  [ '3821', None ],     # door 1 x 3 x 2 right
                  3822:  [ '3822', None ],     # door 1 x 3 x 1 left
+                 3823:  [ '3823', None ],     # windscreen 2 x 4 x 2
                  3828:  [ '3828', None ],     # car steering wheel
                  3829:  [ '3829', None ],     # car steering wheel stand
                  3830:  [ '3830', None ],     # hinge brick 1 x 4 top
@@ -125,6 +126,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  4150:  [ '4150', None ],     # tile 2 x 2 round
                  4162:  [ '4162', None ],     # flat tile 1 x 8
                  4175:  [ '4175', None ],     # plate 1 x 2 with ladder
+                 4176:  [ '4176', None ],     # windscreen 2 x 6 x 2
                  4201:  [ '4201', None ],     # brick 8 x 8
                  4202:  [ '4202', None ],     # brick 4 x 12
                  4204:  [ '4204', None ],     # brick 8 x 16
@@ -151,6 +153,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  4844:  [ '4844', None ],     # boat mast base 4 x 4 x 9 with top notches
                  4854:  [ '4854', None ],     # slope brick 45 4 x 4 inverted double
                  4861:  [ '4861', None ],     # slope brick 45 3 x 4 double / 33 slope
+                 4864:  [ '4864', None ],     # panel 1 x 2 x 2 open studs
                  4871:  [ '4871', None ],     # slope brick 45 4 x 2 inverted double
                  6014:  [ '6014' ,None ],     # wheel wide
                  6015:  [ '6015', None ],     # tyre wide
