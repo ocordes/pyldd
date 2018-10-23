@@ -117,4 +117,4 @@ venv.bak/
 IMAGE100.LXFML*
 *.swp
 /check_vertical.sh
-/test_vertical.*
+/test_vertical*
