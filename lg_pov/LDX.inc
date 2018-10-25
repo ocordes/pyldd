@@ -2489,3 +2489,91 @@ matrix <aw,0,0,0,ah,0,0,0,ad,ax,ay,az>
                 }
         }
 }
+
+
+#declare LDX_joint8socket2_dot_dat_in_part = union {
+// Joint-8 Socket Free Square
+// Name: joint8socket2.dat
+// Author: Willy Tschager [Holly-Wood]
+// !LDRAW_ORG Primitive UPDATE 2017-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2014-01-06 [timgould] Copied, inlined, and origin shifted from 63082
+// !HISTORY 2017-12-30 [PTadmin] Official Update 2017-01
+// BFC INVERTNEXT
+	object {
+		LDX_4_dash_4cyli_dot_dat_in_part
+		matrix <0,0,4,0,3.5,0,-4,0,0,0,6.5,0>
+	}
+	object {
+		LDX_4_dash_4ndis_dot_dat_in_part
+		matrix <0,0,4,0,1,0,-4,0,0,0,6.5,0>
+	}
+	object {
+		LDX_4_dash_4ndis_dot_dat_in_part
+		matrix <0,0,4,0,-1,0,-4,0,0,0,10,0>
+	}
+// BFC INVERTNEXT
+	object {
+		LDX_4_dash_4cyli_dot_dat_in_part
+		matrix <0,0,4,0,-3.5,0,4,0,0,0,-6.5,0>
+	}
+	object {
+		LDX_4_dash_4ndis_dot_dat_in_part
+		matrix <0,0,4,0,-1,0,4,0,0,0,-6.5,0>
+	}
+	object {
+		LDX_4_dash_4ndis_dot_dat_in_part
+		matrix <0,0,4,0,1,0,4,0,0,0,-10,0>
+	}
+	object {
+		LDX_1_dash_4disc_dot_dat_in_part
+		matrix <-4,0,0,0,-1,0,0,0,-9,-6,10,1>
+	}
+	object {
+		LDX_1_dash_4cyli_dot_dat_in_part
+		matrix <-4,0,0,0,4,0,0,0,-9,-6,6,1>
+	}
+	object {
+		LDX_1_dash_4disc_dot_dat_in_part
+		matrix <-4,0,0,0,1,0,0,0,-9,-6,6,1>
+	}
+	object {
+		LDX_1_dash_4disc_dot_dat_in_part
+		matrix <4,0,0,0,-1,0,0,0,-9,6,10,1>
+	}
+	object {
+		LDX_1_dash_4cyli_dot_dat_in_part
+		matrix <4,0,0,0,4,0,0,0,-9,6,6,1>
+	}
+	object {
+		LDX_1_dash_4disc_dot_dat_in_part
+		matrix <4,0,0,0,1,0,0,0,-9,6,6,1>
+	}
+	object {
+		LDX_1_dash_4disc_dot_dat_in_part
+		matrix <4,0,0,0,1,0,0,0,-9,6,-10,1>
+	}
+	object {
+		LDX_1_dash_4cyli_dot_dat_in_part
+		matrix <4,0,0,0,-4,0,0,0,-9,6,-6,1>
+	}
+	object {
+		LDX_1_dash_4disc_dot_dat_in_part
+		matrix <4,0,0,0,-1,0,0,0,-9,6,-6,1>
+	}
+	object {
+		LDX_1_dash_4disc_dot_dat_in_part
+		matrix <-4,0,0,0,1,0,0,0,-9,-6,-10,1>
+	}
+	object {
+		LDX_1_dash_4cyli_dot_dat_in_part
+		matrix <-4,0,0,0,-4,0,0,0,-9,-6,-6,1>
+	}
+	object {
+		LDX_1_dash_4disc_dot_dat_in_part
+		matrix <-4,0,0,0,-1,0,0,0,-9,-6,-6,1>
+	}
+// // Inside ball bit
+// // End inside ball bit
+}
