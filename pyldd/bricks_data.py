@@ -252,6 +252,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  60897: [ '4085', None ],     # plate 1 x 1 with clip vertical
                  61252: [ '6019', None ],     # plate 1 x 1 with clip horizontal
                  63864: [ '63864', None ],    # flat tile 1 x 3
+                 64453: [ '64453', None ],    # windscreen 1 x 6 x 3
                  64799: [ '64799', None ],    # frame plate 4 x 4
                  72454: [ '72454', None ],    # slope brick 45 4 x 4 inverted double with holes
                  74698: [ '2376', None ],     # tile 2 x 2 round with lifting ring
@@ -270,6 +271,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  91988: [ '91988', None ],    # plate 2 x 14
                  92410: [ '92410', None ],    # cupboard 2 x 3 x 2 open studs
                  92438: [ '92438', None ],    # plate 8 x 16
+                 92583: [ '92583', None ],    # windscreen 3 x 6 x 2
                  92593: [ '92593', None ],    # plate 1 x 4 with 2 knobs
                  92946: [ '92946', None ],    # roof tile 1 x 2 45° W 1/3 Plate
                  93273: [ '93273', None ],    # plate with bow 1 x 4 x 2/3

@@ -1,0 +1,16 @@
+# windscreen 1 x 6 x 3
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=windscreen 1 x 6 x 3
+type=brick
+file=lg_64453
+width=5
+length=0
+depth=3
+sx=1
+sy=1
+sz=1
+parts=1
+part0=lg_64453
+text0=n

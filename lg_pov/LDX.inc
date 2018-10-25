@@ -2453,3 +2453,39 @@ matrix <aw,0,0,0,ah,0,0,0,ad,ax,ay,az>
                 matrix <1,0,0,0,-1,0,0,0,-1,0,10,0>
         }
 }
+
+
+#declare LDX_1_dash_4cylc_dot_dat_in_part = union {
+// Cylinder Closed 0.25
+// Name: 1-4cylc.dat
+// Author: Mark Kennedy [mkennedy]
+// !LDRAW_ORG Primitive UPDATE 2010-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2010-04-05 [PTadmin] Official Update 2010-01
+        object {
+                LDX_1_dash_4disc_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+        object {
+                LDX_1_dash_4cyli_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+}
+
+
+#declare LDX_1_dash_4ring4_dot_dat_in_part = disc // Ring 0.25
+{
+        <0,0,0>,<0,1,0>,5,4
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-1,0,0>,0
+                }
+        }
+}
