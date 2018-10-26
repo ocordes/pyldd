@@ -102,7 +102,7 @@ class Brick( object ):
             for parts in defs['parts']:
                 macro = parts[0]
                 # create special object for the bricks, static one, doors, figures etc.
-                obj = PovSimpleBrick( self.refID, descr, macro )
+                obj = PovSimpleBrick( self.refID, descr, macro, self.designID )
                 #obj = PovCSGMacro( '#%i %s' % ( self.refID, descr), macrocmd=macro )
                 if parts[1] == 'n':
                     obj.set_texture( color )

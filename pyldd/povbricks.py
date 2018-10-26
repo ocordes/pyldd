@@ -19,5 +19,11 @@ from pypovlib.pypovtextures import *
 
 
 class PovSimpleBrick( PovCSGMacro ):
-    def __init__( self, nr, descr, cmd ):
+    def __init__( self, nr, descr, cmd, itemNos ):
         PovCSGMacro.__init__( self, '#%i %s' % ( nr, descr), macrocmd=cmd )
+
+
+
+class PovBrickDoor( PovSimpleBrick ):
+    def __init__( self, nr, descr, cmd, ItemNos ):
+        PovSimpleBrick.__init__( self, nr, descr, cmd, ItemNos )

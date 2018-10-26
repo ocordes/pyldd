@@ -48,28 +48,45 @@ class Scene( object ):
         return mat_list
 
 
-    def generate_povfile( self, povfile, declare_name ):
-        f = PovFile( filename = povfile )
-        f.add_include( 'lg_color2.inc')
-        f.add_include( 'lg_defs.inc')
-
+    def generate_povlist( self ):
         known_bricks = 0
         unknown_bricks = 0
         scene = PovCSGUnion()
+
+        scene.add_include( 'lg_color2.inc')
+        scene.add_include( 'lg_defs.inc')
         for brick in self.bricks:
             pov_part, include_list = brick.get_pov_object()
             if pov_part is None:
                 unknown_bricks += 1
             else:
                 scene.add( pov_part )
-                f.add_include( include_list )
+                scene.add_include( include_list )
                 known_bricks += 1
 
         scene.scale = [-1,1,1]
-        f.add_macro( lego_transform_macro )
-        f.add_declare( declare_name, scene )
-
-        f.write_povfile()
+        scene.rotate = [0,180,0]
 
         print( 'Brick statistics:')
         print( '  {} known / {} unknown bricks'.format( known_bricks, unknown_bricks ) )
+
+        return scene
+
+
+
+    def generate_povfile( self, povfile, declare_name ):
+        f = PovFile( filename = povfile )
+
+        povbricks = self.generate_povlist()
+
+        f.add_macro( lego_transform_macro )
+        f.add_declare( declare_name, povbricks )
+
+        f.write_povfile()
+
+
+    def generate_python( self, python_file ):
+
+        povbricks = self.generate_povlist()
+
+        # now save these objects to a file

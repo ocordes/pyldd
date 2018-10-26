@@ -7,13 +7,14 @@ test_pyldd.py
 Author: Oliver Cordes
 
 History:
+ 2018-10-26: exports python objects directly
  2018-09-03: move from lxml/lxml4 files to lxf files
  2018-07-27: start project
 
 
 """
 
-version = 'V0.1 2018-09-13'
+version = 'V0.2 2018-10-26'
 
 
 from pyldd.files import read_ldd_file
@@ -27,12 +28,13 @@ import getopt
 def usage():
      print( 'Usage: {} [options]'.format( sys.argv[0] ) )
      print( ' Options:' )
-     print( ' -m | --material_list : shows the list of used bricks with amounts ')
-     print( ' -p | --povray=file   : exports the file to povray ')
-     print( ' -d | --declare=name  : name of the generated povray declare object [default=scene]')
-     print( '      --bs            : show all known bricks (sorted for names)')
-     print( '      --bn            : show all known bricks (sorted for numbers)')
-     print( ' -v | --version       : show version')
+     print( ' -m | --material_list : shows the list of used bricks with amounts' )
+     print( ' -p | --povray=file   : exports the file to povray' )
+     print( ' -y | --python=file   : exports the file to python' )
+     print( ' -d | --declare=name  : name of the generated povray declare object [default=scene]' )
+     print( '      --bs            : show all known bricks (sorted for names)' )
+     print( '      --bn            : show all known bricks (sorted for numbers)' )
+     print( ' -v | --version       : show version' )
 
 
 def print_version():
@@ -44,8 +46,8 @@ def print_version():
 
 declare_name = 'scene'
 
-shortopts = 'mp:d:v'
-longopts = [ 'material_list', 'povray=', 'declare=',
+shortopts = 'mp:d:v:y:'
+longopts = [ 'material_list', 'povray=', 'declare=', 'python='
              'bs', 'bn', 'version' ]
 
 try:
@@ -86,8 +88,11 @@ for o, a in opts:
         for i,val in mat_list.items():
             print( '{:>3}x {}'.format( val[0], val[1] ) )
     elif o in ( '-p', '--povray' ):
-        povfile = a
-        lego_scene.generate_povfile( povfile, declare_name )
+        pov_filename = a
+        lego_scene.generate_povfile( pov_filename, declare_name )
+    elif o in ( '-y', '--python'):
+        python_filename = a
+        lego_scene.generate_python( python_filename )
     elif o in ( '-d', '--declare' ):
         declare_name = a
 
