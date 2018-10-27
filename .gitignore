@@ -111,11 +111,11 @@ venv.bak/
 /Haus_test2.pov
 /Strassen1.lxf
 /Strassen1.pov
-/60117_Car.*
+/60117*
 /lg_pov/Einrichtung1.pov
 /lg_pov/test_vertical.pov
 *.inc2
 IMAGE100.LXFML*
 *.swp
-/check_vertical.sh
+/check*.sh
 /test_vertical*

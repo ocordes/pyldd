@@ -322,6 +322,7 @@ union {
   translate <-2.5*LG_BRICK_WIDTH, 0, 0>
  }
  scale <1, -1, 1>
+ rotate z*90
 }
 
 #declare lg_54383_clear =
@@ -633,6 +634,7 @@ merge {
   translate <-2.5*LG_BRICK_WIDTH, 0, 0>
  }
  scale <1, -1, 1>
+ rotate z*90
 }
 
 #end

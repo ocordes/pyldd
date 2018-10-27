@@ -7,6 +7,7 @@ test_pyldd.py
 Author: Oliver Cordes
 
 History:
+ 2018-10-27: add python model for non-static models
  2018-10-26: exports python objects directly
  2018-09-03: move from lxml/lxml4 files to lxf files
  2018-07-27: start project
@@ -14,7 +15,7 @@ History:
 
 """
 
-version = 'V0.2 2018-10-26'
+version = 'V0.2.1 2018-10-27'
 
 
 from pyldd.files import read_ldd_file
@@ -31,6 +32,7 @@ def usage():
      print( ' -m | --material_list : shows the list of used bricks with amounts' )
      print( ' -p | --povray=file   : exports the file to povray' )
      print( ' -y | --python=file   : exports the file to python' )
+     print( ' -n | --pymodel=name  : use a python model for povray non-static objects' )
      print( ' -d | --declare=name  : name of the generated povray declare object [default=scene]' )
      print( '      --bs            : show all known bricks (sorted for names)' )
      print( '      --bn            : show all known bricks (sorted for numbers)' )
@@ -45,9 +47,11 @@ def print_version():
 # parse command line
 
 declare_name = 'scene'
+python_model = 'static'
 
-shortopts = 'mp:d:v:y:'
-longopts = [ 'material_list', 'povray=', 'declare=', 'python='
+shortopts = 'mp:n:d:vy:'
+longopts = [ 'material_list', 'povray=', 'declare=',
+             'python=', 'pymodel=',
              'bs', 'bn', 'version' ]
 
 try:
@@ -67,9 +71,12 @@ for o, a in opts:
     elif o == '--bn':
         list_known_bricks( 'numbers' )
         sys.exit( 0 )
-    elif o in ('-v', '--version' ):
+    elif o in ( '-n', '--pymodel' ):
+        python_model = a
+    elif o in ( '-v', '--version' ):
         print_version()
         sys.exit( 0 )
+
 
 # at this point we need a XML file ...
 

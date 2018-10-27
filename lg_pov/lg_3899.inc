@@ -115,6 +115,7 @@ union {
   rotate <90, 0, 0>
   translate <-LG_BRICK_WIDTH, 0, -LG_BRICK_HEIGHT+LG_KNOB_HEIGHT+LG_CORNER_SPACE>
  }
+ rotate z*-90
 }
 
 #declare lg_3899_clear =
@@ -220,6 +221,7 @@ merge {
   rotate <90, 0, 0>
   translate <-LG_BRICK_WIDTH, 0, -LG_BRICK_HEIGHT+LG_KNOB_HEIGHT+LG_CORNER_SPACE>
  }
+ rotate z*-90
 }
 
 #end
