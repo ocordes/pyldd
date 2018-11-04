@@ -1,0 +1,16 @@
+# Minifig arm right
+#
+# Oliver Cordes 2018-08-06
+#
+descr=minifig arm right
+type=arm_right
+file=lg_0981
+width=0
+length=0
+depth=0
+sx=1
+sy=1
+sz=-1
+parts=1
+part0=lg_0981
+text0=n

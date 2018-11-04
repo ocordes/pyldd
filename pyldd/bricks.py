@@ -66,7 +66,9 @@ class Brick( object ):
                 if line[0] == '#':
                     continue
                 key, val = line.split('=',1)
-                if ( key in ( 'descr', 'type', 'file', 'width', 'length', 'depth', 'sx', 'sy', 'sz' ) ):
+                if ( key in ( 'descr', 'type', 'file', 'width', 'length', 'depth',
+                              'map', 'map_type', 'map_scale', 'map_rotate', 'map_translate',
+                              'sx', 'sy', 'sz' ) ):
                     d[key] = val
                 else:
                     if key == 'parts':
@@ -102,7 +104,13 @@ class Brick( object ):
             for parts in defs['parts']:
                 macro = parts[0]
                 # create special object for the bricks, static one, doors, figures etc.
-                obj = PovSimpleBrick( self.refID, descr, macro, self.designID )
+                objtype = defs.get( 'type', 'brick' )
+                if objtype == 'torso':
+                    obj = PovBrickTorso( self.refID, descr, macro, self.designID, self.decoration, defs )
+                elif objtype == 'head':
+                    obj = PovBrickHead( self.refID, descr, macro, self.designID, self.decoration, defs )
+                else:
+                    obj = PovSimpleBrick( self.refID, descr, macro, self.designID, self.decoration, defs )
                 #obj = PovCSGMacro( '#%i %s' % ( self.refID, descr), macrocmd=macro )
                 if parts[1] == 'n':
                     obj.set_texture( color )
@@ -112,6 +120,7 @@ class Brick( object ):
                                                     'normal { bumps 0.1 scale 2 }' ) )
                 elif parts[1] == 's':
                     pass
+
                 objs.append( obj )
             if len( objs ) > 1:
                 u = PovCSGUnion( comment=descr )

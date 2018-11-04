@@ -83,6 +83,26 @@ union {
  #end
 }
 
+#declare lg_3626b_map =
+difference {
+  difference {
+	cylinder {
+	   <0, 0, -0.16>,
+           <0, 0, -LG_BRICK_HEIGHT+0.26>,
+           0.51+LG_EE
+        }
+	cylinder {
+           <0, 0, -0.16+LG_E>,
+           <0, 0, -LG_BRICK_HEIGHT+0.26-LG_E>,
+           0.51
+						         }
+  }
+  box {
+     <0,-1,0>
+     <-1,1,-1>
+  }
+}
+
 #declare lg_3626b_clear =
 merge {
  difference {

@@ -69,6 +69,7 @@
 #declare LG_CROSSAXLE_WIDTH = 0.18;
 #declare LG_GRID_WIDTH=LG_BRICK_WIDTH/sqrt(2)-2*LG_KNOB_RADIUS;
 #declare LG_E = 0.01;
+#declare LG_EE = 0.0000001;
 
 /***********************************************************************
  *  Stud Logo

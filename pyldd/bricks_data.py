@@ -93,6 +93,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  3471:  [ '3471', None ],     # plant tree pyramidal 4 x 4 x 6.667 type 1
                  3622:  [ '3622', None ],     # brick 1 x 3
                  3623:  [ '3623', None ],     # plate 1 x 3
+                 3626:  [ '3626', None ],     # Minifig head with hollow stud
                  3660:  [ '3660', None ],     # slope brick 45 2 x 2 inverted
                  3665:  [ '3665', None ],     # slope brick 45 2 x 1 inverted
                  3666:  [ '3666', None ],     # plate 1 x 6
@@ -108,6 +109,13 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  3794:  [ '3794', None ],     # plate 1 x 2 with stud
                  3795:  [ '3795', None ],     # plate 2 x 6
                  3811:  [ '3811', None ],     # base 32 x 32 plate
+                 3814:  [ '3814', None ],     # Minifig torso
+                 3815:  [ '3815', None ],     # Minifig hips
+                 3816:  [ '3816', None ],     # Minifig leg right
+                 3817:  [ '3817', None ],     # Minifig leg left
+                 3818:  [ '3818', None ],     # Minifig arm left
+                 3819:  [ '3819', None ],     # Minifig arm right
+                 3820:  [ '3820', None ],     # Minifig hand
                  3821:  [ '3821', None ],     # door 1 x 3 x 2 right
                  3822:  [ '3822', None ],     # door 1 x 3 x 1 left
                  3823:  [ '3823', None ],     # windscreen 2 x 4 x 2

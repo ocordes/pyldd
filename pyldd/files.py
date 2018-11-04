@@ -5,6 +5,7 @@ pyldd/files.py
 Author: Oliver Cordes
 
 History:
+ 2018-11-01: add a handler for decoration attributes
  2018-07-27: start project
 
 """
@@ -19,6 +20,12 @@ from pyldd.scene  import Scene
 
 # some constants
 lxfxmlfilename = 'IMAGE100.LXFML'
+
+def str2decoration( s ):
+    if ( s in [ '-1', '0', '0,0', '0,0,0' ] ):
+        return []
+    return s.split( ',' )
+
 
 
 def xml4_parse_group( group_tree ):
@@ -62,7 +69,7 @@ def lxml_parse_bricks( bricks_tree ):
             material = part.attrib['materials']
             attr['designID'] = part.attrib['designID']
             attr['materialID'] = material.split(',',maxsplit=1)[0]
-            attr['decoration'] = part.attrib.get( 'decoration', '-1' )
+            attr['decoration'] = str2decoration( part.attrib.get( 'decoration', '-1' ) )
             bone = part.find( 'Bone')
             attr['transformation'] = bone.attrib['transformation']
             brick = Brick( attr )
@@ -99,7 +106,7 @@ def check_lxf_file( filename ):
 def parse_xml_file( root ):
     child = root.find( 'Scene' )
     if child is None:
-        print( 'lxml file type' )
+        # print( 'lxml file type' )
         ebricks = root.find( 'Bricks')
         bricks = lxml_parse_bricks( ebricks )
         scene = Scene( bricks )

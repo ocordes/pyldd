@@ -1,0 +1,16 @@
+# Minifig leg right
+#
+# Oliver Cordes 2018-08-06
+#
+descr=minifig leg right
+type=leg_right
+file=lg_0971
+width=1
+length=0
+depth=3.5/3
+sx=1
+sy=1
+sz=-1
+parts=1
+part0=lg_0971
+text0=n

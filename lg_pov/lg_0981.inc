@@ -94,6 +94,7 @@ union {
   translate <0, -0.15, -0.44>
  }
  rotate <-lg_angle1*180/pi, 0, 0>
+ rotate y*-45
 }
 
 #declare lg_0981_clear =

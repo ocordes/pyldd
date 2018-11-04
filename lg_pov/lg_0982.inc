@@ -95,6 +95,7 @@ union {
  }
  rotate <-lg_angle1*180/pi, 0, 0>
  matrix <1, 0, 0, 0, -1, 0, 0, 0, 1, 0, 0, 0>
+ rotate y*-45
 }
 
 #declare lg_0982_clear =
