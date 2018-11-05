@@ -274,6 +274,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  60623: [ '60623', None ],    # door 1 x 4 x 6 with 4 panes and stud handle
                  60897: [ '4085', None ],     # plate 1 x 1 with clip vertical
                  61252: [ '6019', None ],     # plate 1 x 1 with clip horizontal
+                 62810: [ '62810', None ],    # Minifig hair short, tousled with side parting
                  63082: [ '63082', None ],    # plate 2 x 2 with socket joint-8 square and axlehole
                  63864: [ '63864', None ],    # flat tile 1 x 3
                  64453: [ '64453', None ],    # windscreen 1 x 6 x 3

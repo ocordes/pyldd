@@ -35,7 +35,6 @@ class PovSimpleBrickMap( PovCSGUnion ):
 
         self.add( self._main_brick )
 
-        print( defs )
         cmd_map = defs.get( 'map', 'lg_unknown' )
         if ( cmd_map != 'lg_unknown' ):
             self._map_part = PovCSGMacro( '#%i %s mapping' % ( nr, descr), macrocmd=cmd_map )
@@ -65,7 +64,7 @@ class PovSimpleBrickMap( PovCSGUnion ):
 
 
     def set_decoration( self ):
-        print( self._decoration, self._defs )
+        #print( self._decoration, self._defs )
         scale     = self._defs.get( 'map_scale', '1.0' )
         rotate    = self._defs.get( 'map_rotate', '<0,0,0>')
         translate = self._defs.get( 'map_translate', '<0,0,0>')
