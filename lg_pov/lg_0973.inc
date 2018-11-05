@@ -213,6 +213,24 @@ union {
  }
 }
 
+#declare lg_0973_map = 
+difference{
+//union{
+   difference{
+	object{
+         	lg_0973
+	        scale (1+LG_EE)
+	}
+	object{
+		lg_0973
+	}
+   }
+   box{
+     <0.4,-1,0.5>
+     <-1,1,-1.5>
+   }
+}
+
 #declare lg_0973_clear =
 merge {
  #declare MIR = 0;

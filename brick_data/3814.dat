@@ -14,3 +14,6 @@ sz=-1
 parts=1
 part0=lg_0973
 text0=n
+map=lg_0973_map
+map_scale=1.25
+map_translate=<-0.22,0.0,0>
