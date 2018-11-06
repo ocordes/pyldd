@@ -13,6 +13,7 @@ from pypovlib import *              # thought this should be enough
 from pypovlib.pypovanimation import *
 from pypovlib.pypovobjects import *
 from pypovlib.pypovtextures import *
+from pyldd.povbricks import *
 
 lego_transform_macro = """
 // create a macro for system LEGO transformation
@@ -48,10 +49,14 @@ class Scene( object ):
         return mat_list
 
 
-    def generate_povlist( self ):
+    def generate_povlist( self, python_model ):
         known_bricks = 0
         unknown_bricks = 0
-        scene = PovCSGUnion()
+        print( 'python_model=%s' % python_model )
+        if ( python_model == 'figure' ):
+            scene = PovBrickFigure()
+        else:
+            scene = PovBrickModel()
 
         scene.add_include( 'lg_color2.inc')
         scene.add_include( 'lg_defs.inc')
@@ -74,10 +79,10 @@ class Scene( object ):
 
 
 
-    def generate_povfile( self, povfile, declare_name ):
+    def generate_povfile( self, povfile, declare_name, python_model ):
         f = PovFile( filename = povfile )
 
-        povbricks = self.generate_povlist()
+        povbricks = self.generate_povlist( python_model )
 
         f.add_macro( lego_transform_macro )
         f.add_declare( declare_name, povbricks )
@@ -85,7 +90,7 @@ class Scene( object ):
         f.write_povfile()
 
 
-    def generate_python( self, python_file ):
+    def generate_python( self, python_file, python_model ):
 
         povbricks = self.generate_povlist()
 

@@ -109,6 +109,8 @@ class Brick( object ):
                     obj = PovBrickTorso( self.refID, descr, macro, self.designID, self.decoration, defs )
                 elif objtype == 'head':
                     obj = PovBrickHead( self.refID, descr, macro, self.designID, self.decoration, defs )
+                elif objtype == 'hair':
+                    obj = PovBrickHair( self.refID, descr, macro, self.designID, self.decoration, defs )
                 else:
                     obj = PovSimpleBrick( self.refID, descr, macro, self.designID, self.decoration, defs )
                 #obj = PovCSGMacro( '#%i %s' % ( self.refID, descr), macrocmd=macro )

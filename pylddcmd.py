@@ -96,10 +96,10 @@ for o, a in opts:
             print( '{:>3}x {}'.format( val[0], val[1] ) )
     elif o in ( '-p', '--povray' ):
         pov_filename = a
-        lego_scene.generate_povfile( pov_filename, declare_name )
+        lego_scene.generate_povfile( pov_filename, declare_name, python_model )
     elif o in ( '-y', '--python'):
         python_filename = a
-        lego_scene.generate_python( python_filename )
+        lego_scene.generate_python( python_filename, python_model )
     elif o in ( '-d', '--declare' ):
         declare_name = a
 

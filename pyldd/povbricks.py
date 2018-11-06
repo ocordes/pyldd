@@ -98,3 +98,19 @@ class PovBrickHead( PovSimpleBrickMap ):
     def __init__( self, nr, descr, cmd, ItemNos, decoration, defs ):
         PovSimpleBrickMap.__init__( self, nr, descr, cmd, ItemNos, decoration, defs )
         #print( 'Minifig Head' )
+
+
+class PovBrickHair( PovSimpleBrick ):
+    def __init__( self, nr, descr, cmd, ItemNos, decoration, defs ):
+        PovSimpleBrick.__init__( self, nr, descr, cmd, ItemNos, decoration, defs )
+
+
+# python brick models
+class PovBrickModel( PovCSGUnion ):
+    def __init__( self, comment='Python model' ):
+        PovCSGUnion.__init__( self, comment=comment )
+
+
+class PovBrickFigure( PovBrickModel ):
+    def __init__( self, name='noname' ):
+        PoBrickModel.__init__( self, comment='Minifig name=%s' % name )
