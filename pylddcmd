@@ -1,6 +1,6 @@
 #!/bin/sh
 
-PYTHONPATH="$HOME/git/povray/pypovray/"
+PYTHONPATH="$HOME/git//pypovray/"
 export PYTHONPATH
 
 PRG=$0.py

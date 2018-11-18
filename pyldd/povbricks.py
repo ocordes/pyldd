@@ -17,17 +17,52 @@ from pypovlib.pypovanimation import *
 from pypovlib.pypovobjects import *
 from pypovlib.pypovtextures import *
 
+import pickle
+import gzip
+
+pyldd_pickle_version = '1.0.0'
+
+
+def save_python_bricks( python_file, model ):
+
+    # open a new zip-file
+    with gzip.open( python_file, 'wb') as f:
+        pickle.dump( pyldd_pickle_version, f, pickle.HIGHEST_PROTOCOL )
+        pickle.dump( model, f, pickle.HIGHEST_PROTOCOL )
+
+
+
+def load_python_bricks( python_file ):
+
+    try:
+        with gzip.open( python_file, 'r' ) as f:
+            v = pickle.load( f )
+            if v != pyldd_pickle_version:
+                print( 'Warning: python brick file has the wrong version \'%s != %s\'' % ( v, pyldd_pickle_version ))
+                return None
+
+            model = pickle.load( f )
+    except:
+        print( 'Error reading file \'%s\'' % python_file )
+        model = None
+
+    return model
+
 
 class PovSimpleBrick( PovCSGMacro ):
     def __init__( self, nr, descr, cmd, itemNos, decoration, defs ):
         PovCSGMacro.__init__( self, '#%i %s' % ( nr, descr), macrocmd=cmd )
+
+        self._itemNos = itemNos
+        self._defs    = defs
 
 
 class PovSimpleBrickMap( PovCSGUnion ):
     def __init__( self, nr, descr, cmd, itemNos, decoration, defs ):
         PovCSGUnion.__init__( self, comment='#%i %s map' % ( nr, descr ) )
 
-        self._defs = defs
+        self._itemNos    = itemNos
+        self._defs       = defs
         self._decoration = decoration
 
 
@@ -99,10 +134,22 @@ class PovBrickHead( PovSimpleBrickMap ):
         PovSimpleBrickMap.__init__( self, nr, descr, cmd, ItemNos, decoration, defs )
         #print( 'Minifig Head' )
 
+        self.move_head = 0
+
+
+    def move( self, angle ):
+        self.move_head += angle
+
 
 class PovBrickHair( PovSimpleBrick ):
     def __init__( self, nr, descr, cmd, ItemNos, decoration, defs ):
         PovSimpleBrick.__init__( self, nr, descr, cmd, ItemNos, decoration, defs )
+
+        self.move_hair = 0
+
+
+    def move( self, angle ):
+        self.move_hair += angle
 
 
 # python brick models
@@ -111,6 +158,78 @@ class PovBrickModel( PovCSGUnion ):
         PovCSGUnion.__init__( self, comment=comment )
 
 
+    def lookforBrick( self, designId ):
+        return [ i for i in self._items if i._itemNos == designId ]
+
+
+    def lookforModel( self, model ):
+        return [ i for i in self._items if isinstance( i, model) ]
+
+
+    def reconfigure( self ):
+        pass
+
+
 class PovBrickFigure( PovBrickModel ):
     def __init__( self, name='noname' ):
-        PoBrickModel.__init__( self, comment='Minifig name=%s' % name )
+        PovBrickModel.__init__( self, comment='Minifig name=%s' % name )
+
+        self._arm_left  = None
+        self._arm_right = None
+        self._leg_left  = None
+        self._leg_right = None
+        self._head      = None
+        self._hair      = None
+        self._torso     = None
+        self._hips      = None
+
+
+    def reconfigure( self ):
+        # left arm
+        b = self.lookforBrick( 3818 )
+        if ( len(b) == 1 ):
+            self._arm_left = b[0]
+
+        # right arm
+        b = self.lookforBrick( 3819 )
+        if ( len(b) == 1 ):
+            self._arm_right = b[0]
+
+        # left leg
+        b = self.lookforBrick( 3817 )
+        if ( len(b) == 1 ):
+            self._leg_left = b[0]
+
+        # right leg
+        b = self.lookforBrick( 3816 )
+        if ( len(b) == 1 ):
+            self._leg_left = b[0]
+
+        # head
+        b = self.lookforModel( PovBrickHead )
+        if ( len(b) == 1 ):
+            self._head = b[0]
+
+        # hair
+        b = self.lookforModel( PovBrickHair )
+        if ( len(b) == 1 ):
+            self._hair = b[0]
+
+        # Torso
+        b = self.lookforModel( PovBrickTorso )
+        if ( len(b) == 1 ):
+            self._torso = b[0]
+
+        # hips
+        b = self.lookforBrick( 3815 )
+        if ( len(b) == 1 ):
+            self._hips = b[0]
+
+        # hands
+        b = self.lookforBrick( 3820 )
+        print( len( b ) )
+
+
+    def move_head( self, angle ):
+        self._head.move( angle )
+        self._hair.move( angle )

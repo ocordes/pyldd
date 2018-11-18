@@ -15,6 +15,8 @@ from pypovlib.pypovobjects import *
 from pypovlib.pypovtextures import *
 from pyldd.povbricks import *
 
+
+
 lego_transform_macro = """
 // create a macro for system LEGO transformation
 #macro L_Transform( WIDTH, HEIGHT, LENGTH, SX, SY, SZ )
@@ -69,11 +71,23 @@ class Scene( object ):
                 scene.add_include( include_list )
                 known_bricks += 1
 
+
+        # reconfirue the model
+        scene.reconfigure()
+
+        if ( python_model == 'figure' ):
+            scene.move_head( 45 )
+
+
         scene.scale = [-1,1,1]
         scene.rotate = [0,180,0]
 
         print( 'Brick statistics:')
         print( '  {} known / {} unknown bricks'.format( known_bricks, unknown_bricks ) )
+
+        # put the LEGO macro definition into the scene not in the
+        # povfile directly
+        scene.add_macro( lego_transform_macro )
 
         return scene
 
@@ -84,7 +98,6 @@ class Scene( object ):
 
         povbricks = self.generate_povlist( python_model )
 
-        f.add_macro( lego_transform_macro )
         f.add_declare( declare_name, povbricks )
 
         f.write_povfile()
@@ -92,6 +105,7 @@ class Scene( object ):
 
     def generate_python( self, python_file, python_model ):
 
-        povbricks = self.generate_povlist()
+        povbricks = self.generate_povlist( python_model )
 
         # now save these objects to a file
+        save_python_bricks( python_file, povbricks )
