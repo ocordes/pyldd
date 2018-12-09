@@ -49,22 +49,60 @@ def load_python_bricks( python_file ):
     return model
 
 
-class PovSimpleBrick( PovCSGMacro ):
+
+class PovPreTransformation( PovWriterObject ):
+    def __init__( self, comment='pre transform' ):
+        self.__pre_rotate = []
+
+
+    @property
+    def pre_rotate( self ):
+        return self.__pre_rotate
+
+
+    @pre_rotate.setter
+    def pre_rotate( self, new_rotate ):
+        rotate = Point3D( new_rotate )
+        self.__pre_rotate.append( rotate )
+
+
+    def _write_pre_rotate( self, ffile, indent=0 ):
+        for r in self.__pre_rotate:
+            print( 'hi',r)
+            self._write_indent( ffile, 'rotate %s\n' % r, indent=indent )
+
+
+
+class PovSimpleBrick( PovCSGMacro, PovPreTransformation ):
     def __init__( self, nr, descr, cmd, itemNos, decoration, defs ):
         PovCSGMacro.__init__( self, '#%i %s' % ( nr, descr), macrocmd=cmd )
+        PovPreTransformation.__init__( self )
 
         self._itemNos = itemNos
         self._defs    = defs
 
+        self.add_pre_commands( self._write_pre_rotate )
 
-class PovSimpleBrickMap( PovCSGUnion ):
+
+    def apply_changes( self ):
+        pass
+
+
+    def write_pov( self, ffile, indent = 0 ):
+        self.apply_changes()
+        PovCSGMacro.write_pov( self, ffile, indent=indent )
+
+
+class PovSimpleBrickMap( PovCSGUnion, PovPreTransformation ):
     def __init__( self, nr, descr, cmd, itemNos, decoration, defs ):
         PovCSGUnion.__init__( self, comment='#%i %s map' % ( nr, descr ) )
+        PovPreTransformation.__init__( self )
 
         self._itemNos    = itemNos
         self._defs       = defs
         self._decoration = decoration
 
+        self.add_pre_commands( self._write_pre_rotate )
 
         self._main_brick = PovSimpleBrick( nr, descr, cmd, itemNos, decoration, defs )
 
@@ -119,6 +157,15 @@ class PovSimpleBrickMap( PovCSGUnion ):
         self._map_part.set_texture( s )
 
 
+    def apply_changes( self ):
+        pass
+
+
+    def write_pov( self, ffile, indent = 0 ):
+        self.apply_changes()
+        PovCSGUnion.write_pov( self, ffile, indent=indent )
+
+
 class PovBrickDoor( PovSimpleBrick ):
     def __init__( self, nr, descr, cmd, ItemNos, decoration, defs ):
         PovSimpleBrick.__init__( self, nr, descr, cmd, ItemNos, decoration, defs )
@@ -141,6 +188,10 @@ class PovBrickHead( PovSimpleBrickMap ):
         self.move_head += angle
 
 
+    def apply_changes( self ):
+        self.pre_rotate = ( 0, self.move_head, 0 )
+
+
 class PovBrickHair( PovSimpleBrick ):
     def __init__( self, nr, descr, cmd, ItemNos, decoration, defs ):
         PovSimpleBrick.__init__( self, nr, descr, cmd, ItemNos, decoration, defs )
@@ -150,6 +201,11 @@ class PovBrickHair( PovSimpleBrick ):
 
     def move( self, angle ):
         self.move_hair += angle
+
+
+    def apply_changes( self ):
+        self.pre_rotate = ( 0, self.move_hair, 0 )
+
 
 
 # python brick models
@@ -170,6 +226,12 @@ class PovBrickModel( PovCSGUnion ):
         pass
 
 
+class PovBrickFigureTorso( PovCSGUnion ):
+    def __init__( self ):
+        PovCSGUnion.__init__( self, comment='Figure torso' )
+
+
+
 class PovBrickFigure( PovBrickModel ):
     def __init__( self, name='noname' ):
         PovBrickModel.__init__( self, comment='Minifig name=%s' % name )
@@ -182,6 +244,7 @@ class PovBrickFigure( PovBrickModel ):
         self._hair      = None
         self._torso     = None
         self._hips      = None
+        self._fig_torso = PovBrickFigureTorso()
 
 
     def reconfigure( self ):
@@ -228,6 +291,21 @@ class PovBrickFigure( PovBrickModel ):
         # hands
         b = self.lookforBrick( 3820 )
         print( len( b ) )
+
+
+        # hips / torso
+        # hips - LG_BRICK_HEIGHT/2 , rotate, +LG_BRICK_HEIGHT/2
+        # -> reduce all matrices to translations
+        # -> the main translation + LG_BRICK_HEIGHT/2
+        # -> change hips matrix - LG_BRICK_HEIGHT/2
+        # -> dereference all matrices of torso etc. according to hips
+        #  -> hips rotate valid now for all figure torso elements
+
+        self._fig_torso.add( self._hips )
+        self._items.remove( self._hips  )
+        self._fig_torso.add( self._torso )
+        self._items.remove( self._torso )
+        self.add( self._fig_torso )
 
 
     def move_head( self, angle ):

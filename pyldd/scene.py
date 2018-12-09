@@ -75,8 +75,8 @@ class Scene( object ):
         # reconfirue the model
         scene.reconfigure()
 
-        if ( python_model == 'figure' ):
-            scene.move_head( 45 )
+        #if ( python_model == 'figure' ):
+        #    scene.move_head( 45 )
 
 
         scene.scale = [-1,1,1]
