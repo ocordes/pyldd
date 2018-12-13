@@ -17,6 +17,8 @@ from pypovlib.pypovanimation import *
 from pypovlib.pypovobjects import *
 from pypovlib.pypovtextures import *
 
+from pyldd.lego_defs import *
+
 import pickle
 import gzip
 
@@ -93,16 +95,32 @@ class PovSimpleBrick( PovCSGMacro, PovPreTransformation ):
         PovCSGMacro.write_pov( self, ffile, indent=indent )
 
 
-class PovSimpleBrickMap( PovCSGUnion, PovPreTransformation ):
-    def __init__( self, nr, descr, cmd, itemNos, decoration, defs ):
-        PovCSGUnion.__init__( self, comment='#%i %s map' % ( nr, descr ) )
+
+class PovSimpleBrickUnion( PovCSGUnion, PovPreTransformation ):
+    def __init__( self, comment='brick union' ):
+        PovCSGUnion.__init__( self, comment=comment )
         PovPreTransformation.__init__( self )
+
+        self.add_pre_commands( self._write_pre_rotate )
+
+
+    def apply_changes( self ):
+        pass
+
+
+    def write_pov( self, ffile, indent = 0 ):
+        self.apply_changes()
+        PovCSGUnion.write_pov( self, ffile, indent=indent )
+
+
+
+class PovSimpleBrickMap( PovSimpleBrickUnion ):
+    def __init__( self, nr, descr, cmd, itemNos, decoration, defs ):
+        PovSimpleBrickUnion.__init__( self, comment='#%i %s map' % ( nr, descr ) )
 
         self._itemNos    = itemNos
         self._defs       = defs
         self._decoration = decoration
-
-        self.add_pre_commands( self._write_pre_rotate )
 
         self._main_brick = PovSimpleBrick( nr, descr, cmd, itemNos, decoration, defs )
 
@@ -157,14 +175,6 @@ class PovSimpleBrickMap( PovCSGUnion, PovPreTransformation ):
         self._map_part.set_texture( s )
 
 
-    def apply_changes( self ):
-        pass
-
-
-    def write_pov( self, ffile, indent = 0 ):
-        self.apply_changes()
-        PovCSGUnion.write_pov( self, ffile, indent=indent )
-
 
 class PovBrickDoor( PovSimpleBrick ):
     def __init__( self, nr, descr, cmd, ItemNos, decoration, defs ):
@@ -175,6 +185,7 @@ class PovBrickTorso( PovSimpleBrickMap ):
     def __init__( self, nr, descr, cmd, ItemNos, decoration, defs ):
         PovSimpleBrickMap.__init__( self, nr, descr, cmd, ItemNos, decoration, defs )
         #print( 'Minifig Torso' )
+
 
 class PovBrickHead( PovSimpleBrickMap ):
     def __init__( self, nr, descr, cmd, ItemNos, decoration, defs ):
@@ -226,15 +237,53 @@ class PovBrickModel( PovCSGUnion ):
         pass
 
 
-class PovBrickFigureTorso( PovCSGUnion ):
-    def __init__( self ):
-        PovCSGUnion.__init__( self, comment='Figure torso' )
+    def split_matrix( self, matrix ):
+        m1 = np.zeros( 12 )
+        m2 = np.zeros( 12 )
+
+        m1[0:9] = matrix[0:9]
+        m2[9:12] = matrix[9:12]
+
+        return m1, m2
+
+
+    def move2union( self, union, obj, shift=None ):
+        union.add( obj )
+        self._items.remove( obj )
+        if shift is None:
+            # calculate the reference
+            m = obj.full_matrix[0] - union.full_matrix[0]
+            obj.full_matrix = None
+            obj.full_matrix = m
+        else:
+            # this is the reference ;-)
+            m1, m2 = self.split_matrix( obj.full_matrix[0] )
+            shift_val = np.zeros( 12 )
+            shift_val[10] = shift
+            obj.full_matrix = None
+            obj.full_matrix, union.full_matrix = m1+shift_val, m2-shift_val
 
 
 
-class PovBrickFigure( PovBrickModel ):
-    def __init__( self, name='noname' ):
-        PovBrickModel.__init__( self, comment='Minifig name=%s' % name )
+class PovBrickFigureTorso(PovSimpleBrickUnion):
+    def __init__(self):
+        PovSimpleBrickUnion.__init__(self, comment='Figure torso')
+
+        self._bend = 0
+
+
+    def bend(self, angle):
+        self._bend += angle
+
+
+    def apply_changes(self):
+        self.pre_rotate = (self._bend, 0, 0)
+
+
+
+class PovBrickFigure(PovBrickModel):
+    def __init__(self, name='noname'):
+        PovBrickModel.__init__(self, comment='Minifig name=%s' % name)
 
         self._arm_left  = None
         self._arm_right = None
@@ -247,9 +296,9 @@ class PovBrickFigure( PovBrickModel ):
         self._fig_torso = PovBrickFigureTorso()
 
 
-    def reconfigure( self ):
+    def reconfigure(self):
         # left arm
-        b = self.lookforBrick( 3818 )
+        b = self.lookforBrick(3818)
         if ( len(b) == 1 ):
             self._arm_left = b[0]
 
@@ -301,13 +350,18 @@ class PovBrickFigure( PovBrickModel ):
         # -> dereference all matrices of torso etc. according to hips
         #  -> hips rotate valid now for all figure torso elements
 
-        self._fig_torso.add( self._hips )
-        self._items.remove( self._hips  )
-        self._fig_torso.add( self._torso )
-        self._items.remove( self._torso )
+        self.move2union(self._fig_torso, self._hips, shift=LG_BRICK_HEIGHT/2.)
+        self.move2union(self._fig_torso, self._torso)
+        self.move2union(self._fig_torso, self._head)
+        self.move2union(self._fig_torso, self._hair)
+
         self.add( self._fig_torso )
 
 
     def move_head( self, angle ):
         self._head.move( angle )
         self._hair.move( angle )
+
+
+    def bend( self, angle ):
+        self._fig_torso.bend( angle )
