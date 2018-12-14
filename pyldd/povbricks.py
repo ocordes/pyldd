@@ -52,6 +52,34 @@ def load_python_bricks( python_file ):
 
 
 
+def split_matrix(matrix):
+    m1 = np.zeros(12)
+    m2 = np.zeros(12)
+
+    m1[0:9] = matrix[0:9]
+    m2[9:12] = matrix[9:12]
+
+    return m1, m2
+
+
+
+def move2union(fromobj, union, obj, shift=None):
+    union.add(obj)
+    fromobj._items.remove(obj)
+    if shift is None:
+        # calculate the reference
+        m = obj.full_matrix[0] - union.full_matrix[0]
+        obj.full_matrix = None
+        obj.full_matrix = m
+    else:
+        # this is the reference ;-)
+        m1, m2 = split_matrix(obj.full_matrix[0])
+        shift_val = np.zeros(12)
+        shift_val[10] = shift
+        obj.full_matrix = None
+        obj.full_matrix, union.full_matrix = m1+shift_val, m2-shift_val
+
+
 class PovPreTransformation( PovWriterObject ):
     def __init__( self, comment='pre transform' ):
         self.__pre_rotate = []
@@ -187,35 +215,52 @@ class PovBrickTorso( PovSimpleBrickMap ):
         #print( 'Minifig Torso' )
 
 
-class PovBrickHead( PovSimpleBrickMap ):
-    def __init__( self, nr, descr, cmd, ItemNos, decoration, defs ):
-        PovSimpleBrickMap.__init__( self, nr, descr, cmd, ItemNos, decoration, defs )
+class PovBrickHead(PovSimpleBrickMap):
+    def __init__(self, nr, descr, cmd, ItemNos, decoration, defs):
+        PovSimpleBrickMap.__init__(self, nr, descr, cmd, ItemNos, decoration, defs)
         #print( 'Minifig Head' )
 
         self.move_head = 0
 
 
-    def move( self, angle ):
+    def move(self, angle):
         self.move_head += angle
 
 
-    def apply_changes( self ):
-        self.pre_rotate = ( 0, self.move_head, 0 )
+    def apply_changes(self):
+        self.pre_rotate = (0, self.move_head, 0)
 
 
-class PovBrickHair( PovSimpleBrick ):
-    def __init__( self, nr, descr, cmd, ItemNos, decoration, defs ):
-        PovSimpleBrick.__init__( self, nr, descr, cmd, ItemNos, decoration, defs )
+
+class PovBrickHair(PovSimpleBrick):
+    def __init__(self, nr, descr, cmd, ItemNos, decoration, defs):
+        PovSimpleBrick.__init__(self, nr, descr, cmd, ItemNos, decoration, defs)
 
         self.move_hair = 0
 
 
-    def move( self, angle ):
+    def move(self, angle):
         self.move_hair += angle
 
 
-    def apply_changes( self ):
-        self.pre_rotate = ( 0, self.move_hair, 0 )
+    def apply_changes(self):
+        self.pre_rotate = (0, self.move_hair, 0)
+
+
+
+class PovBrickHand(PovSimpleBrickMap):
+    def __init__(self, nr, descr, cmd, ItemNos, decoration, defs):
+        PovSimpleBrickMap.__init__(self, nr, descr, cmd, ItemNos, decoration, defs)
+
+        self.move_head = 0
+
+
+    def move(self, angle):
+        self.move_head += angle
+
+
+    def apply_changes(self):
+        self.pre_rotate = (0, 0, self.move_head)
 
 
 
@@ -237,47 +282,20 @@ class PovBrickModel( PovCSGUnion ):
         pass
 
 
-    def split_matrix( self, matrix ):
-        m1 = np.zeros( 12 )
-        m2 = np.zeros( 12 )
 
-        m1[0:9] = matrix[0:9]
-        m2[9:12] = matrix[9:12]
-
-        return m1, m2
-
-
-    def move2union( self, union, obj, shift=None ):
-        union.add( obj )
-        self._items.remove( obj )
-        if shift is None:
-            # calculate the reference
-            m = obj.full_matrix[0] - union.full_matrix[0]
-            obj.full_matrix = None
-            obj.full_matrix = m
-        else:
-            # this is the reference ;-)
-            m1, m2 = self.split_matrix( obj.full_matrix[0] )
-            shift_val = np.zeros( 12 )
-            shift_val[10] = shift
-            obj.full_matrix = None
-            obj.full_matrix, union.full_matrix = m1+shift_val, m2-shift_val
-
-
-
-class PovBrickFigureTorso(PovSimpleBrickUnion):
+class PovBrickFigureGroup(PovSimpleBrickUnion):
     def __init__(self):
-        PovSimpleBrickUnion.__init__(self, comment='Figure torso')
+        PovSimpleBrickUnion.__init__(self, comment='Figure group')
 
-        self._bend = 0
+        self._move_angle = 0
 
 
-    def bend(self, angle):
-        self._bend += angle
+    def move(self, angle):
+        self._move_angle += angle
 
 
     def apply_changes(self):
-        self.pre_rotate = (self._bend, 0, 0)
+        self.pre_rotate = (self._move_angle, 0, 0)
 
 
 
@@ -285,15 +303,33 @@ class PovBrickFigure(PovBrickModel):
     def __init__(self, name='noname'):
         PovBrickModel.__init__(self, comment='Minifig name=%s' % name)
 
-        self._arm_left  = None
-        self._arm_right = None
-        self._leg_left  = None
-        self._leg_right = None
-        self._head      = None
-        self._hair      = None
-        self._torso     = None
-        self._hips      = None
-        self._fig_torso = PovBrickFigureTorso()
+        self._arm_left      = None
+        self._arm_right     = None
+        self._hand_left     = None
+        self._hand_right    = None
+        self._leg_left      = None
+        self._leg_right     = None
+        self._head          = None
+        self._hair          = None
+        self._torso         = None
+        self._hips          = None
+        self._fig_torso     = PovBrickFigureGroup()
+        self._fig_left_arm  = PovBrickFigureGroup()
+        self._fig_right_arm = PovBrickFigureGroup()
+
+
+    def sort_hands( self, hand1, hand2, left_arm ):
+        h1m1, h1m2 = split_matrix( hand1.full_matrix[0] )
+        h2m1, h2m2 = split_matrix( hand2.full_matrix[0] )
+        lm1, lm2 = split_matrix( left_arm.full_matrix[0] )
+
+        dist1 = ((h1m2 - lm2)**2).sum()
+        dist2 = ((h2m2 - lm2)**2).sum()
+
+        if dist1 < dist2:
+            return hand1, hand2
+        else:
+            return hand2, hand1
 
 
     def reconfigure(self):
@@ -339,8 +375,12 @@ class PovBrickFigure(PovBrickModel):
 
         # hands
         b = self.lookforBrick( 3820 )
-        print( len( b ) )
+        # the results should be always 2 hands!
+        if len(b)!=2:
+            print('Figure needs always two hands! Aborted!')
+            sys.exit(0)
 
+        self._hand_left, self._hand_right = self.sort_hands( b[0], b[1], self._arm_left )
 
         # hips / torso
         # hips - LG_BRICK_HEIGHT/2 , rotate, +LG_BRICK_HEIGHT/2
@@ -350,12 +390,22 @@ class PovBrickFigure(PovBrickModel):
         # -> dereference all matrices of torso etc. according to hips
         #  -> hips rotate valid now for all figure torso elements
 
-        self.move2union(self._fig_torso, self._hips, shift=LG_BRICK_HEIGHT/2.)
-        self.move2union(self._fig_torso, self._torso)
-        self.move2union(self._fig_torso, self._head)
-        self.move2union(self._fig_torso, self._hair)
+        move2union(self, self._fig_left_arm, self._arm_left, shift=0.)
+        move2union(self, self._fig_left_arm, self._hand_left)
+        move2union(self, self._fig_right_arm, self._arm_right, shift=0.)
+        move2union(self, self._fig_right_arm, self._hand_right)
+        self.add(self._fig_left_arm)
+        self.add(self._fig_right_arm)
 
-        self.add( self._fig_torso )
+        move2union(self, self._fig_torso, self._hips, shift=LG_BRICK_HEIGHT/2.)
+        move2union(self, self._fig_torso, self._torso)
+        move2union(self, self._fig_torso, self._head)
+        move2union(self, self._fig_torso, self._hair)
+        move2union(self, self._fig_torso, self._fig_left_arm)
+        move2union(self, self._fig_torso, self._fig_right_arm)
+
+        self.add(self._fig_torso)
+
 
 
     def move_head( self, angle ):
@@ -364,4 +414,20 @@ class PovBrickFigure(PovBrickModel):
 
 
     def bend( self, angle ):
-        self._fig_torso.bend( angle )
+        self._fig_torso.move(angle)
+
+
+    def left_arm_move(self, angle):
+        self._fig_left_arm.move(angle)
+
+
+    def right_arm_move(self, angle):
+        self._fig_right_arm.move(angle)
+
+
+    def left_hand_move(self, angle):
+        self._hand_left.move(angle)
+
+
+    def right_hand_move(self, angle):
+        self._hand_right.move(angle)
