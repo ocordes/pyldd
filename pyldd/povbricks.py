@@ -80,65 +80,82 @@ def move2union(fromobj, union, obj, shift=None):
         obj.full_matrix, union.full_matrix = m1+shift_val, m2-shift_val
 
 
-class PovPreTransformation( PovWriterObject ):
-    def __init__( self, comment='pre transform' ):
-        self.__pre_rotate = []
+class PovPreTransformation(PovWriterObject):
+    def __init__(self, comment='pre transform'):
+        self.__pre_rotate    = []
+        self.__pre_translate = []
 
 
     @property
-    def pre_rotate( self ):
+    def pre_rotate(self):
         return self.__pre_rotate
 
 
     @pre_rotate.setter
-    def pre_rotate( self, new_rotate ):
-        rotate = Point3D( new_rotate )
-        self.__pre_rotate.append( rotate )
+    def pre_rotate(self, new_rotate):
+        rotate = Point3D(new_rotate)
+        self.__pre_rotate.append(rotate)
 
 
-    def _write_pre_rotate( self, ffile, indent=0 ):
+    def _write_pre_rotate(self, ffile, indent=0):
         for r in self.__pre_rotate:
-            print( 'hi',r)
-            self._write_indent( ffile, 'rotate %s\n' % r, indent=indent )
+            self._write_indent(ffile, 'rotate %s\n' % r, indent=indent)
 
 
+    @property
+    def pre_translate(self):
+        return self.__pre_translate
 
-class PovSimpleBrick( PovCSGMacro, PovPreTransformation ):
-    def __init__( self, nr, descr, cmd, itemNos, decoration, defs ):
-        PovCSGMacro.__init__( self, '#%i %s' % ( nr, descr), macrocmd=cmd )
-        PovPreTransformation.__init__( self )
+
+    @pre_translate.setter
+    def pre_translate(self, new_translate):
+        translate = Point3D(new_translate)
+        self.__pre_translate.append(translate)
+
+
+    def _write_pre_translate(self, ffile, indent=0):
+        for r in self.__pre_translate:
+            self._write_indent(ffile, 'translate %s\n' % r, indent=indent)
+
+
+class PovSimpleBrick(PovCSGMacro, PovPreTransformation):
+    def __init__(self, nr, descr, cmd, itemNos, decoration, defs):
+        PovCSGMacro.__init__(self, '#%i %s' % ( nr, descr), macrocmd=cmd)
+        PovPreTransformation.__init__(self)
 
         self._itemNos = itemNos
         self._defs    = defs
 
-        self.add_pre_commands( self._write_pre_rotate )
+        self.add_pre_commands(self._write_pre_translate)
+        self.add_pre_commands(self._write_pre_rotate)
 
 
-    def apply_changes( self ):
+    def apply_changes(self):
         pass
 
 
-    def write_pov( self, ffile, indent = 0 ):
+    def write_pov(self, ffile, indent = 0):
         self.apply_changes()
-        PovCSGMacro.write_pov( self, ffile, indent=indent )
+        PovCSGMacro.write_pov(self, ffile, indent=indent)
 
 
 
-class PovSimpleBrickUnion( PovCSGUnion, PovPreTransformation ):
-    def __init__( self, comment='brick union' ):
-        PovCSGUnion.__init__( self, comment=comment )
-        PovPreTransformation.__init__( self )
+class PovSimpleBrickUnion(PovCSGUnion, PovPreTransformation):
+    def __init__(self, comment='brick union'):
+        PovCSGUnion.__init__(self, comment=comment)
+        PovPreTransformation.__init__(self)
 
-        self.add_pre_commands( self._write_pre_rotate )
+        self.add_pre_commands(self._write_pre_translate)
+        self.add_pre_commands(self._write_pre_rotate)
 
 
-    def apply_changes( self ):
+    def apply_changes(self):
         pass
 
 
-    def write_pov( self, ffile, indent = 0 ):
+    def write_pov(self, ffile, indent = 0):
         self.apply_changes()
-        PovCSGUnion.write_pov( self, ffile, indent=indent )
+        PovCSGUnion.write_pov(self, ffile, indent=indent)
 
 
 
@@ -263,6 +280,32 @@ class PovBrickHand(PovSimpleBrickMap):
         self.pre_rotate = (0, 0, self.move_head)
 
 
+class PovBrickLeg(PovSimpleBrick):
+    def __init__(self, nr, descr, cmd, ItemNos, decoration, defs):
+        PovSimpleBrick.__init__(self, nr, descr, cmd, ItemNos, decoration, defs)
+
+        self.move_leg = 0.
+
+
+    def fixtransform(self):
+        # get the trafo matrix
+        shift_val = np.zeros(12)
+        shift_val[10] = 1.12
+        self.full_matrix[0] += shift_val
+
+        shift = np.zeros(3)
+        shift[1] = -1.12
+        self.pre_translate = shift
+
+
+    def move(self,angle):
+        self.move_leg += angle
+
+
+    def apply_changes(self):
+        # somehow negative angles means moving forward
+        self.pre_rotate = (-self.move_leg,0,0)
+
 
 # python brick models
 class PovBrickModel( PovCSGUnion ):
@@ -347,11 +390,13 @@ class PovBrickFigure(PovBrickModel):
         b = self.lookforBrick( 3817 )
         if ( len(b) == 1 ):
             self._leg_left = b[0]
+            self._leg_left.fixtransform()
 
         # right leg
         b = self.lookforBrick( 3816 )
         if ( len(b) == 1 ):
-            self._leg_left = b[0]
+            self._leg_right = b[0]
+            self._leg_right.fixtransform()
 
         # head
         b = self.lookforModel( PovBrickHead )
@@ -431,3 +476,11 @@ class PovBrickFigure(PovBrickModel):
 
     def right_hand_move(self, angle):
         self._hand_right.move(angle)
+
+
+    def left_leg_move(self,angle):
+        self._leg_left.move(angle)
+
+
+    def right_leg_move(self,angle):
+        self._leg_right.move(angle)

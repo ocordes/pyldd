@@ -115,6 +115,8 @@ class Brick( object ):
                     obj = PovBrickHair(self.refID, descr, macro, self.designID, self.decoration, defs)
                 elif objtype == 'hand':
                     obj = PovBrickHand(self.refID, descr, macro, self.designID, self.decoration, defs)
+                elif objtype == 'leg':
+                    obj = PovBrickLeg(self.refID, descr, macro, self.designID, self.decoration, defs)
                 else:
                     obj = PovSimpleBrick(self.refID, descr, macro, self.designID, self.decoration, defs)
                 if parts[1] == 'n':

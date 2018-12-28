@@ -3,7 +3,7 @@
 # Oliver Cordes 2018-08-06
 #
 descr=minifig leg right
-type=leg_right
+type=leg
 file=lg_0971
 width=1
 length=0
