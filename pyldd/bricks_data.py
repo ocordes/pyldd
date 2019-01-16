@@ -91,6 +91,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  3460:  [ '3460', None ],     # plate 1 x 8
                  3470:  [ '3470', None ],     # plant tree oval 4 x 4 x 6
                  3471:  [ '3471', None ],     # plant tree pyramidal 4 x 4 x 6.667 type 1
+                 3479:  [ '3479', None ],     # tail 4 x 2 x 2
                  3622:  [ '3622', None ],     # brick 1 x 3
                  3623:  [ '3623', None ],     # plate 1 x 3
                  3626:  [ '3626', None ],     # Minifig head with hollow stud
@@ -132,6 +133,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  3940:  [ '3940', None ],     # space stand 2 x 2 x 2
                  3941:  [ '3941', None ],     # brick 2 x 2 round
                  3942:  [ '3942', None ],     # cone 2 x 2 x 2 open stud
+                 3943:  [ '3943', None ],     # cone 4 x 4 x 2
                  3956:  [ '3956', None ],     # bracket 2 x 2 - 2 x 2
                  3963:  [ '3963', None ],     # space positioning rockets
                  4032:  [ '4032', None ],     # plate 2 x 2 round
