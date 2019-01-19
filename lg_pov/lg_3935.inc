@@ -346,6 +346,7 @@ union {
    }
   }
  }
+ rotate z*90
 }
 
 #declare lg_3935_clear =
@@ -680,6 +681,7 @@ merge {
    }
   }
  }
+ rotate z*90
 }
 
 #end

@@ -497,6 +497,7 @@ union {
   }
  }
  matrix <1, 0, 0, 0, -1, 0, 0, 0, 1, 0, 0, 0>
+ rotate z*90
 }
 
 #declare lg_3933_clear =
@@ -982,6 +983,7 @@ merge {
   }
  }
  matrix <1, 0, 0, 0, -1, 0, 0, 0, 1, 0, 0, 0>
+ rotate z*90
 }
 
 #end

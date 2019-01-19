@@ -125,16 +125,24 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  3830:  [ '3830', None ],     # hinge brick 1 x 4 top
                  3831:  [ '3831', None ],     # hinge brick 1 x 4 base
                  3832:  [ '3832', None ],     # plate 2 x 10
+                 3839:  [ '3839', None ],     # plate 1 x 2 with handles low attachment
                  3865:  [ '3865', None ],     # base plate 8 x 16
                  3899:  [ '3899', None ],     # town mug
+                 3933:  [ '3933', None ],     # wing 8 x 4 left
+                 3934:  [ '3934', None ],     # wing 8 x 4 right
+                 3935:  [ '3935', None ],     # wing 4 x 4 left
+                 3936:  [ '3936', None ],     # wing 4 x 4 right
                  3937:  [ '3937', None ],     # hinge 1 x 2 base
                  3938:  [ '3938', None ],     # hinge 1 x 2 top
+                 3939:  [ '3939', None ],     # slope brick 33 3 x 6
                  3900:  [ '3900', None ],     # minifig signal holder (stop sign)
                  3940:  [ '3940', None ],     # space stand 2 x 2 x 2
                  3941:  [ '3941', None ],     # brick 2 x 2 round
                  3942:  [ '3942', None ],     # cone 2 x 2 x 2 open stud
                  3943:  [ '3943', None ],     # cone 4 x 4 x 2
                  3956:  [ '3956', None ],     # bracket 2 x 2 - 2 x 2
+                 3957:  [ '3957', None ],     # antenna
+                 3958:  [ '3958', None ],     # plate 6 x 6
                  3963:  [ '3963', None ],     # space positioning rockets
                  4032:  [ '4032', None ],     # plate 2 x 2 round
                  4070:  [ '4070', None ],     # brick 1 x 1 x 1 with vertical stud (headlight brick)
@@ -151,6 +159,8 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  4209:  [ '4209', None ],     # hose reel 2 x 4 x 2 holder
                  4215:  [ '4215', None ],     # panel 1 x 4 x 3 open studs
                  4216:  [ '4216', None ],     # brick 1 x 2 with groove
+                 4275:  [ '4275', None ],     # plate 1 x 2 with hinge open studs counter part 4276
+                 4276:  [ '4276', None ],     # plate 1 x 2 with hinge open studs counter part 4275
                  4282:  [ '4282', None ],     # plate 2 x 16
                  4286:  [ '4286', None ],     # slope brick 33 3 x 1
                  4287:  [ '4287', None ],     # slope brick 33 3 x 1 inverted
@@ -232,6 +242,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  30540: [ '30540', None ],    # hinge brick 1 x 2 locking with 2 fingers horizontal on end
                  32028: [ '32028', None ],    # plate 1 x 2 with door rail
                  33009: [ '33009', None ],    # minifig book
+                 33909: [ '33909', None ],    # plate 2 x 2 with reduced knobs
                  41539: [ '41539', None ],    # plate 8 x 8
                  41767: [ '41767', None ],    # wedge 4 x 2 right
                  41768: [ '41768', None ],    # wedge 4 x 2 left
@@ -251,6 +262,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  48183: [ '48183', None ],    # wedge plate 3 x 4 with stud notches
                  48288: [ '48288', None ],    # tile 8 x 16
                  49668: [ '49668', None ],    # plate 1 x 1 with tooth in-line
+                 50303: [ '50303', None ],    # boat bow plate 6 x 7 with stud notches
                  50745: [ '50745', None ],    # car mudguard 4 x 2.5 x 2
                  50746: [ '50746', None ],    # slope tile 30 1 x 1 x 2/3
                  50950: [ '50950', None ],    # slope brick curved 3 x 1

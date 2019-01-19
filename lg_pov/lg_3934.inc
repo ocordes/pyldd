@@ -478,6 +478,7 @@ union {
    }
   }
  }
+ rotate z*90
 }
 
 #declare lg_3934_clear =
@@ -944,6 +945,7 @@ merge {
    }
   }
  }
+ rotate z*90
 }
 
 #end

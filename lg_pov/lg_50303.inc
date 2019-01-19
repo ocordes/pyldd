@@ -518,6 +518,7 @@ union {
    }
   }
  }
+ rotate z*-90
 }
 
 #declare lg_50303_clear =
@@ -1024,6 +1025,7 @@ merge {
    }
   }
  }
+ rotate z*-90
 }
 
 #end
