@@ -42,68 +42,70 @@ def usage():
 def print_version():
     print( 'Version: {}'.format( version ))
 
-#  main
 
-# parse command line
+def main():
+    #  main
 
-declare_name = 'scene'
-python_model = 'static'
+    # parse command line
 
-shortopts = 'mp:n:d:vy:'
-longopts = [ 'material_list', 'povray=', 'declare=',
-             'python=', 'pymodel=',
-             'bs', 'bn', 'version' ]
+    declare_name = 'scene'
+    python_model = 'static'
 
-try:
-    opts, args = getopt.getopt( sys.argv[1:], shortopts, longopts )
-except getopt.GetoptError as err:
-    # print help information and exit:
-    print( err ) # will print something like "option -a not recognized"
-    usage()
-    sys.exit( 2 )
+    shortopts = 'mp:n:d:vy:'
+    longopts = [ 'material_list', 'povray=', 'declare=',
+                'python=', 'pymodel=',
+                'bs', 'bn', 'version' ]
 
-
-
-for o, a in opts:
-    if o == '--bs':
-        list_known_bricks( 'names' )
-        sys.exit( 0 )
-    elif o == '--bn':
-        list_known_bricks( 'numbers' )
-        sys.exit( 0 )
-    elif o in ( '-n', '--pymodel' ):
-        python_model = a
-    elif o in ( '-v', '--version' ):
-        print_version()
-        sys.exit( 0 )
-
-
-# at this point we need a XML file ...
-
-if len( args ) < 1:
-    print( 'No LDD XML file given!')
-    sys.exit( 2 )
-
-
-# now read the ldd xml file
-lego_scene = read_ldd_file( args[0] )
-print( 'Scene contains {} LEGO bricks'.format( lego_scene.nr_bricks ) )
-
-for o, a in opts:
-    if o in ( '-m', '--material_list' ):
-        mat_list = lego_scene.gen_material_list()
-        for i,val in mat_list.items():
-            print( '{:>3}x {}'.format( val[0], val[1] ) )
-    elif o in ( '-p', '--povray' ):
-        pov_filename = a
-        lego_scene.generate_povfile( pov_filename, declare_name, python_model )
-    elif o in ( '-y', '--python'):
-        python_filename = a
-        lego_scene.generate_python( python_filename, python_model )
-    elif o in ( '-d', '--declare' ):
-        declare_name = a
+    try:
+        opts, args = getopt.getopt( sys.argv[1:], shortopts, longopts )
+    except getopt.GetoptError as err:
+        # print help information and exit:
+        print( err ) # will print something like "option -a not recognized"
+        usage()
+        sys.exit( 2 )
 
 
 
+    for o, a in opts:
+        if o == '--bs':
+            list_known_bricks( 'names' )
+            sys.exit( 0 )
+        elif o == '--bn':
+            list_known_bricks( 'numbers' )
+            sys.exit( 0 )
+        elif o in ( '-n', '--pymodel' ):
+            python_model = a
+        elif o in ( '-v', '--version' ):
+            print_version()
+            sys.exit( 0 )
 
-print( 'Done.' )
+
+    # at this point we need a XML file ...
+
+    if len( args ) < 1:
+        print( 'No LDD XML file given!')
+        sys.exit( 2 )
+
+
+    # now read the ldd xml file
+    lego_scene = read_ldd_file( args[0] )
+    print( 'Scene contains {} LEGO bricks'.format( lego_scene.nr_bricks ) )
+
+    for o, a in opts:
+        if o in ( '-m', '--material_list' ):
+            mat_list = lego_scene.gen_material_list()
+            for i,val in mat_list.items():
+                print( '{:>3}x {}'.format( val[0], val[1] ) )
+        elif o in ( '-p', '--povray' ):
+            pov_filename = a
+            lego_scene.generate_povfile( pov_filename, declare_name, python_model )
+        elif o in ( '-y', '--python'):
+            python_filename = a
+            lego_scene.generate_python( python_filename, python_model )
+        elif o in ( '-d', '--declare' ):
+            declare_name = a
+
+
+
+
+    print( 'Done.' )
