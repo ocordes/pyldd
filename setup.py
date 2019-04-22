@@ -15,8 +15,9 @@ setup(
         [console_scripts]
         pyldd=pylddcmd:main
     ''',
-    package_data={
-        '': [ 'brick_data/*.dat'],
-    },
+    include_package_data=True,
+    #package_data={
+    #    'pyldd': [ 'brick_data/*.dat'],
+    #},
 
 )

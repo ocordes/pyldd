@@ -33,8 +33,6 @@ brick_data_dir = 'brick_data'
 
 from pkg_resources import resource_string, resource_filename
 
-foo_config = resource_filename('pylddcmd', 'brick_data/3189.dat')
-print(foo_config)
 
 class Brick( object ):
     def __init__( self, adicts ):
