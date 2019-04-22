@@ -1,14 +1,12 @@
 from setuptools import setup
 
-
-__version__ = '0.0.1'
-__author__ = 'Oliver Cordes'
+from pyldd import __version__, __author__
 
 setup(
     name='pyldd',
     version=__version__,
     author=__author__,
-    py_modules=['pyldd'],
+    py_modules=['pylddcmd'],
     packages=['pyldd'],
     install_requires=[
      'numpy',
@@ -17,4 +15,8 @@ setup(
         [console_scripts]
         pyldd=pylddcmd:main
     ''',
+    package_data={
+        '': [ 'brick_data/*.dat'],
+    },
+
 )

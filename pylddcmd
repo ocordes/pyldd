@@ -1,9 +1,0 @@
-#!/bin/sh
-
-PYTHONPATH="$HOME/git//pypovray/"
-export PYTHONPATH
-
-PRG=$0.py
-
-python ${PRG} $*
-

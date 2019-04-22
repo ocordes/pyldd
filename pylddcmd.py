@@ -15,8 +15,9 @@ History:
 
 """
 
-version = 'V0.2.1 2018-10-27'
+from pyldd import __version__, __author__
 
+version = 'V%s 2018-10-27 (C) 2018-2019 by %s' % (__version__, __author__)
 
 from pyldd.files import read_ldd_file
 from pyldd.bricks import list_known_bricks
@@ -25,6 +26,7 @@ import sys
 import getopt
 
 
+from pkg_resources import resource_string, resource_filename
 
 def usage():
      print( 'Usage: {} [options]'.format( sys.argv[0] ) )

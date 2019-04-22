@@ -5,6 +5,8 @@ pyldd/bricks.py
 Author: Oliver Cordes
 
 History:
+ 2019-04-22:
+   - change filenames to resource_* for pip installation
  2018-12-14:
    - group figure parts
  2018-09-30:
@@ -29,6 +31,10 @@ from pyldd.colors import *
 
 brick_data_dir = 'brick_data'
 
+from pkg_resources import resource_string, resource_filename
+
+foo_config = resource_filename('pylddcmd', 'brick_data/3189.dat')
+print(foo_config)
 
 class Brick( object ):
     def __init__( self, adicts ):
@@ -55,7 +61,8 @@ class Brick( object ):
 
 
     def load_brick_data( self, brickname, verbose=True ):
-        filename = os.path.join( brick_data_dir, '{}.dat'.format( brickname ) )
+        #filename = os.path.join( brick_data_dir, '{}.dat'.format( brickname ) )
+        filename = resource_filename('pylddcmd', '{}/{}.dat'.format(brick_data_dir, brickname))
         if verbose:
             print( 'loading brick data \'{}\' ...'.format( filename ) )
 
