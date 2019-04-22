@@ -1,1 +1,1 @@
-include brick_data/*.dat
+include pyldd/brick_data/*.dat

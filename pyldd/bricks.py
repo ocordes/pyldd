@@ -60,7 +60,7 @@ class Brick( object ):
 
     def load_brick_data( self, brickname, verbose=True ):
         #filename = os.path.join( brick_data_dir, '{}.dat'.format( brickname ) )
-        filename = resource_filename('pylddcmd', '{}/{}.dat'.format(brick_data_dir, brickname))
+        filename = resource_filename(__name__, '{}/{}.dat'.format(brick_data_dir, brickname))
         if verbose:
             print( 'loading brick data \'{}\' ...'.format( filename ) )
 
