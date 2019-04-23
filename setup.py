@@ -6,6 +6,8 @@ setup(
     name='pyldd',
     version=__version__,
     author=__author__,
+    author_email='ocordes@astro.uni-bonn.de',
+    url='https://github.com/ocordes/pyldd',
     py_modules=['pylddcmd'],
     packages=['pyldd'],
     install_requires=[
