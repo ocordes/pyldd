@@ -134,7 +134,8 @@ class Brick( object ):
 
                 objs.append(obj)
             if len(objs) > 1:
-                u = PovCSGUnion(comment=descr)
+                #u = PovCSGUnion(comment=descr)
+                u = PovSimpleBrickUnion(comment=descr)
                 u.add(objs)
                 obj = u
             else:

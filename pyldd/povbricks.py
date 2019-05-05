@@ -139,6 +139,37 @@ class PovSimpleBrick(PovCSGMacro, PovPreTransformation):
         PovCSGMacro.write_pov(self, ffile, indent=indent)
 
 
+    # for rigid systems
+
+    """
+    fix_rigid_trafo
+
+    applies the fix for the rigid transformation, which is done after
+    the brick transformation, so rotation matrix and translation need
+    to be modified!
+    """
+    def fix_rigid_trafo(self, rigid_trafo):
+        # split the trafos into the matrix parts
+        full_mat = self.full_matrix[0][:9].reshape((3,3))
+        rigid_mat = rigid_trafo[:9].reshape((3,3))
+        rigid_mat_inv = np.linalg.inv(rigid_mat)
+
+        # calculate the rest matrix for the brick
+        # brick = x * rigid
+        # brick * rigid^-1 = x
+        rest_mat = np.dot(full_mat,rigid_mat_inv)
+
+        # calculate the raw difference for the translation
+        rest_trans =  self.full_matrix[0][9:] - rigid_trafo[9:]
+
+        # apply the rotation to the rest tranlation, which is in
+        # the rigid matrix!!
+        rest_trans = np.dot(rigid_mat, rest_trans)
+
+        # recombine the results for the brick
+        self.full_matrix = None
+        self.full_matrix = np.append(rest_mat.flatten(), rest_trans)
+
 
 class PovSimpleBrickUnion(PovCSGUnion, PovPreTransformation):
     def __init__(self, comment='brick union'):
@@ -147,6 +178,38 @@ class PovSimpleBrickUnion(PovCSGUnion, PovPreTransformation):
 
         self.add_pre_commands(self._write_pre_translate)
         self.add_pre_commands(self._write_pre_rotate)
+
+
+    # for rigid systems
+
+    """
+    fix_rigid_trafo
+
+    applies the fix for the rigid transformation, which is done after
+    the brick transformation, so rotation matrix and translation need
+    to be modified!
+    """
+    def fix_rigid_trafo(self, rigid_trafo):
+        # split the trafos into the matrix parts
+        full_mat = self.full_matrix[0][:9].reshape((3,3))
+        rigid_mat = rigid_trafo[:9].reshape((3,3))
+        rigid_mat_inv = np.linalg.inv(rigid_mat)
+
+        # calculate the rest matrix for the brick
+        # brick = x * rigid
+        # brick * rigid^-1 = x
+        rest_mat = np.dot(full_mat,rigid_mat_inv)
+
+        # calculate the raw difference for the translation
+        rest_trans =  self.full_matrix[0][9:] - rigid_trafo[9:]
+
+        # apply the rotation to the rest tranlation, which is in
+        # the rigid matrix!!
+        rest_trans = np.dot(rigid_mat, rest_trans)
+
+        # recombine the results for the brick
+        self.full_matrix = None
+        self.full_matrix = np.append(rest_mat.flatten(), rest_trans)
 
 
     def apply_changes(self):
@@ -484,3 +547,23 @@ class PovBrickFigure(PovBrickModel):
 
     def right_leg_move(self,angle):
         self._leg_right.move(angle)
+
+
+## Rigid models
+
+class PovRigidModel(PovCSGUnion):
+    def __init__(self, comment='Rigid Model'):
+        PovCSGUnion.__init__(self, comment=comment)
+
+
+
+class PovRigidSystemModel(PovCSGUnion):
+    def __init__(self, comment='Rigid System Model'):
+        PovCSGUnion.__init__(self, comment=comment)
+
+
+    def get_rigid(self, nr):
+        if nr < len(self._items):
+            return self._items[nr]
+        else:
+            return None
