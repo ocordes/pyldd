@@ -5,6 +5,7 @@ pyldd/files.py
 Author: Oliver Cordes
 
 History:
+ 2019-05-06: add joints and rigid systems
  2018-11-01: add a handler for decoration attributes
  2018-07-27: start project
 
@@ -15,7 +16,7 @@ import zipfile
 import xml.etree.ElementTree
 
 from pyldd.bricks import Brick
-from pyldd.rigid_systems import Rigid
+from pyldd.rigid_systems import Rigid, RigidRef, Joint
 from pyldd.scene  import Scene
 
 
@@ -65,9 +66,10 @@ def lxml_parse_bricks(bricks_tree):
     print('Parse the bricks ...')
     for ebrick in bricks_tree:
         attr = ebrick.attrib
-        # some bricks are consists of several small bricks
+        # some bricks are consisting of several small bricks
         parts = ebrick.findall('Part')
         for part in parts:
+            attr['refID'] = part.attrib['refID']
             material = part.attrib['materials']
             attr['designID'] = part.attrib['designID']
             attr['materialID'] = material.split(',',maxsplit=1)[0]
@@ -89,8 +91,19 @@ def lxml_parse_rigidsystems(rsystems_tree):
         for erigid in erigids:
             rigid = Rigid(erigid.attrib)
             rigids.append(rigid)
+        ejoints = ersystem.findall('Joint')
+        for ejoint in ejoints:
+            erigidrefs = ejoint.findall('RigidRef')
+            if len(erigidrefs) != 2:
+                print('Only {} RigidRefs detected ... skipping ...'.format(len(erigidrefs)))
+                continue
+            a = RigidRef(erigidrefs[0])
+            b = RigidRef(erigidrefs[1])
+            joint = Joint(ejoint.attrib, a, b)
+            joints.append(joint)
 
     print('{} rigid systems detected'.format(len(rigids)))
+    print('{} joints detected'.format(len(joints)))
 
     return rigids, joints
 
@@ -133,7 +146,7 @@ def parse_xml_file(root, rigid_system):
             rigids = None
         print('Parsing done.')
         print('Creating scene...')
-        scene = Scene(bricks, rigids)
+        scene = Scene(bricks, rigids=rigids, joints=joints)
         print('Scene is complete!')
 
     else:

@@ -5,6 +5,7 @@ pyldd/scene.py
 Author: Oliver Cordes
 
 History:
+ 2019-05-06: add joints in addition to the rigid systems
  2019-05-05: add rigid systems
  2018-07-27: start project
 
@@ -33,9 +34,10 @@ translate <LG_BRICK_WIDTH*WIDTH/2.,LG_BRICK_HEIGHT*HEIGHT,-LG_BRICK_WIDTH*LENGTH
 """
 
 class Scene(object):
-    def __init__(self, abricks, rigids=None):
+    def __init__(self, abricks, rigids=None, joints=None):
         self.bricks = abricks
         self.rigids = rigids
+        self.joints = joints
 
 
     @property
@@ -83,7 +85,7 @@ class Scene(object):
             #if ( python_model == 'figure' ):
             #    scene.move_head( 45 )
         else:
-            scene = PovRigidSystemModel()
+            scene = PovRigidSystemModel(self.joints)
             for rigid in self.rigids:
                 rigid_model, kbricks, ukbricks = create_rigid_model(self.bricks, rigid)
                 scene.add(rigid_model)
@@ -118,7 +120,7 @@ class Scene(object):
 
         print('Writing to \'%s\' ...' % povfile)
         f.write_povfile()
-        
+
 
 
     def generate_python(self, python_file, python_model):

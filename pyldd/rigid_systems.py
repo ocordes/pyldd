@@ -3,7 +3,7 @@
 pyldd/rigid_systems.py
 
 written by: Oliver Cordes 2019-05-05
-changed by: Oliver Cordes 2019-05-05
+changed by: Oliver Cordes 2019-05-06
 
 """
 
@@ -18,7 +18,7 @@ def _csv_to_list(s, numtype):
     return np.array([numtype(i) for i in s.split(',')], dtype=numtype)
 
 
-class Rigid(object):
+class BrickBaseObject(object):
     def __init__(self, adicts):
         if isinstance(adicts, list):
             for adict in adicts:
@@ -27,6 +27,11 @@ class Rigid(object):
             self._set_attributes(adicts)
 
 
+    def _set_attributes(self, adicts):
+        pass
+
+
+class Rigid(BrickBaseObject):
     def _set_attributes(self, adict):
         for name, value in adict.items():
             if name in ('refID'):
@@ -40,6 +45,26 @@ class Rigid(object):
     def __str__(self):
         return 'Rigid: nr={} transformation={}  boneRefs={}'.format(self.refID, self.transformation, self.boneRefs)
 
+
+class RigidRef(BrickBaseObject):
+    def _set_attributes(self, adict):
+        for name, value in adict.items():
+            if name in ('rigidRef'):
+                setattr(self, name, int(value))
+            elif name in ('a', 'z', 't'):
+                setattr(self, name, _csv_to_list(value, float))
+
+
+class Joint(BrickBaseObject):
+    def __init__(self, adict, a, b):
+        BrickBaseObject.__init__(self, adict)
+        self._a = a
+        self._b = b
+
+
+    def _set_attributes(self, adict):
+        for name, value in adict.items():
+            setattr(self, name, value)
 
 
 def create_rigid_model(bricks, rigid):

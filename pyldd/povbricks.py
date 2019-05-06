@@ -25,6 +25,13 @@ import gzip
 pyldd_pickle_version = '1.0.0'
 
 
+def angle_Y(angle):
+    angle = angle * np.pi / 180.
+    return np.array([[np.cos(angle), 0, np.sin(angle)],
+                     [0., 1., 0.],
+                     [-np.sin(angle), 0, np.cos(angle)]])
+
+
 def save_python_bricks( python_file, model ):
 
     # open a new zip-file
@@ -558,8 +565,10 @@ class PovRigidModel(PovCSGUnion):
 
 
 class PovRigidSystemModel(PovCSGUnion):
-    def __init__(self, comment='Rigid System Model'):
+    def __init__(self, joints, comment='Rigid System Model'):
         PovCSGUnion.__init__(self, comment=comment)
+
+        self._joints = joints
 
 
     def get_rigid(self, nr):
@@ -567,3 +576,9 @@ class PovRigidSystemModel(PovCSGUnion):
             return self._items[nr]
         else:
             return None
+
+
+
+    def rotate_rigid(self, nr, angle, update_all=True):
+        print(nr)
+        print(angle)
