@@ -69,6 +69,10 @@ class Scene(object):
             else:
                 scene = PovBrickModel()
 
+            scene.add_include('lg_color2.inc')
+            scene.add_include('lg_defs.inc')
+
+
             for brick in self.bricks:
                 pov_part, include_list = brick.get_pov_object()
                 if pov_part is None:
@@ -92,8 +96,8 @@ class Scene(object):
                 unknown_bricks += ukbricks
                 known_bricks += kbricks
 
-        scene.add_include('lg_color2.inc')
-        scene.add_include('lg_defs.inc')
+            scene.add_include('lg_color2.inc')
+            scene.add_include('lg_defs.inc')
 
         scene.scale = [-1,1,1]
         scene.rotate = [0,180,0]

@@ -7,6 +7,7 @@ changed by: Oliver Cordes 2019-05-06
 
 """
 
+from pypovlib.pypovbase import *
 from pypovlib.pypovobjects import *
 from pyldd.povbricks import *
 
@@ -37,7 +38,7 @@ class Rigid(BrickBaseObject):
             if name in ('refID'):
                 setattr(self, name, int(value))
             elif name in ('transformation'):
-                setattr(self, name, _csv_to_list(value, float))
+                setattr(self, name, Matrix3D(value))
             elif name in ('boneRefs'):
                 setattr(self, name, _csv_to_list(value, int))
 

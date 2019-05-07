@@ -144,6 +144,7 @@ def parse_xml_file(root, rigid_system):
             rigids, joints = lxml_parse_rigidsystems(ersystems)
         else:
             rigids = None
+            joints = None
         print('Parsing done.')
         print('Creating scene...')
         scene = Scene(bricks, rigids=rigids, joints=joints)

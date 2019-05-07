@@ -14,6 +14,7 @@ History:
 
 from pypovlib import *              # thought this should be enough
 from pypovlib.pypovanimation import *
+from pypovlib.pypovbase import *
 from pypovlib.pypovobjects import *
 from pypovlib.pypovtextures import *
 
@@ -23,13 +24,6 @@ import pickle
 import gzip
 
 pyldd_pickle_version = '1.0.0'
-
-
-def angle_Y(angle):
-    angle = angle * np.pi / 180.
-    return np.array([[np.cos(angle), 0, np.sin(angle)],
-                     [0., 1., 0.],
-                     [-np.sin(angle), 0, np.cos(angle)]])
 
 
 def save_python_bricks( python_file, model ):
@@ -152,30 +146,16 @@ class PovSimpleBrick(PovCSGMacro, PovPreTransformation):
     fix_rigid_trafo
 
     applies the fix for the rigid transformation, which is done after
-    the brick transformation, so rotation matrix and translation need
+    the brick transformation, so transformation matrix needs
     to be modified!
     """
     def fix_rigid_trafo(self, rigid_trafo):
-        # split the trafos into the matrix parts
-        full_mat = self.full_matrix[0][:9].reshape((3,3))
-        rigid_mat = rigid_trafo[:9].reshape((3,3))
-        rigid_mat_inv = np.linalg.inv(rigid_mat)
-
-        # calculate the rest matrix for the brick
+        # calculate the matrix for the brick
         # brick = x * rigid
         # brick * rigid^-1 = x
-        rest_mat = np.dot(full_mat,rigid_mat_inv)
-
-        # calculate the raw difference for the translation
-        rest_trans =  self.full_matrix[0][9:] - rigid_trafo[9:]
-
-        # apply the rotation to the rest tranlation, which is in
-        # the rigid matrix!!
-        rest_trans = np.dot(rigid_mat, rest_trans)
-
-        # recombine the results for the brick
+        fixed_trafo = self.full_matrix[0].dot(rigid_trafo.inv())
         self.full_matrix = None
-        self.full_matrix = np.append(rest_mat.flatten(), rest_trans)
+        self.full_matrix = fixed_trafo
 
 
 class PovSimpleBrickUnion(PovCSGUnion, PovPreTransformation):
@@ -193,30 +173,17 @@ class PovSimpleBrickUnion(PovCSGUnion, PovPreTransformation):
     fix_rigid_trafo
 
     applies the fix for the rigid transformation, which is done after
-    the brick transformation, so rotation matrix and translation need
+    the brick transformation, so transformatio matrix needs
     to be modified!
     """
     def fix_rigid_trafo(self, rigid_trafo):
-        # split the trafos into the matrix parts
-        full_mat = self.full_matrix[0][:9].reshape((3,3))
-        rigid_mat = rigid_trafo[:9].reshape((3,3))
-        rigid_mat_inv = np.linalg.inv(rigid_mat)
-
-        # calculate the rest matrix for the brick
+        # calculate the matrix for the brick
         # brick = x * rigid
         # brick * rigid^-1 = x
-        rest_mat = np.dot(full_mat,rigid_mat_inv)
-
-        # calculate the raw difference for the translation
-        rest_trans =  self.full_matrix[0][9:] - rigid_trafo[9:]
-
-        # apply the rotation to the rest tranlation, which is in
-        # the rigid matrix!!
-        rest_trans = np.dot(rigid_mat, rest_trans)
-
-        # recombine the results for the brick
+        fixed_trafo = self.full_matrix[0].dot(rigid_trafo.inv())
         self.full_matrix = None
-        self.full_matrix = np.append(rest_mat.flatten(), rest_trans)
+        self.full_matrix = fixed_trafo
+
 
 
     def apply_changes(self):
