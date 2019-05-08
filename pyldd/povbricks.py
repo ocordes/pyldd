@@ -526,8 +526,8 @@ class PovBrickFigure(PovBrickModel):
 ## Rigid models
 
 class PovRigidModel(PovCSGUnion):
-    def __init__(self, comment='Rigid Model'):
-        PovCSGUnion.__init__(self, comment=comment)
+    def __init__(self, nr):
+        PovCSGUnion.__init__(self, comment='Rigid Model #{}'.format(nr))
 
 
 
@@ -545,7 +545,59 @@ class PovRigidSystemModel(PovCSGUnion):
             return None
 
 
+    def look_for_joints(self, nr):
+        joints = []
+        for j in self._joints:
+            if (j._a.rigidRef == nr) or (j._b.rigidRef == nr):
+                joints.append(j)
+        return joints
 
-    def rotate_rigid(self, nr, angle, update_all=True):
+
+    def get_rigidref(self, joint, refid):
+        if joint._a.rigidRef == refid:
+            return joint._a
+        else:
+            return joint._b
+
+
+    def rotate_rigid(self, nr, refnr,  angle, update_all=True):
         print(nr)
+        print(refnr)
         print(angle)
+
+        joints = self.look_for_joints(nr)
+        main_joint = None
+        for j in joints:
+            if (j._a.rigidRef == refnr) or (j._b.rigidRef == refnr):
+                main_joint = j
+
+        if main_joint is None:
+            raise ValueError('Joint not found!')
+
+        rigidRef = self.get_rigidref(main_joint, nr)
+
+        rigid = self.get_rigid(nr)
+        if rigid is None:
+            raise ValueError('Rigid not found!')
+
+        # so now do the calculations
+        angle_inv = create_rotation_matrix(rigidRef.a, -angle)
+        angle = create_rotation_matrix(rigidRef.a, angle)
+
+
+        t4d = Matrix3D(translation=rigidRef.t)
+        t4d_inv = t4d.inv()
+
+        rot_rigid = t4d_inv.dot(angle).dot(t4d).dot(rigid.full_matrix[0])
+        print(rot_rigid)
+
+        rot_rigid_inv = t4d_inv.dot(angle_inv).dot(t4d).dot(rigid.full_matrix[0])
+
+
+        rotation    = rot_rigid.rotation
+        translation = rot_rigid_inv.translation
+
+        rigid.full_matrix = None
+        rigid.full_matrix = Matrix3D(rotation=rotation, translation=translation)
+
+        print(rigid.full_matrix[0])

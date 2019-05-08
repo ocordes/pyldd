@@ -72,7 +72,7 @@ def create_rigid_model(bricks, rigid):
     #if len(rigid.boneRefs) == 1:
     #    # only one Element in a rigid def, then return only the brick itself
     #    rigid_model, include_list =
-    rigid_model = PovRigidModel()
+    rigid_model = PovRigidModel(rigid.refID)
 
     known_bricks = 0
     unknown_bricks = 0
