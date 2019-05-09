@@ -153,9 +153,33 @@ class PovSimpleBrick(PovCSGMacro, PovPreTransformation):
         # calculate the matrix for the brick
         # brick = x * rigid
         # brick * rigid^-1 = x
-        fixed_trafo = self.full_matrix[0].dot(rigid_trafo.inv())
+        #fixed_trafo = self.full_matrix[0].dot(rigid_trafo.inv())
+        #self.full_matrix = None
+        #self.full_matrix = fixed_trafo
+
+
+        # split the trafos into the matrix parts
+        full_mat = self.full_matrix[0].rotation
+        rigid_mat = rigid_trafo.rotation
+        rigid_mat_inv = np.linalg.inv(rigid_mat)
+
+        # calculate the rest matrix for the brick
+        # brick = x * rigid
+        # brick * rigid^-1 = x
+        rest_mat = np.dot(full_mat,rigid_mat_inv)
+
+        # calculate the raw difference for the translation
+        rest_trans =  self.full_matrix[0].translation - rigid_trafo.translation
+
+        # apply the rotation to the rest tranlation, which is in
+        # the rigid matrix!!
+        rest_trans = np.dot(rigid_mat, rest_trans)
+
+        fixed_trafo_okay = Matrix3D(rotation=rest_mat, translation=rest_trans)
+
+        # recombine the results for the brick
         self.full_matrix = None
-        self.full_matrix = fixed_trafo
+        self.full_matrix = fixed_trafo_okay
 
 
 class PovSimpleBrickUnion(PovCSGUnion, PovPreTransformation):
@@ -180,10 +204,34 @@ class PovSimpleBrickUnion(PovCSGUnion, PovPreTransformation):
         # calculate the matrix for the brick
         # brick = x * rigid
         # brick * rigid^-1 = x
-        fixed_trafo = self.full_matrix[0].dot(rigid_trafo.inv())
-        self.full_matrix = None
-        self.full_matrix = fixed_trafo
+        #fixed_trafo = self.full_matrix[0].dot(rigid_trafo.inv())
+        #self.full_matrix = None
+        #self.full_matrix = fixed_trafo
+        print('Union fix')
 
+
+        # split the trafos into the matrix parts
+        full_mat = self.full_matrix[0].rotation
+        rigid_mat = rigid_trafo.rotation
+        rigid_mat_inv = np.linalg.inv(rigid_mat)
+
+        # calculate the rest matrix for the brick
+        # brick = x * rigid
+        # brick * rigid^-1 = x
+        rest_mat = np.dot(full_mat,rigid_mat_inv)
+
+        # calculate the raw difference for the translation
+        rest_trans =  self.full_matrix[0].translation - rigid_trafo.translation
+
+        # apply the rotation to the rest tranlation, which is in
+        # the rigid matrix!!
+        rest_trans = np.dot(rigid_mat, rest_trans)
+
+        fixed_trafo_okay = Matrix3D(rotation=rest_mat, translation=rest_trans)
+
+        # recombine the results for the brick
+        self.full_matrix = None
+        self.full_matrix = fixed_trafo_okay
 
 
     def apply_changes(self):
@@ -553,17 +601,29 @@ class PovRigidSystemModel(PovCSGUnion):
         return joints
 
 
-    def get_rigidref(self, joint, refid):
+    def get_rigidrefs(self, joint, refid):
         if joint._a.rigidRef == refid:
-            return joint._a
+            return joint._a, joint._b
         else:
-            return joint._b
+            return joint._b, joint._a
+
+    def calculate_rigid_rotation(self, rigid_rot, rigid_trans, anchor, angle):
+        # calculate the rotation for the rigid
+        rotation = np.dot(rigid_rot,angle)
+
+        # the translation is not that easy:
+        # - rotate the anchor point (the t vector)
+        # - apply this vector to the old rigid rotation
+        # - add the old rigid translation
+        translation = np.dot((np.dot(-anchor,angle)+anchor),rigid_rot)+rigid_trans
+
+        return Matrix3D(rotation=rotation, translation=translation)
 
 
-    def rotate_rigid(self, nr, refnr,  angle, update_all=True):
-        print(nr)
-        print(refnr)
-        print(angle)
+    def rotate_rigid(self, nr, refnr,  angle, update_all=True, rot_axis=None):
+        #print(nr)
+        #print(refnr)
+        #print(angle)
 
         joints = self.look_for_joints(nr)
         main_joint = None
@@ -574,30 +634,65 @@ class PovRigidSystemModel(PovCSGUnion):
         if main_joint is None:
             raise ValueError('Joint not found!')
 
-        rigidRef = self.get_rigidref(main_joint, nr)
+        rigidRef1, rigidRef2 = self.get_rigidrefs(main_joint, nr)
 
         rigid = self.get_rigid(nr)
         if rigid is None:
             raise ValueError('Rigid not found!')
 
         # so now do the calculations
-        angle_inv = create_rotation_matrix(rigidRef.a, -angle)
-        angle = create_rotation_matrix(rigidRef.a, angle)
+        if rot_axis is None:
+            rot_axis = get_rot_axes(rigidRef1.a, rigidRef1.z, rigidRef2.a, rigidRef2.z)
 
 
-        t4d = Matrix3D(translation=rigidRef.t)
-        t4d_inv = t4d.inv()
+        angle = create_rotation_matrix(rot_axis, angle).rotation
 
-        rot_rigid = t4d_inv.dot(angle).dot(t4d).dot(rigid.full_matrix[0])
-        print(rot_rigid)
-
-        rot_rigid_inv = t4d_inv.dot(angle_inv).dot(t4d).dot(rigid.full_matrix[0])
+        # the anchor (vector) is in the first rigidRef t entry
+        anchor = rigidRef1.t
 
 
-        rotation    = rot_rigid.rotation
-        translation = rot_rigid_inv.translation
+        rigid_rot   = rigid.full_matrix[0].rotation
+        rigid_trans = rigid.full_matrix[0].translation
+
 
         rigid.full_matrix = None
-        rigid.full_matrix = Matrix3D(rotation=rotation, translation=translation)
+        rigid.full_matrix = self.calculate_rigid_rotation(rigid_rot, rigid_trans, anchor, angle)
 
         print(rigid.full_matrix[0])
+
+
+        # now apply the rotation to the other related rigids
+
+        for j in joints:
+            if j != main_joint:
+                rigidRef1, rigidRef2 = self.get_rigidrefs(j, nr)
+                print(nr)
+                print(rigidRef1.rigidRef)
+                print(rigidRef2.rigidRef)
+
+                # the attached rigid is the second Ref!!!
+                rigid = self.get_rigid(rigidRef2.rigidRef)
+                if rigid is None:
+                    raise ValueError('Rigid not found!')
+
+
+                # apply the same correction ...
+                rigid_rot   = rigid.full_matrix[0].rotation
+                rigid_trans = rigid.full_matrix[0].translation
+
+                print('anchor:  ', anchor)
+                print('anchor1: ', rigidRef1.t)
+                print('anchor2: ', rigidRef2.t)
+                print('rotate:  ', rigid_rot)
+                print('transl:  ', rigid_trans)
+                print('angle:   ', angle)
+
+                #anchor = rigidRef2.t
+
+                rigid.full_matrix = None
+                rigid.full_matrix = self.calculate_rigid_rotation(rigid_rot, rigid_trans, anchor, angle)
+
+                #print(rigid.full_matrix[0])
+
+                print('rotate2: ', rigid.full_matrix[0].rotation)
+                print('transl2: ', rigid.full_matrix[0].translation)

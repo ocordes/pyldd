@@ -90,15 +90,15 @@ class Scene(object):
             #    scene.move_head( 45 )
         else:
             scene = PovRigidSystemModel(self.joints)
-            count = 2
+            #count = 2
             for rigid in self.rigids:
                 rigid_model, kbricks, ukbricks = create_rigid_model(self.bricks, rigid)
                 scene.add(rigid_model)
                 unknown_bricks += ukbricks
                 known_bricks += kbricks
-                count -= 1
-                if count == 0:
-                    break
+                #count -= 1
+                #if count == 0:
+                #    break
 
             scene.add_include('lg_color2.inc')
             scene.add_include('lg_defs.inc')
