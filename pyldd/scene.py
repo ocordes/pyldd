@@ -17,6 +17,7 @@ from pypovlib.pypovobjects import *
 from pypovlib.pypovtextures import *
 from pyldd.povbricks import *
 from pyldd.rigid_systems import *
+from pyldd.bricks import Brick
 
 
 
@@ -137,3 +138,40 @@ class Scene(object):
 
         # now save these objects to a file
         save_python_bricks(python_file, povbricks)
+
+
+
+# helper functions
+zero_trafo = np.array([1.,0.,0.,0.,1.,0.,0.,0.,1.,0.,0.,0.])
+
+
+# custom scene function
+def create_custom_bricks():
+    scene = PovBrickModel()
+
+    scene.add_include('lg_color2.inc')
+    scene.add_include('lg_defs.inc')
+
+    scene.scale = [-1,1,1]
+    scene.rotate = [0,180,0]
+    scene.add_macro(lego_transform_macro)
+
+    return scene
+
+
+def create_custom_brick(scene, itemno, transformation=zero_trafo, colour='194'):
+    adict = { 'designID'       : itemno,
+              'refID'          : '-1',
+              'transformation' : transformation,
+              'decoration'     : [],
+              'materialID'     : colour}
+
+    brick = Brick(adict)
+
+
+    obj, inc_list = brick.get_pov_object()
+
+    scene.add(obj)
+    scene.add_include(inc_list)
+
+    return obj

@@ -5,6 +5,7 @@ pyldd/bricks_data.py
 Author: Oliver Cordes
 
 History:
+ 2019-05-11: add space plates
  2018-09-30: seperate bricks_data from bricks.py
 
 
@@ -13,7 +14,8 @@ History:
 
 
 
-known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
+known_bricks = {  608:  [ '0608', None ],     # base 32 x 32 road T intersection 9 studs
+                 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  2356:  [ '2356', None ],     # brick 4 x 6
                  2357:  [ '2357', None ],     # brick 2 x 2 corner
                  2362:  [ '2362', None ],     # panel 1 x 2 x 3 studs hollow
@@ -140,6 +142,7 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  3941:  [ '3941', None ],     # brick 2 x 2 round
                  3942:  [ '3942', None ],     # cone 2 x 2 x 2 open stud
                  3943:  [ '3943', None ],     # cone 4 x 4 x 2
+                 3947:  [ '3947', None ],     # base 32 x 32 plate with craters
                  3956:  [ '3956', None ],     # bracket 2 x 2 - 2 x 2
                  3957:  [ '3957', None ],     # antenna
                  3958:  [ '3958', None ],     # plate 6 x 6
@@ -190,7 +193,8 @@ known_bricks = { 2341:  [ '2341', None ],     # brick 45 3 x 1 inverted double
                  6019:  [ '6019', None ],     # plate 1 x 1 with clip horizontal
                  6066:  [ '6066', None ],     # castle turrent top 4 x 8 x 2 1/3
                  6091:  [ '6091', None ],     # brick 2 x 1 x 1 & 1/3 with curved top
-                 6098:  [ '3867', None ],     # base 16 x 16 plate
+                 6098:  [ '3867', None ],     # base 16 x 16 plate road 9-stud landing pad with green octagon
+                 6099:  [ '6099', None ],     # base 32 x 32
                  6134:  [ '6134', None ],     # hinge 2 x 2 top
                  6141:  [ '6141', None ],     # plate 1 x 1 round
                  6143:  [ '3941', None ],     # brick 2 x 2 round

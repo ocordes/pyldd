@@ -24,6 +24,7 @@ from pypovlib.pypovobjects import *
 from pypovlib.pypovtextures import *
 
 import sys, os
+import numpy as np
 
 from pyldd.povbricks import *
 from pyldd.bricks_data import *
