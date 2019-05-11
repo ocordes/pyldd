@@ -89,7 +89,7 @@ class Scene(object):
             #if ( python_model == 'figure' ):
             #    scene.move_head( 45 )
         else:
-            scene = PovRigidSystemModel(self.joints)
+            scene = PovRigidSystemModel(self.rigids, self.joints)
             #count = 2
             for rigid in self.rigids:
                 rigid_model, kbricks, ukbricks = create_rigid_model(self.bricks, rigid)

@@ -2,7 +2,7 @@
 #
 # Oliver Cordes 2018-08-06
 # 
-descr=tail 4 x 2 x 2
+descr=tail 4 x 2 x 2, rudder
 type=brick
 file=lg_3479
 width=-5

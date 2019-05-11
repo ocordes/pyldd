@@ -150,13 +150,6 @@ class PovSimpleBrick(PovCSGMacro, PovPreTransformation):
     to be modified!
     """
     def fix_rigid_trafo(self, rigid_trafo):
-        # calculate the matrix for the brick
-        # brick = x * rigid
-        # brick * rigid^-1 = x
-        #fixed_trafo = self.full_matrix[0].dot(rigid_trafo.inv())
-        #self.full_matrix = None
-        #self.full_matrix = fixed_trafo
-
 
         # split the trafos into the matrix parts
         full_mat = self.full_matrix[0].rotation
@@ -201,15 +194,6 @@ class PovSimpleBrickUnion(PovCSGUnion, PovPreTransformation):
     to be modified!
     """
     def fix_rigid_trafo(self, rigid_trafo):
-        # calculate the matrix for the brick
-        # brick = x * rigid
-        # brick * rigid^-1 = x
-        #fixed_trafo = self.full_matrix[0].dot(rigid_trafo.inv())
-        #self.full_matrix = None
-        #self.full_matrix = fixed_trafo
-        print('Union fix')
-
-
         # split the trafos into the matrix parts
         full_mat = self.full_matrix[0].rotation
         rigid_mat = rigid_trafo.rotation
@@ -573,22 +557,35 @@ class PovBrickFigure(PovBrickModel):
 
 ## Rigid models
 
-class PovRigidModel(PovCSGUnion):
+#class PovRigidModel(PovCSGUnion):
+class PovRigidModel(PovSimpleBrickUnion):
     def __init__(self, nr):
-        PovCSGUnion.__init__(self, comment='Rigid Model #{}'.format(nr))
+        PovSimpleBrickUnion.__init__(self, comment='Rigid Model #{}'.format(nr))
 
 
 
 class PovRigidSystemModel(PovCSGUnion):
-    def __init__(self, joints, comment='Rigid System Model'):
+    def __init__(self, rigids, joints, comment='Rigid System Model'):
         PovCSGUnion.__init__(self, comment=comment)
 
-        self._joints = joints
+        self._rigids      = rigids
+        self._joints      = joints
+        self._rigid_items = []
+
+
+    def add(self, new_obj):
+        PovCSGUnion.add(self, new_obj)
+        if ( isinstance( new_obj, list ) == True ) or  ( isinstance( new_obj, tuple ) == True ):
+            for i in new_obj:
+                self._rigid_items.append(i)
+        else:
+            self._rigid_items.append(new_obj)
+
 
 
     def get_rigid(self, nr):
-        if nr < len(self._items):
-            return self._items[nr]
+        if nr < len(self._rigid_items):
+            return self._rigid_items[nr]
         else:
             return None
 
@@ -607,6 +604,7 @@ class PovRigidSystemModel(PovCSGUnion):
         else:
             return joint._b, joint._a
 
+
     def calculate_rigid_rotation(self, rigid_rot, rigid_trans, anchor, angle):
         # calculate the rotation for the rigid
         rotation = np.dot(rigid_rot,angle)
@@ -621,10 +619,6 @@ class PovRigidSystemModel(PovCSGUnion):
 
 
     def rotate_rigid(self, nr, refnr,  angle, update_all=True, rot_axis=None):
-        #print(nr)
-        #print(refnr)
-        #print(angle)
-
         joints = self.look_for_joints(nr)
         main_joint = None
         for j in joints:
@@ -638,7 +632,7 @@ class PovRigidSystemModel(PovCSGUnion):
 
         rigid = self.get_rigid(nr)
         if rigid is None:
-            raise ValueError('Rigid not found!')
+            raise ValueError('Rigid #{} not found!'.format(nr))
 
         # so now do the calculations
         if rot_axis is None:
@@ -658,41 +652,27 @@ class PovRigidSystemModel(PovCSGUnion):
         rigid.full_matrix = None
         rigid.full_matrix = self.calculate_rigid_rotation(rigid_rot, rigid_trans, anchor, angle)
 
-        print(rigid.full_matrix[0])
+        #print(rigid.full_matrix[0])
 
 
-        # now apply the rotation to the other related rigids
+    def move_rigid(self, src_rigid, dest_rigid):
 
-        for j in joints:
-            if j != main_joint:
-                rigidRef1, rigidRef2 = self.get_rigidrefs(j, nr)
-                print(nr)
-                print(rigidRef1.rigidRef)
-                print(rigidRef2.rigidRef)
+        pov_part = self.get_rigid(src_rigid)
+        rigid = self.get_rigid(dest_rigid)
 
-                # the attached rigid is the second Ref!!!
-                rigid = self.get_rigid(rigidRef2.rigidRef)
-                if rigid is None:
-                    raise ValueError('Rigid not found!')
+        if pov_part is None:
+            raise ValueError('Rigid #{}not found!'.format(src_rigid))
+
+        if rigid is None:
+            raise ValueError('Rigid #{}not found!'.format(dest_rigid))
 
 
-                # apply the same correction ...
-                rigid_rot   = rigid.full_matrix[0].rotation
-                rigid_trans = rigid.full_matrix[0].translation
 
-                print('anchor:  ', anchor)
-                print('anchor1: ', rigidRef1.t)
-                print('anchor2: ', rigidRef2.t)
-                print('rotate:  ', rigid_rot)
-                print('transl:  ', rigid_trans)
-                print('angle:   ', angle)
+        print('Moving rigid #{} into #{} union...'.format(src_rigid, dest_rigid))
+        # change matrix from part with respect of rigid
+        pov_part.fix_rigid_trafo(rigid.full_matrix[0])
 
-                #anchor = rigidRef2.t
-
-                rigid.full_matrix = None
-                rigid.full_matrix = self.calculate_rigid_rotation(rigid_rot, rigid_trans, anchor, angle)
-
-                #print(rigid.full_matrix[0])
-
-                print('rotate2: ', rigid.full_matrix[0].rotation)
-                print('transl2: ', rigid.full_matrix[0].translation)
+        # move the src_rigid into dest_rigid
+        rigid.add(pov_part)
+        self._rigids[src_rigid] = None
+        self._items.pop(src_rigid)
