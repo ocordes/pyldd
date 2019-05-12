@@ -46,9 +46,9 @@ class Brick( object ):
 
     def _set_attributes( self, adict ):
         for name, value in adict.items():
-            if name in ( 'refID', 'designID', 'materialID', 'itemNos'):
+            if name in ( 'refID', 'materialID', 'itemNos'):
                 setattr( self, name, int( value ) )
-            elif name in ( 'transformation', 'decoration' ):
+            elif name in ( 'designID', 'transformation', 'decoration' ):
                 setattr( self, name, value )
             else:
                 setattr( self, name, float( value ) )
@@ -104,6 +104,8 @@ class Brick( object ):
 
             defs = defs[1]
 
+            if defs is None:
+                return None, None
             objs = []
             color = color_table.get(self.materialID, 'lg_unknown')
             if (color == 'lg_unknown'):
