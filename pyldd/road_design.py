@@ -43,9 +43,9 @@ def create_road_matrix(road_design=None,center=True):
             colnr += 1
 
         rownr += 1
-        
 
     if center:
-        union.translate = [-rownr*32*LG_BRICK_WIDTH/2.,0,0]
+        union.translate = [(-len(road_design[0]))*16*LG_BRICK_WIDTH/2.,0,
+                           (len(road_design)-2)*16*LG_BRICK_WIDTH/2.]
 
     return union
