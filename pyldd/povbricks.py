@@ -277,7 +277,7 @@ class PovSimpleBrickMap( PovSimpleBrickUnion ):
         s = """
              pigment{
                 image_map{
-                  png "Decorations/%s.png"
+                  png "%s.png"
                   map_type %s
                 once }
              }

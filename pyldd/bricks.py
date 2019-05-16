@@ -126,7 +126,10 @@ class Brick( object ):
                 elif objtype == 'leg':
                     obj = PovBrickLeg(self.refID, descr, macro, self.designID, self.decoration, defs)
                 else:
-                    obj = PovSimpleBrick(self.refID, descr, macro, self.designID, self.decoration, defs)
+                    if len(self.decoration) == 0:
+                        obj = PovSimpleBrick(self.refID, descr, macro, self.designID, self.decoration, defs)
+                    else:
+                        obj = PovSimpleBrickMap(self.refID, descr, macro, self.designID, self.decoration, defs)
                 if parts[1] == 'n':
                     obj.set_texture(color)
                 elif parts[1] == 'r':

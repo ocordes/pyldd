@@ -14,3 +14,7 @@ sz=1
 parts=1
 part0=lg_3010
 text0=n
+map=lg_3010_decals_1
+map_type=0
+map_scale=<1,1,1>
+map_translate=<0,0,0>
