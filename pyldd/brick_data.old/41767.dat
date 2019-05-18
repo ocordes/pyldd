@@ -1,0 +1,16 @@
+# wedge 4 x 2 right
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=wedge 4 x 2 right
+type=brick
+file=lg_41767
+width=3
+length=1
+depth=1
+sx=1
+sy=1
+sz=-1
+parts=1
+part0=lg_41767
+text0=n

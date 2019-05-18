@@ -2,6 +2,7 @@
 #
 # Oliver Cordes 2018-08-06
 #
+[DEFAULT]
 descr=minifig torso
 type=torso
 file=lg_0973
@@ -12,8 +13,12 @@ sx=1
 sy=1
 sz=-1
 parts=1
-part0=lg_0973
-text0=n
+
+[PART0]
+part=lg_0973
+texture=n
+
+[MAPPING0]
 map=lg_0973_map
-map_scale=1.25
-map_translate=<-0.22,0.0,0>
+scale=1.25
+translate=<-0.22,0.0,0>

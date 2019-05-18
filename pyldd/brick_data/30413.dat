@@ -2,6 +2,7 @@
 #
 # Oliver Cordes 2018-08-06
 # 
+[DEFAULT]
 descr=panel 1 x 4 x 1 
 type=brick
 file=lg_30413
@@ -12,5 +13,9 @@ sx=1
 sy=1
 sz=-1
 parts=1
-part0=lg_30413
-text0=n
+
+[PART0]
+part=lg_30413
+texture=n
+
+[MAPPING0]

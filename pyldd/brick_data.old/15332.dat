@@ -1,0 +1,16 @@
+# fence 1 x 4 x 2 with 4 knobs
+#
+# Oliver Cordes 2018-08-06
+#
+descr=fence 1 x 4 x 2 with 4 knobs
+type=brick
+file=lg_15332
+width=3
+length=0
+depth=2
+sx=1
+sy=1
+sz=1
+parts=1
+part0=lg_15332
+text0=n

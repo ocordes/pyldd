@@ -1,0 +1,16 @@
+# arch 1 x 6
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=arch 1 x 6
+type=brick
+file=lg_3455
+width=5
+length=0
+depth=1
+sx=1
+sy=1
+sz=1
+parts=1
+part0=lg_3455
+text0=n

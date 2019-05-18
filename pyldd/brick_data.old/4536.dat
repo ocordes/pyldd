@@ -1,0 +1,16 @@
+# cupboard 2 x 3 x 2 drawer
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=cupboard 2 x 3 x 2 drawer
+type=drawer
+file=lg_4536
+width=8/3
+length=6/3
+depth=2/3
+sx=1
+sy=1
+sz=-1
+parts=1
+part0=lg_4536
+text0=n

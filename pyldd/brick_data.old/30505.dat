@@ -1,0 +1,16 @@
+# brick 3 x 3 without corner
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=brick 3 x 3 without corner
+type=brick
+file=lg_30505
+width=2
+length=-2
+depth=1
+sx=1
+sy=1
+sz=-1
+parts=1
+part0=lg_30505
+text0=n

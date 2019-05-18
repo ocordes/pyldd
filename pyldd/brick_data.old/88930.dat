@@ -1,0 +1,16 @@
+# slope brick curved 2 x 4 with underside studs
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=slope brick curved 2 x 4 with underside studs
+type=brick
+file=lg_88930
+width=3
+length=1
+depth=0
+sx=-1
+sy=1
+sz=-1
+parts=1
+part0=lg_88930
+text0=n

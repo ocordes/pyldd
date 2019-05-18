@@ -2,6 +2,7 @@
 #
 # Oliver Cordes 2018-08-06
 # 
+[DEFAULT]
 descr=wing 4 x 4 right
 type=plate
 file=lg_3936
@@ -12,5 +13,9 @@ sx=1
 sy=1
 sz=-1
 parts=1
-part0=lg_3936
-text0=n
+
+[PART0]
+part=lg_3936
+texture=n
+
+[MAPPING0]

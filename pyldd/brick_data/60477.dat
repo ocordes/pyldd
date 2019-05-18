@@ -2,6 +2,7 @@
 #
 # Oliver Cordes 2018-09-30
 # 
+[DEFAULT]
 descr=slope brick 18 4 x 1
 type=brick
 file=lg_60477
@@ -12,7 +13,13 @@ sx=-1
 sy=1
 sz=-1
 parts=2
-part0=lg_60477
-text0=n
-part1=lg_60477_slope
-text1=r
+
+[PART0]
+part=lg_60477
+texture=n
+
+[PART1]
+part=lg_60477_slope
+texture=r
+
+[MAPPING0]

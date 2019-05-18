@@ -1,0 +1,16 @@
+# mail box 2 x 2 x 2 door
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=mail box 2 x 2 x 2 door
+type=door
+file=lg_4346
+width=1
+length=1
+depth=2
+sx=1
+sy=1
+sz=-1
+parts=1
+part0=lg_4346
+text0=n

@@ -1,0 +1,16 @@
+# brick 4 x 8 round half circle
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=brick 4 x 8 round half circle
+type=brick
+file=lg_47974
+width=7
+length=-1
+depth=1
+sx=1
+sy=1
+sz=-1
+parts=1
+part0=lg_47974
+text0=n

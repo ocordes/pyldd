@@ -1,0 +1,16 @@
+# Base 32 x 32 plate
+#
+# Oliver Cordes 2018-08-06
+#
+descr=base 32 x 32 plate
+type=baseplate
+file=lg_3811
+width=31
+length=31
+depth=0
+sx=1
+sy=1
+sz=1
+parts=1
+part0=lg_3811
+text0=n

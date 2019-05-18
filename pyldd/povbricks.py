@@ -119,6 +119,109 @@ class PovPreTransformation(PovWriterObject):
             self._write_indent(ffile, 'translate %s\n' % r, indent=indent)
 
 
+class PovLEGOBrick(PovCSGObject, PovPreTransformation):
+    def __init__(self, nr, itemNos, color, config, decoration):
+        PovCSGObject.__init__(self)
+
+        self._decoration = decoration
+
+
+        default_config = config['DEFAULT']
+        # create the brick description
+        descr = default_config.get('descr', 'unknown brick')
+
+        # calculate the number of necessary objects to describe the brick
+        max_parts = default_config.getint('parts', 0)
+        if len(self._decoration) > 0:
+            max_parts += 1
+
+        if max_parts == 0:
+            # no container necessary
+            self._container = None
+        else:
+            self._container = PovCSGUnion(comment=descr)
+
+        for partnr in range(default_config.getint('parts', 0)):
+            parts = config['PART%i' % partnr]
+            macro = parts['part']
+
+            brick_part = PovCSGMacro('#%i %s' % ( nr, descr), macrocmd=macro)
+
+
+            texture = parts.get('texture', 'n')
+            if texture == 'n':
+                brick_part.set_texture(color)
+            elif texture == 'r':
+                brick_part.set_texture('{} {}'.format(color,
+                                                 'normal { bumps 0.1 scale 2 }'))
+            elif texture == 's':
+                pass
+
+            if self._container is None:
+                self._container = brick_part
+            else:
+                self._container.add(brick_part)
+
+    @property
+    def macros( self ):
+        return self._container.macros
+
+
+    @macros.setter
+    def macros( self, new_macro ):
+        self._container.macros = new_macro
+        
+
+    @property
+    def full_matrix( self ):
+        return self._container.full_matrix
+
+
+    @full_matrix.setter
+    def full_matrix( self, val ):
+        self._container.full_matrix = val
+
+
+
+    def write_pov(self, ffile, indent = 0 ):
+        self._container.write_pov(ffile, indent=indent)
+
+
+    # for rigid systems
+
+    """
+    fix_rigid_trafo
+
+    applies the fix for the rigid transformation, which is done after
+    the brick transformation, so transformation matrix needs
+    to be modified!
+    """
+    def fix_rigid_trafo(self, rigid_trafo):
+        # split the trafos into the matrix parts
+        full_mat = self.full_matrix[0].rotation
+        rigid_mat = rigid_trafo.rotation
+        rigid_mat_inv = np.linalg.inv(rigid_mat)
+
+        # calculate the rest matrix for the brick
+        # brick = x * rigid
+        # brick * rigid^-1 = x
+        rest_mat = np.dot(full_mat,rigid_mat_inv)
+
+        # calculate the raw difference for the translation
+        rest_trans =  self.full_matrix[0].translation - rigid_trafo.translation
+
+        # apply the rotation to the rest tranlation, which is in
+        # the rigid matrix!!
+        rest_trans = np.dot(rigid_mat, rest_trans)
+
+        fixed_trafo_okay = Matrix3D(rotation=rest_mat, translation=rest_trans)
+
+        # recombine the results for the brick
+        self.full_matrix = None
+        self.full_matrix = fixed_trafo_okay
+
+
+
 class PovSimpleBrick(PovCSGMacro, PovPreTransformation):
     def __init__(self, nr, descr, cmd, itemNos, decoration, defs):
         PovCSGMacro.__init__(self, '#%i %s' % ( nr, descr), macrocmd=cmd)
@@ -240,7 +343,7 @@ class PovSimpleBrickMap( PovSimpleBrickUnion ):
 
         self.add( self._main_brick )
 
-        cmd_map = defs.get( 'map', 'lg_unknown' )
+        cmd_map = defs['MAPPING0'].get( 'map', 'lg_unknown' )
         if ( cmd_map != 'lg_unknown' ):
             self._map_part = PovCSGMacro( '#%i %s mapping' % ( nr, descr), macrocmd=cmd_map )
             self.add( self._map_part )
@@ -270,10 +373,11 @@ class PovSimpleBrickMap( PovSimpleBrickUnion ):
 
     def set_decoration( self ):
         #print( self._decoration, self._defs )
-        scale     = self._defs.get( 'map_scale', '1.0' )
-        rotate    = self._defs.get( 'map_rotate', '<0,0,0>')
-        translate = self._defs.get( 'map_translate', '<0,0,0>')
-        map_type  = self._defs.get( 'map_type', '0' )
+        mapdef = self._defs['MAPPING0']
+        scale     = mapdef.get('scale', '1.0')
+        rotate    = mapdef.get('rotate', '<0,0,0>')
+        translate = mapdef.get('translate', '<0,0,0>')
+        map_type  = mapdef.get('type', '0')
         s = """
              pigment{
                 image_map{
@@ -284,9 +388,10 @@ class PovSimpleBrickMap( PovSimpleBrickUnion ):
              scale %s
              rotate %s
              translate %s
-        """ % ( self._decoration[0], map_type, scale, rotate, translate )
+        """ % (self._decoration[0], map_type, scale, rotate, translate)
 
-        self._map_part.set_texture( s )
+        self._map_part.set_texture(s)
+        #self.add_extra_file('%s.png' % self._decoration[0])
 
 
 

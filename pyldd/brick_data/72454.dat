@@ -2,6 +2,7 @@
 #
 # Oliver Cordes 2018-09-30
 # 
+[DEFAULT]
 descr=slope brick 45 4 x 4 inverted double with holes
 type=brick
 file=lg_72454
@@ -12,7 +13,13 @@ sx=1
 sy=1
 sz=-1
 parts=2
-part0=lg_72454
-text0=n
-part1=lg_72454_slope
-text0=r
+
+[PART0]
+part=lg_72454
+texture=n
+
+[PART1]
+part=lg_72454_slope
+texture=r
+
+[MAPPING0]

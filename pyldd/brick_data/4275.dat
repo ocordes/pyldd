@@ -2,6 +2,7 @@
 #
 # Oliver Cordes 2018-08-06
 #
+[DEFAULT]
 descr=plate 1 x 2 with hinge open studs (counter part 4276)
 type=hinge
 file=lg_4275
@@ -12,5 +13,9 @@ sx=-1
 sy=1
 sz=1
 parts=1
-part0=lg_4275
-text0=n
+
+[PART0]
+part=lg_4275
+texture=n
+
+[MAPPING0]

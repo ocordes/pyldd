@@ -1,0 +1,16 @@
+# panel 1 x 2 x 3 studs hollow
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=panel 1 x 2 x 3 studs hollow
+type=brick
+file=lg_2362
+width=1
+length=0
+depth=3
+sx=1
+sy=1
+sz=1
+parts=1
+part0=lg_2362
+text0=n

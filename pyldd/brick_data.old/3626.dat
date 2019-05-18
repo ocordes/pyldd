@@ -1,0 +1,20 @@
+# Minifig head with hollow stud
+#
+# Oliver Cordes 2018-08-06
+#
+descr=minifig head with hollow stud
+type=head
+file=lg_3626
+width=0
+length=0
+depth=3/3
+sx=1
+sy=1
+sz=-1
+parts=1
+part0=lg_3626
+text0=n
+map=lg_3626_map
+map_type=0
+map_scale=<1.4,1,1>*(LG_BRICK_HEIGHT-0.26)
+map_translate=<-0.5,0.20,0>

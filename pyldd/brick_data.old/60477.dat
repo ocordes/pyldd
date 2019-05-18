@@ -1,0 +1,18 @@
+# slope brick 18 4 x 1
+#
+# Oliver Cordes 2018-09-30
+# 
+descr=slope brick 18 4 x 1
+type=brick
+file=lg_60477
+width=0
+length=0
+depth=1
+sx=-1
+sy=1
+sz=-1
+parts=2
+part0=lg_60477
+text0=n
+part1=lg_60477_slope
+text1=r

@@ -1,0 +1,16 @@
+# slope brick 65 6 x 6 x 2 inverted quadruple
+#
+# Oliver Cordes 2018-09-30
+# 
+descr=slope brick 65 6 x 6 x 2 inverted quadruple
+type=brick
+file=lg_30373
+width=3
+length=3
+depth=2
+sx=1
+sy=1
+sz=-1
+parts=1
+part0=lg_30373
+text0=n

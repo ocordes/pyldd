@@ -1,0 +1,16 @@
+# space stand 2 x 2 x 2
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=spae stand 2 x 2 x 2
+type=brick
+file=lg_3940
+width=1
+length=1
+depth=2
+sx=1
+sy=1
+sz=1
+parts=1
+part0=lg_3940
+text0=n

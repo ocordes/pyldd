@@ -1,0 +1,16 @@
+# cylinder 3 x 6 x 2 2/3 horizontal
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=cylinder 3 x 6 x 2 2/3 horizontal
+type=brick
+file=lg_30360
+width=5
+length=0
+depth=4/3
+sx=1
+sy=1
+sz=1
+parts=1
+part0=lg_30360
+text0=n

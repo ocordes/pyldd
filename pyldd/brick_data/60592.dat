@@ -2,6 +2,7 @@
 #
 # Oliver Cordes 2018-08-06
 # 
+[DEFAULT]
 descr=window  1 x 2 x 2 without sill
 type=brick
 file=lg_60592
@@ -12,5 +13,9 @@ sx=1
 sy=1
 sz=1
 parts=1
-part0=lg_60592
-text0=n
+
+[PART0]
+part=lg_60592
+texture=n
+
+[MAPPING0]

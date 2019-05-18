@@ -2,6 +2,7 @@
 #
 # Oliver Cordes 2018-08-06
 # 
+[DEFAULT]
 descr=plant tree oval 4 x 4 x 6
 type=brick
 file=lg_3470
@@ -12,5 +13,9 @@ sx=1
 sy=1
 sz=1
 parts=1
-part0=lg_3470
-text0=n
+
+[PART0]
+part=lg_3470
+texture=n
+
+[MAPPING0]

@@ -2,6 +2,7 @@
 #
 # Oliver Cordes 2018-08-06
 #
+[DEFAULT]
 descr=roof tile 1 x 2 / 45°
 type=Roof
 file=lg_3040
@@ -12,7 +13,13 @@ sx=1
 sy=1
 sz=-1
 parts=2
-part0=lg_3040
-text0=n
-part1=lg_3040_slope
-text1=r
+
+[PART0]
+part=lg_3040
+texture=n
+
+[PART1]
+part=lg_3040_slope
+texture=r
+
+[MAPPING0]

@@ -1,0 +1,16 @@
+# minifig signal holder (stop sign)
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=minifig signal holder (stop sign)
+type=brick
+file=lg_3900
+width=0
+length=2/3
+depth=7/3
+sx=1
+sy=1
+sz=1
+parts=1
+part0=lg_3900
+text0=n

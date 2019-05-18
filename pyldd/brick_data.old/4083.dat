@@ -1,0 +1,16 @@
+# bar 1 x 4 x 2
+#
+# Oliver Cordes 2018-08-06
+#
+descr=bar 1 x 4 x 2
+type=brick
+file=lg_4083
+width=3
+length=0
+depth=2
+sx=1
+sy=1
+sz=1
+parts=1
+part0=lg_4083
+text0=n

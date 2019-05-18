@@ -1,0 +1,18 @@
+# slope brick 45 2 x 2 double convex
+#
+# Oliver Cordes 2018-09-30
+# 
+descr=slope brick 45 2 x 2 double convex
+type=brick
+file=lg_3045
+width=0
+length=0
+depth=1
+sx=-1
+sy=1
+sz=-1
+parts=2
+part0=lg_3045
+text0=n
+part1=lg_3045_slope
+text1=r

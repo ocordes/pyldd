@@ -1,0 +1,16 @@
+# slope brick 75 2 x 1 x 3 inverted
+#
+# Oliver Cordes 2018-09-30
+# 
+descr=slope brick 75 2 x 1 x 3 inverted
+type=brick
+file=lg_2449
+width=0
+length=0
+depth=3
+sx=-1
+sy=1
+sz=-1
+parts=1
+part0=lg_2449
+text0=n

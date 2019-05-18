@@ -2,6 +2,7 @@
 #
 # Oliver Cordes 2018-08-06
 # 
+[DEFAULT]
 descr=hose reel 2 x 2
 type=brick
 file=lg_2585
@@ -12,5 +13,9 @@ sx=1
 sy=1
 sz=1
 parts=1
-part0=lg_2585
-text0=n
+
+[PART0]
+part=lg_2585
+texture=n
+
+[MAPPING0]

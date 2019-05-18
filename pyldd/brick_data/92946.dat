@@ -2,6 +2,7 @@
 #
 # Oliver Cordes 2018-08-06
 #
+[DEFAULT]
 descr=roof tile 1 x 2 45° W 1/3 plate
 type=Roof
 file=lg_92946
@@ -12,7 +13,13 @@ sx=1
 sy=1
 sz=-1
 parts=2
-part0=lg_92946
-text0=n
-part1=lg_92946_slope
-text1=r
+
+[PART0]
+part=lg_92946
+texture=n
+
+[PART1]
+part=lg_92946_slope
+texture=r
+
+[MAPPING0]

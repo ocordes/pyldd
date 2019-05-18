@@ -1,0 +1,16 @@
+# brick 2 x 2 round
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=brick 2 x 2 round
+type=brick
+file=lg_3941
+width=1
+length=1
+depth=1
+sx=1
+sy=1
+sz=1
+parts=1
+part0=lg_3941
+text0=n

@@ -2,6 +2,7 @@
 #
 # Oliver Cordes 2019-05-11
 #
+[DEFAULT]
 descr=base 32 x 32 road T intersection 9 studs with road pattern
 type=baseplate
 file=lg_0608p01
@@ -12,7 +13,13 @@ sx=1
 sy=1
 sz=1
 parts=2
-part0=lg_0608
-text0=n
-part1=lg_0608p01_decals
-text1=x
+
+[PART0]
+part=lg_0608
+texture=n
+
+[PART1]
+part=lg_0608p01_decals
+texture=x
+
+[MAPPING0]

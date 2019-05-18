@@ -2,6 +2,7 @@
 #
 # Oliver Cordes 2018-08-06
 # 
+[DEFAULT]
 descr=plate 2 x 2 with socket joint-8 square and axlehole
 type=brick
 file=lg_63082
@@ -12,5 +13,9 @@ sx=1
 sy=1
 sz=1
 parts=1
-part0=lg_63082
-text0=n
+
+[PART0]
+part=lg_63082
+texture=n
+
+[MAPPING0]

@@ -2,6 +2,7 @@
 #
 # Oliver Cordes 2018-08-06
 # 
+[DEFAULT]
 descr=glass for window 1 x 4 x 3 opening
 type=brick
 file=lg_60603
@@ -12,5 +13,9 @@ sx=1
 sy=1
 sz=1
 parts=1
-part0=lg_60603
-text0=n
+
+[PART0]
+part=lg_60603
+texture=n
+
+[MAPPING0]

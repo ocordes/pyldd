@@ -2,6 +2,7 @@
 #
 # Oliver Cordes 2018-08-06
 #
+[DEFAULT]
 descr=brick 1 x 4
 type=brick
 file=lg_3010
@@ -12,9 +13,13 @@ sx=1
 sy=1
 sz=1
 parts=1
-part0=lg_3010
-text0=n
+
+[PART0]
+part=lg_3010
+texture=n
+
+[MAPPING0]
 map=lg_3010_decals_1
-map_type=0
-map_scale=<1,1,1>
-map_translate=<0,0,0>
+type=0
+scale=<4*LG_BRICK_WIDTH,LG_BRICK_HEIGHT,1>
+translate=<-0.4,0,0>

@@ -2,6 +2,7 @@
 #
 # Oliver Cordes 2018-08-06
 # 
+[DEFAULT]
 descr=plate 4 x 6 with studs on edges
 type=plate
 file=lg_6180
@@ -12,5 +13,9 @@ sx=1
 sy=1
 sz=-1
 parts=1
-part0=lg_6180
-text0=n
+
+[PART0]
+part=lg_6180
+texture=n
+
+[MAPPING0]

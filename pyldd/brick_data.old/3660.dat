@@ -1,0 +1,16 @@
+# slope brick 45 2 x 2 inverted
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=slope brick 45 2 x 2 inverted
+type=brick
+file=lg_3660
+width=1
+length=0
+depth=1
+sx=1
+sy=1
+sz=-1
+parts=1
+part0=lg_3660
+text0=n

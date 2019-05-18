@@ -2,6 +2,7 @@
 #
 # Oliver Cordes 2018-08-06
 # 
+[DEFAULT]
 descr=tail 4 x 2 x 2, rudder
 type=brick
 file=lg_3479
@@ -12,5 +13,9 @@ sx=1
 sy=1
 sz=1
 parts=1
-part0=lg_3479
-text0=n
+
+[PART0]
+part=lg_3479
+texture=n
+
+[MAPPING0]

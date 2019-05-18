@@ -1,0 +1,16 @@
+# brick 1 x 2 with grille
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=brick 1 x 2 with grille
+type=brick
+file=lg_2877
+width=1
+length=0
+depth=1
+sx=1
+sy=1
+sz=1
+parts=1
+part0=lg_2877
+text0=n

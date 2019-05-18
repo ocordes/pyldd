@@ -5,6 +5,8 @@ pyldd/bricks.py
 Author: Oliver Cordes
 
 History:
+ 2019-05-18:
+   - change the input type for the brick_data files to ConfigParser
  2019-04-22:
    - change filenames to resource_* for pip installation
  2018-12-14:
@@ -25,6 +27,7 @@ from pypovlib.pypovtextures import *
 
 import sys, os
 import numpy as np
+import configparser
 
 from pyldd.povbricks import *
 from pyldd.bricks_data import *
@@ -65,35 +68,14 @@ class Brick( object ):
         if verbose:
             print( 'loading brick data \'{}\' ...'.format( filename ) )
 
-        try:
-            f = open( filename, 'r' )
-            d = {}
-            parts = []
-            for line in f:
-                line = line.replace( '\n', '' ).lstrip().rstrip()
-                if line[0] == '#':
-                    continue
-                key, val = line.split('=',1)
-                if ( key in ( 'descr', 'type', 'file', 'width', 'length', 'depth',
-                              'map', 'map_type', 'map_scale', 'map_rotate', 'map_translate',
-                              'sx', 'sy', 'sz' ) ):
-                    d[key] = val
-                else:
-                    if key == 'parts':
-                        #parts = [[None,None]] * int(val)
-                        parts = [ [None,None] for _ in range( int(val) ) ]
-                    elif key[:4] == 'part':
-                        nr = int( key[4:])
-                        parts[nr][0] = val
-                    elif key[:4] == 'text':
-                        nr = int( key[4:])
-                        parts[nr][1] = val
-            d['parts'] = parts
-            f.close()
-            #print( d )
-            return d
-        except:
+
+        config = configparser.ConfigParser()
+        if len(config.read(filename)) == 0:
+            print('WARNING: Cannot read file!')
             return None
+
+        return config
+
 
 
     def get_pov_object(self):
@@ -110,42 +92,50 @@ class Brick( object ):
             color = color_table.get(self.materialID, 'lg_unknown')
             if (color == 'lg_unknown'):
                 print('Warning: Unknown color #{}'.format(self.materialID))
-            descr = defs.get('descr', 'unknown brick')
-            for parts in defs['parts']:
-                macro = parts[0]
-                # create special object for the bricks, static one, doors, figures etc.
-                objtype = defs.get('type', 'brick')
-                if objtype == 'torso':
-                    obj = PovBrickTorso(self.refID, descr, macro, self.designID, self.decoration, defs)
-                elif objtype == 'head':
-                    obj = PovBrickHead(self.refID, descr, macro, self.designID, self.decoration, defs)
-                elif objtype == 'hair':
-                    obj = PovBrickHair(self.refID, descr, macro, self.designID, self.decoration, defs)
-                elif objtype == 'hand':
-                    obj = PovBrickHand(self.refID, descr, macro, self.designID, self.decoration, defs)
-                elif objtype == 'leg':
-                    obj = PovBrickLeg(self.refID, descr, macro, self.designID, self.decoration, defs)
-                else:
-                    if len(self.decoration) == 0:
-                        obj = PovSimpleBrick(self.refID, descr, macro, self.designID, self.decoration, defs)
-                    else:
-                        obj = PovSimpleBrickMap(self.refID, descr, macro, self.designID, self.decoration, defs)
-                if parts[1] == 'n':
-                    obj.set_texture(color)
-                elif parts[1] == 'r':
-                    obj.set_texture('{} {}'.format(color,
-                                                'normal { bumps 0.1 scale 2 }'))
-                elif parts[1] == 's':
-                    pass
 
-                objs.append(obj)
-            if len(objs) > 1:
-                #u = PovCSGUnion(comment=descr)
-                u = PovSimpleBrickUnion(comment=descr)
-                u.add(objs)
-                obj = u
-            else:
-                obj = objs[0]
+
+            obj = PovLEGOBrick(self.refID, self.designID, color, defs, self.decoration)
+
+            # descr = defs['DEFAULT'].get('descr', 'unknown brick')
+            # for partnr in range(defs['DEFAULT'].getint('parts', 0)):
+            # #for parts in defs['parts']:
+            #     parts = defs['PART%i' % partnr]
+            #     macro = parts['part']
+            #     # create special object for the bricks, static one, doors, figures etc.
+            #     objtype = defs['DEFAULT'].get('type', 'brick')
+            #     if objtype == 'torso':
+            #         obj = PovBrickTorso(self.refID, descr, macro, self.designID, self.decoration, defs)
+            #     elif objtype == 'head':
+            #         obj = PovBrickHead(self.refID, descr, macro, self.designID, self.decoration, defs)
+            #     elif objtype == 'hair':
+            #         obj = PovBrickHair(self.refID, descr, macro, self.designID, self.decoration, defs)
+            #     elif objtype == 'hand':
+            #         obj = PovBrickHand(self.refID, descr, macro, self.designID, self.decoration, defs)
+            #     elif objtype == 'leg':
+            #         obj = PovBrickLeg(self.refID, descr, macro, self.designID, self.decoration, defs)
+            #     else:
+            #         if len(self.decoration) == 0:
+            #             obj = PovSimpleBrick(self.refID, descr, macro, self.designID, self.decoration, defs)
+            #         else:
+            #             obj = PovSimpleBrickMap(self.refID, descr, macro, self.designID, self.decoration, defs)
+            #
+            #     texture = parts.get('texture', 'n')
+            #     if texture == 'n':
+            #         obj.set_texture(color)
+            #     elif texture == 'r':
+            #         obj.set_texture('{} {}'.format(color,
+            #                                     'normal { bumps 0.1 scale 2 }'))
+            #     elif texture == 's':
+            #         pass
+            #
+            #     objs.append(obj)
+            # if len(objs) > 1:
+            #     #u = PovCSGUnion(comment=descr)
+            #     u = PovSimpleBrickUnion(comment=descr)
+            #     u.add(objs)
+            #     obj = u
+            # else:
+            #     obj = objs[0]
 
             if 'transformation' in self.__dict__:
                 obj.full_matrix = self.transformation
@@ -157,13 +147,13 @@ class Brick( object ):
                 obj.translate = [self.tx,self.ty,self.tz]
 
             # now apply the macros
-            obj.macros = 'L_Transform( {},{},{},{},{},{} )'.format(defs['width'],
-                                                                   defs['depth'],
-                                                                   defs['length'],
-                                                                   defs['sx'],
-                                                                   defs['sy'],
-                                                                   defs['sz'])
-            return obj, '{}.inc'.format(defs['file'])
+            obj.macros = 'L_Transform( {},{},{},{},{},{} )'.format(defs['DEFAULT']['width'],
+                                                                   defs['DEFAULT']['depth'],
+                                                                   defs['DEFAULT']['length'],
+                                                                   defs['DEFAULT']['sx'],
+                                                                   defs['DEFAULT']['sy'],
+                                                                   defs['DEFAULT']['sz'])
+            return obj, '{}.inc'.format(defs['DEFAULT']['file'])
         else:
             print('Brick with designID={} not implemented!'.format(self.designID))
         return None, None

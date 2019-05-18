@@ -1,0 +1,16 @@
+# hinge plate 2 x 4.5 top with technic pin hole
+#
+# Oliver Cordes 2018-08-06
+#
+descr=hinge plate 2 x 4.5 top with technic pin hole
+type=hinge
+file=lg_98286
+width=1
+length=1
+depth=1/3
+sx=1
+sy=1
+sz=1
+parts=1
+part0=lg_98286
+text0=n

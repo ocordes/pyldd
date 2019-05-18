@@ -1,0 +1,18 @@
+# slope brick 45 1 x 2 triple
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=slope brick 45 1 x 2 triple
+type=brick
+file=lg_3048
+width=0
+length=1
+depth=1
+sx=1
+sy=1
+sz=1
+parts=2
+part0=lg_3048
+text0=n
+part1=lg_3048_slope
+text1=r

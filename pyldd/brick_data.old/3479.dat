@@ -1,0 +1,16 @@
+# tail 4 x 2 x 2
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=tail 4 x 2 x 2, rudder
+type=brick
+file=lg_3479
+width=-5
+length=0
+depth=2
+sx=1
+sy=1
+sz=1
+parts=1
+part0=lg_3479
+text0=n

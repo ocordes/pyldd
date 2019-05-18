@@ -1,0 +1,18 @@
+# slope brick 45 2 x 4 double
+#
+# Oliver Cordes 2018-09-30
+# 
+descr=slope brick 45 2 x 4 double
+type=brick
+file=lg_3041
+width=3
+length=1
+depth=1
+sx=1
+sy=1
+sz=1
+parts=2
+part0=lg_3041
+text0=n
+part1=lg_3041_slope
+text1=r

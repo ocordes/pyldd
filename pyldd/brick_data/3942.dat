@@ -2,6 +2,7 @@
 #
 # Oliver Cordes 2018-08-06
 # 
+[DEFAULT]
 descr=cone  2 x 2 x 2 open stud
 type=brick
 file=lg_3942
@@ -12,5 +13,9 @@ sx=1
 sy=1
 sz=1
 parts=1
-part0=lg_3942
-text0=n
+
+[PART0]
+part=lg_3942
+texture=n
+
+[MAPPING0]

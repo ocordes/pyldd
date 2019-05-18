@@ -1,0 +1,16 @@
+# Brick  1 x 2 x 5
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=brick 1 x 2 x 5
+type=brick
+file=lg_2454
+width=1
+length=0
+depth=5
+sx=1
+sy=1
+sz=1
+parts=1
+part0=lg_2454
+text0=n

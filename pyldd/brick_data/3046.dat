@@ -2,6 +2,7 @@
 #
 # Oliver Cordes 2018-09-30
 # 
+[DEFAULT]
 descr=slope brick 45 2 x 2 double concave
 type=brick
 file=lg_3046
@@ -12,7 +13,13 @@ sx=-1
 sy=1
 sz=-1
 parts=2
-part0=lg_3046
-text0=n
-part1=lg_3046_slope
-text1=r
+
+[PART0]
+part=lg_3046
+texture=n
+
+[PART1]
+part=lg_3046_slope
+texture=r
+
+[MAPPING0]

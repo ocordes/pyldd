@@ -4,4 +4,4 @@ DATE=$(date +%Y%m%d)
 
 export COPYFILE_DISABLE=1
 
-tar cvfz pyldd_base_${DATE}.tgz lg_pov/* info_pyldd_base.ini
+tar cvfz pyldd_base_${DATE}.tgz lg_pov/* Decorations/* info_pyldd_base.ini

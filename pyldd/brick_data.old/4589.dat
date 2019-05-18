@@ -1,0 +1,16 @@
+# Nose cone small 1 x 1
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=nose cone small 1 x 1
+type=brick
+file=lg_4589
+width=0
+length=0
+depth=1
+sx=1
+sy=1
+sz=1
+parts=1
+part0=lg_4589
+text0=n

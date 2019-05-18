@@ -2,6 +2,7 @@
 #
 # Oliver Cordes 2018-09-30
 # 
+[DEFAULT]
 descr=slope brick 65 2 x 2 x 2
 type=brick
 file=lg_3678
@@ -12,5 +13,9 @@ sx=1
 sy=1
 sz=-1
 parts=1
-part0=lg_3678
-text0=n
+
+[PART0]
+part=lg_3678
+texture=n
+
+[MAPPING0]

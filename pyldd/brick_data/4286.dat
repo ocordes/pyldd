@@ -2,6 +2,7 @@
 #
 # Oliver Cordes 2018-08-06
 # 
+[DEFAULT]
 descr=slope brick 33 3 x 1
 type=brick
 file=lg_4286
@@ -12,7 +13,13 @@ sx=1
 sy=1
 sz=-1
 parts=2
-part0=lg_4286
-text0=n
-part1=lg_4286_slope
-text1=r
+
+[PART0]
+part=lg_4286
+texture=n
+
+[PART1]
+part=lg_4286_slope
+texture=r
+
+[MAPPING0]

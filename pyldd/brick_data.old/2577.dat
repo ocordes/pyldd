@@ -1,0 +1,16 @@
+# brick 4 x 4 with round corner
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=brick 4 x 4 with round corner
+type=brick
+file=lg_2577
+width=-1
+length=1
+depth=1
+sx=1
+sy=1
+sz=-1
+parts=1
+part0=lg_2577
+text0=n

@@ -2,6 +2,7 @@
 #
 # Oliver Cordes 2018-08-06
 #
+[DEFAULT]
 descr=Minifig hair short, tousled with side parting
 type=hair
 file=lg_62810
@@ -12,5 +13,9 @@ sx=1
 sy=1
 sz=1
 parts=1
-part0=lg_62810
-text0=n
+
+[PART0]
+part=lg_62810
+texture=n
+
+[MAPPING0]

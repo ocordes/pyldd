@@ -1,0 +1,16 @@
+# door 1 x 4 x 6 with 4 panes and stud handle
+#
+# Oliver Cordes 2018-08-06
+# 
+descr=door 1 x 4 x 6 with 4 panes and stud handle
+type=brick
+file=lg_60623
+width=0
+length=0
+depth=17/3
+sx=1
+sy=1
+sz=1
+parts=1
+part0=lg_60623
+text0=n

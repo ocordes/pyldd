@@ -1,0 +1,18 @@
+# Base 32 x 32 road 9-stud landing paf with green octagon
+#
+# Oliver Cordes 2019-05-11
+#
+descr=base 32 x 32 road 9-stud landing pad with green octagon
+type=baseplate
+file=lg_6099p05
+width=31
+length=31
+depth=0
+sx=1
+sy=1
+sz=1
+parts=2
+part0=lg_6099
+text0=n
+part1=lg_6099p05_decals
+text1=x

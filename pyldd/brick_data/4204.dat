@@ -2,6 +2,7 @@
 #
 # Oliver Cordes 2018-08-06
 # 
+[DEFAULT]
 descr=brick 8 x 16
 type=brick
 file=lg_4204
@@ -12,5 +13,9 @@ sx=1
 sy=1
 sz=1
 parts=1
-part0=lg_4204
-text0=n
+
+[PART0]
+part=lg_4204
+texture=n
+
+[MAPPING0]

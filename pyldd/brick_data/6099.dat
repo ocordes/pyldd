@@ -2,6 +2,7 @@
 #
 # Oliver Cordes 2019-05-11
 #
+[DEFAULT]
 descr=base 32 x 32 road 9-stud landing pad with green octagon
 type=baseplate
 file=lg_6099p05
@@ -12,7 +13,13 @@ sx=1
 sy=1
 sz=1
 parts=2
-part0=lg_6099
-text0=n
-part1=lg_6099p05_decals
-text1=x
+
+[PART0]
+part=lg_6099
+texture=n
+
+[PART1]
+part=lg_6099p05_decals
+texture=x
+
+[MAPPING0]

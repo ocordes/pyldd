@@ -2,6 +2,7 @@
 #
 # Oliver Cordes 2018-08-06
 # 
+[DEFAULT]
 descr=brick 1 x 1 with studs on the two opposite sides
 type=brick
 file=lg_47905
@@ -12,5 +13,9 @@ sx=1
 sy=1
 sz=-1
 parts=1
-part0=lg_47905
-text0=n
+
+[PART0]
+part=lg_47905
+texture=n
+
+[MAPPING0]
