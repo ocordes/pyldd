@@ -5,6 +5,8 @@ pyldd/bricks.py
 Author: Oliver Cordes
 
 History:
+ 2019-05-20:
+   - add DecorationMapping
  2019-05-18:
    - change the input type for the brick_data files to ConfigParser
  2019-04-22:
@@ -28,6 +30,7 @@ from pypovlib.pypovtextures import *
 import sys, os
 import numpy as np
 import configparser
+import xml.etree.ElementTree
 
 from pyldd.povbricks import *
 from pyldd.bricks_data import *
@@ -37,6 +40,7 @@ brick_data_dir = 'brick_data'
 
 from pkg_resources import resource_string, resource_filename
 
+decoration_mappings = None
 
 class Brick( object ):
     def __init__( self, adicts ):
@@ -77,8 +81,38 @@ class Brick( object ):
         return config
 
 
+    def _load_decorations_mappings(self):
+        global decoration_mappings
+        print('Loading DecorationsMappings...')
+
+        filename = resource_filename(__name__, '{}/DecorationMapping.xml'.format(brick_data_dir))
+
+        decoration_mappings = {}
+
+        with open(filename,'r') as xmlfile:
+            root = xml.etree.ElementTree.parse(xmlfile).getroot()
+
+            mappings = root.findall('Mapping')
+            for mapping in mappings:
+                el = decoration_mappings.get(mapping.attrib['decorationID'], None)
+                if el is None:
+                    el = { mapping.attrib['designID']: []}
+                else:
+                    el2 = el.get(mapping.attrib['designID'],None)
+                    if el2 is None:
+                        el[mapping.attrib['designID']] = []
+                el[mapping.attrib['designID']].append(int(mapping.attrib['surfaceID']))
+                if len(el[mapping.attrib['designID']]) > 1:
+                    print(mapping.attrib['decorationID'])
+                decoration_mappings[mapping.attrib['decorationID']] = el
+
+        print('Done.')
+
 
     def get_pov_object(self):
+        if decoration_mappings is None:
+            self._load_decorations_mappings()
+
         if self.designID in known_bricks:
             defs = known_bricks[self.designID]
             if defs[1] is None:
@@ -94,7 +128,8 @@ class Brick( object ):
                 print('Warning: Unknown color #{}'.format(self.materialID))
 
 
-            obj = PovLEGOBrick(self.refID, self.designID, color, defs, self.decoration)
+            obj = PovLEGOBrick(self.refID, self.designID, color, defs,
+                                self.decoration, decoration_mappings)
 
             # descr = defs['DEFAULT'].get('descr', 'unknown brick')
             # for partnr in range(defs['DEFAULT'].getint('parts', 0)):

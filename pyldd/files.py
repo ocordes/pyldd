@@ -102,8 +102,8 @@ def lxml_parse_rigidsystems(rsystems_tree):
             joint = Joint(ejoint.attrib, a, b)
             joints.append(joint)
 
-    print('{} rigid systems detected'.format(len(rigids)))
-    print('{} joints detected'.format(len(joints)))
+    print('{} rigid system(s) detected'.format(len(rigids)))
+    print('{} joint(s) detected'.format(len(joints)))
 
     return rigids, joints
 

@@ -18,7 +18,7 @@ parts=1
 part=lg_3010
 texture=n
 
-[MAPPING0]
+[MAPPING1]
 map=lg_3010_decals_1
 type=0
 scale=<4*LG_BRICK_WIDTH,LG_BRICK_HEIGHT,1>

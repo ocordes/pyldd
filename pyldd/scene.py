@@ -65,10 +65,12 @@ class Scene(object):
 
         if self.rigids is None:
             print('python_model=%s' % python_model)
-            if (python_model == 'figure'):
-                scene = PovBrickFigure()
-            else:
-                scene = PovBrickModel()
+            #if (python_model == 'figure'):
+            #    scene = PovBrickFigure()
+            #else:
+            #    scene = PovBrickModel()
+
+            scene = PovBrickModel()
 
             scene.add_include('lg_color2.inc')
             scene.add_include('lg_defs.inc')

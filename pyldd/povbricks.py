@@ -120,10 +120,12 @@ class PovPreTransformation(PovWriterObject):
 
 
 class PovLEGOBrick(PovCSGObject, PovPreTransformation):
-    def __init__(self, nr, itemNos, color, config, decoration):
+    def __init__(self, nr, itemNos, color, config,
+                  decoration, decoration_mappings):
         PovCSGObject.__init__(self)
 
-        self._decoration = decoration
+        self._decoration          = decoration
+        self._decoration_mappings = decoration_mappings
 
 
         default_config = config['DEFAULT']
@@ -133,6 +135,7 @@ class PovLEGOBrick(PovCSGObject, PovPreTransformation):
         # calculate the number of necessary objects to describe the brick
         max_parts = default_config.getint('parts', 0)
         if len(self._decoration) > 0:
+            # it is minimum one decoration, maybe more ...
             max_parts += 1
 
         if max_parts == 0:
@@ -162,6 +165,65 @@ class PovLEGOBrick(PovCSGObject, PovPreTransformation):
             else:
                 self._container.add(brick_part)
 
+
+        # add decoration if necessary
+        if len(self._decoration) > 0:
+            #get the surfaces for this decoration
+            surfaces = None
+            did = self._decoration_mappings.get(self._decoration[0], None)
+            if did is not None:
+                surfaces = did.get(itemNos, None)
+
+            if surfaces is None:
+                print('Surface info for brick={} and decoration={} not found!'.format(itemNos, self._decoration[0]))
+            else:
+                for sid in surfaces:
+                    mapdef = 'MAPPING%i' %sid
+                    if mapdef in config:
+                        # now we have all information for creating the decoration
+                        decal = self._create_decal(self._decoration[0], config[mapdef], nr, descr, color)
+                        if decal is None:
+                            print('Creating decal failed!')
+                        else:
+                            self._container.add(decal)
+                    else:
+                        print('No mapinfo given for brick={} surface={}!'.format(itemNos, sid))
+
+
+
+
+
+
+    def _create_decal(self, decoration, mapdef, nr, descr, color):
+        macro = mapdef.get('map', None)
+        if macro is None:
+            return None
+
+        obj = PovCSGMacro('#%i %s mapping' % ( nr, descr), macrocmd=macro)
+        obj.set_texture(color) # the original color first...
+
+        # create the texture
+        scale     = mapdef.get('scale', '1.0')
+        rotate    = mapdef.get('rotate', '<0,0,0>')
+        translate = mapdef.get('translate', '<0,0,0>')
+        map_type  = mapdef.get('type', '0')
+        s = """
+             pigment{
+                image_map{
+                  png "%s.png"
+                  map_type %s
+                once }
+             }
+             scale %s
+             rotate %s
+             translate %s
+        """ % (decoration, map_type, scale, rotate, translate)
+
+        obj.set_texture(s)
+
+        return obj
+
+
     @property
     def macros( self ):
         return self._container.macros
@@ -169,8 +231,9 @@ class PovLEGOBrick(PovCSGObject, PovPreTransformation):
 
     @macros.setter
     def macros( self, new_macro ):
-        self._container.macros = new_macro
-        
+        for i in self._container._items:
+            i.macros = new_macro
+
 
     @property
     def full_matrix( self ):
@@ -181,6 +244,25 @@ class PovLEGOBrick(PovCSGObject, PovPreTransformation):
     def full_matrix( self, val ):
         self._container.full_matrix = val
 
+
+    @property
+    def rotate( self ):
+        return self._container._rotate
+
+
+    @rotate.setter
+    def rotate( self, new_rotate ):
+        self._container.rotate = new_rotate
+
+
+    @property
+    def translate( self ):
+        return self._container.translate
+
+
+    @translate.setter
+    def translate( self, val ):
+        self._container.translate = val
 
 
     def write_pov(self, ffile, indent = 0 ):
@@ -395,90 +477,14 @@ class PovSimpleBrickMap( PovSimpleBrickUnion ):
 
 
 
-class PovBrickDoor( PovSimpleBrick ):
-    def __init__( self, nr, descr, cmd, ItemNos, decoration, defs ):
-        PovSimpleBrick.__init__( self, nr, descr, cmd, ItemNos, decoration, defs )
-
-
-class PovBrickTorso( PovSimpleBrickMap ):
-    def __init__( self, nr, descr, cmd, ItemNos, decoration, defs ):
-        PovSimpleBrickMap.__init__( self, nr, descr, cmd, ItemNos, decoration, defs )
-        #print( 'Minifig Torso' )
-
-
-class PovBrickHead(PovSimpleBrickMap):
-    def __init__(self, nr, descr, cmd, ItemNos, decoration, defs):
-        PovSimpleBrickMap.__init__(self, nr, descr, cmd, ItemNos, decoration, defs)
-        #print( 'Minifig Head' )
-
-        self.move_head = 0
-
-
-    def move(self, angle):
-        self.move_head += angle
-
-
-    def apply_changes(self):
-        self.pre_rotate = (0, self.move_head, 0)
 
 
 
-class PovBrickHair(PovSimpleBrick):
-    def __init__(self, nr, descr, cmd, ItemNos, decoration, defs):
-        PovSimpleBrick.__init__(self, nr, descr, cmd, ItemNos, decoration, defs)
-
-        self.move_hair = 0
-
-
-    def move(self, angle):
-        self.move_hair += angle
-
-
-    def apply_changes(self):
-        self.pre_rotate = (0, self.move_hair, 0)
 
 
 
-class PovBrickHand(PovSimpleBrickMap):
-    def __init__(self, nr, descr, cmd, ItemNos, decoration, defs):
-        PovSimpleBrickMap.__init__(self, nr, descr, cmd, ItemNos, decoration, defs)
-
-        self.move_head = 0
 
 
-    def move(self, angle):
-        self.move_head += angle
-
-
-    def apply_changes(self):
-        self.pre_rotate = (0, 0, self.move_head)
-
-
-class PovBrickLeg(PovSimpleBrick):
-    def __init__(self, nr, descr, cmd, ItemNos, decoration, defs):
-        PovSimpleBrick.__init__(self, nr, descr, cmd, ItemNos, decoration, defs)
-
-        self.move_leg = 0.
-
-
-    def fixtransform(self):
-        # get the trafo matrix
-        shift_val = np.zeros(12)
-        shift_val[10] = 1.12
-        self.full_matrix[0] += shift_val
-
-        shift = np.zeros(3)
-        shift[1] = -1.12
-        self.pre_translate = shift
-
-
-    def move(self,angle):
-        self.move_leg += angle
-
-
-    def apply_changes(self):
-        # somehow negative angles means moving forward
-        self.pre_rotate = (-self.move_leg,0,0)
 
 
 # python brick models
@@ -500,21 +506,7 @@ class PovBrickModel( PovCSGUnion ):
 
 
 
-class PovBrickFigureGroup(PovSimpleBrickUnion):
-    def __init__(self):
-        PovSimpleBrickUnion.__init__(self, comment='Figure group')
-
-        self._move_angle = 0
-
-
-    def move(self, angle):
-        self._move_angle += angle
-
-
-    def apply_changes(self):
-        self.pre_rotate = (self._move_angle, 0, 0)
-
-
+### Warning not working!
 
 class PovBrickFigure(PovBrickModel):
     def __init__(self, name='noname'):

@@ -22,4 +22,9 @@ texture=n
 part=lg_3039_slope
 texture=r
 
-[MAPPING0]
+[MAPPING1]
+map=lg_3039_decals_1
+type=0
+scale=<2*LG_BRICK_WIDTH,LG_BRICK_WIDTH,1>
+translate=<-LG_BRICK_WIDTH/2,0.20,0>
+
