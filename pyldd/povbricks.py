@@ -138,7 +138,7 @@ class PovLEGOBrick(PovCSGObject, PovPreTransformation):
             # it is minimum one decoration, maybe more ...
             max_parts += 1
 
-        if max_parts == 0:
+        if max_parts == 1:
             # no container necessary
             self._container = None
         else:
@@ -224,45 +224,62 @@ class PovLEGOBrick(PovCSGObject, PovPreTransformation):
         return obj
 
 
+    def set_texture(self, texture):
+        self._container.set_texture(texture)
+
+
     @property
-    def macros( self ):
+    def macros(self):
         return self._container.macros
 
 
     @macros.setter
-    def macros( self, new_macro ):
-        for i in self._container._items:
-            i.macros = new_macro
+    def macros(self, new_macro):
+        if hasattr(self._container, '_items'):
+            for i in self._container._items:
+                i.macros = new_macro
+        else:
+            self._container.macros = new_macro
 
 
     @property
-    def full_matrix( self ):
+    def full_matrix(self):
         return self._container.full_matrix
 
 
     @full_matrix.setter
-    def full_matrix( self, val ):
+    def full_matrix(self, val):
         self._container.full_matrix = val
 
 
     @property
-    def rotate( self ):
+    def rotate(self):
         return self._container._rotate
 
 
     @rotate.setter
-    def rotate( self, new_rotate ):
+    def rotate(self, new_rotate):
         self._container.rotate = new_rotate
 
 
     @property
-    def translate( self ):
+    def translate(self):
         return self._container.translate
 
 
     @translate.setter
-    def translate( self, val ):
+    def translate(self, val):
         self._container.translate = val
+
+
+    @property
+    def scale(self):
+        return self._container.scale
+
+
+    @scale.setter
+    def scale(self, val):
+        self._container.scale = val
 
 
     def write_pov(self, ffile, indent = 0 ):

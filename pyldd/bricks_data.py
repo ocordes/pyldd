@@ -85,6 +85,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '3068':  [ '3068', None ],     # flat tile 2 x 2
                  '3069':  [ '3069', None ],     # tile 1 x 2 with groove
                  '3070':  [ '3070', None ],     # flat tile 1 x 1
+                 '3144':  [ '3144', None ],     # antenna with side spokes
                  '3185':  [ '3185', None ],     # fence 1 x 4 x 2
                  '3188':  [ '3188', None ],     # door 1 x 3 x 2 right
                  '3189':  [ '3189', None ],     # door 1 x 3 x 2 left
