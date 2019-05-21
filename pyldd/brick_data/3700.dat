@@ -1,0 +1,19 @@
+# Technic Beam  1 x 2 with Hole
+#
+# Oliver Cordes 2018-08-06
+# 
+[DEFAULT]
+descr=technic beam 1 x 2 with hole
+type=brick
+file=lg_3700
+width=1
+length=0
+depth=1
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_3700
+texture=n

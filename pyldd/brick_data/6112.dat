@@ -1,0 +1,19 @@
+# Brick 1 x 12
+#
+# Oliver Cordes 2018-08-06
+#
+[DEFAULT]
+descr=brick 1 x 12
+type=brick
+file=lg_6112
+width=11
+length=0
+depth=1
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_6112
+texture=n

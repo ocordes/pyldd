@@ -36,6 +36,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '2450':  [ '2450', None ],     # plate 3 x 3 without corner
                  '2454':  [ '2454', None ],     # brick 1 x 2 x 5
                  '2462':  [ '2462', None ],     # brick 3 x 3 facet
+                 '2465':  [ '2465', None ],     # brick 1 x 16
                  '2508':  [ '2508', None ],     # plate 1 x 2 with towball long
                  '2577':  [ '2577', None ],     # brick 4 x 4 with round corner
                  '2584':  [ '2584', None ],     # hose reel 2 x 2 holder
@@ -43,6 +44,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '2639':  [ '2639', None ],     # plate 4 x 4 corner
                  '2654':  [ '2654', None ],     # boot stud 2 x 2
                  '2680':  [ '2680', None ],     # support 4 x 4 x 5 stanchion
+                 '2730':  [ '2730', None ],     # technic beam 1 x 10 with holes
                  '2877':  [ '2877', None ],     # brick 1 x 2 with grille
                  '2921':  [ '2921', None ],     # brick 1 x 1 with handle
                  '3001':  [ '3001', None ],     # brick 2 x 4
@@ -111,6 +113,10 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '3684':  [ '3684', None ],     # slope brick 75 2 x 2 x 3
                  '3685':  [ '3685', None ],     # slope brick 75 2 x 2 x 3 double convex
                  '3688':  [ '3688', None ],     # slope brick 75 2 x 2 x 2 quad. convex
+                 '3700':  [ '3700', None ],     # technic beam 1 x 2 with hole
+                 '3701':  [ '3701', None ],     # technic beam 1 x 4 with holes
+                 '3702':  [ '3702', None ],     # technic beam 1 x 8 with holes
+                 '3703':  [ '3703', None ],     # technic beam 1 x 16 with holes
                  '3710':  [ '3710', None ],     # plate 1 x 4
                  '3730':  [ '3730', None ],     # plate 2 x 2 with towball coupling
                  '3747':  [ '3747', None ],     # slope brick 33 3 x 2 inverted
@@ -135,6 +141,8 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '3832':  [ '3832', None ],     # plate 2 x 10
                  '3839':  [ '3839', None ],     # plate 1 x 2 with handles low attachment
                  '3865':  [ '3865', None ],     # base plate 8 x 16
+                 '3894':  [ '3894', None ],     # technic beam 1 x 6 with holes
+                 '3895':  [ '3895', None ],     # technic beam 1 x 12 with holes
                  '3899':  [ '3899', None ],     # town mug
                  '3933':  [ '3933', None ],     # wing 8 x 4 left
                  '3934':  [ '3934', None ],     # wing 8 x 4 right
@@ -201,6 +209,8 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '6091':  [ '6091', None ],     # brick 2 x 1 x 1 & 1/3 with curved top
                  '6098':  [ '3867', None ],     # base 16 x 16 plate road 9-stud landing pad with green octagon
                  '6099':  [ '6099', None ],     # base 32 x 32 road 9-stud landing pad
+                 '6111':  [ '6111', None ],     # brick 1 x 10
+                 '6112':  [ '6112', None ],     # brick 1 x 12
                  '6134':  [ '6134', None ],     # hinge 2 x 2 top
                  '6141':  [ '6141', None ],     # plate 1 x 1 round
                  '6143':  [ '3941', None ],     # brick 2 x 2 round
@@ -212,6 +222,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '6213':  [ '6213', None ],     # brick 2 x 6 x 3
                  '6215':  [ '6215', None ],     # brick 2 x 3 with curved top
                  '6222':  [ '6222', None ],     # brick 4 x 4 round with holes
+                 '6541':  [ '6541', None ],     # technic beam 1 x 1 with hole
                  '6564':  [ '6564', None ],     # wedge 3 x 2 right
                  '6565':  [ '6565', None ],     # wedge 3 x 2 left
                  '6576':  [ '6576', None ],     # plate 4 x 8 with studs in center
@@ -250,6 +261,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '30499': [ '3684', None ],     # slope brick 75 2 x 2 x 3
                  '30505': [ '30505', None ],    # brick 3 x 3 without corner
                  '30540': [ '30540', None ],    # hinge brick 1 x 2 locking with 2 fingers horizontal on end
+                 '32018': [ '32018', None ],    # technical beam 1 x 14 with holes
                  '32028': [ '32028', None ],    # plate 1 x 2 with door rail
                  '33009': [ '33009', None ],    # minifig book
                  '33909': [ '33909', None ],    # plate 2 x 2 with reduced knobs
