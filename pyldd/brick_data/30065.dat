@@ -1,0 +1,21 @@
+# space radar dish 4 x 4
+#
+# Oliver Cordes 2018-08-06
+# 
+[DEFAULT]
+descr=space radar dish 4 x 4
+type=plate
+file=lg_30065
+width=0
+length=0
+depth=2/3
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_30065
+texture=n
+
+[MAPPING0]

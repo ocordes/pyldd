@@ -1,0 +1,21 @@
+# Turntable 2 x 2 Plate Top
+#
+# Oliver Cordes 2018-08-06
+#
+[DEFAULT]
+descr=turnable 2 x 2 plate top
+type=plate
+file=lg_3679
+width=1
+length=1
+depth=0
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_3679
+texture=n
+
+[MAPPING0]

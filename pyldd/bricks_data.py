@@ -110,6 +110,8 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '3666':  [ '3666', None ],     # plate 1 x 6
                  '3676':  [ '3676', None ],     # slope brick 45 2x 2 inverted double convex
                  '3678':  [ '3678', None ],     # slope brick 65 2 x 2 x 2
+                 '3679':  [ '3679', None ],     # turntable 2 x 2 plate top
+                 '3680':  [ '3680', None ],     # turntable 2 x 2 plate base
                  '3684':  [ '3684', None ],     # slope brick 75 2 x 2 x 3
                  '3685':  [ '3685', None ],     # slope brick 75 2 x 2 x 3 double convex
                  '3688':  [ '3688', None ],     # slope brick 75 2 x 2 x 2 quad. convex
@@ -139,6 +141,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '3830':  [ '3830', None ],     # hinge brick 1 x 4 top
                  '3831':  [ '3831', None ],     # hinge brick 1 x 4 base
                  '3832':  [ '3832', None ],     # plate 2 x 10
+                 '3838':  [ '3838', None ],     # minifig airtanks
                  '3839':  [ '3839', None ],     # plate 1 x 2 with handles low attachment
                  '3865':  [ '3865', None ],     # base plate 8 x 16
                  '3894':  [ '3894', None ],     # technic beam 1 x 6 with holes
@@ -161,6 +164,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '3957':  [ '3957', None ],     # antenna
                  '3958':  [ '3958', None ],     # plate 6 x 6
                  '3963':  [ '3963', None ],     # space positioning rockets
+                 '3960':  [ '30065', None ],     # space radar dish 4 x 4
                  '4032':  [ '4032', None ],     # plate 2 x 2 round
                  '4070':  [ '4070', None ],     # brick 1 x 1 x 1 with vertical stud (headlight brick)
                  '4079':  [ '4079', None ],     # town seat 2 x 2
@@ -237,7 +241,10 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '15571': [ '3048', None ],     # slope brick 45 1 x 2 triple
                  '15573': [ '3794', None ],     # plate 1 x 2 with stud
                  '15647': [ '30390', None ],    # slope brick 45 2 x 4 inverted double with pins
+                 '20460': [ '3817', None ],     # minifig leg left
+                 '20461': [ '3816', None ],     # minifig leg right
                  '30055': [ '30055', None ],    # fence 1 x 4 x 2 spindled
+                 '30065': [ '30065', None ],    # space radar dish 4 x 4
                  '30072': [ '30072', None ],    # brick 12 x 24
                  '30136': [ '30136', None ],    # log brick 1 x 2
                  '30137': [ '30137', None ],    # log brick 1 x 4
@@ -291,6 +298,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '51739': [ '51739', None ],    # wing 2 x 4
                  '52031': [ '52031', None ],    # wedge 4 x 6 x 2/3 curved
                  '52501': [ '52501', None ],    # slope brick 45 6 x 1 inverted double
+                 '52107': [ '52107', None ],    # brick 1 x 2 with studs on two opposite sides
                  '54383': [ '54383', None ],    # wedge plate 6 x 3 right
                  '54384': [ '54384', None ],    # wedge plate 6 x 3 left
                  '58846': [ '58846', None ],    # brick 10 x 10 corner round with tapered edge and cutout

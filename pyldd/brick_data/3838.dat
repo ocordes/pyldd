@@ -1,0 +1,21 @@
+# minifig airtanks
+#
+# Oliver Cordes 2018-08-06
+# 
+[DEFAULT]
+descr=minifigs airtanks
+type=plate
+file=lg_3838
+width=0
+length=0
+depth=0
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_3838
+texture=n
+
+[MAPPING0]

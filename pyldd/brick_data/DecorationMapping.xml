@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <DecorationMapping>
+	<Mapping decorationID="999999" designID="3004" surfaceID="1"/>
 	<Mapping decorationID="999928" designID="3010" surfaceID="1"/>
 	<Mapping decorationID="54580" designID="3626" surfaceID="1"/>
 	<Mapping decorationID="54581" designID="3626" surfaceID="1"/>

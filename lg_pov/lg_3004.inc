@@ -148,6 +148,18 @@ union {
  rotate <0,0,90>
 }
 
+
+#declare lg_3004_decals_1 =
+ box {
+   <LG_CORNER_SPACE, 0.0, LG_CORNER_SPACE>,
+   <LENGTH*LG_BRICK_WIDTH-LG_CORNER_SPACE, WIDTH*LG_BRICK_WIDTH+LG_EE, 
+   LG_BRICK_HEIGHT-LG_CORNER_SPACE>
+
+   translate <-LG_BRICK_WIDTH,-LG_BRICK_WIDTH/2,-LG_BRICK_HEIGHT>
+   rotate <0,0,90>
+ }
+
+
 #declare lg_3004_clear = 
 merge {
  sphere {
