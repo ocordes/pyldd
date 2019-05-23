@@ -232,6 +232,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '6576':  [ '6576', None ],     # plate 4 x 8 with studs in center
                  '6636':  [ '6636', None ],     # flat tile 1 x 6
                  '10314': [ '10314', None ],    # brick 1 x 4 x 1.333 with curved top without understuds
+                 '11211': [ '11211', None ],    # brick 1 x 2 with studs on one opposite side
                  '11477': [ '11477', None ],    # slope brick curved 2 x 1
                  '14719': [ '14719', None ],    # flat tile 2 x 2 corner
                  '14769': [ '4150', None ],     # tile 2 x 2 round

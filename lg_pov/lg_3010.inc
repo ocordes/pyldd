@@ -153,11 +153,9 @@ union {
 }
 
 #declare lg_3010_decals_1 =
-union {
-  box {
+box {
     <LG_CORNER_SPACE, 0, LG_CORNER_SPACE>,
     <LENGTH*LG_BRICK_WIDTH-LG_CORNER_SPACE, WIDTH*LG_BRICK_WIDTH+LG_EE, LG_BRICK_HEIGHT-LG_CORNER_SPACE>
-  }
 /*
   box {
    <LG_CORNER_SPACE, LG_CORNER_SPACE, 0>,

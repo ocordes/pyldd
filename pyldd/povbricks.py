@@ -5,6 +5,8 @@ pyldd/povbricks.py
 Author: Oliver Cordes
 
 History:
+ 2019-05-23:
+   - rewrite the basic brick object for rendering
  2018-09-30:
    - start to create a special object for each brick
       -> figures, doors etc.
