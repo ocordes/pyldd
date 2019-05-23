@@ -207,17 +207,21 @@ class PovLEGOBrick(PovCSGObject, PovPreTransformation):
         rotate    = mapdef.get('rotate', '<0,0,0>')
         translate = mapdef.get('translate', '<0,0,0>')
         map_type  = mapdef.get('type', '0')
+        gamma     = mapdef.get('gamma', '1.0')
+        emission  = mapdef.get('emission', '0.0')
         s = """
              pigment{
                 image_map{
                   png "%s.png"
+                  gamma %s
                   map_type %s
                 once }
              }
+             finish{ emission %s }
              scale %s
              rotate %s
              translate %s
-        """ % (decoration, map_type, scale, rotate, translate)
+        """ % (decoration, gamma, map_type, emission, scale, rotate, translate)
 
         obj.set_texture(s)
 
