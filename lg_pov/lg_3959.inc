@@ -198,6 +198,8 @@ union {
   rotate <0, 0, 90>
   translate <LG_BRICK_HEIGHT-LG_KNOB_HEIGHT-LG_CORNER_SPACE-0.32, 0, 0>
  }
+ rotate y*-90
+ rotate z*-90
 }
 
 #declare lg_3959_clear =

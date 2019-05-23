@@ -163,6 +163,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '3956':  [ '3956', None ],     # bracket 2 x 2 - 2 x 2
                  '3957':  [ '3957', None ],     # antenna
                  '3958':  [ '3958', None ],     # plate 6 x 6
+                 '3959':  [ '3959', None ],     # space gun
                  '3963':  [ '3963', None ],     # space positioning rockets
                  '3960':  [ '30065', None ],     # space radar dish 4 x 4
                  '4032':  [ '4032', None ],     # plate 2 x 2 round
