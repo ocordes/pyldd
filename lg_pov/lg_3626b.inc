@@ -83,7 +83,7 @@ union {
  #end
 }
 
-#declare lg_3626b_map =
+#declare lg_3626b_decals_1 =
 difference {
   difference {
 	cylinder {

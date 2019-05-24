@@ -18,8 +18,8 @@ parts=1
 part=lg_3626
 texture=n
 
-[MAPPING0]
-map=lg_3626_map
+[MAPPING1]
+map=lg_3626_decals_1
 type=0
 scale=<1.4,1,1>*(LG_BRICK_HEIGHT-0.26)
 translate=<-0.5,0.20,0>
