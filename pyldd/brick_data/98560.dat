@@ -1,11 +1,11 @@
-# slope brick 75 2 x 2 x 3
+# slope brick 75 2 x 2 x 3 not open studs
 #
 # Oliver Cordes 2018-09-30
 # 
 [DEFAULT]
-descr=slope brick 75 2 x 2 x 3 open studs
+descr=slope brick 75 2 x 2 x 3 not open studs
 type=brick
-file=lg_3684
+file=lg_98560
 width=1
 length=0
 depth=3
@@ -15,11 +15,11 @@ sz=-1
 parts=2
 
 [PART0]
-part=lg_3684
+part=lg_98560
 texture=n
 
 [PART1]
-part=lg_3684_slope
+part=lg_98560_slope
 texture=n
 
 [MAPPING0]

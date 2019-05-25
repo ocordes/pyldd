@@ -143,6 +143,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '3832':  [ '3832', None ],     # plate 2 x 10
                  '3838':  [ '3838', None ],     # minifig airtanks
                  '3839':  [ '3839', None ],     # plate 1 x 2 with handles low attachment
+                 '3842':  [ '3842', None ],     # minifig helmet classic with thick chin guard and visor dimples
                  '3865':  [ '3865', None ],     # base plate 8 x 16
                  '3894':  [ '3894', None ],     # technic beam 1 x 6 with holes
                  '3895':  [ '3895', None ],     # technic beam 1 x 12 with holes
@@ -353,5 +354,6 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '98283': [ '98283', None ],    # brick 1 x 2 with embossed bricks
                  '98285': [ '98285', None ],    # hinge plate 2 x 4.5 base with technic pin hole
                  '98286': [ '98286', None ],    # hinge plate 2 x 4.5 base with technic pin hole
+                 '98560': [ '98560', None ],    # slope brick 75 2 x 2 x 3 not open studs
                  '99206': [ '99206', None ],    # plate 2 x 2 x 2/3 with two studs on side and two raised
 }

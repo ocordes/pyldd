@@ -1,0 +1,21 @@
+# Minifig Helmet Classic with Thick Chin Guard and Visor Dimples 
+#
+# Oliver Cordes 2018-08-06
+# 
+[DEFAULT]
+descr=minifig helmet classic with thick chin guard and visor dimples 
+type=hair
+file=lg_3842
+width=0
+length=0
+depth=0
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_3842
+texture=n
+
+[MAPPING0]
