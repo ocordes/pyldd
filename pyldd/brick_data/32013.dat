@@ -1,0 +1,21 @@
+# technic connector #1 end
+#
+# Oliver Cordes 2019-05-26
+# 
+[DEFAULT]
+descr=technic connector #1 end
+type=brick
+file=lg_32013
+width=3
+length=0
+depth=0
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_32013
+texture=n
+
+[MAPPING0]

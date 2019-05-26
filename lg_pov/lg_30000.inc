@@ -263,6 +263,7 @@ union {
    LG_KNOB_RADIUS+LG_CORNER_SPACE
   }
  }
+ rotate z*90
 } 
 
 #declare lg_30000_clear = 
@@ -515,6 +516,7 @@ merge {
    LG_KNOB_RADIUS+LG_CORNER_SPACE
   }
  }
+ rotate z*90
 } 
 
 #end

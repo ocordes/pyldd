@@ -217,6 +217,8 @@ union {
   }
   #declare HOLE_X = HOLE_X + 1;
  #end
+ rotate x*90
+ rotate z*90
 }
 
 #declare lg_32524_clear =
@@ -423,6 +425,8 @@ merge {
   }
   #declare HOLE_X = HOLE_X + 1;
  #end
+ rotate x*90
+ rotate z*90
 }
 
 #end

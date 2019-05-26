@@ -53,6 +53,7 @@ difference {
    #declare ROT = ROT + 1;
   #end
  }
+ rotate z*90
 }
 
 #declare lg_3706_clear =
@@ -95,6 +96,7 @@ difference {
    #declare ROT = ROT + 1;
   #end
  }
+ rotate z*90
 }
 
 #end

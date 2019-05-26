@@ -240,6 +240,8 @@ union {
   }
   rotate <0, 0, 90>
  }
+ rotate z*90
+ rotate y*90
 }
 
 #declare lg_32013_clear =
@@ -471,6 +473,8 @@ merge {
   }
   rotate <0, 0, 90>
  }
+ rotate z*90
+ rotate y*90
 }
 
 #end

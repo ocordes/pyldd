@@ -7,7 +7,7 @@
 /* This file is in no way related to the LEGO(tm) Group.                       */
 /* It is provided for private non-commercial use only.                         */
 /*                                                                             */
-/* lg_32316: Technic Liftarm 1 x 7 Straight                                    */
+/* lg_32316: Technic Liftarm 1 x 5 Straight                                    */
 /*                                                                             */
 /*******************************************************************************/
 #ifdef(lg_32316)
@@ -216,6 +216,8 @@ union {
   }
   #declare HOLE_X = HOLE_X + 1;
  #end
+ rotate x*90
+ rotate z*90
 }
 
 #declare lg_32316_clear =
@@ -422,6 +424,8 @@ merge {
   }
   #declare HOLE_X = HOLE_X + 1;
  #end
+ rotate x*90
+ rotate z*90
 }
 
 #end

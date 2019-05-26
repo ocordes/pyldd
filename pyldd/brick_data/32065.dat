@@ -1,0 +1,21 @@
+# technic liftarm 1 x 7 thin
+#
+# Oliver Cordes 2019-05-26
+# 
+[DEFAULT]
+descr=technic liftarm 1 x 7 thin
+type=brick
+file=lg_32065
+width=6
+length=0.50
+depth=0
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_32065
+texture=n
+
+[MAPPING0]

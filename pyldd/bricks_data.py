@@ -119,6 +119,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '3701':  [ '3701', None ],     # technic beam 1 x 4 with holes
                  '3702':  [ '3702', None ],     # technic beam 1 x 8 with holes
                  '3703':  [ '3703', None ],     # technic beam 1 x 16 with holes
+                 '3706':  [ '3706', None ],     # technic axle 6
                  '3710':  [ '3710', None ],     # plate 1 x 4
                  '3730':  [ '3730', None ],     # plate 2 x 2 with towball coupling
                  '3747':  [ '3747', None ],     # slope brick 33 3 x 2 inverted
@@ -196,6 +197,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '4490':  [ '4490', None ],     # arch 1 x 3
                  '4509':  [ '4509', None ],     # train roof 33 6 x 6 double
                  '4515':  [ '4515', None ],     # slope brick 10 6 x 8
+                 '4519':  [ '4519', None ],     # technic axle 3
                  '4532':  [ '4532', None ],     # cupboard 2 x 3 x 2
                  '4533':  [ '4533', None ],     # cupboard 2 x 3 x 2 door
                  '4536':  [ '4536', None ],     # cupboard 2 x 3 x 2 drawer
@@ -246,6 +248,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '15647': [ '30390', None ],    # slope brick 45 2 x 4 inverted double with pins
                  '20460': [ '3817', None ],     # minifig leg left
                  '20461': [ '3816', None ],     # minifig leg right
+                 '30000': [ '30000', None ],    # brick 2 x 2 with pins
                  '30055': [ '30055', None ],    # fence 1 x 4 x 2 spindled
                  '30065': [ '30065', None ],    # space radar dish 4 x 4
                  '30072': [ '30072', None ],    # brick 12 x 24
@@ -271,8 +274,13 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '30499': [ '3684', None ],     # slope brick 75 2 x 2 x 3
                  '30505': [ '30505', None ],    # brick 3 x 3 without corner
                  '30540': [ '30540', None ],    # hinge brick 1 x 2 locking with 2 fingers horizontal on end
+                 '32013': [ '32013', None ],    # technic connecttor #1 end
                  '32018': [ '32018', None ],    # technical beam 1 x 14 with holes
                  '32028': [ '32028', None ],    # plate 1 x 2 with door rail
+                 '32039': [ '32039', None ],    # technic connector with axlehole
+                 '32065': [ '32065', None ],    # technic liftarm 1 x 7 thin
+                 '32316': [ '32316', None ],    # technic liftarm 1 x 5 straight
+                 '32524': [ '32524', None ],    # technic liftarm 1 x 7 straight
                  '33009': [ '33009', None ],    # minifig book
                  '33909': [ '33909', None ],    # plate 2 x 2 with reduced knobs
                  '41539': [ '41539', None ],    # plate 8 x 8

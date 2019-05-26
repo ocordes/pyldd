@@ -1,0 +1,21 @@
+# technic axle 6
+#
+# Oliver Cordes 2019-05-26
+# 
+[DEFAULT]
+descr=technic axle 6
+type=brick
+file=lg_3706
+width=0
+length=6
+depth=0
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_3706
+texture=n
+
+[MAPPING0]
