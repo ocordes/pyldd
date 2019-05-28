@@ -338,6 +338,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '74698': [ '2376', None ],     # tile 2 x 2 round with lifting ring
                  '85080': [ '3063', None ],     # brick 2 x 2 corner round ?? LEGO has a different description but looks similar
                  '85984': [ '85984', None ],    # slope tile 30 2 x 1 x 2/3
+                 '85943': [ '85943', None ],    # technic brick 1 x 2 with two liftarms
                  '87079': [ '87079', None ],    # tile 2 x 4 with groove
                  '87087': [ '87087', None ],    # brick 1 x 1 with stud on 1 side
                  '87544': [ '2362', None ],     # panel 1 x 2 x 3 studs hollow
