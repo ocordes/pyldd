@@ -2577,3 +2577,225 @@ matrix <aw,0,0,0,ah,0,0,0,ad,ax,ay,az>
 // // Inside ball bit
 // // End inside ball bit
 }
+
+
+#declare LDX_stud3a_dot_dat_in_part = union {
+// Stud Tube Solid without Base Edges
+// Name: stud3a.dat
+// Author: James Jessiman
+// !LDRAW_ORG Primitive UPDATE 2003-02
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2002-08-31 [izanette] Modified with WINDZ for BFC compliance
+// !HISTORY 2003-08-01 [PTadmin] Official Update 2003-02
+// !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement
+// !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01
+        object {
+                LDX_4_dash_4disc_dot_dat_in_part
+                matrix <4,0,0,0,1,0,0,0,4,0,-4,0>
+        }
+        object {
+                LDX_4_dash_4cyli_dot_dat_in_part
+                matrix <4,0,0,0,4,0,0,0,4,0,-4,0>
+        }
+}
+
+
+#declare LDX_peghole2_dot_dat_in_part = union {
+// Peg Hole End Extended
+// Name: peghole2.dat
+// Author: Steve Bliss [sbliss]
+// !LDRAW_ORG Primitive UPDATE 2012-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2002-06-11 [PTadmin] Official Update 2002-03
+// !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement
+// !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01
+// !HISTORY 2012-02-16 [Philo] Changed to CCW
+// !HISTORY 2012-03-30 [PTadmin] Official Update 2012-01
+// BFC INVERTNEXT
+        object {
+                LDX_2_dash_4cyli_dot_dat_in_part
+                matrix <8,0,0,0,2,0,0,0,8,0,0,0>
+        }
+        object {
+                LDX_2_dash_4ndis_dot_dat_in_part
+                matrix <6,0,0,0,1,0,0,0,-6,0,2,0>
+        }
+        object {
+                LDX_2_dash_4ring3_dot_dat_in_part
+                matrix <2,0,0,0,1,0,0,0,2,0,2,0>
+        }
+}
+
+
+#declare LDX_3_dash_16rin2_dot_dat_in_part = disc // Ring 0.1875
+{
+        <0,0,0>,<0,1,0>,3,2
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.92387953251128673848,0,0.38268343236508983729>,0
+                }
+        }
+}
+
+
+#declare LDX_1_dash_16cyli_dot_dat_in_part = cylinder // Cylinder 0.0625
+{
+        <0,0,0>,<0,1,0>,1 open
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.38268343236508972627,0,0.92387953251128673848>,0
+                }
+        }
+}
+
+
+#declare LDX_npeghol4_dot_dat_in_part = union {
+// Technic Peg Hole / Axle Hole Negative with Top Surface Extension
+// Name: npeghol4.dat
+// Author: Guy Vivan [guyvivan]
+// !LDRAW_ORG Primitive UPDATE 2014-02
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2009-05-02 [PTadmin] Official Update 2009-01
+// !HISTORY 2012-02-16 [Philo] Changed to CCW
+// !HISTORY 2012-03-30 [PTadmin] Official Update 2012-01
+// !HISTORY 2014-03-02 [KROACH] Fixed overlap on extensions
+// !HISTORY 2014-03-03 [Philo] Used more primitives
+// !HISTORY 2014-03-03 [MMR1988] Fixed some rounding errors
+// !HISTORY 2014-12-23 [PTadmin] Official Update 2014-02
+// // for insert between cylinder and axlehol4.dat or axlehol5.dat
+        object {
+                LDX_1_dash_4cylo_dot_dat_in_part
+                matrix <6.36396,0,-6.36396,0,1,0,-6.36396,0,-6.36396,0,0,10>
+        }
+        object {
+                LDX_3_dash_16rin2_dot_dat_in_part
+                matrix <-3,0,0,0,1,0,0,0,3,0,0,-10>
+        }
+        object {
+                LDX_3_dash_16rin2_dot_dat_in_part
+                matrix <-3,0,0,0,-1,0,0,0,3,0,1,-10>
+        }
+        object {
+                LDX_3_dash_16rin2_dot_dat_in_part
+                matrix <3,0,0,0,1,0,0,0,3,0,0,-10>
+        }
+        object {
+                LDX_3_dash_16rin2_dot_dat_in_part
+                matrix <3,0,0,0,-1,0,0,0,3,0,1,-10>
+        }
+        object {
+                LDX_1_dash_8ndis_dot_dat_in_part
+                matrix <-9,0,0,0,1,0,0,0,9,0,0,-10>
+        }
+        object {
+                LDX_1_dash_8ndis_dot_dat_in_part
+                matrix <-9,0,0,0,-1,0,0,0,9,0,1,-10>
+        }
+        object {
+                LDX_1_dash_8ndis_dot_dat_in_part
+                matrix <9,0,0,0,1,0,0,0,9,0,0,-10>
+        }
+        object {
+                LDX_1_dash_8ndis_dot_dat_in_part
+                matrix <9,0,0,0,-1,0,0,0,9,0,1,-10>
+        }
+        object {
+                LDX_1_dash_8ndis_dot_dat_in_part
+                matrix <-9,0,0,0,1,0,0,0,-9,0,0,10>
+        }
+        object {
+                LDX_1_dash_8ndis_dot_dat_in_part
+                matrix <-9,0,0,0,-1,0,0,0,-9,0,1,10>
+        }
+        object {
+                LDX_1_dash_8ndis_dot_dat_in_part
+                matrix <9,0,0,0,1,0,0,0,-9,0,0,10>
+        }
+        object {
+                LDX_1_dash_8ndis_dot_dat_in_part
+                matrix <9,0,0,0,-1,0,0,0,-9,0,1,10>
+        }
+        object {
+                LDX_1_dash_16cyli_dot_dat_in_part
+                matrix <-6.36396,0,6.36396,0,1,0,6.36396,0,6.36396,0,0,-10>
+        }
+        object {
+                LDX_1_dash_16cyli_dot_dat_in_part
+                matrix <6.36396,0,6.36396,0,1,0,-6.36396,0,6.36396,0,0,-10>
+        }
+}
+
+
+#declare LDX_axlehol4_dot_dat_in_part = union {
+// Technic Axle Hole Open One Side
+// Name: axlehol4.dat
+// Author: James Jessiman
+// !LDRAW_ORG Primitive UPDATE 2005-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2000-05-07 [PTadmin] Official Update 2000-01
+// !HISTORY 2002-11-08 [OrionP] Adjusted fit and precision
+// !HISTORY 2003-03-12 [PTadmin] Official Update 2003-01
+// !HISTORY 2005-05-15 [guyvivan] Use 1-8chrd.dat primitive
+// !HISTORY 2005-12-28 [PTadmin] Official Update 2005-01
+// !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement
+// !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01
+// 2 24 6    0 0    5.543 0 2.296
+// 2 24 5.543 0 2.296 4.243 0 4.243
+// 2 24 4.243 0 4.243 2.296 0 5.543
+// 2 24 2.296 0 5.543 0    0 6
+// 2 24 2    0 5.602 0    0 6
+// 2 24 -2    0 5.602 -0    0 6
+// 2 24 2    1 5.602 0    1 6
+// 2 24 2    0 5.602 2    1 5.602
+// 2 24 -2    0 5.602 -2    1 5.602
+// 4 16 2    0 5.602 0    0 6    0    1 6    2    1 5.602
+// 4 16 -2    0 5.602 -0    0 6    -0    1 6    -2    1 5.602
+        object {
+                LDX_1_dash_8chrd_dot_dat_in_part
+                matrix <5.54328,0,2.2961,0,1,0,-2.2961,0,5.54328,0,0,0>
+        }
+        object {
+                LDX_1_dash_8chrd_dot_dat_in_part
+                matrix <-2.2961,0,5.54328,0,1,0,-5.54328,0,-2.2961,0,0,0>
+        }
+        object {
+                LDX_1_dash_8chrd_dot_dat_in_part
+                matrix <-5.54328,0,-2.2961,0,1,0,2.2961,0,-5.54328,0,0,0>
+        }
+        object {
+                LDX_1_dash_8chrd_dot_dat_in_part
+                matrix <2.2961,0,-5.54328,0,1,0,5.54328,0,2.2961,0,0,0>
+        }
+        object {
+                LDX_1_dash_8chrd_dot_dat_in_part
+                matrix <5.54328,0,-2.2961,0,-1,0,-2.2961,0,-5.54328,0,1,0>
+        }
+        object {
+                LDX_1_dash_8chrd_dot_dat_in_part
+                matrix <-2.2961,0,-5.54328,0,-1,0,-5.54328,0,2.2961,0,1,0>
+        }
+        object {
+                LDX_1_dash_8chrd_dot_dat_in_part
+                matrix <-5.54328,0,2.2961,0,-1,0,2.2961,0,5.54328,0,1,0>
+        }
+        object {
+                LDX_1_dash_8chrd_dot_dat_in_part
+                matrix <2.2961,0,5.54328,0,-1,0,5.54328,0,-2.2961,0,1,0>
+        }
+}
