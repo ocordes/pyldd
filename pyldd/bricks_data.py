@@ -231,6 +231,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '6215':  [ '6215', None ],     # brick 2 x 3 with curved top
                  '6222':  [ '6222', None ],     # brick 4 x 4 round with holes
                  '6541':  [ '6541', None ],     # technic beam 1 x 1 with hole
+                 '6562':  [ '43093', None ],    # technic axle pin with friction
                  '6564':  [ '6564', None ],     # wedge 3 x 2 right
                  '6565':  [ '6565', None ],     # wedge 3 x 2 left
                  '6576':  [ '6576', None ],     # plate 4 x 8 with studs in center
@@ -279,6 +280,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '32028': [ '32028', None ],    # plate 1 x 2 with door rail
                  '32039': [ '32039', None ],    # technic connector with axlehole
                  '32065': [ '32065', None ],    # technic liftarm 1 x 7 thin
+                 '32123': [ '32123', None ],    # technic bush 1/2 type smooth
                  '32316': [ '32316', None ],    # technic liftarm 1 x 5 straight
                  '32524': [ '32524', None ],    # technic liftarm 1 x 7 straight
                  '33009': [ '33009', None ],    # minifig book
@@ -288,6 +290,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '41768': [ '41768', None ],    # wedge 4 x 2 left
                  '41769': [ '41769', None ],    # wedge plate 4 x 2 right
                  '41770': [ '41770', None ],    # wedge plate 4 x 2 left
+                 '43093': [ '43093', None ],    # technic axle pin with friction
                  '43722': [ '43722', None ],    # wedge plate 3 x 2 right
                  '43723': [ '43723', None ],    # wedge plate 3 x 2 left
                  '43802': [ '4201', None ],     # brick 8 x 8

@@ -1,0 +1,19 @@
+# Technic bush 1/2 type smooth
+#
+# Oliver Cordes 2018-08-06
+# 
+[DEFAULT]
+descr=technic bush 1/2 type smooth
+type=brick
+file=lg_32123
+width=0
+length=0.5
+depth=0
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_32123
+texture=n
