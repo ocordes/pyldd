@@ -121,6 +121,22 @@ class PovPreTransformation(PovWriterObject):
             self._write_indent(ffile, 'translate %s\n' % r, indent=indent)
 
 
+class PovLEGOUnion(PovCSGUnion):
+    def find_brick(self, itemNos):
+        bricks = []
+        for i in self._items:
+            if isinstance(i, PovLEGOBrick):
+                if i._itemNos == itemNos:
+                    bricks.append(i)
+            elif hasattr( i, 'find_brick' ):
+                j = i.find_brick(itemNos)
+                bricks += j
+            else:
+                print('class: ', i.__class__.__name__)
+
+        return bricks
+
+
 class PovLEGOBrick(PovCSGObject, PovPreTransformation):
     def __init__(self, nr, itemNos, color, config,
                   decoration, decoration_mappings):
@@ -128,11 +144,15 @@ class PovLEGOBrick(PovCSGObject, PovPreTransformation):
 
         self._decoration          = decoration
         self._decoration_mappings = decoration_mappings
+        self._itemNos             = itemNos
+        self._config              = config
+        self._color               = color
+        self._nr                  = nr           # brick number in list
 
 
         default_config = config['DEFAULT']
         # create the brick description
-        descr = default_config.get('descr', 'unknown brick')
+        self._descr = default_config.get('descr', 'unknown brick')
 
         # calculate the number of necessary objects to describe the brick
         max_parts = default_config.getint('parts', 0)
@@ -144,13 +164,13 @@ class PovLEGOBrick(PovCSGObject, PovPreTransformation):
             # no container necessary
             self._container = None
         else:
-            self._container = PovCSGUnion(comment=descr)
+            self._container = PovCSGUnion(comment=self._descr)
 
         for partnr in range(default_config.getint('parts', 0)):
             parts = config['PART%i' % partnr]
             macro = parts['part']
 
-            brick_part = PovCSGMacro('#%i %s' % ( nr, descr), macrocmd=macro)
+            brick_part = PovCSGMacro('#%i %s' % ( nr, self._descr), macrocmd=macro)
 
 
             texture = parts.get('texture', 'n')
@@ -180,29 +200,57 @@ class PovLEGOBrick(PovCSGObject, PovPreTransformation):
                 print('Surface info for brick={} and decoration={} not found!'.format(itemNos, self._decoration[0]))
             else:
                 for sid in surfaces:
-                    mapdef = 'MAPPING%i' %sid
-                    if mapdef in config:
-                        # now we have all information for creating the decoration
-                        decal = self._create_decal(self._decoration[0], config[mapdef], nr, descr, color)
-                        if decal is None:
-                            print('Creating decal failed!')
-                        else:
-                            self._container.add(decal)
+                    # now we have all information for creating the decoration
+                    decal = self._create_decal(self._decoration[0], sid)
+                    if decal is None:
+                        print('Creating decal failed!')
                     else:
-                        print('No mapinfo given for brick={} surface={}!'.format(itemNos, sid))
+                        self._container.add(decal)
 
 
 
+    def decorate(self, decoration, surface):
+        decal = self._create_decal(decoration, surface)
+        if decal is None:
+            print('Creating decal failed!')
+        else:
+            if isinstance(self._container, PovCSGUnion):
+                # we are lucky ...
+
+                # copy macros to the decal
+                for m in self._container._items[0].macros:
+                    decal.macros = m
+            else:
+                print('Problem Brick is not a container')
+                new_container = PovCSGUnion(comment=self._descr)
+                save_macros = self._container.macros
+                new_container.move_attributes(self._container)
+                new_container.add(self._container)
+                # copy macros to the decal
+                for m in save_macros:
+                    decal.macros = m
+                    self._container.macros = m
+                new_container.macros = None
+
+                # make the new container as the default
+                self._container = new_container
+
+            self._container.add(decal)
 
 
 
-    def _create_decal(self, decoration, mapdef, nr, descr, color):
+    def _create_decal(self, decoration, surface):
+        mapname = 'MAPPING%i' % surface
+        if mapname not in self._config:
+            print('No mapinfo given for brick={} surface={}!'.format(self._itemNos, surface))
+            return None
+        mapdef = self._config[mapname]
         macro = mapdef.get('map', None)
         if macro is None:
             return None
 
-        obj = PovCSGMacro('#%i %s mapping' % ( nr, descr), macrocmd=macro)
-        obj.set_texture(color) # the original color first...
+        obj = PovCSGMacro('#%i %s mapping' % ( self._nr, self._descr), macrocmd=macro)
+        obj.set_texture(self._color) # the original color first...
 
         # create the texture
         scale     = mapdef.get('scale', '1.0')
@@ -383,9 +431,9 @@ class PovSimpleBrick(PovCSGMacro, PovPreTransformation):
         self.full_matrix = fixed_trafo_okay
 
 
-class PovSimpleBrickUnion(PovCSGUnion, PovPreTransformation):
+class PovSimpleBrickUnion(PovLEGOUnion, PovPreTransformation):
     def __init__(self, comment='brick union'):
-        PovCSGUnion.__init__(self, comment=comment)
+        PovLEGOUnion.__init__(self, comment=comment)
         PovPreTransformation.__init__(self)
 
         self.add_pre_commands(self._write_pre_translate)
@@ -432,7 +480,7 @@ class PovSimpleBrickUnion(PovCSGUnion, PovPreTransformation):
 
     def write_pov(self, ffile, indent = 0):
         self.apply_changes()
-        PovCSGUnion.write_pov(self, ffile, indent=indent)
+        PovLEGOUnion.write_pov(self, ffile, indent=indent)
 
 
 
@@ -511,12 +559,13 @@ class PovSimpleBrickMap( PovSimpleBrickUnion ):
 
 
 # python brick models
-class PovBrickModel( PovCSGUnion ):
+class PovBrickModel( PovLEGOUnion ):
     def __init__( self, comment='Python model' ):
-        PovCSGUnion.__init__( self, comment=comment )
+        PovLEGOUnion.__init__( self, comment=comment )
 
 
     def lookforBrick( self, designId ):
+        print('deprecated: lookforBrick')
         return [ i for i in self._items if i._itemNos == designId ]
 
 
@@ -684,9 +733,9 @@ class PovRigidModel(PovSimpleBrickUnion):
 
 
 
-class PovRigidSystemModel(PovCSGUnion):
+class PovRigidSystemModel(PovLEGOUnion):
     def __init__(self, rigids, joints, comment='Rigid System Model'):
-        PovCSGUnion.__init__(self, comment=comment)
+        PovLEGOUnion.__init__(self, comment=comment)
 
         self._rigids      = rigids
         self._joints      = joints
@@ -694,7 +743,7 @@ class PovRigidSystemModel(PovCSGUnion):
 
 
     def add(self, new_obj):
-        PovCSGUnion.add(self, new_obj)
+        PovLEGOUnion.add(self, new_obj)
         if ( isinstance( new_obj, list ) == True ) or  ( isinstance( new_obj, tuple ) == True ):
             for i in new_obj:
                 self._rigid_items.append(i)

@@ -18,4 +18,9 @@ parts=1
 part=lg_3939
 texture=n
 
-[MAPPING0]
+[MAPPING1]
+map=lg_3939_decals_1
+type=0
+scale=<6*LG_BRICK_WIDTH,0.80-2*0.016,1>
+translate=<-0.40,0.20,0>
+emission=0.5
