@@ -57,7 +57,7 @@ class Scene(object):
         return mat_list
 
 
-    def generate_povlist(self, python_model):
+    def generate_povlist(self, python_model, scene=None):
         known_bricks = 0
         unknown_bricks = 0
 
@@ -70,7 +70,8 @@ class Scene(object):
             #else:
             #    scene = PovBrickModel()
 
-            scene = PovLEGOModel()
+            if scene is None:
+                scene = PovLEGOModel()
 
             scene.add_include('lg_color2.inc')
             scene.add_include('lg_defs.inc')
@@ -92,7 +93,14 @@ class Scene(object):
             #if ( python_model == 'figure' ):
             #    scene.move_head( 45 )
         else:
-            scene = PovLEGORigidModel(self.rigids, self.joints)
+            if scene is None:
+                scene = PovLEGORigidModel(rigids=self.rigids, joints=self.joints)
+            else:
+                if isinstance(scene, PovLEGORigidModel):
+                    scene.set_rigis(self.rigids, self.joints)
+                else:
+                    print('Cannot use the defined scene model! Use a PovLEGORigidModel!')
+                    return
             #count = 2
             for rigid in self.rigids:
                 rigid_model, kbricks, ukbricks = create_rigid_model(self.bricks, rigid)

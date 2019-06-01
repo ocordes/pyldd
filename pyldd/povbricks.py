@@ -13,6 +13,7 @@ History:
 
 """
 
+from pkg_resources import resource_string, resource_filename
 
 from pypovlib import *              # thought this should be enough
 from pypovlib.pypovanimation import *
@@ -21,6 +22,7 @@ from pypovlib.pypovobjects import *
 from pypovlib.pypovtextures import *
 
 from pyldd.lego_defs import *
+import pyldd.files
 
 import pickle
 import gzip
@@ -205,7 +207,7 @@ class PovLEGOBrick(PovCSGObject, PovPreTransformation):
                 for m in self._container._items[0].macros:
                     decal.macros = m
             else:
-                print('Problem Brick is not a container')
+                #print('Problem Brick is not a container')
                 new_container = PovCSGUnion(comment=self._descr)
                 save_macros = self._container.macros
                 new_container.move_attributes(self._container)
@@ -392,6 +394,24 @@ class PovLEGOModel(PovCSGUnion):
         pass
 
 
+    """
+    load_model
+
+    loads a LDD file and merge it into the model, rigids and joints will
+    be overwritten ...
+    """
+    def load_model(self, filename):
+        print(filename)
+
+
+        # load ldd_model depending of the type of the calling model
+        if isinstance(self, PovLEGORigidModel):
+            ldd_model = pyldd.files.read_ldd_file(filename, True)
+        else:
+            print('Cannot use the defined scene model! Use a PovLEGORigidModel!')
+            ldd_model = pyldd.files.read_ldd_file(filename, False)
+
+        ldd_model.generate_povlist('static', self)
 
 
 ## Rigid models
@@ -403,12 +423,17 @@ class PovRigidModel(PovLEGOModel):
 
 
 class PovLEGORigidModel(PovLEGOModel):
-    def __init__(self, rigids, joints, comment='Rigid System Model'):
+    def __init__(self, rigids=[], joints=[], comment='Rigid System Model'):
         PovLEGOModel.__init__(self, comment=comment)
 
         self._rigids      = rigids
         self._joints      = joints
         self._rigid_items = []
+
+
+    def set_rigis(self, rigids, joints):
+        self._rigids = rigids
+        self._joints = joints
 
 
     def add(self, new_obj):
