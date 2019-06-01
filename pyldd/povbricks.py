@@ -121,22 +121,6 @@ class PovPreTransformation(PovWriterObject):
             self._write_indent(ffile, 'translate %s\n' % r, indent=indent)
 
 
-class PovLEGOUnion(PovCSGUnion):
-    def find_brick(self, itemNos):
-        bricks = []
-        for i in self._items:
-            if isinstance(i, PovLEGOBrick):
-                if i._itemNos == itemNos:
-                    bricks.append(i)
-            elif hasattr( i, 'find_brick' ):
-                j = i.find_brick(itemNos)
-                bricks += j
-            else:
-                print('class: ', i.__class__.__name__)
-
-        return bricks
-
-
 class PovLEGOBrick(PovCSGObject, PovPreTransformation):
     def __init__(self, nr, itemNos, color, config,
                   decoration, decoration_mappings):
@@ -377,9 +361,22 @@ class PovLEGOBrick(PovCSGObject, PovPreTransformation):
 
 
 # python brick models
-class PovBrickModel( PovLEGOUnion ):
-    def __init__( self, comment='Python model' ):
-        PovLEGOUnion.__init__( self, comment=comment )
+
+
+class PovLEGOModel(PovCSGUnion):
+    def find_brick(self, itemNos):
+        bricks = []
+        for i in self._items:
+            if isinstance(i, PovLEGOBrick):
+                if i._itemNos == itemNos:
+                    bricks.append(i)
+            elif hasattr( i, 'find_brick' ):
+                j = i.find_brick(itemNos)
+                bricks += j
+            else:
+                print('class: ', i.__class__.__name__)
+
+        return bricks
 
 
     def lookforBrick( self, designId ):
@@ -399,16 +396,15 @@ class PovBrickModel( PovLEGOUnion ):
 
 ## Rigid models
 
-#class PovRigidModel(PovCSGUnion):
-class PovRigidModel(PovLEGOUnion):
+class PovRigidModel(PovLEGOModel):
     def __init__(self, nr):
-        PovLEGOUnion.__init__(self, comment='Rigid Model #{}'.format(nr))
+        PovLEGOModel.__init__(self, comment='Rigid Model #{}'.format(nr))
 
 
 
-class PovRigidSystemModel(PovLEGOUnion):
+class PovLEGORigidModel(PovLEGOModel):
     def __init__(self, rigids, joints, comment='Rigid System Model'):
-        PovLEGOUnion.__init__(self, comment=comment)
+        PovLEGOModel.__init__(self, comment=comment)
 
         self._rigids      = rigids
         self._joints      = joints
@@ -416,7 +412,7 @@ class PovRigidSystemModel(PovLEGOUnion):
 
 
     def add(self, new_obj):
-        PovLEGOUnion.add(self, new_obj)
+        PovLEGOModel.add(self, new_obj)
         if ( isinstance( new_obj, list ) == True ) or  ( isinstance( new_obj, tuple ) == True ):
             for i in new_obj:
                 self._rigid_items.append(i)

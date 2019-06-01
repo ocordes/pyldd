@@ -70,7 +70,7 @@ class Scene(object):
             #else:
             #    scene = PovBrickModel()
 
-            scene = PovBrickModel()
+            scene = PovLEGOModel()
 
             scene.add_include('lg_color2.inc')
             scene.add_include('lg_defs.inc')
@@ -92,7 +92,7 @@ class Scene(object):
             #if ( python_model == 'figure' ):
             #    scene.move_head( 45 )
         else:
-            scene = PovRigidSystemModel(self.rigids, self.joints)
+            scene = PovLEGORigidModel(self.rigids, self.joints)
             #count = 2
             for rigid in self.rigids:
                 rigid_model, kbricks, ukbricks = create_rigid_model(self.bricks, rigid)
@@ -149,7 +149,7 @@ zero_trafo = np.array([1.,0.,0.,0.,1.,0.,0.,0.,1.,0.,0.,0.])
 
 # custom scene function
 def create_custom_bricks():
-    scene = PovBrickModel()
+    scene = PovLEGOModel()
 
     scene.add_include('lg_color2.inc')
     scene.add_include('lg_defs.inc')
