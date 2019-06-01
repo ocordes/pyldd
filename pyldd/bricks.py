@@ -131,47 +131,6 @@ class Brick( object ):
             obj = PovLEGOBrick(self.refID, self.designID, color, defs,
                                 self.decoration, decoration_mappings)
 
-            # descr = defs['DEFAULT'].get('descr', 'unknown brick')
-            # for partnr in range(defs['DEFAULT'].getint('parts', 0)):
-            # #for parts in defs['parts']:
-            #     parts = defs['PART%i' % partnr]
-            #     macro = parts['part']
-            #     # create special object for the bricks, static one, doors, figures etc.
-            #     objtype = defs['DEFAULT'].get('type', 'brick')
-            #     if objtype == 'torso':
-            #         obj = PovBrickTorso(self.refID, descr, macro, self.designID, self.decoration, defs)
-            #     elif objtype == 'head':
-            #         obj = PovBrickHead(self.refID, descr, macro, self.designID, self.decoration, defs)
-            #     elif objtype == 'hair':
-            #         obj = PovBrickHair(self.refID, descr, macro, self.designID, self.decoration, defs)
-            #     elif objtype == 'hand':
-            #         obj = PovBrickHand(self.refID, descr, macro, self.designID, self.decoration, defs)
-            #     elif objtype == 'leg':
-            #         obj = PovBrickLeg(self.refID, descr, macro, self.designID, self.decoration, defs)
-            #     else:
-            #         if len(self.decoration) == 0:
-            #             obj = PovSimpleBrick(self.refID, descr, macro, self.designID, self.decoration, defs)
-            #         else:
-            #             obj = PovSimpleBrickMap(self.refID, descr, macro, self.designID, self.decoration, defs)
-            #
-            #     texture = parts.get('texture', 'n')
-            #     if texture == 'n':
-            #         obj.set_texture(color)
-            #     elif texture == 'r':
-            #         obj.set_texture('{} {}'.format(color,
-            #                                     'normal { bumps 0.1 scale 2 }'))
-            #     elif texture == 's':
-            #         pass
-            #
-            #     objs.append(obj)
-            # if len(objs) > 1:
-            #     #u = PovCSGUnion(comment=descr)
-            #     u = PovSimpleBrickUnion(comment=descr)
-            #     u.add(objs)
-            #     obj = u
-            # else:
-            #     obj = objs[0]
-
             if 'transformation' in self.__dict__:
                 obj.full_matrix = self.transformation
             else:
