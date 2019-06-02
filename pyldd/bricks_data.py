@@ -101,6 +101,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '3460':  [ '3460', None ],     # plate 1 x 8
                  '3470':  [ '3470', None ],     # plant tree oval 4 x 4 x 6
                  '3471':  [ '3471', None ],     # plant tree pyramidal 4 x 4 x 6.667 type 1
+                 '3475':  [ '3475', None ],     # plate 1 x 2 with jet enginde with axle hole
                  '3479':  [ '3479', None ],     # tail 4 x 2 x 2
                  '3622':  [ '3622', None ],     # brick 1 x 3
                  '3623':  [ '3623', None ],     # plate 1 x 3
@@ -315,6 +316,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '52107': [ '52107', None ],    # brick 1 x 2 with studs on two opposite sides
                  '54383': [ '54383', None ],    # wedge plate 6 x 3 right
                  '54384': [ '54384', None ],    # wedge plate 6 x 3 left
+                 '58181': [ '3939', None ],     # slope brick 33 3 x 6
                  '58846': [ '58846', None ],    # brick 10 x 10 corner round with tapered edge and cutout
                  '60033': [ '4202', None ],     # brick 4 x 12
                  '60219': [ '60219', None ],    # slope brick 45 6 x 4 inverted double with open center and 3 holes
@@ -366,6 +368,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '98283': [ '98283', None ],    # brick 1 x 2 with embossed bricks
                  '98285': [ '98285', None ],    # hinge plate 2 x 4.5 base with technic pin hole
                  '98286': [ '98286', None ],    # hinge plate 2 x 4.5 base with technic pin hole
+                 '98302': [ '3475', None ],     # plate 1 x 2 with jet enginde with axle hole
                  '98560': [ '98560', None ],    # slope brick 75 2 x 2 x 3 not open studs
                  '99206': [ '99206', None ],    # plate 2 x 2 x 2/3 with two studs on side and two raised
 }

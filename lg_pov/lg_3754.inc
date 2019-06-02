@@ -136,6 +136,18 @@ union {
  }
 } 
 
+#declare lg_3754_decals_1 =
+ box {
+   <0, 0.0, LG_CORNER_SPACE>,
+   <LG_EE, WIDTH*LG_BRICK_WIDTH,
+      HEIGHT*LG_BRICK_HEIGHT-LG_CORNER_SPACE>
+
+  //translate <-LG_BRICK_WIDTH+1,-WIDTH*LG_BRICK_WIDTH/2,-LG_BRICK_HEIGHT*HEIGHT>
+  translate <-LG_EE-LG_BRICK_WIDTH/2,-WIDTH*LG_BRICK_WIDTH/2,-LG_BRICK_HEIGHT*HEIGHT>
+}
+
+
+
 #declare lg_3754_clear = 
 merge {
  #declare ROT = 0;
