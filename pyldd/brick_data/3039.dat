@@ -25,6 +25,6 @@ texture=r
 [MAPPING1]
 map=lg_3039_decals_1
 type=0
-scale=<2*LG_BRICK_WIDTH,LG_BRICK_WIDTH,1>
-translate=<-LG_BRICK_WIDTH/2,0.20,0>
+scale=<2*(LG_BRICK_WIDTH-LG_CORNER_SPACE*2),0.6788225,1>
+translate=<-(LG_BRICK_WIDTH-LG_CORNER_SPACE*3)/2,0.26,0>
 
