@@ -1,0 +1,21 @@
+# Brick 1 x 4 without center studs
+#
+# Oliver Cordes 2019-07-17
+#
+[DEFAULT]
+descr=brick 1 x 4
+type=brick
+file=lg_3066
+width=3
+length=0
+depth=1
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_3066
+texture=n
+
+[MAPPING1]

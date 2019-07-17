@@ -37,6 +37,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '2454':  [ '2454', None ],     # brick 1 x 2 x 5
                  '2462':  [ '2462', None ],     # brick 3 x 3 facet
                  '2465':  [ '2465', None ],     # brick 1 x 16
+                 '2486':  [ '2486', None ],     # bar 1 x 8 x 2
                  '2508':  [ '2508', None ],     # plate 1 x 2 with towball long
                  '2577':  [ '2577', None ],     # brick 4 x 4 with round corner
                  '2584':  [ '2584', None ],     # hose reel 2 x 2 holder
@@ -84,6 +85,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '3049':  [ '3049', None ],     # slope brick 45 1 x 2 double / inverted with center stud
                  '3062':  [ '3062', None ],     # brick 1 x 1 round open stud
                  '3063':  [ '3063', None ],     # brick 2 x 2 corner round
+                 '3066':  [ '3066', None ],     # brick 1 x 4 without center studs
                  '3068':  [ '3068', None ],     # flat tile 2 x 2
                  '3069':  [ '3069', None ],     # tile 1 x 2 with groove
                  '3070':  [ '3070', None ],     # flat tile 1 x 1
@@ -125,6 +127,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '3730':  [ '3730', None ],     # plate 2 x 2 with towball coupling
                  '3747':  [ '3747', None ],     # slope brick 33 3 x 2 inverted
                  '3754':  [ '3754', None ],     # brick 1 x 6 x 5
+                 '3755':  [ '3755', None ],     # brick 1 x 3 x 5
                  '3794':  [ '3794', None ],     # plate 1 x 2 with stud
                  '3795':  [ '3795', None ],     # plate 2 x 6
                  '3811':  [ '3811', None ],     # base 32 x 32 plate
