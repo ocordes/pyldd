@@ -253,6 +253,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '15647': [ '30390', None ],    # slope brick 45 2 x 4 inverted double with pins
                  '20460': [ '3817', None ],     # minifig leg left
                  '20461': [ '3816', None ],     # minifig leg right
+                 '23950': [ '23950', None ],    # panel 1 x 3 x 1
                  '30000': [ '30000', None ],    # brick 2 x 2 with pins
                  '30055': [ '30055', None ],    # fence 1 x 4 x 2 spindled
                  '30065': [ '30065', None ],    # space radar dish 4 x 4

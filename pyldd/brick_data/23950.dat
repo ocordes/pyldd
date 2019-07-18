@@ -1,0 +1,21 @@
+# panel 1 x 3 x 1 
+#
+# Oliver Cordes 2019-07-18
+# 
+[DEFAULT]
+descr=panel 1 x 3 x 1 
+type=brick
+file=lg_23950
+width=2
+length=0
+depth=1
+sx=1
+sy=1
+sz=-1
+parts=1
+
+[PART0]
+part=lg_23950
+texture=n
+
+[MAPPING0]
