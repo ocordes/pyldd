@@ -171,7 +171,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '3958':  [ '3958', None ],     # plate 6 x 6
                  '3959':  [ '3959', None ],     # space gun
                  '3963':  [ '3963', None ],     # space positioning rockets
-                 '3960':  [ '30065', None ],     # space radar dish 4 x 4
+                 '3960':  [ '30065', None ],    # space radar dish 4 x 4
                  '4032':  [ '4032', None ],     # plate 2 x 2 round
                  '4070':  [ '4070', None ],     # brick 1 x 1 x 1 with vertical stud (headlight brick)
                  '4079':  [ '4079', None ],     # town seat 2 x 2
@@ -259,6 +259,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '23950': [ '23950', None ],    # panel 1 x 3 x 1
                  '30000': [ '30000', None ],    # brick 2 x 2 with pins
                  '30055': [ '30055', None ],    # fence 1 x 4 x 2 spindled
+                 '30064': [ '3957', None ],     # antenna
                  '30065': [ '30065', None ],    # space radar dish 4 x 4
                  '30072': [ '30072', None ],    # brick 12 x 24
                  '30136': [ '30136', None ],    # log brick 1 x 2
