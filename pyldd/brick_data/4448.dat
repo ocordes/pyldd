@@ -1,0 +1,26 @@
+# window 4 x 4 x 3 roof glass
+#
+# Oliver Cordes 2019-07-19
+#
+[DEFAULT]
+descr=window 4 x 4 x 3 roof glass
+type=brick
+file=lg_4448
+width=3
+length=6
+depth=3
+sx=1
+sy=1
+sz=-1
+parts=1
+
+[PART0]
+part=lg_4448
+texture=n
+
+[MAPPING1]
+map=lg_3010_decals_1
+type=0
+scale=<4*LG_BRICK_WIDTH,LG_BRICK_HEIGHT,1>
+translate=<-0.4,0,0>
+emission=0.5

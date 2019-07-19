@@ -195,6 +195,8 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '4345':  [ '4345', None ],     # mail box 2 x 2 x 2 open studs
                  '4346':  [ '4346', None ],     # mail box 2 x 2 x 2 door
                  '4445':  [ '4445', None ],     # slope brick 45 2 x 8
+                 '4447':  [ '4447', None ],     # window 4 x 4 x 3 roof
+                 '4448':  [ '4448', None ],     # window 4 x 4 x 3 roof glass
                  '4460':  [ '4460', None ],     # slope brick 75 2 x 1 x 3
                  '4477':  [ '4477', None ],     # plate 1 x 10
                  '4488':  [ '4488', None ],     # plate 2 x 2 with wheel holder
@@ -208,6 +210,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '4589':  [ '4589', None ],     # nose cone small 1 x 1
                  '4733':  [ '4733', None ],     # brick 1 x 1 with studs on sides
                  '4740':  [ '4740', None ],     # satellite dish 2 x 2
+                 '4741':  [ '4741', None ],     # frame right/inv 1 x 4 x 6
                  '4844':  [ '4844', None ],     # boat mast base 4 x 4 x 9 with top notches
                  '4854':  [ '4854', None ],     # slope brick 45 4 x 4 inverted double
                  '4861':  [ '4861', None ],     # slope brick 45 3 x 4 double / 33 slope
@@ -280,6 +283,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '30499': [ '3684', None ],     # slope brick 75 2 x 2 x 3
                  '30505': [ '30505', None ],    # brick 3 x 3 without corner
                  '30540': [ '30540', None ],    # hinge brick 1 x 2 locking with 2 fingers horizontal on end
+                 '30586': [ '30586', None ],    # plate 2 x 8 with liding groove
                  '32013': [ '32013', None ],    # technic connecttor #1 end
                  '32018': [ '32018', None ],    # technical beam 1 x 14 with holes
                  '32028': [ '32028', None ],    # plate 1 x 2 with door rail
@@ -359,6 +363,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '90194': [ '48183', None ],    # wedge plate 3 x 4 with stud notches
                  '90498': [ '48288', None ],    # tile 8 x 16
                  '91049': [ '91049', None ],    # plate 1.5 x 1.5 x 2/3 round
+                 '91405': [ '91405', None ],    # plate 16 x 16
                  '91988': [ '91988', None ],    # plate 2 x 14
                  '92410': [ '92410', None ],    # cupboard 2 x 3 x 2 open studs
                  '92438': [ '92438', None ],    # plate 8 x 16

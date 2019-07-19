@@ -1,0 +1,21 @@
+# Plate 2 x 8 with gliding groove
+#
+# Oliver Cordes 2019-07-19
+# 
+[DEFAULT]
+descr=plate 2 x 8 with gliding groove
+type=plate
+file=lg_30586
+width=-3
+length=13
+depth=-1/6
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_30586
+texture=n
+
+[MAPPING0]

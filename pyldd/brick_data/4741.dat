@@ -1,0 +1,26 @@
+# Frame right/inv 1 x 4 x 6
+#
+# Oliver Cordes 2018-08-06
+#
+[DEFAULT]
+descr=frame right/inv 1 x 4 x 6
+type=brick
+file=lg_4741
+width=3
+length=0
+depth=6
+sx=1
+sy=1
+sz=-1
+parts=1
+
+[PART0]
+part=lg_4741
+texture=n
+
+[MAPPING1]
+map=lg_3010_decals_1
+type=0
+scale=<4*LG_BRICK_WIDTH,LG_BRICK_HEIGHT,1>
+translate=<-0.4,0,0>
+emission=0.5
