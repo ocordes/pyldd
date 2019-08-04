@@ -124,6 +124,7 @@ class PovPreTransformation(PovWriterObject):
 
 
 class PovLEGOBrick(PovCSGObject, PovPreTransformation):
+    _name = 'LEGO Brick'
     def __init__(self, nr, itemNos, color, config,
                   decoration, decoration_mappings):
         PovCSGObject.__init__(self)
