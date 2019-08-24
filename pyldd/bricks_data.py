@@ -346,6 +346,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '62810': [ '62810', None ],    # Minifig hair short, tousled with side parting
                  '63082': [ '63082', None ],    # plate 2 x 2 with socket joint-8 square and axlehole
                  '63864': [ '63864', None ],    # flat tile 1 x 3
+                 '64449': [ '64449', None ],    # support  1 x  6 x 10 girder triangular
                  '64453': [ '64453', None ],    # windscreen 1 x 6 x 3
                  '64799': [ '64799', None ],    # frame plate 4 x 4
                  '72454': [ '72454', None ],    # slope brick 45 4 x 4 inverted double with holes
