@@ -2799,3 +2799,99 @@ matrix <aw,0,0,0,ah,0,0,0,ad,ax,ay,az>
                 matrix <2.2961,0,5.54328,0,-1,0,5.54328,0,-2.2961,0,1,0>
         }
 }
+
+
+#declare LDX_7_dash_8cyli_dot_dat_in_part = cylinder // Cylinder 0.875
+{
+        <0,0,0>,<0,1,0>,1 open
+        clipped_by
+        {
+                union
+                {
+                        plane
+                        {
+                                <0,0,-1>,0
+                        }
+                        plane
+                        {
+                                <0.70710678118654768376,0,0.70710678118654735069>,0
+                        }
+                }
+        }
+}
+
+
+#declare LDX_3_dash_16ndis_dot_dat_in_part = disc // Not-Disc 0.1875
+{
+        <0,0,0>,<0,1,0>,2,1
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.92387953251128673848,0,0.38268343236508983729>,0
+                }
+                box
+                {
+                        <-1,-1,-1>,<1,1,1>
+                }
+        }
+}
+
+
+#declare LDX_axlehol6_dot_dat_in_part = union {
+// Technic Axle Hole Tooth
+// Name: axlehol6.dat
+// Author: Steve Bliss [sbliss]
+// !LDRAW_ORG Primitive UPDATE 2005-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 1999-07-05 [PTadmin] Official Update 1999-05
+// !HISTORY 2002-11-08 [OrionP] Adjusted fit and precision
+// !HISTORY 2003-03-12 [PTadmin] Official Update 2003-01
+// !HISTORY 2005-08-28 [guyvivan] Use 1-8chrd.dat primitive
+// !HISTORY 2005-12-28 [PTadmin] Official Update 2005-01
+// !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement
+// !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01
+        object {
+                LDX_1_dash_8chrd_dot_dat_in_part
+                matrix <5.543,0,2.296,0,1,0,-2.296,0,5.543,0,0,0>
+        }
+        object {
+                LDX_1_dash_8chrd_dot_dat_in_part
+                matrix <5.543,0,2.296,0,-1,0,-2.296,0,5.543,0,1,0>
+        }
+}
+
+
+#declare LDX_3_dash_16rin9_dot_dat_in_part = disc // Ring 0.1875
+{
+        <0,0,0>,<0,1,0>,10,9
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.92387953251128673848,0,0.38268343236508983729>,0
+                }
+        }
+}
+
+
+#declare LDX_2_dash_4ring9_dot_dat_in_part = disc // Ring 0.5
+{
+        <0,0,0>,<0,1,0>,10,9
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+        }
+}
