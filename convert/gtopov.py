@@ -7,7 +7,7 @@
 
 import numpy as np
 
-
+from pypovlib.pypovobjects import *
 
 TEXTURE_COORDINATES_INCLUDED = 0x1
 
@@ -101,7 +101,8 @@ def read_g_file(filename):
         else:
             texCoords = None
 
-        indices = np.fromfile(f, dtype=np.uint32, count=indexCount)
+        facecount = indexCount // 3
+        indices = np.fromfile(f, dtype=np.uint32, count=indexCount).reshape(facecount,3)
 
         print(f.tell())
 
@@ -111,6 +112,34 @@ def read_g_file(filename):
         print(normals[:10])
 
 
-# main
+        return vertices, normals, texCoords, indices
 
-read_g_file('/Users/ocordes/Library/Application Support/LEGO Company/LEGO Digital Designer/db.user/Primitives/Lod0/3002.g')
+
+def write_povmesh(povfilename,
+                  vertices,
+                  normals,
+                  texCoords,
+                  indices):
+
+    f = PovFile(filename=povfilename)
+    mesh = PovMesh2(vertex_vectors=vertices,
+                       normal_vectors=normals,
+                       uv_vectors=texCoords,
+                       face_indices=indices,
+                       normal_indices=indices,
+                       comment=None)
+
+    f.add_declare('test_mesh', mesh)
+
+    f.write_povfile()
+
+
+
+# main
+filename = '/Users/ocordes/Library/Application Support/LEGO Company/LEGO Digital Designer/db.user/Primitives/Lod0/58827.g'
+
+vertices, normals, texCoords, indices = read_g_file(filename)
+
+povfilename = 'test.pov'
+
+write_povmesh(povfilename, vertices, normals, texCoords, indices)
