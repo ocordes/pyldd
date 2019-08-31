@@ -1,0 +1,22 @@
+# Support  2 x  2 x 10 Girder Triangular with Axlehole 
+#
+# Oliver Cordes 2019-08-31
+# 
+[DEFAULT]
+descr=support 2 x  2 x 10 girder triangular with axlehole
+type=brick
+file=lg_58827
+width=1
+length=1
+depth=10
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_58827
+texture=n
+
+[MAPPING0]
+

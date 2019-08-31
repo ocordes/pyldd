@@ -9,6 +9,10 @@ import numpy as np
 
 from pypovlib.pypovobjects import *
 
+
+prefix = '/Users/ocordes/Library/Application Support/LEGO Company/LEGO Digital Designer/db.user/Primitives/Lod0/'
+
+
 TEXTURE_COORDINATES_INCLUDED = 0x1
 
 """
@@ -116,6 +120,7 @@ def read_g_file(filename):
 
 
 def write_povmesh(povfilename,
+                  macroname,
                   vertices,
                   normals,
                   texCoords,
@@ -129,17 +134,29 @@ def write_povmesh(povfilename,
                        normal_indices=indices,
                        comment=None)
 
-    f.add_declare('test_mesh', mesh)
+    # make somehow compatible to lg_pov definitions
+    mesh.rotate = [0,-90,0]
+    mesh.rotate = [90,0,0]
+
+    f.add_declare(macroname, mesh)
 
     f.write_povfile()
 
 
 
+def convert_brick(nr):
+    filename = os.path.join(prefix, '%s.g' % nr)
+    macroname = 'lg_%s' % nr
+
+    vertices, normals, texCoords, indices = read_g_file(filename)
+
+    povfilename = macroname + '.inc'
+
+    write_povmesh(povfilename, macroname, vertices, normals, texCoords, indices)
+
 # main
 filename = '/Users/ocordes/Library/Application Support/LEGO Company/LEGO Digital Designer/db.user/Primitives/Lod0/58827.g'
+filename = '/Users/ocordes/Library/Application Support/LEGO Company/LEGO Digital Designer/db.user/Primitives/Lod0/3001.g'
 
-vertices, normals, texCoords, indices = read_g_file(filename)
 
-povfilename = 'test.pov'
-
-write_povmesh(povfilename, vertices, normals, texCoords, indices)
+convert_brick('95347')

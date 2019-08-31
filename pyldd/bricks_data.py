@@ -325,7 +325,9 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '52107': [ '52107', None ],    # brick 1 x 2 with studs on two opposite sides
                  '54383': [ '54383', None ],    # wedge plate 6 x 3 right
                  '54384': [ '54384', None ],    # wedge plate 6 x 3 left
+                 '57893': [ '57893', None ],    # lattice tower with wall 2 x 2 x 10
                  '58181': [ '3939', None ],     # slope brick 33 3 x 6
+                 '58827': [ '58827', None ],    # support 2 x 2 x 10 girder triangular with axlehole
                  '58846': [ '58846', None ],    # brick 10 x 10 corner round with tapered edge and cutout
                  '60033': [ '4202', None ],     # brick 4 x 12
                  '60219': [ '60219', None ],    # slope brick 45 6 x 4 inverted double with open center and 3 holes
@@ -375,6 +377,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '92950': [ '3455', None ],     # arch 1 x 6
                  '93273': [ '93273', None ],    # plate with bow 1 x 4 x 2/3
                  '95188': [ '95188', None ],    # brick 6 x 6 corner round with slope 33
+                 '95347': [ '95347', None ],    # lattice tower w/cross 2 x 2 x 10
                  '98138': [ '98138', None ],    # tile 1 x 1 round with groove
                  '98283': [ '98283', None ],    # brick 1 x 2 with embossed bricks
                  '98285': [ '98285', None ],    # hinge plate 2 x 4.5 base with technic pin hole
