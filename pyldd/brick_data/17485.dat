@@ -1,0 +1,21 @@
+# brick 2 x 2 round with hole o 4,85
+#
+# Oliver Cordes 2019-09-01
+# 
+[DEFAULT]
+descr=brick 2 x 2 round with hole o 4,85
+type=brick
+file=lg_17485
+width=0
+length=2
+depth=0
+sx=1
+sy=1
+sz=-1
+parts=1
+
+[PART0]
+part=lg_17485
+texture=n
+
+[MAPPING0]

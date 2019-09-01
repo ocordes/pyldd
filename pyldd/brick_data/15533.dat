@@ -1,0 +1,22 @@
+# brick 1 x 4 with embossed bricks 
+#
+# Oliver Cordes 2019-08-31
+# 
+[DEFAULT]
+descr= brick 1 x 4 with embossed bricks
+type=brick
+file=lg_15533
+width=0
+length=0
+depth=0
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_15533
+texture=n
+
+[MAPPING0]
+

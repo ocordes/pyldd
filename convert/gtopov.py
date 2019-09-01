@@ -86,14 +86,12 @@ def read_g_file(filename):
 
         print('vertexCount =', vertexCount)
         print('indexCount =', indexCount)
-        print(options)
+        print('options = ', options)
 
-        print(f.tell())
 
         vertices = np.fromfile(f, dtype=np.float32, count=3*vertexCount).reshape(vertexCount,3)
         normals = np.fromfile(f, dtype=np.float32, count=3*vertexCount).reshape(vertexCount,3)
 
-        print(f.tell())
 
         has_textures = bool(options & TEXTURE_COORDINATES_INCLUDED)
 
@@ -107,13 +105,6 @@ def read_g_file(filename):
 
         facecount = indexCount // 3
         indices = np.fromfile(f, dtype=np.uint32, count=indexCount).reshape(facecount,3)
-
-        print(f.tell())
-
-        print(indices[:10])
-        print(indices[:-10])
-        print(vertices[:10])
-        print(normals[:10])
 
 
         return vertices, normals, texCoords, indices
@@ -159,4 +150,4 @@ filename = '/Users/ocordes/Library/Application Support/LEGO Company/LEGO Digital
 filename = '/Users/ocordes/Library/Application Support/LEGO Company/LEGO Digital Designer/db.user/Primitives/Lod0/3001.g'
 
 
-convert_brick('95347')
+convert_brick('17485')

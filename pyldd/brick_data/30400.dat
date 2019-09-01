@@ -1,0 +1,21 @@
+# brick 4 x 18
+#
+# Oliver Cordes 2019-09-01
+# 
+[DEFAULT]
+descr=brick 4 x 18
+type=brick
+file=lg_30400
+width=17
+length=3
+depth=1
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_30400
+texture=n
+
+[MAPPING0]

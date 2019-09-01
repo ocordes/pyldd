@@ -34,6 +34,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '2445':  [ '2445', None ],     # plate 2 x 12
                  '2449':  [ '2449', None ],     # slope brick 75 2 x 1 x 3 inverted
                  '2450':  [ '2450', None ],     # plate 3 x 3 without corner
+                 '2453':  [ '2453', None ],     # brick 1 x 1 x 5
                  '2454':  [ '2454', None ],     # brick 1 x 2 x 5
                  '2462':  [ '2462', None ],     # brick 3 x 3 facet
                  '2465':  [ '2465', None ],     # brick 1 x 16
@@ -85,7 +86,9 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '3049':  [ '3049', None ],     # slope brick 45 1 x 2 double / inverted with center stud
                  '3062':  [ '3062', None ],     # brick 1 x 1 round open stud
                  '3063':  [ '3063', None ],     # brick 2 x 2 corner round
+                 '3065':  [ '3065', None ],     # brick 1 x 2 without center studs
                  '3066':  [ '3066', None ],     # brick 1 x 4 without center studs
+                 '3067':  [ '3067', None ],     # brick 1 x 6 without center studs
                  '3068':  [ '3068', None ],     # flat tile 2 x 2
                  '3069':  [ '3069', None ],     # tile 1 x 2 with groove
                  '3070':  [ '3070', None ],     # flat tile 1 x 1
@@ -232,6 +235,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '6178':  [ '6178', None ],     # plate 6 x 12 with studs on edges
                  '6179':  [ '6179', None ],     # plate 4 x 4 with studs on edges
                  '6180':  [ '6180', None ],     # plate 4 x 6 with studs on edges
+                 '6188':  [ '6188', None ],     # nose cone small 1 x 1
                  '6205':  [ '6205', None ],     # plate 6 x 16 with studs on edges
                  '6212':  [ '6212', None ],     # brick 4 x 10
                  '6213':  [ '6213', None ],     # brick 2 x 6 x 3
@@ -246,16 +250,22 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '10314': [ '10314', None ],    # brick 1 x 4 x 1.333 with curved top without understuds
                  '11211': [ '11211', None ],    # brick 1 x 2 with studs on one opposite side
                  '11477': [ '11477', None ],    # slope brick curved 2 x 1
+                 '14716': [ '14716', None ],    # brick 1 x 1 x 3
                  '14719': [ '14719', None ],    # flat tile 2 x 2 corner
                  '14769': [ '4150', None ],     # tile 2 x 2 round
+                 '14918': [ '3942', None ],     # Cone 2 x 2 x 2 open stud
+                 '15533': [ '15533', None ],    # brick 1 x 4 with embossed bricks
                  '15068': [ '15068', None ],    # slope brick curved 2 x 2 x 2/3
                  '15332': [ '15332', None ],    # fence 1 x 4 x 2 with 4 knobs
                  '15397': [ '15397', None ],    # plate 3 x 3 cross
                  '15571': [ '3048', None ],     # slope brick 45 1 x 2 triple
                  '15573': [ '3794', None ],     # plate 1 x 2 with stud
                  '15647': [ '30390', None ],    # slope brick 45 2 x 4 inverted double with pins
+                 '17485': [ '17485', None ],    # brick 2 x 2 round with hole o 4,85
+                 '18841': [ '30367', None ],    # cylinder 2 x 2 with dome top with blocked stud, R2-D2
                  '20460': [ '3817', None ],     # minifig leg left
                  '20461': [ '3816', None ],     # minifig leg right
+                 '22886': [ '22886', None ],    # brick 1 x 2 x 3
                  '23950': [ '23950', None ],    # panel 1 x 3 x 1
                  '30000': [ '30000', None ],    # brick 2 x 2 with pins
                  '30055': [ '30055', None ],    # fence 1 x 4 x 2 spindled
@@ -266,6 +276,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '30137': [ '30137', None ],    # log brick 1 x 4
                  '30144': [ '30144', None ],    # brick 2 x 4 x 3
                  '30145': [ '30145', None ],    # brick 2 x 2 x 3
+                 '30151': [ '30151', None ],    # cylinder 2 x 2 x 1 & 2/3 half-dome
                  '30179': [ '30179', None ],    # door 1 x 4 x 6 framte type 1
                  '30181': [ '30181', None ],    # brick 4 x 10 with cut corners
                  '30183': [ '30183', None ],    # slope brick 45 6 x 4 inverted double with hole
@@ -279,6 +290,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '30367': [ '30367', None ],    # cylinder 2 x 2 with dome top with blocked stud, R2-D2
                  '30373': [ '30373', None ],    # slope brick 65 6 x 6 x 2 inverted quadruple
                  '30390': [ '30390', None ],    # slope brick 45 4 x 2 double inverted with pins
+                 '30400': [ '30400', None ],    # brick 4 x 18
                  '30413': [ '30413', None ],    # panel 1 x 4 x 1
                  '30414': [ '30414', None ],    # brick 1 x 4 with studs on side
                  '30499': [ '3684', None ],     # slope brick 75 2 x 2 x 3
@@ -375,9 +387,11 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '92593': [ '92593', None ],    # plate 1 x 4 with 2 knobs
                  '92946': [ '92946', None ],    # roof tile 1 x 2 45° W 1/3 Plate
                  '92950': [ '3455', None ],     # arch 1 x 6
+                 '93888': [ '3007', None ],     # brick 2 x 8
                  '93273': [ '93273', None ],    # plate with bow 1 x 4 x 2/3
                  '95188': [ '95188', None ],    # brick 6 x 6 corner round with slope 33
                  '95347': [ '95347', None ],    # lattice tower w/cross 2 x 2 x 10
+                 '97492': [ '30144', None ],    # brick 2 x 4 x 3
                  '98138': [ '98138', None ],    # tile 1 x 1 round with groove
                  '98283': [ '98283', None ],    # brick 1 x 2 with embossed bricks
                  '98285': [ '98285', None ],    # hinge plate 2 x 4.5 base with technic pin hole
