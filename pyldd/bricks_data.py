@@ -385,6 +385,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '92438': [ '92438', None ],    # plate 8 x 16
                  '92583': [ '92583', None ],    # windscreen 3 x 6 x 2
                  '92593': [ '92593', None ],    # plate 1 x 4 with 2 knobs
+                 '92947': [ '92947', None ],    # brick 2 x 2 round with grille 
                  '92946': [ '92946', None ],    # roof tile 1 x 2 45° W 1/3 Plate
                  '92950': [ '3455', None ],     # arch 1 x 6
                  '93888': [ '3007', None ],     # brick 2 x 8

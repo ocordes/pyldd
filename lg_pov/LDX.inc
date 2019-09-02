@@ -2895,3 +2895,22 @@ matrix <aw,0,0,0,ah,0,0,0,ad,ax,ay,az>
                 }
         }
 }
+
+
+#declare LDX_stud15_dot_dat_in_part = union {
+// Stud for Round  2 x  2 Parts, 1 Face, Complete Edges
+// Name: stud15.dat
+// Author: Joerg Sommerer [Brickaneer]
+// !LDRAW_ORG Primitive UPDATE 2011-02
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2011-12-29 [PTadmin] Official Update 2011-02
+        object {
+                LDX_3_dash_4cyli_dot_dat_in_part
+                matrix <0,0,6,0,4,0,-6,0,0,0,-4,0>
+        }
+        object {
+                LDX_3_dash_4disc_dot_dat_in_part
+                matrix <0,0,6,0,1,0,-6,0,0,0,-4,0>
+        }
+}

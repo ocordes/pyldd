@@ -1,0 +1,21 @@
+# brick 2 x 2 round with grille
+#
+# Oliver Cordes 2019-09-0
+# 
+[DEFAULT]
+descr=brick 2 x 2 round with grille
+type=brick
+file=lg_92947
+width=1
+length=1
+depth=1
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_92947
+texture=n
+
+[MAPPING0]
