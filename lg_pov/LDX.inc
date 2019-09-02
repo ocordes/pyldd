@@ -2914,3 +2914,27 @@ matrix <aw,0,0,0,ah,0,0,0,ad,ax,ay,az>
                 matrix <0,0,6,0,1,0,-6,0,0,0,-4,0>
         }
 }
+
+
+#declare LDX_4_dash_4rin12_dot_dat_in_part = disc // Ring 1
+{
+        <0,0,0>,<0,1,0>,13,12
+}
+
+
+#declare LDX_4_dash_4con4_dot_dat_in_part = cone // Cone 1
+{
+        <0,0,0>,5,<0,1,0>,4 open
+}
+
+
+#declare LDX_4_dash_4con7_dot_dat_in_part = cone // Cone 1
+{
+        <0,0,0>,8,<0,1,0>,7 open
+}
+
+
+#declare LDX_4_dash_4con13_dot_dat_in_part = cone // Cone 1
+{
+        <0,0,0>,14,<0,1,0>,13 open
+}

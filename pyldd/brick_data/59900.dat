@@ -1,0 +1,21 @@
+# cone 1 x 1 wit hstop
+#
+# Oliver Cordes 2019-09-02
+# 
+[DEFAULT]
+descr=cone 1 x 1 with stop
+type=brick
+file=lg_59900
+width=0
+length=0
+depth=1
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_59900
+texture=n
+
+[MAPPING0]
