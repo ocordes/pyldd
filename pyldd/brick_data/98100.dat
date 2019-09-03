@@ -1,0 +1,21 @@
+# slope brick 2 x 2 round with knob
+#
+# Oliver Cordes 2019-09-01
+# 
+[DEFAULT]
+descr=slope brick 2 x 2 round with knob
+type=brick
+file=lg_98100
+width=0
+length=2
+depth=0
+sx=1
+sy=1
+sz=-1
+parts=1
+
+[PART0]
+part=lg_98100
+texture=n
+
+[MAPPING0]

@@ -394,6 +394,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '95188': [ '95188', None ],    # brick 6 x 6 corner round with slope 33
                  '95347': [ '95347', None ],    # lattice tower w/cross 2 x 2 x 10
                  '97492': [ '30144', None ],    # brick 2 x 4 x 3
+                 '98100': [ '98100', None ],    # slope brick 2 x 2 round w knob
                  '98138': [ '98138', None ],    # tile 1 x 1 round with groove
                  '98283': [ '98283', None ],    # brick 1 x 2 with embossed bricks
                  '98285': [ '98285', None ],    # hinge plate 2 x 4.5 base with technic pin hole
