@@ -267,6 +267,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '20461': [ '3816', None ],     # minifig leg right
                  '22886': [ '22886', None ],    # brick 1 x 2 x 3
                  '23950': [ '23950', None ],    # panel 1 x 3 x 1
+                 '24947': [ '24947', None ],    # sphere 2 x 2 x 1 1/3 inverted
                  '30000': [ '30000', None ],    # brick 2 x 2 with pins
                  '30055': [ '30055', None ],    # fence 1 x 4 x 2 spindled
                  '30064': [ '3957', None ],     # antenna
@@ -306,6 +307,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '32316': [ '32316', None ],    # technic liftarm 1 x 5 straight
                  '32524': [ '32524', None ],    # technic liftarm 1 x 7 straight
                  '33009': [ '33009', None ],    # minifig book
+                 '33176': [ '33176', None ],    # decoration ball
                  '33909': [ '33909', None ],    # plate 2 x 2 with reduced knobs
                  '41539': [ '41539', None ],    # plate 8 x 8
                  '41767': [ '41767', None ],    # wedge 4 x 2 right
@@ -316,6 +318,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '43722': [ '43722', None ],    # wedge plate 3 x 2 right
                  '43723': [ '43723', None ],    # wedge plate 3 x 2 left
                  '43802': [ '4201', None ],     # brick 8 x 8
+                 '43888': [ '43888', None ],    # column 1 x 1 x 6
                  '44041': [ '4204', None ],     # brick 8 x 16
                  '44042': [ '2356', None ],     # brick 4 x 6
                  '44237': [ '44237', None ],    # brick 2 x 6

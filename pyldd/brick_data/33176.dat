@@ -1,0 +1,21 @@
+# decoration ball
+#
+# Oliver Cordes 2019-09-04
+# 
+[DEFAULT]
+descr=decoration ball
+type=brick
+file=lg_33176
+width=0
+length=0
+depth=0
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_33176
+texture=n
+
+[MAPPING0]

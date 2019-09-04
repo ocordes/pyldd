@@ -178,4 +178,4 @@ filename = '/Users/ocordes/Library/Application Support/LEGO Company/LEGO Digital
 filename = '/Users/ocordes/Library/Application Support/LEGO Company/LEGO Digital Designer/db.user/Primitives/Lod0/3001.g'
 
 
-convert_brick('98100')
+convert_brick('33176')
