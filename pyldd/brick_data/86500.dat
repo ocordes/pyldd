@@ -1,0 +1,21 @@
+# dome 4 x 4 smooth 
+#
+# Oliver Cordes 2019-09-07
+# 
+[DEFAULT]
+descr=dome 4 x 4 smooth
+type=brick
+file=lg_86500
+width=2
+length=2
+depth=0
+sx=1
+sy=1
+sz=-1
+parts=1
+
+[PART0]
+part=lg_86500
+texture=n
+
+[MAPPING0]

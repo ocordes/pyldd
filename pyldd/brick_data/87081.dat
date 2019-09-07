@@ -1,0 +1,21 @@
+# brick 4 x 4 round with pinhole and snapstud 
+#
+# Oliver Cordes 2019-09-07
+# 
+[DEFAULT]
+descr=brick 4 x 4 round with pinhole and snapstud
+type=brick
+file=lg_87081
+width=3
+length=1
+depth=1
+sx=1
+sy=1
+sz=-1
+parts=1
+
+[PART0]
+part=lg_87081
+texture=n
+
+[MAPPING0]

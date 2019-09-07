@@ -190,6 +190,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '4209':  [ '4209', None ],     # hose reel 2 x 4 x 2 holder
                  '4215':  [ '4215', None ],     # panel 1 x 4 x 3 open studs
                  '4216':  [ '4216', None ],     # brick 1 x 2 with groove
+                 '4266':  [ '4266', None ],     # technic wheel centre "20 x 30"
                  '4275':  [ '4275', None ],     # plate 1 x 2 with hinge open studs counter part 4276
                  '4276':  [ '4276', None ],     # plate 1 x 2 with hinge open studs counter part 4275
                  '4282':  [ '4282', None ],     # plate 2 x 16
@@ -214,6 +215,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '4733':  [ '4733', None ],     # brick 1 x 1 with studs on sides
                  '4740':  [ '4740', None ],     # satellite dish 2 x 2
                  '4741':  [ '4741', None ],     # frame right/inv 1 x 4 x 6
+                 '4742':  [ '4742', None ],     # cone 4 x 4 x 2 hollow no studs
                  '4844':  [ '4844', None ],     # boat mast base 4 x 4 x 9 with top notches
                  '4854':  [ '4854', None ],     # slope brick 45 4 x 4 inverted double
                  '4861':  [ '4861', None ],     # slope brick 45 3 x 4 double / 33 slope
@@ -227,6 +229,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '6091':  [ '6091', None ],     # brick 2 x 1 x 1 & 1/3 with curved top
                  '6098':  [ '3867', None ],     # base 16 x 16 plate road 9-stud landing pad with green octagon
                  '6099':  [ '6099', None ],     # base 32 x 32 road 9-stud landing pad
+                 '6107':  [ '6107', None ],     # brick 5 x 5 facet
                  '6111':  [ '6111', None ],     # brick 1 x 10
                  '6112':  [ '6112', None ],     # brick 1 x 12
                  '6134':  [ '6134', None ],     # hinge 2 x 2 top
@@ -241,6 +244,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '6213':  [ '6213', None ],     # brick 2 x 6 x 3
                  '6215':  [ '6215', None ],     # brick 2 x 3 with curved top
                  '6222':  [ '6222', None ],     # brick 4 x 4 round with holes
+                 '6233':  [ '6233', None ],     # cone 3 x 3 x 2
                  '6541':  [ '6541', None ],     # technic beam 1 x 1 with hole
                  '6562':  [ '43093', None ],    # technic axle pin with friction
                  '6564':  [ '6564', None ],     # wedge 3 x 2 right
@@ -257,6 +261,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '15533': [ '15533', None ],    # brick 1 x 4 with embossed bricks
                  '15068': [ '15068', None ],    # slope brick curved 2 x 2 x 2/3
                  '15332': [ '15332', None ],    # fence 1 x 4 x 2 with 4 knobs
+                 '15395': [ '15395', None ],    # dome 2 x 2 inverted with stud and tube
                  '15397': [ '15397', None ],    # plate 3 x 3 cross
                  '15571': [ '3048', None ],     # slope brick 45 1 x 2 triple
                  '15573': [ '3794', None ],     # plate 1 x 2 with stud
@@ -265,6 +270,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '18841': [ '30367', None ],    # cylinder 2 x 2 with dome top with blocked stud, R2-D2
                  '20460': [ '3817', None ],     # minifig leg left
                  '20461': [ '3816', None ],     # minifig leg right
+                 '20953': [ '20953', None ],    # double sphere 2 x 2 x 1 2/3 w knob
                  '22886': [ '22886', None ],    # brick 1 x 2 x 3
                  '23950': [ '23950', None ],    # panel 1 x 3 x 1
                  '24947': [ '24947', None ],    # sphere 2 x 2 x 1 1/3 inverted
@@ -372,12 +378,15 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '85080': [ '3063', None ],     # brick 2 x 2 corner round ?? LEGO has a different description but looks similar
                  '85984': [ '85984', None ],    # slope tile 30 2 x 1 x 2/3
                  '85943': [ '85943', None ],    # technic brick 1 x 2 with two liftarms
+                 '86500': [ '86500', None ],    # dome 4 x 4 smooth
                  '87079': [ '87079', None ],    # tile 2 x 4 with groove
+                 '87081': [ '87081', None ],    # brick 4 x 4 round with pinhole and snapstud
                  '87087': [ '87087', None ],    # brick 1 x 1 with stud on 1 side
                  '87544': [ '2362', None ],     # panel 1 x 2 x 3 studs hollow
                  '87559': [ '87559', None ],    # brick round corner 6 x 6 x 2
                  '87580': [ '87580', None ],    # plate 2 x 2 with stud
                  '87620': [ '87620', None ],    # brick 2 x 2 facet
+                 '88293': [ '88293', None ],    # brick 3 x 3 x 2 round corner with dome top
                  '88646': [ '88646', None ],    # plate 3 x 4 with 4 knobs
                  '88930': [ '88930', None ],    # slope brick curved 2 x 4 with underside studs
                  '90194': [ '48183', None ],    # wedge plate 3 x 4 with stud notches

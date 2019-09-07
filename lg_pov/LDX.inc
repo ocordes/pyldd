@@ -434,7 +434,7 @@ matrix <aw,0,0,0,ah,0,0,0,ad,ax,ay,az>
 }
 
 
-#declare LDX_4_dash_4cylo_dot_dat_in_part = union {
+#declare LDX_4_dash_4cylo_dot_dat_in_part = //union {
 // Cylinder Open 1.0
 // Name: 4-4cylo.dat
 // Author: Mark Kennedy [mkennedy]
@@ -446,7 +446,7 @@ matrix <aw,0,0,0,ah,0,0,0,ad,ax,ay,az>
                 LDX_4_dash_4cyli_dot_dat_in_part
                 matrix <1,0,0,0,1,0,0,0,1,0,0,0>
         }
-}
+//}
 
 
 #declare LDX_1_dash_4cyli_dot_dat_in_part = cylinder // Cylinder 0.25
@@ -542,7 +542,7 @@ matrix <aw,0,0,0,ah,0,0,0,ad,ax,ay,az>
 }
 
 
-#declare LDX_2_dash_4cylo_dot_dat_in_part = union {
+#declare LDX_2_dash_4cylo_dot_dat_in_part = //union {
 // Cylinder Open 0.5
 // Name: 2-4cylo.dat
 // Author: Max Martin Richter [MMR1988]
@@ -554,10 +554,10 @@ matrix <aw,0,0,0,ah,0,0,0,ad,ax,ay,az>
                 LDX_2_dash_4cyli_dot_dat_in_part
                 matrix <1,0,0,0,1,0,0,0,1,0,0,0>
         }
-}
+//}
 
 
-#declare LDX_1_dash_4cylo_dot_dat_in_part = union {
+#declare LDX_1_dash_4cylo_dot_dat_in_part = //union {
 // Cylinder Open 0.25
 // Name: 1-4cylo.dat
 // Author: Max Martin Richter [MMR1988]
@@ -569,7 +569,7 @@ matrix <aw,0,0,0,ah,0,0,0,ad,ax,ay,az>
                 LDX_1_dash_4cyli_dot_dat_in_part
                 matrix <1,0,0,0,1,0,0,0,1,0,0,0>
         }
-}
+//}
 
 
 #declare LDX_2_dash_4ring2_dot_dat_in_part = disc // Ring 0.5
@@ -727,7 +727,7 @@ matrix <aw,0,0,0,ah,0,0,0,ad,ax,ay,az>
 
 
 
-#declare LDX_1_dash_8cylo_dot_dat_in_part = union {
+#declare LDX_1_dash_8cylo_dot_dat_in_part = //union {
 // Cylinder Open 0.125
 // Name: 1-8cylo.dat
 // Author: Tim Gould [timgould]
@@ -739,7 +739,7 @@ matrix <aw,0,0,0,ah,0,0,0,ad,ax,ay,az>
                 LDX_1_dash_8cyli_dot_dat_in_part
                 matrix <1,0,0,0,1,0,0,0,1,0,0,0>
         }
-}
+//}
 
 
 #declare LDX_1_dash_8ndis_dot_dat_in_part = disc // Not-Disc 0.125
@@ -1050,7 +1050,7 @@ matrix <aw,0,0,0,ah,0,0,0,ad,ax,ay,az>
 }
 
 
-#declare LDX_stug6_dot_dat_in_part = union {
+#declare LDX_stug6_dot_dat_in_part = //union {
 // ~Moved to stug-6x6
 // Name: stug6.dat
 // Author: [PTadmin]
@@ -1063,7 +1063,7 @@ matrix <aw,0,0,0,ah,0,0,0,ad,ax,ay,az>
                 LDX_stug_dash_6x6_dot_dat_in_part
                 matrix <1,0,0,0,1,0,0,0,1,0,0,0>
         }
-}
+//}
 
 
 #declare LDX_s_slash_3811s01_dot_dat_in_part = union {
@@ -1148,7 +1148,7 @@ matrix <aw,0,0,0,ah,0,0,0,ad,ax,ay,az>
 }
 
 
-#declare LDX_stug2_dot_dat_in_part = union {
+#declare LDX_stug2_dot_dat_in_part = //union {
 // ~Moved to stug-2x2
 // Name: stug2.dat
 // Author: [PTadmin]
@@ -1161,7 +1161,7 @@ matrix <aw,0,0,0,ah,0,0,0,ad,ax,ay,az>
                 LDX_stug_dash_2x2_dot_dat_in_part
                 matrix <1,0,0,0,1,0,0,0,1,0,0,0>
         }
-}
+//}
 
 
 #declare LDX_1_dash_8cyli_dot_DAT_in_part = cylinder // Cylinder 0.125
@@ -2342,7 +2342,7 @@ matrix <aw,0,0,0,ah,0,0,0,ad,ax,ay,az>
 }
 
 
-#declare LDX_3_dash_16cylo_dot_dat_in_part = union {
+#declare LDX_3_dash_16cylo_dot_dat_in_part = //union {
 // Cylinder Open 0.1875
 // Name: 3-16cylo.dat
 // Author: J.C. Tchang [tchang]
@@ -2354,7 +2354,7 @@ matrix <aw,0,0,0,ah,0,0,0,ad,ax,ay,az>
                 LDX_3_dash_16cyli_dot_dat_in_part
                 matrix <1,0,0,0,1,0,0,0,1,0,0,0>
         }
-}
+//}
 
 
 #declare LDX_2_dash_4chrd_dot_dat_in_part = disc // Disc 0.5

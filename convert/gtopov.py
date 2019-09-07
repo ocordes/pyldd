@@ -2,10 +2,10 @@
 # LDD .g object to .pov
 #
 # written by: Oliver Cordes 2019-08-25
-# changed by: Oliver Cordes 2019-09-03
+# changed by: Oliver Cordes 2019-09-07
 #
 
-import os
+import os, sys
 import numpy as np
 
 from pypovlib.pypovobjects import *
@@ -151,6 +151,11 @@ def write_povmesh(povfilename,
 
 def convert_brick(nr):
     filename = os.path.join(prefix, '%s.g' % nr)
+
+    if os.access(filename, os.R_OK) == False:
+        print('Cannot open file \'%s\'! Program aborted!' % filename)
+        sys.exit(0)
+
     macroname = 'lg_%s' % nr
 
     mesh_grids = []
@@ -178,4 +183,9 @@ filename = '/Users/ocordes/Library/Application Support/LEGO Company/LEGO Digital
 filename = '/Users/ocordes/Library/Application Support/LEGO Company/LEGO Digital Designer/db.user/Primitives/Lod0/3001.g'
 
 
-convert_brick('33176')
+#convert_brick('33176')
+
+if len(sys.argv) > 1:
+    convert_brick(sys.argv[1])
+else:
+    print('Too few arguments for program. Need a brick number...!')

@@ -159,7 +159,7 @@ def list_known_bricks(tosort):
     for brick in known_bricks:
         b = Brick({})
         defs = b.load_brick_data(known_bricks[brick][0], verbose=False)
-        descr = defs.get('descr', 'unknown brick')
+        descr = defs['DEFAULT'].get('descr', 'unknown brick')
         e = (brick, descr)
         list_of_bricks.append(e)
 

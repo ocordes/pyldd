@@ -1,0 +1,21 @@
+# double sphere 2 x 2 x 1 2/3 w knob
+##
+# Oliver Cordes 2019-09-07
+# 
+[DEFAULT]
+descr=double sphere 2 x 2 x 1 2/3 w knob
+type=brick
+file=lg_20953
+width=0
+length=0
+depth=0
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_20953
+texture=n
+
+[MAPPING0]

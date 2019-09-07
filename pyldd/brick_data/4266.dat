@@ -1,0 +1,21 @@
+# technic wheel centre "20 x 30"
+#
+# Oliver Cordes 2019-09-07
+# 
+[DEFAULT]
+descr=technic wheel centre "20 x 30"
+type=brick
+file=lg_4266
+width=0
+length=2
+depth=0
+sx=1
+sy=1
+sz=-1
+parts=1
+
+[PART0]
+part=lg_4266
+texture=n
+
+[MAPPING0]

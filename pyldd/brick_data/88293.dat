@@ -1,0 +1,21 @@
+# brick 3 x 3 x 2 round corner with dome top 
+#
+# Oliver Cordes 2019-09-07
+# 
+[DEFAULT]
+descr=brick 3 x 3 x 2 round corner with dome top
+type=brick
+file=lg_88293
+width=0
+length=0
+depth=2
+sx=1
+sy=1
+sz=-1
+parts=1
+
+[PART0]
+part=lg_88293
+texture=n
+
+[MAPPING0]
