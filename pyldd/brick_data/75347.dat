@@ -1,0 +1,21 @@
+# pillar 2 x 2 x 11
+#
+# Oliver Cordes 2019-09-08
+# 
+[DEFAULT]
+descr=pillar 2 x 2 x 11
+type=brick
+file=lg_6168a
+width=1
+length=1
+depth=11
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_6168a
+texture=n
+
+[MAPPING0]

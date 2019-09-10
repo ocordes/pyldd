@@ -1,0 +1,21 @@
+# circle brick 6 x 6 with 4.85 hole
+##
+# Oliver Cordes 2019-09-08
+# 
+[DEFAULT]
+descr=circle brick 6 x 6 with 4.85 hole
+type=brick
+file=lg_18897
+width=0
+length=0
+depth=0
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_18897
+texture=n
+
+[MAPPING0]

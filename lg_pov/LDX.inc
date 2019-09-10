@@ -2938,3 +2938,127 @@ matrix <aw,0,0,0,ah,0,0,0,ad,ax,ay,az>
 {
         <0,0,0>,14,<0,1,0>,13 open
 }
+
+
+#declare LDX_stug3_dot_dat_in_part = //union {
+// ~Moved to stug-3x3
+// Name: stug3.dat
+// Author: [PTadmin]
+// !LDRAW_ORG Primitive UPDATE 2011-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2011-07-25 [PTadmin] Official Update 2011-01
+// // Stud Group  3 x  3
+        object {
+                LDX_stug_dash_3x3_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+//}
+
+
+#declare LDX_stug_dash_4x4_dot_dat_in_part = union {
+// Stud Group  4 x  4
+// Name: stug-4x4.dat
+// Author: Tore Eriksson [Tore_Eriksson]
+// !LDRAW_ORG Primitive UPDATE 2011-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2004-10-31 [Steffen] used stug2.dat
+// !HISTORY 2005-12-28 [PTadmin] Official Update 2005-01
+// !HISTORY 2007-05-04 [PTadmin] Header formatted for Contributor Agreement
+// !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01
+// !HISTORY 2011-07-01 [PTadmin] Renamed from stug4
+// !HISTORY 2011-07-25 [PTadmin] Official Update 2011-01
+        object {
+                LDX_stug_dash_2x2_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,-20,0,-20>
+        }
+        object {
+                LDX_stug_dash_2x2_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,-20,0,20>
+        }
+        object {
+                LDX_stug_dash_2x2_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,20,0,20>
+        }
+        object {
+                LDX_stug_dash_2x2_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,20,0,-20>
+        }
+}
+
+
+
+#declare LDX_stug_dash_8x8_dot_dat_in_part = union {
+// Stud Group  8 x  8
+// Name: stug-8x8.dat
+// Author: Tore Eriksson [Tore_Eriksson]
+// !LDRAW_ORG Primitive UPDATE 2011-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2005-12-28 [PTadmin] Official Update 2005-01
+// !HISTORY 2007-05-04 [PTadmin] Header formatted for Contributor Agreement
+// !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01
+// !HISTORY 2011-07-01 [PTadmin] Renamed from stug8
+// !HISTORY 2011-07-25 [PTadmin] Official Update 2011-01
+        object {
+                LDX_stug_dash_4x4_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,-40,0,-40>
+        }
+        object {
+                LDX_stug_dash_4x4_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,-40,0,40>
+        }
+        object {
+                LDX_stug_dash_4x4_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,40,0,-40>
+        }
+        object {
+                LDX_stug_dash_4x4_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,40,0,40>
+        }
+}
+
+
+#declare LDX_s_slash_6161s02_dot_dat_in_part = union {
+// ~Brick 24 x 24 Corner with Cutout - Tube and Rib Segment 2
+// Name: s\6161s02.dat
+// Author: Steve Bliss [sbliss]
+// !LDRAW_ORG Subpart UPDATE 2013-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2006-07-18 [WilliamH] closed gap between box3u2p and stud4, needed to inline box3u2p
+// !HISTORY 2013-07-21 [PTadmin] Official Update 2013-01
+        object {
+                LDX_stud4_dot_dat_in_part
+                matrix <-1,0,0,0,-5,0,0,0,1,0,4,0>
+        }
+        object {
+                LDX_stud4_dot_dat_in_part
+                matrix <-1,0,0,0,-5,0,0,0,1,-20,4,20>
+        }
+// // 1 16 0 4 22 0 0 -1 0 19 0 14 0 0 box3u2p.dat
+// // 1 16 -20 4 0 -12 0 0 0 19 0 0 0 -1 box3u2p.dat
+}
+
+
+#declare LDX_s_slash_6161s01_dot_dat_in_part = union {
+// ~Brick 24 x 24 Corner with Cutout - Tube and Rib Segment 1
+// Name: s\6161s01.dat
+// Author: Steve Bliss [sbliss]
+// !LDRAW_ORG Subpart UPDATE 2013-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2006-07-18 [WilliamH] closed gap between box3u2p and stud4, needed to inline box3u2p
+// !HISTORY 2013-07-21 [PTadmin] Official Update 2013-01
+        object {
+                LDX_stud4_dot_dat_in_part
+                matrix <-1,0,0,0,-5,0,0,0,1,0,4,0>
+        }
+        object {
+                LDX_stud4_dot_dat_in_part
+                matrix <-1,0,0,0,-5,0,0,0,1,-20,4,20>
+        }
+// // 1 16 0 4 20 0 0 -1 0 19 0 12 0 0 box3u2p.dat
+// // 1 16 -20 4 0 -12 0 0 0 19 0 0 0 -1 box3u2p.dat
+}

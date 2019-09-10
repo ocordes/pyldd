@@ -1,0 +1,21 @@
+# brick 12 x 12 corner round
+#
+# Oliver Cordes 2019-09-10
+# 
+[DEFAULT]
+descr=brick 12 x 12 corner round
+type=brick
+file=lg_6162
+width=11
+length=-11
+depth=1
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_6162
+texture=n
+
+[MAPPING0]

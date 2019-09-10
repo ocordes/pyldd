@@ -1,0 +1,21 @@
+# brick 4 x 4 facet
+#
+# Oliver Cordes 2019-09-08
+# 
+[DEFAULT]
+descr=brick 4 x 4 facet
+type=brick
+file=lg_14413
+width=0
+length=0
+depth=0
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_14413
+texture=n
+
+[MAPPING0]

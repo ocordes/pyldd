@@ -225,7 +225,8 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '6014':  [ '6014' ,None ],     # wheel wide
                  '6015':  [ '6015', None ],     # tyre wide
                  '6019':  [ '6019', None ],     # plate 1 x 1 with clip horizontal
-                 '6066':  [ '6066', None ],     # castle turrent top 4 x 8 x 2 1/3
+                 '6066':  [ '6066', None ],     # castle turret top 4 x 8 x 2 1/3
+                 '6072':  [ '6072', None ],     # castle turret quarter 7 x 7 x 2 1/3
                  '6091':  [ '6091', None ],     # brick 2 x 1 x 1 & 1/3 with curved top
                  '6098':  [ '3867', None ],     # base 16 x 16 plate road 9-stud landing pad with green octagon
                  '6099':  [ '6099', None ],     # base 32 x 32 road 9-stud landing pad
@@ -235,6 +236,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '6134':  [ '6134', None ],     # hinge 2 x 2 top
                  '6141':  [ '6141', None ],     # plate 1 x 1 round
                  '6143':  [ '3941', None ],     # brick 2 x 2 round
+                 '6162':  [ '6162', None ],     # brick 12 x 12 corner round
                  '6178':  [ '6178', None ],     # plate 6 x 12 with studs on edges
                  '6179':  [ '6179', None ],     # plate 4 x 4 with studs on edges
                  '6180':  [ '6180', None ],     # plate 4 x 6 with studs on edges
@@ -254,6 +256,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '10314': [ '10314', None ],    # brick 1 x 4 x 1.333 with curved top without understuds
                  '11211': [ '11211', None ],    # brick 1 x 2 with studs on one opposite side
                  '11477': [ '11477', None ],    # slope brick curved 2 x 1
+                 '14413': [ '14413', None ],    # brick 4 x 4 facet
                  '14716': [ '14716', None ],    # brick 1 x 1 x 3
                  '14719': [ '14719', None ],    # flat tile 2 x 2 corner
                  '14769': [ '4150', None ],     # tile 2 x 2 round
@@ -268,6 +271,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '15647': [ '30390', None ],    # slope brick 45 2 x 4 inverted double with pins
                  '17485': [ '17485', None ],    # brick 2 x 2 round with hole o 4,85
                  '18841': [ '30367', None ],    # cylinder 2 x 2 with dome top with blocked stud, R2-D2
+                 '18897': [ '18897', None ],    # circle brick 6 x 6 with 4.85 hole
                  '20460': [ '3817', None ],     # minifig leg left
                  '20461': [ '3816', None ],     # minifig leg right
                  '20953': [ '20953', None ],    # double sphere 2 x 2 x 1 2/3 w knob
@@ -375,6 +379,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '64799': [ '64799', None ],    # frame plate 4 x 4
                  '72454': [ '72454', None ],    # slope brick 45 4 x 4 inverted double with holes
                  '74698': [ '2376', None ],     # tile 2 x 2 round with lifting ring
+                 '75347': [ '75347', None ],    # pillar 2 x 2 x 11
                  '85080': [ '3063', None ],     # brick 2 x 2 corner round ?? LEGO has a different description but looks similar
                  '85984': [ '85984', None ],    # slope tile 30 2 x 1 x 2/3
                  '85943': [ '85943', None ],    # technic brick 1 x 2 with two liftarms
