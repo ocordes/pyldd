@@ -334,6 +334,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '44237': [ '44237', None ],    # brick 2 x 6
                  '44336': [ '44336', None ],    # baseplate 32 x 32 road 6-stud straight
                  '45677': [ '45677', None ],    # wedge 4 x 4 x 2/3 curved
+                 '47543': [ '47543', None ],    # cone 8 x 4 half
                  '47905': [ '47905', None ],    # brick 1 x 1 with studs on the two opposite sides
                  '47974': [ '47974', None ],    # brick 4 x 8 round half circle
                  '48092': [ '48092', None ],    # brick 4 x 4 corner round

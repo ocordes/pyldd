@@ -1,0 +1,21 @@
+# cone 8 x 4 half 
+#
+# Oliver Cordes 2019-09-11
+# 
+[DEFAULT]
+descr=cone 8 x 4 half
+type=brick
+file=lg_47543
+width=7
+length=1
+depth=6
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_47543
+texture=n
+
+[MAPPING0]

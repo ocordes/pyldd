@@ -3062,3 +3062,380 @@ matrix <aw,0,0,0,ah,0,0,0,ad,ax,ay,az>
 // // 1 16 0 4 20 0 0 -1 0 19 0 12 0 0 box3u2p.dat
 // // 1 16 -20 4 0 -12 0 0 0 19 0 0 0 -1 box3u2p.dat
 }
+
+
+#declare LDX_48_slash_1_dash_4con1_dot_dat_in_part = cone // Cone 0.25
+{
+        <0,0,0>,2,<0,1,0>,1 open
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-1,0,0>,0
+                }
+        }
+}
+
+
+#declare LDX_48_slash_1_dash_4chrd_dot_dat_in_part = disc // Disc 0.25
+{
+        <0,0,0>,<0,1,0>,1
+        clipped_by
+        {
+                plane
+                {
+                        <-1,0,-0.99999999999999988898>,-0.70710676908493041992
+                }
+        }
+}
+
+
+#declare LDX_48_slash_1_dash_4ring6_dot_dat_in_part = disc // Ring 0.25
+{
+        <0,0,0>,<0,1,0>,7,6
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-1,0,0>,0
+                }
+        }
+}
+
+
+#declare LDX_48_slash_1_dash_4ring9_dot_dat_in_part = disc // Ring 0.25
+{
+        <0,0,0>,<0,1,0>,10,9
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-1,0,0>,0
+                }
+        }
+}
+
+
+#declare LDX_48_slash_1_dash_24cyli_dot_dat_in_part = cylinder // Cylinder 0.041667
+{
+        <0,0,0>,<0,1,0>,1 open
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.25881905263889581903,0,0.96592582426970263754>,0
+                }
+        }
+}
+
+
+#declare LDX_48_slash_1_dash_12cyli_dot_dat_in_part = cylinder // Cylinder 0.083333
+{
+        <0,0,0>,<0,1,0>,1 open
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.50000001351385803261,0,0.86602539598220884542>,0
+                }
+        }
+}
+
+
+#declare LDX_1_dash_4cyli_dot_DAT_in_part = cylinder // Cylinder 0.25
+{
+        <0,0,0>,<0,1,0>,1 open
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-1,0,0>,0
+                }
+        }
+}
+
+
+#declare LDX_48_slash_1_dash_12chrd_dot_dat_in_part = disc // Disc 0.083333
+{
+        <0,0,0>,<0,1,0>,1
+        clipped_by
+        {
+                plane
+                {
+                        <-0.50000001351385825465,0,-0.13397460401779115458>,-0.96592581272125244141
+                }
+        }
+}
+
+
+#declare LDX_s_slash_48310s01_dot_dat_in_part = union {
+// ~Cone  8 x  4 x  6 Half without Outside Face
+// Name: s\48310s01.dat
+// Author: Andy Westrate [westrate]
+// !LDRAW_ORG Subpart UPDATE 2010-02
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2010-07-05 [PTadmin] Official Update 2010-02
+// // top
+        object {
+                LDX_48_slash_1_dash_4chrd_dot_dat_in_part
+                matrix <40,0,0,0,1,0,0,0,-40,0,0,0>
+        }
+        object {
+                LDX_48_slash_1_dash_4chrd_dot_dat_in_part
+                matrix <-40,0,0,0,1,0,0,0,-40,0,0,0>
+        }
+        object {
+                LDX_2_dash_4ndis_dot_dat_in_part
+                matrix <6,0,0,0,1,0,0,0,-6,0,0,0>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_2_dash_4cyli_dot_dat_in_part
+                matrix <6,0,0,0,4,0,0,0,-6,0,0,0>
+        }
+// // studs
+        object {
+                LDX_stud2_dot_dat_in_part
+                matrix <0,0,1,0,1,0,1,0,0,-30,0,-10>
+        }
+        object {
+                LDX_stud2_dot_dat_in_part
+                matrix <0,0,1,0,1,0,1,0,0,-10,0,-10>
+        }
+        object {
+                LDX_stud2_dot_dat_in_part
+                matrix <0,0,1,0,1,0,1,0,0,10,0,-10>
+        }
+        object {
+                LDX_stud2_dot_dat_in_part
+                matrix <0,0,1,0,1,0,1,0,0,30,0,-10>
+        }
+        object {
+                LDX_stud2_dot_dat_in_part
+                matrix <0,0,1,0,1,0,1,0,0,-10,0,-30>
+        }
+        object {
+                LDX_stud2_dot_dat_in_part
+                matrix <0,0,1,0,1,0,1,0,0,10,0,-30>
+        }
+// // inside
+        object {
+                LDX_48_slash_1_dash_4chrd_dot_dat_in_part
+                matrix <37,0,0,0,-1,0,0,0,-37,0,4,0>
+        }
+        object {
+                LDX_48_slash_1_dash_4chrd_dot_dat_in_part
+                matrix <-37,0,0,0,-1,0,0,0,-37,0,4,0>
+        }
+        object {
+                LDX_2_dash_4ndis_dot_dat_in_part
+                matrix <6,0,0,0,-1,0,0,0,-6,0,4,0>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_48_slash_1_dash_4con1_dot_dat_in_part
+                matrix <37,0,0,0,-132,0,0,0,-37,0,136,0>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_48_slash_1_dash_4con1_dot_dat_in_part
+                matrix <-37,0,0,0,-132,0,0,0,-37,0,136,0>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_48_slash_1_dash_4cyli_dot_dat_in_part
+                matrix <60,0,0,0,3,0,0,0,-60,0,136,0>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_48_slash_1_dash_4cyli_dot_dat_in_part
+                matrix <-60,0,0,0,3,0,0,0,-60,0,136,0>
+        }
+// // bottom ledge
+        object {
+                LDX_48_slash_1_dash_4ring6_dot_dat_in_part
+                matrix <10,0,0,0,1,0,0,0,-10,0,136,0>
+        }
+        object {
+                LDX_48_slash_1_dash_4ring6_dot_dat_in_part
+                matrix <-10,0,0,0,1,0,0,0,-10,0,136,0>
+        }
+        object {
+                LDX_48_slash_1_dash_4ring9_dot_dat_in_part
+                matrix <7.4,0,0,0,1,0,0,0,-7.4,0,136,0>
+        }
+        object {
+                LDX_48_slash_1_dash_4ring9_dot_dat_in_part
+                matrix <-7.4,0,0,0,1,0,0,0,-7.4,0,136,0>
+        }
+// // bottom ledge, inside
+// BFC INVERTNEXT
+        object {
+                LDX_48_slash_1_dash_16cyli_dot_dat_in_part
+                matrix <60,0,0,0,-5,0,0,0,-60,0,144,0>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_48_slash_1_dash_24cyli_dot_dat_in_part
+                matrix <47.604,0,-36.528,0,-5,0,-36.528,0,-47.604,0,144,0>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_48_slash_1_dash_12cyli_dot_dat_in_part
+                matrix <15.528,0,-57.953999,0,-5,0,-57.953999,0,-15.528,0,144,0>
+        }
+        object {
+                LDX_48_slash_1_dash_16cyli_dot_dat_in_part
+                matrix <-60,0,0,0,-5,0,0,0,-60,0,144,0>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_48_slash_1_dash_24cyli_dot_dat_in_part
+                matrix <-47.604,0,-36.528,0,-5,0,36.528,0,-47.604,0,144,0>
+        }
+// // bottom outside
+        object {
+                LDX_48_slash_1_dash_24cyli_dot_dat_in_part
+                matrix <80,0,0,0,5,0,0,0,-80,0,139,0>
+        }
+        object {
+                LDX_48_slash_1_dash_12cyli_dot_dat_in_part
+                matrix <69.281998,0,-40,0,5,0,-40,0,-69.281998,0,139,0>
+        }
+        object {
+                LDX_48_slash_1_dash_12cyli_dot_dat_in_part
+                matrix <20.704,0,-77.274002,0,5,0,-77.274002,0,-20.704,0,139,0>
+        }
+        object {
+                LDX_48_slash_1_dash_24cyli_dot_dat_in_part
+                matrix <-80,0,0,0,5,0,0,0,-80,0,139,0>
+        }
+        object {
+                LDX_48_slash_1_dash_12cyli_dot_dat_in_part
+                matrix <-69.281998,0,-40,0,5,0,40,0,-69.281998,0,139,0>
+        }
+// // outer cutouts
+// // inner cutouts
+// // underside studs
+        object {
+                LDX_stud3_dot_dat_in_part
+                matrix <1,0,0,0,-1.25,0,0,0,1,0,139,-70>
+        }
+        object {
+                LDX_stud3_dot_dat_in_part
+                matrix <1,0,0,0,-1.25,0,0,0,1,60,139,-30>
+        }
+        object {
+                LDX_stud3_dot_dat_in_part
+                matrix <1,0,0,0,-1.25,0,0,0,1,-60,139,-30>
+        }
+        object {
+                LDX_1_dash_4chrd_dot_dat_in_part
+                matrix <2,0,0,0,-1,0,0,0,-2,74,139,-14>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_1_dash_4cyli_dot_DAT_in_part
+                matrix <2,0,0,0,5,0,0,0,-2,74,139,-14>
+        }
+        object {
+                LDX_1_dash_4ndis_dot_dat_in_part
+                matrix <2,0,0,0,-1,0,0,0,-2,74,144,-14>
+        }
+// // underside
+// inside bottom
+        object {
+                LDX_1_dash_4chrd_dot_dat_in_part
+                matrix <-2,0,0,0,-1,0,0,0,-2,-74,139,-14>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_1_dash_4cyli_dot_DAT_in_part
+                matrix <-2,0,0,0,5,0,0,0,-2,-74,139,-14>
+        }
+        object {
+                LDX_1_dash_4ndis_dot_dat_in_part
+                matrix <-2,0,0,0,-1,0,0,0,-2,-74,144,-14>
+        }
+// inside bottom
+        object {
+                LDX_1_dash_4chrd_dot_dat_in_part
+                matrix <2,0,0,0,-1,0,0,0,-2,14,139,-74>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_1_dash_4cyli_dot_DAT_in_part
+                matrix <2,0,0,0,5,0,0,0,-2,14,139,-74>
+        }
+        object {
+                LDX_1_dash_4ndis_dot_dat_in_part
+                matrix <2,0,0,0,-1,0,0,0,-2,14,144,-74>
+        }
+        object {
+                LDX_1_dash_4chrd_dot_dat_in_part
+                matrix <-2,0,0,0,-1,0,0,0,-2,-14,139,-74>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_1_dash_4cyli_dot_DAT_in_part
+                matrix <-2,0,0,0,5,0,0,0,-2,-14,139,-74>
+        }
+        object {
+                LDX_1_dash_4ndis_dot_dat_in_part
+                matrix <-2,0,0,0,-1,0,0,0,-2,-14,144,-74>
+        }
+        object {
+                LDX_48_slash_1_dash_12chrd_dot_dat_in_part
+                matrix <20.704,0,-77.274002,0,-1,0,-77.274002,0,-20.704,0,144,0>
+        }
+// // end
+}
+
+
+#declare LDX_48310_dot_dat_sub_part =
+union {
+// Cone  8 x  4 x  6 Half
+// Name: 48310.dat
+// Author: Andy Westrate [westrate]
+// !LDRAW_ORG Part UPDATE 2010-02
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2010-07-05 [PTadmin] Official Update 2010-02
+        object {
+                LDX_48_slash_1_dash_4con1_dot_dat_in_part
+                matrix <40,0,0,0,-139,0,0,0,-40,0,139,0>
+        }
+        object {
+                LDX_48_slash_1_dash_4con1_dot_dat_in_part
+                matrix <-40,0,0,0,-139,0,0,0,-40,0,139,0>
+        }
+        object {
+                LDX_s_slash_48310s01_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+}
