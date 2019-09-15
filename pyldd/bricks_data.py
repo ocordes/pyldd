@@ -44,6 +44,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '2584':  [ '2584', None ],     # hose reel 2 x 2 holder
                  '2585':  [ '2585', None ],     # hose reel 2 x 2
                  '2639':  [ '2639', None ],     # plate 4 x 4 corner
+                 '2653':  [ '2653', None ],     # brick 1 x 4 with groove
                  '2654':  [ '2654', None ],     # boot stud 2 x 2
                  '2680':  [ '2680', None ],     # support 4 x 4 x 5 stanchion
                  '2730':  [ '2730', None ],     # technic beam 1 x 10 with holes
@@ -190,6 +191,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '4209':  [ '4209', None ],     # hose reel 2 x 4 x 2 holder
                  '4215':  [ '4215', None ],     # panel 1 x 4 x 3 open studs
                  '4216':  [ '4216', None ],     # brick 1 x 2 with groove
+                 '4217':  [ '4217', None ],     # brick 1 x 14 with groove
                  '4266':  [ '4266', None ],     # technic wheel centre "20 x 30"
                  '4275':  [ '4275', None ],     # plate 1 x 2 with hinge open studs counter part 4276
                  '4276':  [ '4276', None ],     # plate 1 x 2 with hinge open studs counter part 4275
@@ -212,6 +214,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '4533':  [ '4533', None ],     # cupboard 2 x 3 x 2 door
                  '4536':  [ '4536', None ],     # cupboard 2 x 3 x 2 drawer
                  '4589':  [ '4589', None ],     # nose cone small 1 x 1
+                 '4729':  [ '4729', None ],     # brick 2 x 2 no studs with pin
                  '4733':  [ '4733', None ],     # brick 1 x 1 with studs on sides
                  '4740':  [ '4740', None ],     # satellite dish 2 x 2
                  '4741':  [ '4741', None ],     # frame right/inv 1 x 4 x 6
@@ -225,8 +228,11 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '6014':  [ '6014' ,None ],     # wheel wide
                  '6015':  [ '6015', None ],     # tyre wide
                  '6019':  [ '6019', None ],     # plate 1 x 1 with clip horizontal
+                 '6061':  [ '6061', None ],     # brick 2 x 4 x 2 with holes on sides
                  '6066':  [ '6066', None ],     # castle turret top 4 x 8 x 2 1/3
                  '6072':  [ '6072', None ],     # castle turret quarter 7 x 7 x 2 1/3
+                 '6082':  [ '6082', None ],     # rock piece 4 x 10 x 6 rectangular
+                 '6083':  [ '6083', None ],     # rock piece 3 x 8 x 7 triangular
                  '6091':  [ '6091', None ],     # brick 2 x 1 x 1 & 1/3 with curved top
                  '6098':  [ '3867', None ],     # base 16 x 16 plate road 9-stud landing pad with green octagon
                  '6099':  [ '6099', None ],     # base 32 x 32 road 9-stud landing pad
@@ -300,6 +306,8 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '30365': [ '30365', None ],    # brick 1 x 2 locking with 2 fingers on end
                  '30367': [ '30367', None ],    # cylinder 2 x 2 with dome top with blocked stud, R2-D2
                  '30373': [ '30373', None ],    # slope brick 65 6 x 6 x 2 inverted quadruple
+                 '30387': [ '30387', None ],    # hinge brick 1 x 4 locking double
+                 '30389': [ '30389', None ],    # hinge brick 2 x 2 locking with 1 finger on end with LDX_axlehole_dot_dat_in_part
                  '30390': [ '30390', None ],    # slope brick 45 4 x 2 double inverted with pins
                  '30400': [ '30400', None ],    # brick 4 x 18
                  '30413': [ '30413', None ],    # panel 1 x 4 x 1
