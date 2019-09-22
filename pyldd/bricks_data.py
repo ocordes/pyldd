@@ -215,6 +215,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '4536':  [ '4536', None ],     # cupboard 2 x 3 x 2 drawer
                  '4589':  [ '4589', None ],     # nose cone small 1 x 1
                  '4729':  [ '4729', None ],     # brick 2 x 2 no studs with pin
+                 '4732':  [ '4732', None ],     # bracket 8 x 2 x 1 & 1/3
                  '4733':  [ '4733', None ],     # brick 1 x 1 with studs on sides
                  '4740':  [ '4740', None ],     # satellite dish 2 x 2
                  '4741':  [ '4741', None ],     # frame right/inv 1 x 4 x 6

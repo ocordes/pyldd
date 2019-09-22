@@ -414,6 +414,7 @@ union {
    }
   }
  }
+ rotate z*90
 }
 
 #declare lg_4732_clear =
