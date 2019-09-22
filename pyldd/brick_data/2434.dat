@@ -1,0 +1,21 @@
+# brick 2 x 4 x 2 with studs on sides
+#
+# Oliver Cordes 2019-09-22
+# 
+[DEFAULT]
+descr=brick 2 x 4 x 2 with studs on sides
+type=brick
+file=lg_2434
+width=3
+length=1
+depth=2
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_2434
+texture=n
+
+[MAPPING0]

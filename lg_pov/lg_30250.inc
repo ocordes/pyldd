@@ -467,6 +467,7 @@ union {
    }
   }
  }
+ rotate z*90
 }
 
 #declare lg_30250_clear =
@@ -922,6 +923,7 @@ merge {
    }
   }
  }
+ rotate z*90
 }
 
 #end

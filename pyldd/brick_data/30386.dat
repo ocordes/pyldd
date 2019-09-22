@@ -1,0 +1,21 @@
+# hinge brick 1 x 2 locking double
+#
+# Oliver Cordes 2019-09-22
+# 
+[DEFAULT]
+descr=hinge brick 1 x 2 locking double
+type=brick
+file=lg_30386
+width=1
+length=0
+depth=1
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_30386
+texture=n
+
+[MAPPING0]

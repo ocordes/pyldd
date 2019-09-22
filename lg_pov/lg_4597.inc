@@ -563,6 +563,7 @@ union {
   #declare KNOB = KNOB + 1;
  #end
  translate<0,0,-LG_BRICK_HEIGHT-LG_PLATE_HEIGHT>
+ rotate z*90
 }
 
 #declare lg_4597_clear = 
@@ -1114,6 +1115,7 @@ merge {
   #declare KNOB = KNOB + 1;
  #end
  translate<0,0,-LG_BRICK_HEIGHT-LG_PLATE_HEIGHT>
+ rotate z*90
 }
 
 #end

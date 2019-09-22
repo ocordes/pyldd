@@ -1,0 +1,21 @@
+# bracket 4 x 7 x 3 
+#
+# Oliver Cordes 2019-09-22
+# 
+[DEFAULT]
+descr=bracket 4 x 7 x 3
+type=brick
+file=lg_30250
+width=1
+length=3
+depth=1
+sx=-1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_30250
+texture=n
+
+[MAPPING0]

@@ -1,0 +1,21 @@
+# hinge brick 2 x 2 locking with 2 fingers on end with X axlehole
+#
+# Oliver Cordes 2019-09-22
+# 
+[DEFAULT]
+descr=hinge brick 2 x 2 locking with 2 fingers on end with X axlehole
+type=brick
+file=lg_40902
+width=1
+length=1
+depth=1
+sx=-1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_40902
+texture=n
+
+[MAPPING0]

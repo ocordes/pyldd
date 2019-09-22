@@ -326,6 +326,7 @@ union {
    }
   }
  }
+ rotate z*90
 }
 
 #declare lg_6087_clear =
@@ -641,6 +642,7 @@ union {
    }
   }
  }
+ rotate z+90
 }
 
 #end

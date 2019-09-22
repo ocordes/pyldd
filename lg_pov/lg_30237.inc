@@ -8,7 +8,7 @@
 /* This file is in no way related to the LEGO(tm) Group.                       */
 /* It is provided for private non-commercial use only.                         */
 /*                                                                             */
-/* lg_30237: Plate 1 x 1 with Clip Vertical                                    */
+/* lg_30237: brick 1 x 2 with Clip Horizontal                                  */
 /*                                                                             */ 
 /*******************************************************************************/
 #ifdef(lg_30237)
