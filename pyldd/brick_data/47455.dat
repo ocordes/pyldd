@@ -1,0 +1,21 @@
+# technic brick 2 x 2 with hole, half rotation joint ball vert
+#
+# Oliver Cordes 2019-09-23
+# 
+[DEFAULT]
+descr=technic brick 2 x 2 with hole, half rotation joint ball vert
+type=brick
+file=lg_47455
+width=0
+length=4
+depth=0
+sx=1
+sy=1
+sz=-1
+parts=1
+
+[PART0]
+part=lg_47455
+texture=n
+
+[MAPPING0]

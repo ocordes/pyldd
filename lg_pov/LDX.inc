@@ -3439,3 +3439,149 @@ union {
                 matrix <1,0,0,0,1,0,0,0,1,0,0,0>
         }
 }
+
+
+#declare LDX_s_slash_3005s01_dot_DAT_in_part = union {
+// ~Brick  1 x  1 without Front Face
+// Name: s\3005s01.dat
+// Author: John Riley [jriley]
+// !LDRAW_ORG Subpart UPDATE 2004-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2003-09-07 [jriley] BFCed & Subfiled
+// !HISTORY 2004-03-02 [PTadmin] Official Update 2004-01
+// !HISTORY 2007-08-29 [PTadmin] Header formatted for Contributor Agreement
+// !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01
+// BFC INVERTNEXT
+        object {
+                lg_knob
+                matrix <0,0,-25,-25,0,0,0,-25,0,0,0,0>
+                matrix <0,0,-1,0,1,0,1,0,0,0,0,0>
+        }
+}
+
+
+#declare LDX_1_dash_16ndis_dot_dat_in_part = disc // Not-Disc 0.0625
+{
+        <0,0,0>,<0,1,0>,2,1
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.38268343236508972627,0,0.92387953251128673848>,0
+                }
+                box
+                {
+                        <-1,-1,-1>,<1,1,1>
+                }
+        }
+}
+
+
+#declare LDX_5_dash_8cyli_dot_dat_in_part = cylinder // Cylinder 0.625
+{
+        <0,0,0>,<0,1,0>,1 open
+        clipped_by
+        {
+                union
+                {
+                        plane
+                        {
+                                <0,0,-1>,0
+                        }
+                        plane
+                        {
+                                <0.70710678118654746172,0,-0.70710678118654768376>,0
+                        }
+                }
+        }
+}
+
+
+#declare LDX_clip6_dot_DAT_in_part = union {
+// Clip Horizontal with Rounded Sides
+// Name: clip6.dat
+// Author: Magnus Forsberg [MagFors]
+// !LDRAW_ORG Primitive UPDATE 2013-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2013-07-21 [PTadmin] Official Update 2013-01
+        object {
+                LDX_1_dash_4ndis_dot_dat_in_part
+                matrix <0,-4,0,1,0,0,0,0,4,-4,2,0>
+        }
+        object {
+                LDX_1_dash_16ndis_dot_dat_in_part
+                matrix <0,-4,0,1,0,0,0,0,-4,-4,2,0>
+        }
+        object {
+                LDX_1_dash_4chrd_dot_dat_in_part
+                matrix <0,-6.32544,-4.02975,1,0,0,0,-4.19094,6.57845,-4,2,0>
+        }
+        object {
+                LDX_1_dash_4ndis_dot_dat_in_part
+                matrix <0,4,0,1,0,0,0,0,4,-4,2,0>
+        }
+        object {
+                LDX_1_dash_16ndis_dot_dat_in_part
+                matrix <0,4,0,1,0,0,0,0,-4,-4,2,0>
+        }
+        object {
+                LDX_3_dash_16chrd_dot_dat_in_part
+                matrix <0,6.32544,-4.02975,1,0,0,0,4.19094,6.57845,-4,2,0>
+        }
+        object {
+                LDX_1_dash_4ndis_dot_dat_in_part
+                matrix <0,4,0,-1,0,0,0,0,4,4,2,0>
+        }
+        object {
+                LDX_1_dash_16ndis_dot_dat_in_part
+                matrix <0,4,0,-1,0,0,0,0,-4,4,2,0>
+        }
+        object {
+                LDX_3_dash_16chrd_dot_dat_in_part
+                matrix <0,6.32544,-4.02975,-1,0,0,0,4.19094,6.57845,4,2,0>
+        }
+        object {
+                LDX_1_dash_4ndis_dot_dat_in_part
+                matrix <0,-4,0,-1,0,0,0,0,4,4,2,0>
+        }
+        object {
+                LDX_1_dash_16ndis_dot_dat_in_part
+                matrix <0,-4,0,-1,0,0,0,0,-4,4,2,0>
+        }
+        object {
+                LDX_1_dash_4chrd_dot_dat_in_part
+                matrix <0,-6.32544,-4.02975,-1,0,0,0,-4.19094,6.57845,4,2,0>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_3_dash_16cylo_dot_dat_in_part
+                matrix <0,3.5492,0,-8,0,0,0,0,-3.7034,4,-3.5492,10>
+        }
+        object {
+                LDX_3_dash_16ndis_dot_dat_in_part
+                matrix <0,3.5492,0,-8,0,0,0,0,-3.7034,4,-3.5492,10>
+        }
+        object {
+                LDX_3_dash_16ndis_dot_dat_in_part
+                matrix <0,3.5492,0,8,0,0,0,0,-3.7034,-4,-3.5492,10>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_5_dash_8cyli_dot_dat_in_part
+                matrix <0,-3.69552,-1.53073,-8,0,0,0,-1.53073,3.69552,4,2,0>
+        }
+        object {
+                LDX_1_dash_4cylo_dot_dat_in_part
+                matrix <0,-6.32544,-4.02975,8,0,0,0,-4.19094,6.57845,-4,2,0>
+        }
+        object {
+                LDX_3_dash_16cylo_dot_dat_in_part
+                matrix <0,6.32544,-4.02975,8,0,0,0,4.19094,6.57845,-4,2,0>
+        }
+}

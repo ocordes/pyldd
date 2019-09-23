@@ -1,0 +1,21 @@
+# brick 2 x 2 with ball socket and axlehole (=62712)
+#
+# Oliver Cordes 2019-09-23
+# 
+[DEFAULT]
+descr=brick 2 x 2 with ball socket and axlehole
+type=brick
+file=lg_92013
+width=1
+length=1
+depth=1
+sx=-1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_92013
+texture=n
+
+[MAPPING0]

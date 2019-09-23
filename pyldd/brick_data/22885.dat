@@ -1,0 +1,21 @@
+# brick 1 x 2 x 1 2/3 with studs on 1 side
+#
+# Oliver Cordes 2019-09-23
+# 
+[DEFAULT]
+descr=brick 1 x 2 x 1 2/3 with studs on 1 side
+type=brick
+file=lg_22885
+width=1
+length=0
+depth=5/3
+sx=1
+sy=1
+sz=-1
+parts=1
+
+[PART0]
+part=lg_22885
+texture=n
+
+[MAPPING0]

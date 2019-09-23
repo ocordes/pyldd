@@ -289,7 +289,8 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '20460': [ '3817', None ],     # minifig leg left
                  '20461': [ '3816', None ],     # minifig leg right
                  '20953': [ '20953', None ],    # double sphere 2 x 2 x 1 2/3 w knob
-                 '22886': [ '22886', None ],    # brick 1 x 2 x 3
+                 '22885': [ '22885', None ],    # brick 1 x 2 x 1 2/3 with stud on 1 side
+                 '22886': [ '22886', None ],    # brick 1 x 2 x 3 with inside axlehole
                  '23950': [ '23950', None ],    # panel 1 x 3 x 1
                  '24947': [ '24947', None ],    # sphere 2 x 2 x 1 1/3 inverted
                  '26604': [ '26604', None ],    # brick 1 x 1 with studs on two adjacent sides
@@ -358,11 +359,13 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '44237': [ '44237', None ],    # brick 2 x 6
                  '44336': [ '44336', None ],    # baseplate 32 x 32 road 6-stud straight
                  '45677': [ '45677', None ],    # wedge 4 x 4 x 2/3 curved
+                 '47455': [ '47455', None ],    # technic brick 2 x 2 with hole, half rotation joint ball vert
                  '47543': [ '47543', None ],    # cone 8 x 4 half
                  '47905': [ '47905', None ],    # brick 1 x 1 with studs on the two opposite sides
                  '47974': [ '47974', None ],    # brick 4 x 8 round half circle
                  '47975': [ '47975', None ],    # hinge brick 1 x 2 locking with 2gers horizontal
                  '48092': [ '48092', None ],    # brick 4 x 4 corner round
+                 '48171': [ '48171', None ],    # brick 2 x 2 with hole, half rotation joint ball vert
                  '48183': [ '48183', None ],    # wedge plate 3 x 4 with stud notches
                  '48288': [ '48288', None ],    # tile 8 x 16
                  '49668': [ '49668', None ],    # plate 1 x 1 with tooth in-line
@@ -384,6 +387,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '60033': [ '4202', None ],     # brick 4 x 12
                  '60219': [ '60219', None ],    # slope brick 45 6 x 4 inverted double with open center and 3 holes
                  '60475': [ '30241', None ],    # brick 1 x 1 with clip vertical
+                 '60476': [ '60476', None ],    # brick 1 x 1 with clip horizontal
                  '60477': [ '60477', None ],    # slope brick 18 4 x 1
                  '60478': [ '60478', None ],    # plate 1 x 2 with handle on end
                  '60479': [ '60479', None ],    # plate 1 x 12
@@ -397,6 +401,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '60623': [ '60623', None ],    # door 1 x 4 x 6 with 4 panes and stud handle
                  '60897': [ '4085', None ],     # plate 1 x 1 with clip vertical
                  '61252': [ '6019', None ],     # plate 1 x 1 with clip horizontal
+                 '62712': [ '62712', None ],    # brick 2 x 2 with ball socket and axlehole
                  '62810': [ '62810', None ],    # Minifig hair short, tousled with side parting
                  '63082': [ '63082', None ],    # plate 2 x 2 with socket joint-8 square and axlehole
                  '63864': [ '63864', None ],    # flat tile 1 x 3
@@ -427,6 +432,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '91049': [ '91049', None ],    # plate 1.5 x 1.5 x 2/3 round
                  '91405': [ '91405', None ],    # plate 16 x 16
                  '91988': [ '91988', None ],    # plate 2 x 14
+                 '92013': [ '92013', None ],    # brick 2 x 2 with ball socket and axlehole
                  '92410': [ '92410', None ],    # cupboard 2 x 3 x 2 open studs
                  '92438': [ '92438', None ],    # plate 8 x 16
                  '92583': [ '92583', None ],    # windscreen 3 x 6 x 2
@@ -438,6 +444,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '93273': [ '93273', None ],    # plate with bow 1 x 4 x 2/3
                  '95188': [ '95188', None ],    # brick 6 x 6 corner round with slope 33
                  '95347': [ '95347', None ],    # lattice tower w/cross 2 x 2 x 10
+                 '95820': [ '30237', None ],    # brick 1 x 2 with clip horizontal
                  '97492': [ '30144', None ],    # brick 2 x 4 x 3
                  '98100': [ '98100', None ],    # slope brick 2 x 2 round w knob
                  '98138': [ '98138', None ],    # tile 1 x 1 round with groove
