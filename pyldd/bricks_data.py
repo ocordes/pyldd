@@ -292,6 +292,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '22886': [ '22886', None ],    # brick 1 x 2 x 3
                  '23950': [ '23950', None ],    # panel 1 x 3 x 1
                  '24947': [ '24947', None ],    # sphere 2 x 2 x 1 1/3 inverted
+                 '26604': [ '26604', None ],    # brick 1 x 1 with studs on two adjacent sides
                  '30000': [ '30000', None ],    # brick 2 x 2 with pins
                  '30055': [ '30055', None ],    # fence 1 x 4 x 2 spindled
                  '30064': [ '3957', None ],     # antenna
@@ -360,6 +361,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '47543': [ '47543', None ],    # cone 8 x 4 half
                  '47905': [ '47905', None ],    # brick 1 x 1 with studs on the two opposite sides
                  '47974': [ '47974', None ],    # brick 4 x 8 round half circle
+                 '47975': [ '47975', None ],    # hinge brick 1 x 2 locking with 2gers horizontal
                  '48092': [ '48092', None ],    # brick 4 x 4 corner round
                  '48183': [ '48183', None ],    # wedge plate 3 x 4 with stud notches
                  '48288': [ '48288', None ],    # tile 8 x 16
@@ -404,6 +406,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '72454': [ '72454', None ],    # slope brick 45 4 x 4 inverted double with holes
                  '74698': [ '2376', None ],     # tile 2 x 2 round with lifting ring
                  '75347': [ '75347', None ],    # pillar 2 x 2 x 11
+                 '76385': [ '76385', None ],    # hinge brick 1 x 2 locking with 1 finger on top
                  '85080': [ '3063', None ],     # brick 2 x 2 corner round ?? LEGO has a different description but looks similar
                  '85984': [ '85984', None ],    # slope tile 30 2 x 1 x 2/3
                  '85943': [ '85943', None ],    # technic brick 1 x 2 with two liftarms
@@ -416,6 +419,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '87580': [ '87580', None ],    # plate 2 x 2 with stud
                  '87620': [ '87620', None ],    # brick 2 x 2 facet
                  '88293': [ '88293', None ],    # brick 3 x 3 x 2 round corner with dome top
+                 '88393': [ '88393', None ],    # brick 1 x 2 x 5 with groove
                  '88646': [ '88646', None ],    # plate 3 x 4 with 4 knobs
                  '88930': [ '88930', None ],    # slope brick curved 2 x 4 with underside studs
                  '90194': [ '48183', None ],    # wedge plate 3 x 4 with stud notches

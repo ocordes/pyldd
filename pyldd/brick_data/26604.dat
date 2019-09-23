@@ -1,0 +1,21 @@
+# brick 1 x 1 with studs on two adjacent sides
+#
+# Oliver Cordes 2019-09-23
+# 
+[DEFAULT]
+descr=brick 1 x 1 with studs on two adjacent sides
+type=brick
+file=lg_26604
+width=0
+length=0
+depth=1
+sx=1
+sy=1
+sz=-1
+parts=1
+
+[PART0]
+part=lg_26604
+texture=n
+
+[MAPPING0]

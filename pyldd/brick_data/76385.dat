@@ -1,0 +1,21 @@
+# hinge brick 1 x 2 locking with 1 finger on top
+#
+# Oliver Cordes 2019-09-23
+# 
+[DEFAULT]
+descr=hinge brick 1 x 2 locking with 1 finger on top
+type=brick
+file=lg_76385
+width=1
+length=0
+depth=1
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_76385
+texture=n
+
+[MAPPING0]
