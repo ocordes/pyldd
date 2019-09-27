@@ -1,0 +1,21 @@
+# fence 1 x 4 x 2 picket
+#
+# Oliver Cordes 2019-09-27
+# 
+[DEFAULT]
+descr=fence 1 x 4 x 2 picket
+type=brick
+file=lg_33303
+width=3
+length=0
+depth=2
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_33303
+texture=n
+
+[MAPPING0]

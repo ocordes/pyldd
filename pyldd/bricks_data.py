@@ -341,6 +341,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '32316': [ '32316', None ],    # technic liftarm 1 x 5 straight
                  '32524': [ '32524', None ],    # technic liftarm 1 x 7 straight
                  '33009': [ '33009', None ],    # minifig book
+                 '33303': [ '33303', None ],    # fence 1 x 4 x 2 picket
                  '33176': [ '33176', None ],    # decoration ball
                  '33909': [ '33909', None ],    # plate 2 x 2 with reduced knobs
                  '40902': [ '40902', None ],    # hinge brick 2 x 2 locking with 2 fingrs on end with X axlehole
@@ -408,6 +409,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '64449': [ '64449', None ],    # support  1 x  6 x 10 girder triangular
                  '64453': [ '64453', None ],    # windscreen 1 x 6 x 3
                  '64799': [ '64799', None ],    # frame plate 4 x 4
+                 '63965': [ '63965', None ],    # bar 6L with thick stop
                  '72454': [ '72454', None ],    # slope brick 45 4 x 4 inverted double with holes
                  '74698': [ '2376', None ],     # tile 2 x 2 round with lifting ring
                  '75347': [ '75347', None ],    # pillar 2 x 2 x 11

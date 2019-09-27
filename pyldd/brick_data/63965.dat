@@ -1,0 +1,21 @@
+# bar 6L with thick stop
+#
+# Oliver Cordes 2019-09-27
+# 
+[DEFAULT]
+descr=bar 6L with thick stop
+type=brick
+file=lg_63965
+width=0
+length=0
+depth=1
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_63965
+texture=n
+
+[MAPPING0]
