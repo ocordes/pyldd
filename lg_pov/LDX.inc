@@ -3762,3 +3762,502 @@ union {
                 }
         }
 }
+
+
+#declare LDX_48_slash_1_dash_8ring1_dot_dat_in_part = disc // Ring 0.125
+{
+        <0,0,0>,<0,1,0>,2,1
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.70710678118654746172,0,0.70710678118654757274>,0
+                }
+        }
+}
+
+
+#declare LDX_48_slash_1_dash_8ring8_dot_dat_in_part = disc // Ring 0.125
+{
+        <0,0,0>,<0,1,0>,9,8
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.70710678118654746172,0,0.70710678118654757274>,0
+                }
+        }
+}
+
+
+#declare LDX_48_slash_1_dash_48rin9_dot_dat_in_part = disc // Ring 0.020833
+{
+        <0,0,0>,<0,1,0>,10,9
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.13052619608779178484,0,0.99144486086461269814>,0
+                }
+        }
+}
+
+
+#declare LDX_48_slash_1_dash_8ring4_dot_dat_in_part = disc // Ring 0.125
+{
+        <0,0,0>,<0,1,0>,5,4
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.70710678118654746172,0,0.70710678118654757274>,0
+                }
+        }
+}
+
+
+#declare LDX_4_dash_4ring7_dot_dat_in_part = disc // Ring 1
+{
+        <0,0,0>,<0,1,0>,8,7
+}
+
+
+#declare LDX_1_dash_8ring6_dot_dat_in_part = disc // Ring 0.125
+{
+        <0,0,0>,<0,1,0>,7,6
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.70710678118654746172,0,0.70710678118654757274>,0
+                }
+        }
+}
+
+
+#declare LDX_t16o1429_dot_dat_in_part = torus // Torus 0.0625
+{
+        1,0.14290000498294830322
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.38268343236508972627,0,0.92387953251128673848>,0
+                }
+                difference
+                {
+                        cylinder
+                        {
+                                <0,0,0>,<0,1,0>,2                       }
+                        cylinder
+                        {
+                                <0,0,0>,<0,1,0>,1                       }
+                }
+        }
+}
+
+
+#declare LDX_2_dash_8sphe_dot_dat_in_part = union {
+// Sphere 0.25
+// Name: 2-8sphe.dat
+// Author: James Jessiman
+// !LDRAW_ORG Primitive UPDATE 2003-02
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2002-08-31 [izanette] Modified with WINDZ for BFC compliance
+// !HISTORY 2003-08-01 [PTadmin] Official Update 2003-02
+// !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement
+// !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01
+        object {
+                LDX_1_dash_8sphe_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+        object {
+                LDX_1_dash_8sphe_dot_dat_in_part
+                matrix <-1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+}
+
+
+#declare LDX_stud18a_dot_dat_in_part = union {
+// Stud Tube Open Snap
+// Name: stud18a.dat
+// Author: Magnus Forsberg [MagFors]
+// !LDRAW_ORG Primitive UPDATE 2011-02
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2011-12-29 [PTadmin] Official Update 2011-02
+        object {
+                LDX_4_dash_4ring7_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+        object {
+                LDX_1_dash_8ring6_dot_dat_in_part
+                matrix <0.9239,0,0.3827,0,1,0,-0.3827,0,0.9239,0,-4,0>
+        }
+        object {
+                LDX_1_dash_8cyli_dot_dat_in_part
+                matrix <6.4672,0,2.6788,0,2,0,-2.6788,0,6.4672,0,-2,0>
+        }
+        object {
+                LDX_t16o1429_dot_dat_in_part
+                matrix <6.4672,0,2.6788,0,7,0,-2.6788,0,6.4672,0,-3,0>
+        }
+        object {
+                LDX_t16o1429_dot_dat_in_part
+                matrix <4.9497,0,4.9497,0,-7,0,4.9497,0,-4.9497,0,-3,0>
+        }
+        object {
+                LDX_1_dash_4ndis_dot_dat_in_part
+                matrix <0.1951,0,-0.9808,-0.9808,0,-0.1951,0,1,0,6.606,-3,1.981>
+        }
+        object {
+                LDX_1_dash_4disc_dot_dat_in_part
+                matrix <0.1951,0,-0.9808,1,0,0,0,-1,0,5.606,-3,1.981>
+        }
+        object {
+                LDX_1_dash_4cyli_dot_dat_in_part
+                matrix <0.1951,0,-0.9808,1,0,0,0,-1,0,5.606,-3,1.981>
+        }
+        object {
+                LDX_2_dash_8sphe_dot_dat_in_part
+                matrix <0,-1,0,0.1951,0,-0.9808,0.9808,0,0.1951,6.606,-3,1.981>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_1_dash_8cyli_dot_dat_in_part
+                matrix <5.5433,0,2.2961,0,4,0,-2.2961,0,5.5433,0,-4,0>
+        }
+// // mirrored
+        object {
+                LDX_t16o1429_dot_dat_in_part
+                matrix <2.6788,0,6.4672,0,7,0,6.4672,0,-2.6788,0,-3,0>
+        }
+        object {
+                LDX_t16o1429_dot_dat_in_part
+                matrix <4.9497,0,4.9497,0,-7,0,-4.9497,0,4.9497,0,-3,0>
+        }
+        object {
+                LDX_1_dash_4ndis_dot_dat_in_part
+                matrix <-0.9808,0,0.1951,-0.1951,0,-0.9808,0,1,0,1.981,-3,6.606>
+        }
+        object {
+                LDX_1_dash_4disc_dot_dat_in_part
+                matrix <-0.9808,0,0.1951,0,0,1,0,-1,0,1.981,-3,5.606>
+        }
+        object {
+                LDX_1_dash_4cyli_dot_dat_in_part
+                matrix <-0.9808,0,0.1951,0,0,1,0,-1,0,1.981,-3,5.606>
+        }
+        object {
+                LDX_2_dash_8sphe_dot_dat_in_part
+                matrix <0,-1,0,-0.9808,0,0.1951,0.1951,0,0.9808,1.981,-3,6.606>
+        }
+// // condlines
+// //
+        object {
+                LDX_1_dash_8ring6_dot_dat_in_part
+                matrix <-0.3827,0,0.9239,0,1,0,-0.9239,0,-0.3827,0,-4,0>
+        }
+        object {
+                LDX_1_dash_8cyli_dot_dat_in_part
+                matrix <-2.6788,0,6.4672,0,2,0,-6.4672,0,-2.6788,0,-2,0>
+        }
+        object {
+                LDX_t16o1429_dot_dat_in_part
+                matrix <-2.6788,0,6.4672,0,7,0,-6.4672,0,-2.6788,0,-3,0>
+        }
+        object {
+                LDX_t16o1429_dot_dat_in_part
+                matrix <-4.9497,0,4.9497,0,-7,0,4.9497,0,4.9497,0,-3,0>
+        }
+        object {
+                LDX_1_dash_4ndis_dot_dat_in_part
+                matrix <0.9808,0,0.1951,0.1951,0,-0.9808,0,1,0,-1.981,-3,6.606>
+        }
+        object {
+                LDX_1_dash_4disc_dot_dat_in_part
+                matrix <0.9808,0,0.1951,0,0,1,0,-1,0,-1.981,-3,5.606>
+        }
+        object {
+                LDX_1_dash_4cyli_dot_dat_in_part
+                matrix <0.9808,0,0.1951,0,0,1,0,-1,0,-1.981,-3,5.606>
+        }
+        object {
+                LDX_2_dash_8sphe_dot_dat_in_part
+                matrix <0,-1,0,0.9808,0,0.1951,-0.1951,0,0.9808,-1.981,-3,6.606>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_1_dash_8cyli_dot_dat_in_part
+                matrix <-2.2961,0,5.5433,0,4,0,-5.5433,0,-2.2961,0,-4,0>
+        }
+// // mirrored
+        object {
+                LDX_t16o1429_dot_dat_in_part
+                matrix <-6.4672,0,2.6788,0,7,0,2.6788,0,6.4672,0,-3,0>
+        }
+        object {
+                LDX_t16o1429_dot_dat_in_part
+                matrix <-4.9497,0,4.9497,0,-7,0,-4.9497,0,-4.9497,0,-3,0>
+        }
+        object {
+                LDX_1_dash_4ndis_dot_dat_in_part
+                matrix <-0.1951,0,-0.9808,0.9808,0,-0.1951,0,1,0,-6.606,-3,1.981>
+        }
+        object {
+                LDX_1_dash_4disc_dot_dat_in_part
+                matrix <-0.1951,0,-0.9808,-1,0,0,0,-1,0,-5.606,-3,1.981>
+        }
+        object {
+                LDX_1_dash_4cyli_dot_dat_in_part
+                matrix <-0.1951,0,-0.9808,-1,0,0,0,-1,0,-5.606,-3,1.981>
+        }
+        object {
+                LDX_2_dash_8sphe_dot_dat_in_part
+                matrix <0,-1,0,-0.1951,0,-0.9808,-0.9808,0,0.1951,-6.606,-3,1.981>
+        }
+// // condlines
+// //
+        object {
+                LDX_1_dash_8ring6_dot_dat_in_part
+                matrix <-0.9239,0,-0.3827,0,1,0,0.3827,0,-0.9239,0,-4,0>
+        }
+        object {
+                LDX_1_dash_8cyli_dot_dat_in_part
+                matrix <-6.4672,0,-2.6788,0,2,0,2.6788,0,-6.4672,0,-2,0>
+        }
+        object {
+                LDX_t16o1429_dot_dat_in_part
+                matrix <-6.4672,0,-2.6788,0,7,0,2.6788,0,-6.4672,0,-3,0>
+        }
+        object {
+                LDX_t16o1429_dot_dat_in_part
+                matrix <-4.9497,0,-4.9497,0,-7,0,-4.9497,0,4.9497,0,-3,0>
+        }
+        object {
+                LDX_1_dash_4ndis_dot_dat_in_part
+                matrix <-0.1951,0,0.9808,0.9808,0,0.1951,0,1,0,-6.606,-3,-1.981>
+        }
+        object {
+                LDX_1_dash_4disc_dot_dat_in_part
+                matrix <-0.1951,0,0.9808,-1,0,0,0,-1,0,-5.606,-3,-1.981>
+        }
+        object {
+                LDX_1_dash_4cyli_dot_dat_in_part
+                matrix <-0.1951,0,0.9808,-1,0,0,0,-1,0,-5.606,-3,-1.981>
+        }
+        object {
+                LDX_2_dash_8sphe_dot_dat_in_part
+                matrix <0,-1,0,-0.1951,0,0.9808,-0.9808,0,-0.1951,-6.606,-3,-1.981>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_1_dash_8cyli_dot_dat_in_part
+                matrix <-5.5433,0,-2.2961,0,4,0,2.2961,0,-5.5433,0,-4,0>
+        }
+// // mirrored
+        object {
+                LDX_t16o1429_dot_dat_in_part
+                matrix <-2.6788,0,-6.4672,0,7,0,-6.4672,0,2.6788,0,-3,0>
+        }
+        object {
+                LDX_t16o1429_dot_dat_in_part
+                matrix <-4.9497,0,-4.9497,0,-7,0,4.9497,0,-4.9497,0,-3,0>
+        }
+        object {
+                LDX_1_dash_4ndis_dot_dat_in_part
+                matrix <0.9808,0,-0.1951,0.1951,0,0.9808,0,1,0,-1.981,-3,-6.606>
+        }
+        object {
+                LDX_1_dash_4disc_dot_dat_in_part
+                matrix <0.9808,0,-0.1951,0,0,-1,0,-1,0,-1.981,-3,-5.606>
+        }
+        object {
+                LDX_1_dash_4cyli_dot_dat_in_part
+                matrix <0.9808,0,-0.1951,0,0,-1,0,-1,0,-1.981,-3,-5.606>
+        }
+        object {
+                LDX_2_dash_8sphe_dot_dat_in_part
+                matrix <0,-1,0,0.9808,0,-0.1951,-0.1951,0,-0.9808,-1.981,-3,-6.606>
+        }
+// // condlines
+// //
+        object {
+                LDX_1_dash_8ring6_dot_dat_in_part
+                matrix <0.3827,0,-0.9239,0,1,0,0.9239,0,0.3827,0,-4,0>
+        }
+        object {
+                LDX_1_dash_8cyli_dot_dat_in_part
+                matrix <2.6788,0,-6.4672,0,2,0,6.4672,0,2.6788,0,-2,0>
+        }
+        object {
+                LDX_t16o1429_dot_dat_in_part
+                matrix <2.6788,0,-6.4672,0,7,0,6.4672,0,2.6788,0,-3,0>
+        }
+        object {
+                LDX_t16o1429_dot_dat_in_part
+                matrix <4.9497,0,-4.9497,0,-7,0,-4.9497,0,-4.9497,0,-3,0>
+        }
+        object {
+                LDX_1_dash_4ndis_dot_dat_in_part
+                matrix <-0.9808,0,-0.1951,-0.1951,0,0.9808,0,1,0,1.981,-3,-6.606>
+        }
+        object {
+                LDX_1_dash_4disc_dot_dat_in_part
+                matrix <-0.9808,0,-0.1951,0,0,-1,0,-1,0,1.981,-3,-5.606>
+        }
+        object {
+                LDX_1_dash_4cyli_dot_dat_in_part
+                matrix <-0.9808,0,-0.1951,0,0,-1,0,-1,0,1.981,-3,-5.606>
+        }
+        object {
+                LDX_2_dash_8sphe_dot_dat_in_part
+                matrix <0,-1,0,-0.9808,0,-0.1951,0.1951,0,-0.9808,1.981,-3,-6.606>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_1_dash_8cyli_dot_dat_in_part
+                matrix <2.2961,0,-5.5433,0,4,0,5.5433,0,2.2961,0,-4,0>
+        }
+// // mirrored
+        object {
+                LDX_t16o1429_dot_dat_in_part
+                matrix <6.4672,0,-2.6788,0,7,0,-2.6788,0,-6.4672,0,-3,0>
+        }
+        object {
+                LDX_t16o1429_dot_dat_in_part
+                matrix <4.9497,0,-4.9497,0,-7,0,4.9497,0,4.9497,0,-3,0>
+        }
+        object {
+                LDX_1_dash_4ndis_dot_dat_in_part
+                matrix <0.1951,0,0.9808,-0.9808,0,0.1951,0,1,0,6.606,-3,-1.981>
+        }
+        object {
+                LDX_1_dash_4disc_dot_dat_in_part
+                matrix <0.1951,0,0.9808,1,0,0,0,-1,0,5.606,-3,-1.981>
+        }
+        object {
+                LDX_1_dash_4cyli_dot_dat_in_part
+                matrix <0.1951,0,0.9808,1,0,0,0,-1,0,5.606,-3,-1.981>
+        }
+        object {
+                LDX_2_dash_8sphe_dot_dat_in_part
+                matrix <0,-1,0,0.1951,0,0.9808,0.9808,0,-0.1951,6.606,-3,-1.981>
+        }
+// // condlines
+}
+
+
+#declare LDX_2_dash_4ring1_dot_dat_in_part = disc // Ring 0.5
+{
+        <0,0,0>,<0,1,0>,2,1
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+        }
+}
+
+
+#declare LDX_2_dash_4rin13_dot_dat_in_part = disc // Ring 0.5
+{
+        <0,0,0>,<0,1,0>,14,13
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+        }
+}
+
+
+#declare LDX_2_dash_4rin14_dot_dat_in_part = disc // Ring 0.5
+{
+        <0,0,0>,<0,1,0>,15,14
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+        }
+}
+
+
+#declare LDX_1_dash_4ring1_dot_dat_in_part = disc // Ring 0.25
+{
+        <0,0,0>,<0,1,0>,2,1
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-1,0,0>,0
+                }
+        }
+}
+
+
+#declare LDX_1_dash_4rin13_dot_dat_in_part = disc // Ring 0.25
+{
+        <0,0,0>,<0,1,0>,14,13
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-1,0,0>,0
+                }
+        }
+}
+
+
+#declare LDX_1_dash_4rin14_dot_dat_in_part = disc // Ring 0.25
+{
+        <0,0,0>,<0,1,0>,15,14
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-1,0,0>,0
+                }
+        }
+}

@@ -385,6 +385,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '54383': [ '54383', None ],    # wedge plate 6 x 3 right
                  '54384': [ '54384', None ],    # wedge plate 6 x 3 left
                  '57893': [ '57893', None ],    # lattice tower with wall 2 x 2 x 10
+                 '57894': [ '57894', None ],    # window 1 x 4 x 6 frame with three panes
                  '58181': [ '3939', None ],     # slope brick 33 3 x 6
                  '58827': [ '58827', None ],    # support 2 x 2 x 10 girder triangular with axlehole
                  '58846': [ '58846', None ],    # brick 10 x 10 corner round with tapered edge and cutout
@@ -392,6 +393,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '60033': [ '4202', None ],     # brick 4 x 12
                  '60219': [ '60219', None ],    # slope brick 45 6 x 4 inverted double with open center and 3 holes
                  '60475': [ '30241', None ],    # brick 1 x 1 with clip vertical
+                 '60474': [ '60474', None ],    # plate 4 x 4 round with hole and snapstud
                  '60476': [ '60476', None ],    # brick 1 x 1 with clip horizontal
                  '60477': [ '60477', None ],    # slope brick 18 4 x 1
                  '60478': [ '60478', None ],    # plate 1 x 2 with handle on end
