@@ -5,6 +5,7 @@ pyldd/files.py
 Author: Oliver Cordes
 
 History:
+ 2019-09-28: honors multicolor definitons for one brick
  2019-05-06: add joints and rigid systems
  2018-11-01: add a handler for decoration attributes
  2018-07-27: start project
@@ -72,7 +73,7 @@ def lxml_parse_bricks(bricks_tree):
             attr['refID'] = part.attrib['refID']
             material = part.attrib['materials']
             attr['designID'] = part.attrib['designID']
-            attr['materialID'] = material.split(',',maxsplit=1)[0]
+            attr['materialID'] = material.split(',')   # convert the colours into a list
             attr['decoration'] = str2decoration(part.attrib.get('decoration', '-1'))
             bone = part.find('Bone')
             attr['transformation'] = bone.attrib['transformation']

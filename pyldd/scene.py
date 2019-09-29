@@ -170,6 +170,10 @@ def create_custom_bricks():
 
 
 def create_custom_brick(scene, itemno, transformation=zero_trafo, colour='194'):
+    # create a list from colors
+    if isinstance(color, list) == False:
+        colour = [colour]
+
     adict = { 'designID'       : itemno,
               'refID'          : '-1',
               'transformation' : transformation,

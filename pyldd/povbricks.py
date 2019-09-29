@@ -136,7 +136,6 @@ class PovLEGOBrick(PovCSGObject, PovPreTransformation):
         self._color               = color
         self._nr                  = nr           # brick number in list
 
-
         default_config = config['DEFAULT']
         # create the brick description
         self._descr = default_config.get('descr', 'unknown brick')
@@ -156,15 +155,19 @@ class PovLEGOBrick(PovCSGObject, PovPreTransformation):
         for partnr in range(default_config.getint('parts', 0)):
             parts = config['PART%i' % partnr]
             macro = parts['part']
+            if len(color) > partnr:
+                col = color[partnr]
+            else:
+                col = color[0]
 
             brick_part = PovCSGMacro('#%i %s' % ( nr, self._descr), macrocmd=macro)
 
 
             texture = parts.get('texture', 'n')
             if texture == 'n':
-                brick_part.set_texture(color)
+                brick_part.set_texture(col)
             elif texture == 'r':
-                brick_part.set_texture('{} {}'.format(color,
+                brick_part.set_texture('{} {}'.format(col,
                                                  'normal { bumps 0.1 scale 2 }'))
             elif texture == 's':
                 pass

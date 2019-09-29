@@ -53,8 +53,12 @@ class Brick( object ):
 
     def _set_attributes( self, adict ):
         for name, value in adict.items():
-            if name in ( 'refID', 'materialID', 'itemNos'):
+            if name in ( 'refID', 'itemNos'):
                 setattr( self, name, int( value ) )
+            elif name == 'materialID':
+                self.materialID = [int(i) for i in value if i != '0']
+                if len(self.materialID) == 0:
+                    self.materialID = [0]
             elif name in ( 'designID', 'transformation', 'decoration' ):
                 setattr( self, name, value )
             else:
@@ -123,10 +127,12 @@ class Brick( object ):
             if defs is None:
                 return None, None
             objs = []
-            color = color_table.get(self.materialID, 'lg_unknown')
-            if (color == 'lg_unknown'):
-                print('Warning: Unknown color #{}'.format(self.materialID))
-
+            color = []
+            for mID in self.materialID:
+                c = color_table.get(mID, 'lg_unknown')
+                if (c == 'lg_unknown'):
+                    print('Warning: Unknown color #{}'.format(mID))
+                color.append(c)
 
             obj = PovLEGOBrick(self.refID, self.designID, color, defs,
                                 self.decoration, decoration_mappings)

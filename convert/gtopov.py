@@ -2,7 +2,7 @@
 # LDD .g object to .pov
 #
 # written by: Oliver Cordes 2019-08-25
-# changed by: Oliver Cordes 2019-09-07
+# changed by: Oliver Cordes 2019-09-28
 #
 
 import os, sys
@@ -148,8 +148,53 @@ def write_povmesh(povfilename,
     f.write_povfile()
 
 
+def write_povmesh_multi(povfilename,
+                        macroname,
+                        mesh_grids):
 
-def convert_brick(nr):
+    f = PovFile(filename=povfilename)
+
+    u = PovCSGUnion()
+
+    print('Generating multi mesh object file ... ')
+    count = 1
+    for grid in mesh_grids:
+        mname = macroname + '_%i' % count
+        vertices = grid[0]
+        normals = grid[1]
+        texCoords = grid[2]
+        indices = grid[3]
+
+        mesh = PovMesh2(vertex_vectors=vertices,
+                        normal_vectors=normals,
+                        #uv_vectors=texCoords,
+                        face_indices=indices,
+                        normal_indices=indices,
+                        comment=None)
+
+        f.add_declare(mname, mesh)
+
+        # make somehow compatible to lg_pov definitions
+        mesh.rotate = [0,-90,0]
+        mesh.rotate = [90,0,0]
+
+        if len(mesh_grids) == 1:
+            u = mesh
+        else:
+            u.add(mesh)
+        count += 1
+
+    # make somehow compatible to lg_pov definitions
+    #u.rotate = [0,-90,0]
+    #u.rotate = [90,0,0]
+
+    f.add_declare(macroname, u)
+
+    f.write_povfile()
+
+
+
+def convert_brick(nr, multi_object):
     filename = os.path.join(prefix, '%s.g' % nr)
 
     if os.access(filename, os.R_OK) == False:
@@ -176,7 +221,11 @@ def convert_brick(nr):
 
     povfilename = macroname + '.inc'
 
-    write_povmesh(povfilename, macroname, mesh_grids)
+    if multi_object:
+        write_povmesh_multi(povfilename, macroname, mesh_grids)
+    else:
+        write_povmesh(povfilename, macroname, mesh_grids)
+
 
 # main
 filename = '/Users/ocordes/Library/Application Support/LEGO Company/LEGO Digital Designer/db.user/Primitives/Lod0/58827.g'
@@ -185,7 +234,15 @@ filename = '/Users/ocordes/Library/Application Support/LEGO Company/LEGO Digital
 
 #convert_brick('33176')
 
+multi_object = False
+
 if len(sys.argv) > 1:
-    convert_brick(sys.argv[1])
+    if len(sys.argv) > 2:
+        option = sys.argv[1]
+        if option in ('-multi'):
+            multi_object = True
+        convert_brick(sys.argv[2], multi_object)
+    else:
+        convert_brick(sys.argv[1], multi_object)
 else:
     print('Too few arguments for program. Need a brick number...!')
