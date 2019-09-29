@@ -3441,7 +3441,7 @@ union {
 }
 
 
-#declare LDX_s_slash_3005s01_dot_DAT_in_part = union {
+#declare LDX_s_slash_3005s01_dot_DAT_in_part = //union {
 // ~Brick  1 x  1 without Front Face
 // Name: s\3005s01.dat
 // Author: John Riley [jriley]
@@ -3458,7 +3458,7 @@ union {
                 matrix <0,0,-25,-25,0,0,0,-25,0,0,0,0>
                 matrix <0,0,-1,0,1,0,1,0,0,0,0,0>
         }
-}
+//}
 
 
 #declare LDX_1_dash_16ndis_dot_dat_in_part = disc // Not-Disc 0.0625
@@ -3583,5 +3583,182 @@ union {
         object {
                 LDX_3_dash_16cylo_dot_dat_in_part
                 matrix <0,6.32544,-4.02975,8,0,0,0,4.19094,6.57845,-4,2,0>
+        }
+}
+
+
+#declare LDX_stug2_dash_2x2_dot_dat_in_part = union {
+// Stud Open Group  2 x  2
+// Name: stug2-2x2.dat
+// Author: Steffen [Steffen]
+// !LDRAW_ORG Primitive UPDATE 2012-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2009-05-02 [PTadmin] Official Update 2009-01
+// !HISTORY 2011-06-30 [PTadmin] Renamed from stug2a
+// !HISTORY 2011-07-25 [PTadmin] Official Update 2011-01
+// !HISTORY 2012-02-16 [Philo] Changed to CCW
+// !HISTORY 2012-03-30 [PTadmin] Official Update 2012-01
+        object {
+                LDX_stud2_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,-10,0,-10>
+        }
+        object {
+                LDX_stud2_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,10,0,-10>
+        }
+        object {
+                LDX_stud2_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,-10,0,10>
+        }
+        object {
+                LDX_stud2_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,10,0,10>
+        }
+}
+
+
+#declare LDX_stug2a_dot_dat_in_part = //union {
+// ~Moved to stug2-2x2
+// Name: stug2a.dat
+// Author: [PTadmin]
+// !LDRAW_ORG Primitive UPDATE 2011-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2011-07-25 [PTadmin] Official Update 2011-01
+// // Stud Hollow Group  2 x  2
+        object {
+                LDX_stug2_dash_2x2_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+//}
+
+
+#declare LDX_3_dash_8ring3_dot_dat_in_part = disc // Ring 0.375
+{
+        <0,0,0>,<0,1,0>,4,3
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.70710678118654768376,0,-0.70710678118654746172>,0
+                }
+        }
+}
+
+
+#declare LDX_1_dash_8cyls_dot_dat_in_part = cylinder // Sloped Cylinder 0.125
+{
+        <0,0,0>,<0,2,0>,1 open
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.70710678118654746172,0,0.70710678118654757274>,0
+                }
+                plane
+                {
+                        <1,1,0>,0.70710678118654757274
+                }
+        }
+}
+
+
+#declare LDX_48_slash_4_dash_4ring8_dot_dat_in_part = disc // Ring 1
+{
+        <0,0,0>,<0,1,0>,9,8
+}
+
+
+#declare LDX_T04O2500_dot_DAT_in_part = torus // Torus 0.25
+{
+        1,0.25
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-1,0,0>,0
+                }
+                difference
+                {
+                        cylinder
+                        {
+                                <0,0,0>,<0,1,0>,2                       }
+                        cylinder
+                        {
+                                <0,0,0>,<0,1,0>,1                       }
+                }
+        }
+}
+
+
+#declare LDX_T04i2500_dot_DAT_in_part = torus // Torus 0.25
+{
+        1,0.25
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-1,0,0>,0
+                }
+                cylinder
+                {
+                        <0,0,0>,<0,1,0>,1               }
+        }
+}
+
+
+#declare LDX_7_dash_8rin15_dot_dat_in_part = disc // Ring 0.875
+{
+        <0,0,0>,<0,1,0>,16,15
+        clipped_by
+        {
+                union
+                {
+                        plane
+                        {
+                                <0,0,-1>,0
+                        }
+                        plane
+                        {
+                                <0.70710678118654768376,0,0.70710678118654735069>,0
+                        }
+                }
+        }
+}
+
+
+#declare LDX_7_dash_8rin16_dot_dat_in_part = disc // Ring 0.875
+{
+        <0,0,0>,<0,1,0>,17,16
+        clipped_by
+        {
+                union
+                {
+                        plane
+                        {
+                                <0,0,-1>,0
+                        }
+                        plane
+                        {
+                                <0.70710678118654768376,0,0.70710678118654735069>,0
+                        }
+                }
         }
 }

@@ -1,0 +1,25 @@
+# door glas t/frame 1 x 4 x 6 multicolor
+#
+# Oliver Cordes 2019-09-28
+# 
+[DEFAULT]
+descr=door glas t/frame 1 x 4 x 6 multicolor
+type=brick
+file=lg_60797
+width=0
+length=0
+depth=0
+sx=1
+sy=1
+sz=1
+parts=2
+
+[PART0]
+part=lg_60797_1
+texture=n
+
+[PART1]
+part=lg_60797_2
+texture=n
+
+[MAPPING0]

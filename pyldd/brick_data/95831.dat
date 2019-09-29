@@ -1,0 +1,21 @@
+# M4
+#
+# Oliver Cordes 2019-09-28
+# 
+[DEFAULT]
+descr=M4
+type=brick
+file=lg_95831
+width=0
+length=0
+depth=0
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_95831
+texture=n
+
+[MAPPING0]

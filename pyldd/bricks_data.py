@@ -132,6 +132,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '3706':  [ '3706', None ],     # technic axle 6
                  '3710':  [ '3710', None ],     # plate 1 x 4
                  '3730':  [ '3730', None ],     # plate 2 x 2 with towball coupling
+                 '3741':  [ '3741', None ],     # flower stem
                  '3747':  [ '3747', None ],     # slope brick 33 3 x 2 inverted
                  '3754':  [ '3754', None ],     # brick 1 x 6 x 5
                  '3755':  [ '3755', None ],     # brick 1 x 3 x 5
@@ -280,6 +281,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '15332': [ '15332', None ],    # fence 1 x 4 x 2 with 4 knobs
                  '15395': [ '15395', None ],    # dome 2 x 2 inverted with stud and tube
                  '15397': [ '15397', None ],    # plate 3 x 3 cross
+                 '15444': [ '15444', None ],    # brick 1 x 1 x 2 with square hole in 1 side
                  '15571': [ '3048', None ],     # slope brick 45 1 x 2 triple
                  '15573': [ '3794', None ],     # plate 1 x 2 with stud
                  '15647': [ '30390', None ],    # slope brick 45 2 x 4 inverted double with pins
@@ -340,6 +342,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '32123': [ '32123', None ],    # technic bush 1/2 type smooth
                  '32316': [ '32316', None ],    # technic liftarm 1 x 5 straight
                  '32524': [ '32524', None ],    # technic liftarm 1 x 7 straight
+                 '32952': [ '32952', None ],    # brick 1 x 1 x 1 2/3 with studs on 1 side
                  '33009': [ '33009', None ],    # minifig book
                  '33303': [ '33303', None ],    # fence 1 x 4 x 2 picket
                  '33176': [ '33176', None ],    # decoration ball
@@ -366,6 +369,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '47974': [ '47974', None ],    # brick 4 x 8 round half circle
                  '47975': [ '47975', None ],    # hinge brick 1 x 2 locking with 2gers horizontal
                  '48092': [ '48092', None ],    # brick 4 x 4 corner round
+                 '48170': [ '48170', None ],    # brick 2 x 2 with hole, half rotation joint ball horiz
                  '48171': [ '48171', None ],    # brick 2 x 2 with hole, half rotation joint ball vert
                  '48183': [ '48183', None ],    # wedge plate 3 x 4 with stud notches
                  '48288': [ '48288', None ],    # tile 8 x 16
@@ -400,6 +404,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '60608': [ '60608', None ],    # window 1 x 2 x 3 pane with thick corner tabs
                  '60616': [ '60616', None ],    # door 1 x 4 x 6 smooth with square handle plinth
                  '60623': [ '60623', None ],    # door 1 x 4 x 6 with 4 panes and stud handle
+                 '60797': [ '60797', None ],    # door glas t/frae 1 x 4 x 6 multicolor
                  '60897': [ '4085', None ],     # plate 1 x 1 with clip vertical
                  '61252': [ '6019', None ],     # plate 1 x 1 with clip horizontal
                  '62712': [ '62712', None ],    # brick 2 x 2 with ball socket and axlehole
@@ -447,6 +452,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '95188': [ '95188', None ],    # brick 6 x 6 corner round with slope 33
                  '95347': [ '95347', None ],    # lattice tower w/cross 2 x 2 x 10
                  '95820': [ '30237', None ],    # brick 1 x 2 with clip horizontal
+                 '95831': [ '95831', None ],    # M4
                  '97492': [ '30144', None ],    # brick 2 x 4 x 3
                  '98100': [ '98100', None ],    # slope brick 2 x 2 round w knob
                  '98138': [ '98138', None ],    # tile 1 x 1 round with groove
@@ -456,4 +462,5 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '98302': [ '3475', None ],     # plate 1 x 2 with jet enginde with axle hole
                  '98560': [ '98560', None ],    # slope brick 75 2 x 2 x 3 not open studs
                  '99206': [ '99206', None ],    # plate 2 x 2 x 2/3 with two studs on side and two raised
+                 '99249': [ '99249', None ],    # mini bouq. stem with 3.2 shaft
 }

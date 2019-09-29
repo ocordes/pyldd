@@ -1,0 +1,21 @@
+# mini bouq. stem with 3.2 shaft 
+#
+# Oliver Cordes 2019-09-28
+# 
+[DEFAULT]
+descr=mini bouq. ste, with 3.2 shaft
+type=brick
+file=lg_99249
+width=0
+length=0
+depth=0
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_99249
+texture=n
+
+[MAPPING0]

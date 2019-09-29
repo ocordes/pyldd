@@ -1,0 +1,21 @@
+# brick 1 x 1 x 2 with square hole in 1 side
+#
+# Oliver Cordes 2019-09-28
+# 
+[DEFAULT]
+descr=brick 1 x 1 x 2 with square hole in 1 side
+type=brick
+file=lg_15444
+width=0
+length=0
+depth=2
+sx=0
+sy=0
+sz=0
+parts=1
+
+[PART0]
+part=lg_15444
+texture=n
+
+[MAPPING0]

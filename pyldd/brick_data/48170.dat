@@ -1,0 +1,21 @@
+# brick 2 x 2 with hole, half rotation joint ball horiz 
+#
+# Oliver Cordes 2019-09-28
+# 
+[DEFAULT]
+descr=brick 2 x 2 with hole, half rotation joint ball horiz 
+type=brick
+file=lg_48170
+width=1
+length=1
+depth=1
+sx=-1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_48170
+texture=n
+
+[MAPPING0]
