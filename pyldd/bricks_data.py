@@ -386,6 +386,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '54384': [ '54384', None ],    # wedge plate 6 x 3 left
                  '57893': [ '57893', None ],    # lattice tower with wall 2 x 2 x 10
                  '57894': [ '57894', None ],    # window 1 x 4 x 6 frame with three panes
+                 '57895': [ '57895', None ],    # glass for window 1 x 4 x 6
                  '58181': [ '3939', None ],     # slope brick 33 3 x 6
                  '58827': [ '58827', None ],    # support 2 x 2 x 10 girder triangular with axlehole
                  '58846': [ '58846', None ],    # brick 10 x 10 corner round with tapered edge and cutout
@@ -406,7 +407,8 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '60608': [ '60608', None ],    # window 1 x 2 x 3 pane with thick corner tabs
                  '60616': [ '60616', None ],    # door 1 x 4 x 6 smooth with square handle plinth
                  '60623': [ '60623', None ],    # door 1 x 4 x 6 with 4 panes and stud handle
-                 '60797': [ '60797', None ],    # door glas t/frae 1 x 4 x 6 multicolor
+                 '60797': [ '60797', None ],    # door glas t/frame 1 x 4 x 6 multicolor
+                 '60803': [ '60803', None ],    # glass for window 1 x 4 x 6
                  '60897': [ '4085', None ],     # plate 1 x 1 with clip vertical
                  '61252': [ '6019', None ],     # plate 1 x 1 with clip horizontal
                  '62712': [ '62712', None ],    # brick 2 x 2 with ball socket and axlehole
