@@ -261,6 +261,97 @@
 }
 
 
+#declare LDX_s_slash_48170s04_dot_dat_in_part = union {
+// ~Technic Brick Click Rotation Ring Joint - Socket
+// Name: s\48170s04.dat
+// Author: Guy Vivan [guyvivan]
+// !LDRAW_ORG Subpart UPDATE 2010-02
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2006-03-15 [guyvivan] Adjust size of rotation joint (27 to 24 LDU)
+// !HISTORY 2010-07-05 [PTadmin] Official Update 2010-02
+// BFC INVERTNEXT
+        object {
+                LDX_1_dash_8chrd_dot_dat_in_part
+                matrix <-3.06147,-7.39104,0,0,0,1,7.39104,-3.06147,0,0,10,-20>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_1_dash_8cyli_dot_dat_in_part
+                matrix <-3.06147,-7.39104,0,0,0,2,7.39104,-3.06147,0,0,10,-22>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_48_slash_4_dash_4cyli_dot_dat_in_part
+                matrix <0,-6,0,0,0,16,6,0,0,0,10,-38>
+        }
+        object {
+                LDX_48_slash_1_dash_4cyli_dot_dat_in_part
+                matrix <-9.89949,-9.89949,0,0,0,24,9.89949,-9.89949,0,0,10,-44>
+        }
+        object {
+                LDX_48_slash_1_dash_4chrd_dot_dat_in_part
+                matrix <-9.89949,-9.89949,0,0,0,-1,9.89949,-9.89949,0,0,10,-20>
+        }
+        object {
+                LDX_48_slash_4_dash_4ring2_dot_dat_in_part
+                matrix <0,-3,0,0,0,1,3,0,0,0,10,-38>
+        }
+        object {
+                LDX_48_slash_4_dash_4ndis_dot_dat_in_part
+                matrix <8,0,0,0,0,-1,0,8,0,0,10,-22>
+        }
+        object {
+                LDX_48_slash_4_dash_4ring3_dot_dat_in_part
+                matrix <-2,0,0,0,0,-1,0,-2,0,0,10,-22>
+        }
+        object {
+                LDX_48_slash_4_dash_4ring9_dot_dat_in_part
+                matrix <0,-1,0,0,0,1,1,0,0,0,10,-30>
+        }
+        object {
+                LDX_48_slash_4_dash_4rin10_dot_dat_in_part
+                matrix <0,-1,0,0,0,1,1,0,0,0,10,-30>
+        }
+        object {
+                LDX_48_slash_4_dash_4cyli_dot_dat_in_part
+                matrix <0,-9,0,0,0,8,9,0,0,0,10,-38>
+        }
+        object {
+                LDX_48_slash_4_dash_4ring6_dot_dat_in_part
+                matrix <0,-2,0,0,0,1,2,0,0,0,10,-44>
+        }
+        object {
+                LDX_48_slash_1_dash_4ndis_dot_dat_in_part
+                matrix <0,14,0,0,0,1,-14,0,7.467,0,10,-30.667>
+        }
+        object {
+                LDX_48_slash_1_dash_4ndis_dot_dat_in_part
+                matrix <0,14,0,0,0,1,14,0,7.467,0,10,-30.667>
+        }
+        object {
+                LDX_48_slash_1_dash_4cyls2_dot_dat_in_part
+                matrix <14,0,0,0,0,7.467,0,14,0,0,10,-30.667>
+        }
+        object {
+                LDX_48_slash_1_dash_4cyls2_dot_dat_in_part
+                matrix <-14,0,0,0,0,7.467,0,14,0,0,10,-30.667>
+        }
+        object {
+                LDX_48_slash_2_dash_4cyli_dot_dat_in_part
+                matrix <14,0,0,0,0,13.333,0,14,0,0,10,-44>
+        }
+        object {
+                LDX_48_slash_1_dash_8cyli_dot_dat_in_part
+                matrix <-14,0,0,0,0,20.799999,0,-14,0,0,10,-44>
+        }
+        object {
+                LDX_48_slash_1_dash_8cyli_dot_dat_in_part
+                matrix <14,0,0,0,0,20.799999,0,-14,0,0,10,-44>
+        }
+}
+
+
 #declare LDX_s_slash_48170s05_dot_dat_in_part = union {
 // ~Technic Brick with Horizontal Click Rotation Hinge - Socket
 // Name: s\48170s05.dat
@@ -307,6 +398,343 @@
         object {
                 LDX_1_dash_8cyli_dot_dat_in_part
                 matrix <2.2961,0,5.54328,0,4,0,-5.54328,0,2.2961,-10,20,-30>
+        }
+}
+
+
+#declare LDX_s_slash_48170s06_dot_dat_in_part = union {
+// ~Technic Brick with Vertical Click Rotation Hinge - Socket
+// Name: s\48170s06.dat
+// Author: Guy Vivan [guyvivan]
+// !LDRAW_ORG Subpart UPDATE 2010-02
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2010-07-05 [PTadmin] Official Update 2010-02
+        object {
+                LDX_s_slash_48170s02_dot_dat_in_part
+                matrix <0,-1,0,1,0,0,0,0,1,-10,10,-40>
+        }
+        object {
+                LDX_1_dash_8chrd_dot_dat_in_part
+                matrix <0,-6.69696,16.1679,-1,0,0,0,16.1679,6.69696,-5,10,-40>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_1_dash_8cyli_dot_dat_in_part
+                matrix <0,-6.69696,16.1679,18.617001,0,0,0,16.1679,6.69696,-5,10,-40>
+        }
+}
+
+
+#declare LDX_s_slash_48170s07_dot_dat_in_part = union {
+// ~Technic Brick  2 x  3 with Holes Type 2 without End Faces
+// Name: s\48170s07.dat
+// Author: Guy Vivan [guyvivan]
+// !LDRAW_ORG Subpart UPDATE 2010-02
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2010-07-05 [PTadmin] Official Update 2010-02
+        object {
+                LDX_stug2a_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,0,0,-10>
+        }
+        object {
+                LDX_stud2_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,-10,0,20>
+        }
+        object {
+                LDX_stud2_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,10,0,20>
+        }
+        object {
+                LDX_peghole_dot_dat_in_part
+                matrix <0,0,-1,-1,0,0,0,1,0,20,10,-10>
+        }
+        object {
+                LDX_peghole_dot_dat_in_part
+                matrix <0,0,1,1,0,0,0,1,0,-20,10,-10>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_4_dash_4cyli_dot_dat_in_part
+                matrix <0,0,6,16,0,0,0,6,0,2,10,-10>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_4_dash_4cyli_dot_dat_in_part
+                matrix <0,0,-6,-16,0,0,0,6,0,-2,10,-10>
+        }
+        object {
+                LDX_4_dash_4ring3_dot_dat_in_part
+                matrix <0,0,-2,1,0,0,0,-2,0,2,10,-10>
+        }
+        object {
+                LDX_2_dash_4ndis_dot_dat_in_part
+                matrix <0,0,8,1,0,0,0,8,0,2,10,-10>
+        }
+        object {
+                LDX_2_dash_4ndis_dot_dat_in_part
+                matrix <0,0,-8,-1,0,0,0,8,0,-2,10,-10>
+        }
+        object {
+                LDX_4_dash_4ring3_dot_dat_in_part
+                matrix <0,0,2,-1,0,0,0,-2,0,-2,10,-10>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_2_dash_4cyli_dot_dat_in_part
+                matrix <0,0,-8,4,0,0,0,-8,0,-2,10,-10>
+        }
+        object {
+                LDX_4_dash_4ndis_dot_dat_in_part
+                matrix <0,0,8,1,0,0,0,8,0,-20,10,-10>
+        }
+        object {
+                LDX_4_dash_4ndis_dot_dat_in_part
+                matrix <0,0,-8,-1,0,0,0,8,0,20,10,-10>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_3_dash_8cyli_dot_dat_in_part
+                matrix <-2.2961,0,5.54328,0,4,0,-5.54328,0,-2.2961,0,20,-10>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_3_dash_8cyli_dot_dat_in_part
+                matrix <2.2961,0,-5.54328,0,4,0,5.54328,0,2.2961,0,20,-10>
+        }
+        object {
+                LDX_3_dash_8chrd_dot_dat_in_part
+                matrix <-2.2961,0,5.54328,0,-1,0,-5.54328,0,-2.2961,0,20,-10>
+        }
+        object {
+                LDX_3_dash_8chrd_dot_dat_in_part
+                matrix <2.2961,0,-5.54328,0,-1,0,5.54328,0,2.2961,0,20,-10>
+        }
+        object {
+                LDX_2_dash_4ndis_dot_dat_in_part
+                matrix <0,0,-9,1,0,0,0,9,0,16,10,-10>
+        }
+        object {
+                LDX_2_dash_4ndis_dot_dat_in_part
+                matrix <0,0,9,-1,0,0,0,9,0,-16,10,-10>
+        }
+        object {
+                LDX_2_dash_4cyli_dot_dat_in_part
+                matrix <0,0,-9,12,0,0,0,9,0,-16,10,-10>
+        }
+        object {
+                LDX_2_dash_4cyli_dot_dat_in_part
+                matrix <0,0,9,-12,0,0,0,9,0,16,10,-10>
+        }
+        object {
+                LDX_3_dash_8ring3_dot_dat_in_part
+                matrix <0.765367,0,-1.84776,0,-1,0,1.84776,0,0.765367,0,24,-10>
+        }
+        object {
+                LDX_3_dash_8ring3_dot_dat_in_part
+                matrix <-0.765367,0,1.84776,0,-1,0,-1.84776,0,-0.765367,0,24,-10>
+        }
+        object {
+                LDX_3_dash_8cyli_dot_dat_in_part
+                matrix <3.06147,0,-7.39104,0,5,0,7.39104,0,3.06147,0,19,-10>
+        }
+        object {
+                LDX_3_dash_8cyli_dot_dat_in_part
+                matrix <-3.06147,0,7.39104,0,5,0,-7.39104,0,-3.06147,0,19,-10>
+        }
+        object {
+                LDX_1_dash_8cyls_dot_dat_in_part
+                matrix <8,0,0,0,-8,0,0,0,8,0,19,-10>
+        }
+        object {
+                LDX_1_dash_8cyls_dot_dat_in_part
+                matrix <8,0,0,0,-8,0,0,0,-8,0,19,-10>
+        }
+        object {
+                LDX_1_dash_8cyls_dot_dat_in_part
+                matrix <7.39104,0,3.06147,0,-8,0,-3.06147,0,7.39104,0,17,-10>
+        }
+        object {
+                LDX_1_dash_8cyls_dot_dat_in_part
+                matrix <7.39104,0,-3.06147,0,-8,0,-3.06147,0,-7.39104,0,17,-10>
+        }
+        object {
+                LDX_1_dash_16cyli_dot_dat_in_part
+                matrix <5.65685,0,5.65685,0,-2,0,-5.65685,0,5.65685,0,19,-10>
+        }
+        object {
+                LDX_1_dash_16cyli_dot_dat_in_part
+                matrix <3.06147,0,-7.39103,0,-2,0,7.39103,0,3.06147,0,19,-10>
+        }
+        object {
+                LDX_1_dash_8cyls_dot_dat_in_part
+                matrix <-8,0,0,0,-8,0,0,0,-8,0,19,-10>
+        }
+        object {
+                LDX_1_dash_8cyls_dot_dat_in_part
+                matrix <-8,0,0,0,-8,0,0,0,8,0,19,-10>
+        }
+        object {
+                LDX_1_dash_8cyls_dot_dat_in_part
+                matrix <-7.39104,0,-3.06147,0,-8,0,3.06147,0,-7.39104,0,17,-10>
+        }
+        object {
+                LDX_1_dash_8cyls_dot_dat_in_part
+                matrix <-7.39104,0,3.06147,0,-8,0,3.06147,0,7.39104,0,17,-10>
+        }
+        object {
+                LDX_1_dash_16cyli_dot_dat_in_part
+                matrix <-5.65685,0,-5.65685,0,-2,0,5.65685,0,-5.65685,0,19,-10>
+        }
+        object {
+                LDX_1_dash_16cyli_dot_dat_in_part
+                matrix <-3.06147,0,7.39103,0,-2,0,-7.39103,0,-3.06147,0,19,-10>
+        }
+        object {
+                LDX_peghole_dot_dat_in_part
+                matrix <0,0,-1,-1,0,0,0,1,0,20,10,10>
+        }
+        object {
+                LDX_peghole_dot_dat_in_part
+                matrix <0,0,1,1,0,0,0,1,0,-20,10,10>
+        }
+        object {
+                LDX_4_dash_4ndis_dot_dat_in_part
+                matrix <0,0,8,1,0,0,0,8,0,-20,10,10>
+        }
+        object {
+                LDX_4_dash_4ndis_dot_dat_in_part
+                matrix <0,0,-8,-1,0,0,0,8,0,20,10,10>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_4_dash_4cyli_dot_dat_in_part
+                matrix <0,0,6,16,0,0,0,6,0,2,10,10>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_4_dash_4cyli_dot_dat_in_part
+                matrix <0,0,-6,-16,0,0,0,6,0,-2,10,10>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_2_dash_4cyli_dot_dat_in_part
+                matrix <0,0,-8,4,0,0,0,-8,0,-2,10,10>
+        }
+        object {
+                LDX_2_dash_4cyli_dot_dat_in_part
+                matrix <0,0,-9,12,0,0,0,9,0,-16,10,10>
+        }
+        object {
+                LDX_2_dash_4cyli_dot_dat_in_part
+                matrix <0,0,9,-12,0,0,0,9,0,16,10,10>
+        }
+        object {
+                LDX_2_dash_4ndis_dot_dat_in_part
+                matrix <0,0,-9,1,0,0,0,9,0,16,10,10>
+        }
+        object {
+                LDX_2_dash_4ndis_dot_dat_in_part
+                matrix <0,0,9,-1,0,0,0,9,0,-16,10,10>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_3_dash_8cyli_dot_dat_in_part
+                matrix <-2.2961,0,5.54328,0,4,0,-5.54328,0,-2.2961,0,20,10>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_3_dash_8cyli_dot_dat_in_part
+                matrix <2.2961,0,-5.54328,0,4,0,5.54328,0,2.2961,0,20,10>
+        }
+        object {
+                LDX_3_dash_8chrd_dot_dat_in_part
+                matrix <-2.2961,0,5.54328,0,-1,0,-5.54328,0,-2.2961,0,20,10>
+        }
+        object {
+                LDX_3_dash_8chrd_dot_dat_in_part
+                matrix <2.2961,0,-5.54328,0,-1,0,5.54328,0,2.2961,0,20,10>
+        }
+        object {
+                LDX_3_dash_8ring3_dot_dat_in_part
+                matrix <0.765367,0,-1.84776,0,-1,0,1.84776,0,0.765367,0,24,10>
+        }
+        object {
+                LDX_3_dash_8ring3_dot_dat_in_part
+                matrix <-0.765367,0,1.84776,0,-1,0,-1.84776,0,-0.765367,0,24,10>
+        }
+        object {
+                LDX_3_dash_8cyli_dot_dat_in_part
+                matrix <3.06147,0,-7.39104,0,5,0,7.39104,0,3.06147,0,19,10>
+        }
+        object {
+                LDX_3_dash_8cyli_dot_dat_in_part
+                matrix <-3.06147,0,7.39104,0,5,0,-7.39104,0,-3.06147,0,19,10>
+        }
+        object {
+                LDX_1_dash_8cyls_dot_dat_in_part
+                matrix <8,0,0,0,-8,0,0,0,8,0,19,10>
+        }
+        object {
+                LDX_1_dash_8cyls_dot_dat_in_part
+                matrix <8,0,0,0,-8,0,0,0,-8,0,19,10>
+        }
+        object {
+                LDX_1_dash_8cyls_dot_dat_in_part
+                matrix <7.39104,0,3.06147,0,-8,0,-3.06147,0,7.39104,0,17,10>
+        }
+        object {
+                LDX_1_dash_8cyls_dot_dat_in_part
+                matrix <7.39104,0,-3.06147,0,-8,0,-3.06147,0,-7.39104,0,17,10>
+        }
+        object {
+                LDX_1_dash_16cyli_dot_dat_in_part
+                matrix <5.65685,0,5.65685,0,-2,0,-5.65685,0,5.65685,0,19,10>
+        }
+        object {
+                LDX_1_dash_16cyli_dot_dat_in_part
+                matrix <3.06147,0,-7.39103,0,-2,0,7.39103,0,3.06147,0,19,10>
+        }
+        object {
+                LDX_1_dash_8cyls_dot_dat_in_part
+                matrix <-8,0,0,0,-8,0,0,0,-8,0,19,10>
+        }
+        object {
+                LDX_1_dash_8cyls_dot_dat_in_part
+                matrix <-8,0,0,0,-8,0,0,0,8,0,19,10>
+        }
+        object {
+                LDX_1_dash_8cyls_dot_dat_in_part
+                matrix <-7.39104,0,-3.06147,0,-8,0,3.06147,0,-7.39104,0,17,10>
+        }
+        object {
+                LDX_1_dash_8cyls_dot_dat_in_part
+                matrix <-7.39104,0,3.06147,0,-8,0,3.06147,0,7.39104,0,17,10>
+        }
+        object {
+                LDX_1_dash_16cyli_dot_dat_in_part
+                matrix <-5.65685,0,-5.65685,0,-2,0,5.65685,0,-5.65685,0,19,10>
+        }
+        object {
+                LDX_1_dash_16cyli_dot_dat_in_part
+                matrix <-3.06147,0,7.39103,0,-2,0,-7.39103,0,-3.06147,0,19,10>
+        }
+        object {
+                LDX_4_dash_4ring3_dot_dat_in_part
+                matrix <0,0,-2,1,0,0,0,-2,0,2,10,10>
+        }
+        object {
+                LDX_2_dash_4ndis_dot_dat_in_part
+                matrix <0,0,-8,-1,0,0,0,8,0,-2,10,10>
+        }
+        object {
+                LDX_4_dash_4ring3_dot_dat_in_part
+                matrix <0,0,2,-1,0,0,0,-2,0,-2,10,10>
+        }
+        object {
+                LDX_2_dash_4ndis_dot_dat_in_part
+                matrix <0,0,8,1,0,0,0,8,0,2,10,10>
         }
 }
 

@@ -295,6 +295,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '22886': [ '22886', None ],    # brick 1 x 2 x 3 with inside axlehole
                  '23950': [ '23950', None ],    # panel 1 x 3 x 1
                  '24947': [ '24947', None ],    # sphere 2 x 2 x 1 1/3 inverted
+                 '26597': [ '34816', None ],    # brick 1 x 2 with handle on end with trimmed arm
                  '26604': [ '26604', None ],    # brick 1 x 1 with studs on two adjacent sides
                  '30000': [ '30000', None ],    # brick 2 x 2 with pins
                  '30055': [ '30055', None ],    # fence 1 x 4 x 2 spindled
@@ -347,6 +348,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '33303': [ '33303', None ],    # fence 1 x 4 x 2 picket
                  '33176': [ '33176', None ],    # decoration ball
                  '33909': [ '33909', None ],    # plate 2 x 2 with reduced knobs
+                 '34816': [ '34816', None ],    # brick 1 x 2 witj handle on end with trimmed arm
                  '40902': [ '40902', None ],    # hinge brick 2 x 2 locking with 2 fingrs on end with X axlehole
                  '41539': [ '41539', None ],    # plate 8 x 8
                  '41767': [ '41767', None ],    # wedge 4 x 2 right
@@ -363,8 +365,10 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '44237': [ '44237', None ],    # brick 2 x 6
                  '44336': [ '44336', None ],    # baseplate 32 x 32 road 6-stud straight
                  '45677': [ '45677', None ],    # wedge 4 x 4 x 2/3 curved
+                 '47432': [ '47432', None ],    # technic brick 2 x 3 w/ holes, click rot. hinge (v) and socket
                  '47455': [ '47455', None ],    # technic brick 2 x 2 with hole, half rotation joint ball vert
                  '47543': [ '47543', None ],    # cone 8 x 4 half
+                 '47847': [ '47847', None ],    # panel 2 x 4 x 6 rock
                  '47905': [ '47905', None ],    # brick 1 x 1 with studs on the two opposite sides
                  '47974': [ '47974', None ],    # brick 4 x 8 round half circle
                  '47975': [ '47975', None ],    # hinge brick 1 x 2 locking with 2gers horizontal
@@ -380,6 +384,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '50950': [ '50950', None ],    # slope brick curved 3 x 1
                  '51739': [ '51739', None ],    # wing 2 x 4
                  '52031': [ '52031', None ],    # wedge 4 x 6 x 2/3 curved
+                 '52040': [ '52040', None ],    # brick 12 x 12 with 3 pin holes on sides & axle holes in corners
                  '52501': [ '52501', None ],    # slope brick 45 6 x 1 inverted double
                  '52107': [ '52107', None ],    # brick 1 x 2 with studs on two opposite sides
                  '54383': [ '54383', None ],    # wedge plate 6 x 3 right

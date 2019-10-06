@@ -1,0 +1,21 @@
+# technic brick 2 x 3 w/ holes, click rot. hinge (v) and socket
+#
+# Oliver Cordes 2019-10-06
+# 
+[DEFAULT]
+descr=technic brick 2 x 3 w/ holes, click rot. hinge (v) and socket
+type=brick
+file=lg_47432
+width=2
+length=1
+depth=1
+sx=-1
+sy=1
+sz=-1
+parts=1
+
+[PART0]
+part=lg_47432
+texture=n
+
+[MAPPING0]

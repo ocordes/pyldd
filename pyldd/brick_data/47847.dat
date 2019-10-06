@@ -1,0 +1,21 @@
+# panel 2 x 4 x 6 rock
+#
+# Oliver Cordes 2019-10-06
+# 
+[DEFAULT]
+descr=panel 2 x 4 x 6 rock
+type=brick
+file=lg_47847
+width=3
+length=1
+depth=6
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_47847
+texture=n
+
+[MAPPING0]
