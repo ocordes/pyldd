@@ -1,0 +1,25 @@
+# slope brick 33 3 x 3 
+#
+# Oliver Cordes 2019-10-08
+# 
+[DEFAULT]
+descr=slope brick 33 3 x 3
+type=brick
+file=lg_4161
+width=2
+length=0
+depth=1
+sx=1
+sy=1
+sz=-1
+parts=2
+
+[PART0]
+part=lg_4161
+texture=n
+
+[PART1]
+part=lg_4161_slope
+texture=r
+
+[MAPPING0]

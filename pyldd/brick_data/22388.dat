@@ -1,0 +1,21 @@
+# slope brick 50 1 x 1 x 2/3 quadruple
+#
+# Oliver Cordes 2019-10-11
+# 
+[DEFAULT]
+descr=slope brick 50 1 x 1 x 2/3 quadruple
+type=brick
+file=lg_22388
+width=0
+length=0
+depth=0
+sx=-1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_22388
+texture=n
+
+[MAPPING0]

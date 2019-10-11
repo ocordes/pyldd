@@ -1,0 +1,21 @@
+# plant brick 1 x 1 round with 3 bamboo leaves
+#
+# Oliver Cordes 2019-10-10
+# 
+[DEFAULT]
+descr=plant brick 1 x 1 round with 3 bamboo leaves
+type=brick
+file=lg_30176
+width=0
+length=0
+depth=1
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_30176
+texture=n
+
+[MAPPING0]

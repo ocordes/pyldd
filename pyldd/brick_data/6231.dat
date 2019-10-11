@@ -1,0 +1,22 @@
+# panel 1 x 1 x 1 corner
+#
+# Oliver Cordes 2019-10-08
+# 
+[DEFAULT]
+descr=panel 1 x 1 x 1 corner
+type=brick
+file=lg_6231
+width=0
+length=0
+depth=1
+sx=-1
+sy=1
+sz=-1
+parts=1
+
+[PART0]
+part=lg_6231
+texture=n
+
+
+[MAPPING0]

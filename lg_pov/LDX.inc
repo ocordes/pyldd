@@ -4522,3 +4522,141 @@ union {
                 matrix <1,0,0,0,1,0,0,0,1,30,0,0>
         }
 }
+
+
+#declare LDX_t04i5000_dot_dat_in_part = torus // Torus 0.25
+{
+        1,0.5
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-1,0,0>,0
+                }
+                cylinder
+                {
+                        <0,0,0>,<0,1,0>,1               }
+        }
+}
+
+
+#declare LDX_t04o6667_dot_dat_in_part = torus // Torus 0.25
+{
+        1,0.66670000553131103516
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-1,0,0>,0
+                }
+                difference
+                {
+                        cylinder
+                        {
+                                <0,0,0>,<0,1,0>,2                       }
+                        cylinder
+                        {
+                                <0,0,0>,<0,1,0>,1                       }
+                }
+        }
+}
+
+
+#declare LDX_t04o1667_dot_dat_in_part = torus // Torus 0.25
+{
+        1,0.16670000553131103516
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-1,0,0>,0
+                }
+                difference
+                {
+                        cylinder
+                        {
+                                <0,0,0>,<0,1,0>,2                       }
+                        cylinder
+                        {
+                                <0,0,0>,<0,1,0>,1                       }
+                }
+        }
+}
+
+
+#declare LDX_stud2s2_dot_dat_in_part = union {
+// Stud Tube Open Sliced for Open Stud with Inner Stopper Ring
+// Name: stud2s2.dat
+// Author: Owen Burgoyne [C3POwen]
+// !LDRAW_ORG Primitive UPDATE 2016-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2016-12-31 [PTadmin] Official Update 2016-01
+// BFC INVERTNEXT
+        object {
+                LDX_4_dash_4cyls_dot_dat_in_part
+                matrix <3.5,0,0,0,0.58333,0,0,0,3.5,0,0.41667,0>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_4_dash_4cyli_dot_dat_in_part
+                matrix <3.5,0,0,0,0.41667,0,0,0,3.5,0,0,0>
+        }
+        object {
+                LDX_4_dash_4cyls_dot_dat_in_part
+                matrix <6,0,0,0,1,0,0,0,6,0,0,0>
+        }
+}
+
+
+#declare LDX_stud2s2e_dot_dat_in_part = union {
+// Open Stud Extension with 0.5 LDU Inner Stopper Ring
+// Name: stud2s2e.dat
+// Author: Owen Burgoyne [C3POwen]
+// !LDRAW_ORG Primitive UPDATE 2016-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2016-12-31 [PTadmin] Official Update 2016-01
+// BFC INVERTNEXT
+        object {
+                LDX_4_dash_4cyli_dot_dat_in_part
+                matrix <3.5,0,0,0,1,0,0,0,3.5,0,0,0>
+        }
+        object {
+                LDX_4_dash_4ring7_dot_dat_in_part
+                matrix <0.5,0,0,0,1,0,0,0,0.5,0,0,0>
+        }
+        object {
+                LDX_4_dash_4cyli_dot_dat_in_part
+                matrix <6,0,0,0,1,0,0,0,6,0,0,0>
+        }
+}
+
+
+#declare LDX_2_dash_4cyls_dot_dat_in_part = cylinder // Sloped Cylinder 0.5
+{
+        <0,0,0>,<0,2,0>,1 open
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <1,1,0>,0.70710678118654757274
+                }
+        }
+}

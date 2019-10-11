@@ -50,6 +50,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '2654':  [ '2654', None ],     # boot stud 2 x 2
                  '2680':  [ '2680', None ],     # support 4 x 4 x 5 stanchion
                  '2730':  [ '2730', None ],     # technic beam 1 x 10 with holes
+                 '2875':  [ '2875', None ],     # slope brick 45 2 x 6 x 2/3
                  '2877':  [ '2877', None ],     # brick 1 x 2 with grille
                  '2921':  [ '2921', None ],     # brick 1 x 1 with handle
                  '3001':  [ '3001', None ],     # brick 2 x 4
@@ -82,6 +83,8 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '3039':  [ '3039', None ],     # slope brick 45 2 x 2
                  '3040':  [ '3040', None ],     # roof tile 1 x 2 / 45°
                  '3041':  [ '3041', None ],     # slope brick 45 2 x 4 double
+                 '3042':  [ '3042', None ],     # slope brick 45 2 x 3 double
+                 '3043':  [ '3043', None ],     # slope brick 45 2 x 2 double
                  '3044':  [ '3044', None ],     # slope brick 45 2 x 1 double
                  '3045':  [ '3045', None ],     # slope brick 45 2 x 2 double convex
                  '3046':  [ '3046', None ],     # slope brick 45 2 x 2 double concave
@@ -103,6 +106,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '3245':  [ '3245', None ],     # brick 1 x 2 x 2
                  '3297':  [ '3297', None ],     # slope brick 33 3 x 4
                  '3298':  [ '3298', None ],     # slope brick 33 3 x 2
+                 '3299':  [ '3299', None ],     # slope brick 33 2 x 4 double
                  '3300':  [ '3300', None ],     # slope brick 33 2 x 2 double
                  '3307':  [ '3307', None ],     # arch 1 x 6 x 2
                  '3455':  [ '3455', None ],     # arch 1 x 6
@@ -118,7 +122,8 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '3660':  [ '3660', None ],     # slope brick 45 2 x 2 inverted
                  '3665':  [ '3665', None ],     # slope brick 45 2 x 1 inverted
                  '3666':  [ '3666', None ],     # plate 1 x 6
-                 '3676':  [ '3676', None ],     # slope brick 45 2x 2 inverted double convex
+                 '3675':  [ '3675', None ],     # slope brick 33 3 x 3 double convex
+                 '3676':  [ '3676', None ],     # slope brick 45 2 x 2 inverted double convex
                  '3678':  [ '3678', None ],     # slope brick 65 2 x 2 x 2
                  '3679':  [ '3679', None ],     # turntable 2 x 2 plate top
                  '3680':  [ '3680', None ],     # turntable 2 x 2 plate base
@@ -186,6 +191,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '4083':  [ '4083', None ],     # bar 1 x 4 x 2
                  '4085':  [ '4085', None ],     # plate 1 x 1 with clip vertical
                  '4150':  [ '4150', None ],     # tile 2 x 2 round
+                 '4161':  [ '4161', None ],     # slope brick 33 3 x 3
                  '4162':  [ '4162', None ],     # flat tile 1 x 8
                  '4175':  [ '4175', None ],     # plate 1 x 2 with ladder
                  '4176':  [ '4176', None ],     # windscreen 2 x 6 x 2
@@ -214,11 +220,13 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '4509':  [ '4509', None ],     # train roof 33 6 x 6 double
                  '4515':  [ '4515', None ],     # slope brick 10 6 x 8
                  '4519':  [ '4519', None ],     # technic axle 3
+                 '4528':  [ '4528', None ],     # town frypan
                  '4532':  [ '4532', None ],     # cupboard 2 x 3 x 2
                  '4533':  [ '4533', None ],     # cupboard 2 x 3 x 2 door
                  '4536':  [ '4536', None ],     # cupboard 2 x 3 x 2 drawer
                  '4589':  [ '4589', None ],     # nose cone small 1 x 1
                  '4597':  [ '4597', None ],     # space cabin base 6 x 6
+                 '4599':  [ '4599', None ],     # Tap 1 x 1
                  '4729':  [ '4729', None ],     # brick 2 x 2 no studs with pin
                  '4732':  [ '4732', None ],     # bracket 8 x 2 x 1 & 1/3
                  '4733':  [ '4733', None ],     # brick 1 x 1 with studs on sides
@@ -261,7 +269,9 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '6213':  [ '6213', None ],     # brick 2 x 6 x 3
                  '6215':  [ '6215', None ],     # brick 2 x 3 with curved top
                  '6222':  [ '6222', None ],     # brick 4 x 4 round with holes
+                 '6231':  [ '6231', None ],     # panel 1 x 1 x 1 corner
                  '6233':  [ '6233', None ],     # cone 3 x 3 x 2
+                 '6269':  [ '6269', None ],     # crystal cup
                  '6541':  [ '6541', None ],     # technic beam 1 x 1 with hole
                  '6562':  [ '43093', None ],    # technic axle pin with friction
                  '6564':  [ '6564', None ],     # wedge 3 x 2 right
@@ -271,6 +281,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '10314': [ '10314', None ],    # brick 1 x 4 x 1.333 with curved top without understuds
                  '11211': [ '11211', None ],    # brick 1 x 2 with studs on one opposite side
                  '11477': [ '11477', None ],    # slope brick curved 2 x 1
+                 '13548': [ '13548', None ],    # slope brick 45 2 x 2 double convex with cant *wrong texture*
                  '14413': [ '14413', None ],    # brick 4 x 4 facet
                  '14716': [ '14716', None ],    # brick 1 x 1 x 3
                  '14719': [ '14719', None ],    # flat tile 2 x 2 corner
@@ -286,17 +297,20 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '15573': [ '3794', None ],     # plate 1 x 2 with stud
                  '15647': [ '30390', None ],    # slope brick 45 2 x 4 inverted double with pins
                  '17485': [ '17485', None ],    # brick 2 x 2 round with hole o 4,85
+                 '18759': [ '18759', None ],    # slope brick 45 3 x 1 inverted double with inner stopper rings *wrong texture*
                  '18841': [ '30367', None ],    # cylinder 2 x 2 with dome top with blocked stud, R2-D2
                  '18897': [ '18897', None ],    # circle brick 6 x 6 with 4.85 hole
                  '20460': [ '3817', None ],     # minifig leg left
                  '20461': [ '3816', None ],     # minifig leg right
                  '20953': [ '20953', None ],    # double sphere 2 x 2 x 1 2/3 w knob
+                 '22388': [ '22388', None ],    # slope brick 50 1 x 1 x 2/3 quadruple  *wrong texture*
                  '22885': [ '22885', None ],    # brick 1 x 2 x 1 2/3 with stud on 1 side
                  '22886': [ '22886', None ],    # brick 1 x 2 x 3 with inside axlehole
                  '23950': [ '23950', None ],    # panel 1 x 3 x 1
                  '24947': [ '24947', None ],    # sphere 2 x 2 x 1 1/3 inverted
                  '26597': [ '34816', None ],    # brick 1 x 2 with handle on end with trimmed arm
                  '26604': [ '26604', None ],    # brick 1 x 1 with studs on two adjacent sides
+                 '28192': [ '28192', None ],    # slope brick 45 2 x 1 with cutout and without stud
                  '30000': [ '30000', None ],    # brick 2 x 2 with pins
                  '30055': [ '30055', None ],    # fence 1 x 4 x 2 spindled
                  '30064': [ '3957', None ],     # antenna
@@ -307,6 +321,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '30144': [ '30144', None ],    # brick 2 x 4 x 3
                  '30145': [ '30145', None ],    # brick 2 x 2 x 3
                  '30151': [ '30151', None ],    # cylinder 2 x 2 x 1 & 2/3 half-dome
+                 '30176': [ '30176', None ],    # plant brick 1 x 1 round with 3 bamboo leaves
                  '30179': [ '30179', None ],    # door 1 x 4 x 6 framte type 1
                  '30181': [ '30181', None ],    # brick 4 x 10 with cut corners
                  '30183': [ '30183', None ],    # slope brick 45 6 x 4 inverted double with hole
@@ -472,4 +487,5 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '98560': [ '98560', None ],    # slope brick 75 2 x 2 x 3 not open studs
                  '99206': [ '99206', None ],    # plate 2 x 2 x 2/3 with two studs on side and two raised
                  '99249': [ '99249', None ],    # mini bouq. stem with 3.2 shaft
+                 '99301': [ '99301', None ],    # slope brick 33 3 x 3 double concave *wrong texture* 
 }

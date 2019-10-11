@@ -1,0 +1,25 @@
+# slope brick 45 2 x 6 x 2/3
+#
+# Oliver Cordes 2019-10-11
+# 
+[DEFAULT]
+descr=slope brick 45 2 x 6 x 2/3
+type=brick
+file=lg_2875
+width=5
+length=2
+depth=1
+sx=1
+sy=1
+sz=-1
+parts=2
+
+[PART0]
+part=lg_2875
+texture=n
+
+[PART1]
+part=lg_2875_slope
+texture=r
+
+[MAPPING0]
