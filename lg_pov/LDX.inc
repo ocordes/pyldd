@@ -4660,3 +4660,167 @@ union {
                 }
         }
 }
+
+
+#declare LDX_stud4f2w_dot_dat_in_part = union {
+// Stud Tube Open with  2 Fillets Wide Opposite
+// Name: stud4f2w.dat
+// Author: William Howard [WilliamH]
+// !LDRAW_ORG Primitive UPDATE 2012-02
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2012-04-06 [MagFors] subfiled fillet
+// !HISTORY 2012-08-09 [PTadmin] Official Update 2012-02
+// BFC INVERTNEXT
+        object {
+                LDX_4_dash_4cyli_dot_dat_in_part
+                matrix <6,0,0,0,4,0,0,0,-6,0,-4,0>
+        }
+        object {
+                LDX_3_dash_8cyli_dot_dat_in_part
+                matrix <7.3912,0,-3.0616,0,4,0,-3.0616,0,-7.3912,0,-4,0>
+        }
+        object {
+                LDX_3_dash_8cyli_dot_dat_in_part
+                matrix <-7.3912,0,3.0616,0,4,0,3.0616,0,7.3912,0,-4,0>
+        }
+        object {
+                LDX_3_dash_8ring3_dot_dat_in_part
+                matrix <1.8478,0,0.7654,0,1,0,-0.7654,0,1.8478,0,-4,0>
+        }
+        object {
+                LDX_3_dash_8ring3_dot_dat_in_part
+                matrix <-1.8478,0,-0.7654,0,1,0,0.7654,0,-1.8478,0,-4,0>
+        }
+}
+
+
+#declare LDX_stud4s2_dot_dat_in_part = union {
+// Stud Tube Open 0.500 Sloped
+// Name: stud4s2.dat
+// Author: Greg Teft [gregteft]
+// !LDRAW_ORG Primitive UPDATE 2012-02
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HELP For use between a stud4a and a half-sloped surface. It is enough
+// !HELP to know coordinates Y of the centre and that of the outside circle.
+// !HELP The difference of both coordinates is the height of the primitive
+// !HELP to be applied. Finally, this primitive can be used with all the
+// !HELP parts sloped using a STUD4A. H = Y center sloped - Y common border.
+// !HISTORY 2012-08-09 [PTadmin] Official Update 2012-02
+        object {
+                LDX_2_dash_4cyli_dot_dat_in_part
+                matrix <0,0,8,0,1,0,-8,0,0,0,-1,0>
+        }
+        object {
+                LDX_1_dash_4cyls_dot_dat_in_part
+                matrix <8,0,0,0,-1,0,0,0,-8,0,0,0>
+        }
+        object {
+                LDX_1_dash_4cyls_dot_dat_in_part
+                matrix <8,0,0,0,-1,0,0,0,8,0,0,0>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_2_dash_4cyli_dot_dat_in_part
+                matrix <0,0,6,0,0.75,0,-6,0,0,0,-1,0>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_1_dash_4cyls_dot_dat_in_part
+                matrix <6,0,0,0,-0.75,0,0,0,-6,0,-0.25,0>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_1_dash_4cyls_dot_dat_in_part
+                matrix <6,0,0,0,-0.75,0,0,0,6,0,-0.25,0>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_4_dash_4cyli_dot_dat_in_part
+                matrix <0,0,6,0,0.25,0,-6,0,0,0,-0.25,0>
+        }
+}
+
+
+#declare LDX_stug_dash_1x6_dot_dat_in_part = union {
+// Stud Group  1 x  6
+// Name: stug-1x6.dat
+// Author: Steffen [Steffen]
+// !LDRAW_ORG Primitive UPDATE 2011-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2011-07-25 [PTadmin] Official Update 2011-01
+        object {
+                lg_knob
+                matrix <0,0,-25,-25,0,0,0,-25,0,0,0,0>
+                matrix <1,0,0,0,1,0,0,0,1,-50,0,0>
+        }
+        object {
+                lg_knob
+                matrix <0,0,-25,-25,0,0,0,-25,0,0,0,0>
+                matrix <1,0,0,0,1,0,0,0,1,-30,0,0>
+        }
+        object {
+                lg_knob
+                matrix <0,0,-25,-25,0,0,0,-25,0,0,0,0>
+                matrix <1,0,0,0,1,0,0,0,1,-10,0,0>
+        }
+        object {
+                lg_knob
+                matrix <0,0,-25,-25,0,0,0,-25,0,0,0,0>
+                matrix <1,0,0,0,1,0,0,0,1,10,0,0>
+        }
+        object {
+                lg_knob
+                matrix <0,0,-25,-25,0,0,0,-25,0,0,0,0>
+                matrix <1,0,0,0,1,0,0,0,1,30,0,0>
+        }
+        object {
+                lg_knob
+                matrix <0,0,-25,-25,0,0,0,-25,0,0,0,0>
+                matrix <1,0,0,0,1,0,0,0,1,50,0,0>
+        }
+}
+
+
+#declare LDX_stug4_dot_dat_in_part = //union {
+// ~Moved to stug-4x4
+// Name: stug4.dat
+// Author: [PTadmin]
+// !LDRAW_ORG Primitive UPDATE 2011-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2011-07-25 [PTadmin] Official Update 2011-01
+// // Stud Group  4 x  4
+        object {
+                LDX_stug_dash_4x4_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+//}
+
+
+#declare LDX_2_dash_4RING8_dot_DAT_in_part = disc // Ring 0.5
+{
+        <0,0,0>,<0,1,0>,9,8
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+        }
+}
+
+
+#declare LDX_2_dash_4ring8_dot_dat_in_part = disc // Ring 0.5
+{
+        <0,0,0>,<0,1,0>,9,8
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+        }
+}

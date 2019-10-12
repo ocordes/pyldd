@@ -1,0 +1,21 @@
+# technic pin long with friction
+#
+# Oliver Cordes 2019-10-12
+# 
+[DEFAULT]
+descr=technic pin long with friction
+type=brick
+file=lg_6558
+width=0
+length=3
+depth=0
+sx=-1
+sy=1
+sz=-1
+parts=1
+
+[PART0]
+part=lg_6558
+texture=n
+
+[MAPPING0]

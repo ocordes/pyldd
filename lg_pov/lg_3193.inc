@@ -283,6 +283,8 @@ union {
   0,-1, 0,
   0, 0, 1,
   0, 0, 0>
+
+ rotate z*-90
 }
 
 #declare lg_3193_clear = 
@@ -553,5 +555,7 @@ merge {
   0, 0, 1,
   0, 0, 0>
 }
+
+ rotate z*-90
 
 #end

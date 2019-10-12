@@ -103,6 +103,8 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '3185':  [ '3185', None ],     # fence 1 x 4 x 2
                  '3188':  [ '3188', None ],     # door 1 x 3 x 2 right
                  '3189':  [ '3189', None ],     # door 1 x 3 x 2 left
+                 '3192':  [ '3192', None ],     # door 1 x 3 x 3 right
+                 '3193':  [ '3193', None ],     # door 1 x 3 x 3 left
                  '3245':  [ '3245', None ],     # brick 1 x 2 x 2
                  '3297':  [ '3297', None ],     # slope brick 33 3 x 4
                  '3298':  [ '3298', None ],     # slope brick 33 3 x 2
@@ -122,6 +124,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '3660':  [ '3660', None ],     # slope brick 45 2 x 2 inverted
                  '3665':  [ '3665', None ],     # slope brick 45 2 x 1 inverted
                  '3666':  [ '3666', None ],     # plate 1 x 6
+                 '3673':  [ '3673', None ],     # technic pin
                  '3675':  [ '3675', None ],     # slope brick 33 3 x 3 double convex
                  '3676':  [ '3676', None ],     # slope brick 45 2 x 2 inverted double convex
                  '3678':  [ '3678', None ],     # slope brick 65 2 x 2 x 2
@@ -273,11 +276,13 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '6233':  [ '6233', None ],     # cone 3 x 3 x 2
                  '6269':  [ '6269', None ],     # crystal cup
                  '6541':  [ '6541', None ],     # technic beam 1 x 1 with hole
+                 '6558':  [ '6558', None ],     # technic pin long with friction
                  '6562':  [ '43093', None ],    # technic axle pin with friction
                  '6564':  [ '6564', None ],     # wedge 3 x 2 right
                  '6565':  [ '6565', None ],     # wedge 3 x 2 left
                  '6576':  [ '6576', None ],     # plate 4 x 8 with studs in center
                  '6636':  [ '6636', None ],     # flat tile 1 x 6
+                 '10247': [ '10247', None ],    # plate 2 x 2 with hole and complete underside rib
                  '10314': [ '10314', None ],    # brick 1 x 4 x 1.333 with curved top without understuds
                  '11211': [ '11211', None ],    # brick 1 x 2 with studs on one opposite side
                  '11477': [ '11477', None ],    # slope brick curved 2 x 1
@@ -297,6 +302,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '15573': [ '3794', None ],     # plate 1 x 2 with stud
                  '15647': [ '30390', None ],    # slope brick 45 2 x 4 inverted double with pins
                  '17485': [ '17485', None ],    # brick 2 x 2 round with hole o 4,85
+                 '18654': [ '18654', None ],    # technic beam 1
                  '18759': [ '18759', None ],    # slope brick 45 3 x 1 inverted double with inner stopper rings *wrong texture*
                  '18841': [ '30367', None ],    # cylinder 2 x 2 with dome top with blocked stud, R2-D2
                  '18897': [ '18897', None ],    # circle brick 6 x 6 with 4.85 hole
@@ -304,8 +310,11 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '20461': [ '3816', None ],     # minifig leg right
                  '20953': [ '20953', None ],    # double sphere 2 x 2 x 1 2/3 w knob
                  '22388': [ '22388', None ],    # slope brick 50 1 x 1 x 2/3 quadruple  *wrong texture*
+                 '22391': [ '22391', None ],    # wedge 4 x 4 pointed
                  '22885': [ '22885', None ],    # brick 1 x 2 x 1 2/3 with stud on 1 side
                  '22886': [ '22886', None ],    # brick 1 x 2 x 3 with inside axlehole
+                 '22889': [ '22889', None ],    # slope brick 45 6 x 2 double inverted with open centre
+                 '23949': [ '23949', None ],    # slope brick 45 2 x 6 *wrong texture*
                  '23950': [ '23950', None ],    # panel 1 x 3 x 1
                  '24947': [ '24947', None ],    # sphere 2 x 2 x 1 1/3 inverted
                  '26597': [ '34816', None ],    # brick 1 x 2 with handle on end with trimmed arm
@@ -323,11 +332,13 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '30151': [ '30151', None ],    # cylinder 2 x 2 x 1 & 2/3 half-dome
                  '30176': [ '30176', None ],    # plant brick 1 x 1 round with 3 bamboo leaves
                  '30179': [ '30179', None ],    # door 1 x 4 x 6 framte type 1
+                 '30180': [ '30180', None ],    # slope brick 45 6 x 2 x 2 double
                  '30181': [ '30181', None ],    # brick 4 x 10 with cut corners
                  '30183': [ '30183', None ],    # slope brick 45 6 x 4 inverted double with hole
                  '30236': [ '30236', None ],    # brick 1 x 2 with handle
                  '30237': [ '30237', None ],    # brick 1 x 2 with clip horizontal
                  '30241': [ '30241', None ],    # brick 1 x 1 with clip vertical
+                 '30249': [ '30249', None ],    # slope brick 55 1 x 6 x 5
                  '30250': [ '30250', None ],    # bracket 4 x 7 x 3
                  '30357': [ '30357', None ],    # plate 3 x 3 corner round
                  '30360': [ '30360', None ],    # cylinder 3 x 6 x 2 2/3 horizontal
@@ -355,6 +366,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '32028': [ '32028', None ],    # plate 1 x 2 with door rail
                  '32039': [ '32039', None ],    # technic connector with axlehole
                  '32065': [ '32065', None ],    # technic liftarm 1 x 7 thin
+                 '32083': [ '32083', None ],    # slope brick 45 4 x 6 double
                  '32123': [ '32123', None ],    # technic bush 1/2 type smooth
                  '32316': [ '32316', None ],    # technic liftarm 1 x 5 straight
                  '32524': [ '32524', None ],    # technic liftarm 1 x 7 straight
@@ -379,6 +391,8 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '44042': [ '2356', None ],     # brick 4 x 6
                  '44237': [ '44237', None ],    # brick 2 x 6
                  '44336': [ '44336', None ],    # baseplate 32 x 32 road 6-stud straight
+                 '45410': [ '45410', None ],    # slope brick curved 6 x 8 x 2 inverted double
+                 '45411': [ '45411', None ],    # slope brick curved 6 x 8 x 2 double
                  '45677': [ '45677', None ],    # wedge 4 x 4 x 2/3 curved
                  '47432': [ '47432', None ],    # technic brick 2 x 3 w/ holes, click rot. hinge (v) and socket
                  '47455': [ '47455', None ],    # technic brick 2 x 2 with hole, half rotation joint ball vert
@@ -487,5 +501,5 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '98560': [ '98560', None ],    # slope brick 75 2 x 2 x 3 not open studs
                  '99206': [ '99206', None ],    # plate 2 x 2 x 2/3 with two studs on side and two raised
                  '99249': [ '99249', None ],    # mini bouq. stem with 3.2 shaft
-                 '99301': [ '99301', None ],    # slope brick 33 3 x 3 double concave *wrong texture* 
+                 '99301': [ '99301', None ],    # slope brick 33 3 x 3 double concave *wrong texture*
 }

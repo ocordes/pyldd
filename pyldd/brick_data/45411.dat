@@ -1,0 +1,21 @@
+# slope brick curved 6 x 8 x 2 double
+#
+# Oliver Cordes 2019-10-12
+# 
+[DEFAULT]
+descr=slope brick curved 6 x 8 x 2 double
+type=brick
+file=lg_45411
+width=3
+length=7
+depth=2
+sx=-1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_45411
+texture=n
+
+[MAPPING0]

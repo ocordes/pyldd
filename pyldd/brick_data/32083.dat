@@ -1,0 +1,25 @@
+# slope brick 45 4 x 6 double
+#
+# Oliver Cordes 2019-10-12
+# 
+[DEFAULT]
+descr=slope brick 45 4 x 6 double
+type=brick
+file=lg_32083
+width=3
+length=3
+depth=1
+sx=1
+sy=1
+sz=1
+parts=2
+
+[PART0]
+part=lg_32083
+texture=n
+
+[PART1]
+part=lg_32083_slope
+texture=r
+
+[MAPPING0]

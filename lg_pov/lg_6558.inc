@@ -165,6 +165,7 @@ difference {
    <-0.04, -0.08, -LG_CYLINDER_RADIUS>
   }
  }
+ rotate z*-90
 }
 
 #declare lg_6558_clear =
@@ -320,6 +321,7 @@ difference {
    <-0.04, -0.08, -LG_CYLINDER_RADIUS>
   }
  }
+ rotate z*-90
 }
 
 #end

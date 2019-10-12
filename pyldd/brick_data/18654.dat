@@ -1,0 +1,21 @@
+# technic beam 1
+#
+# Oliver Cordes 2019-10-12
+# 
+[DEFAULT]
+descr=technic beam 1
+type=brick
+file=lg_18654
+width=0
+length=1
+depth=0
+sx=-1
+sy=1
+sz=-1
+parts=1
+
+[PART0]
+part=lg_18654
+texture=n
+
+[MAPPING0]

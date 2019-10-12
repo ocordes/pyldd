@@ -1,0 +1,21 @@
+# slope brick 55 1 x 6 x 5
+#
+# Oliver Cordes 2019-10-12
+# 
+[DEFAULT]
+descr=slope brick 55 1 x 6 x 5
+type=brick
+file=lg_30249
+width=0
+length=-1
+depth=5
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_30249
+texture=n
+
+[MAPPING0]

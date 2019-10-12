@@ -76,6 +76,7 @@ difference {
    <-LG_CYLINDER_RADIUS, -LG_BRICK_WIDTH-LG_E, -0.04>
   }
  }
+ rotate z*-90
 }
 
 #declare lg_3673_clear =
@@ -142,6 +143,7 @@ difference {
    <-LG_CYLINDER_RADIUS, -LG_BRICK_WIDTH-LG_E, -0.04>
   }
  }
+ rotate z*-90
 }
 
 #end
