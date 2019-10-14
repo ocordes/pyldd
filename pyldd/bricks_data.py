@@ -358,6 +358,8 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '30414': [ '30414', None ],    # brick 1 x 4 with studs on side
                  '30499': [ '3684', None ],     # slope brick 75 2 x 2 x 3
                  '30505': [ '30505', None ],    # brick 3 x 3 without corner
+                 '30517': [ '30517', None ],    # support 2 x 2 x 10 girder triangular
+                 '30535': [ '30535', None ],    # brick 2 x 4 x 4 with propellor housing
                  '30540': [ '30540', None ],    # hinge brick 1 x 2 locking with 2 fingers horizontal on end
                  '30541': [ '30541', None ],    # hinge brick 1 x 2 locking with 1 finger on end horizontal
                  '30586': [ '30586', None ],    # plate 2 x 8 with liding groove
@@ -396,6 +398,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '45677': [ '45677', None ],    # wedge 4 x 4 x 2/3 curved
                  '47432': [ '47432', None ],    # technic brick 2 x 3 w/ holes, click rot. hinge (v) and socket
                  '47455': [ '47455', None ],    # technic brick 2 x 2 with hole, half rotation joint ball vert
+                 '47507': [ '47507', None ],    # plate 6 x 6 x 2 with recessed base 4 x 4 and 6 pegholes
                  '47543': [ '47543', None ],    # cone 8 x 4 half
                  '47847': [ '47847', None ],    # panel 2 x 4 x 6 rock
                  '47905': [ '47905', None ],    # brick 1 x 1 with studs on the two opposite sides

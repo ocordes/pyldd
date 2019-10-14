@@ -9,14 +9,14 @@
 /* It is provided for private non-commercial use only.                         */
 /*                                                                             */
 /* lg_3193: Door 1 x 3 x 3 Left                                                */
-/*                                                                             */ 
+/*                                                                             */
 /*******************************************************************************/
 #ifdef(lg_3193)
 #else
 #declare LENGTH = 3;
 #declare WIDTH = 1;
 #declare HEIGHT = 3;
-#declare lg_3193 = 
+#declare lg_3193 =
 union {
  difference {
   union {
@@ -220,7 +220,7 @@ union {
     <-(LENGTH-1)*LG_BRICK_WIDTH-0.1-LG_CORNER_SPACE, LG_BRICK_WIDTH/2+0.1, -HEIGHT/2*LG_BRICK_HEIGHT-LG_KNOB_RADIUS>,
     <-(LENGTH-1)*LG_BRICK_WIDTH+0.025, LG_BRICK_WIDTH/2-LG_WALL_WIDTH-2*LG_E, -HEIGHT/2*LG_BRICK_HEIGHT+LG_KNOB_RADIUS>
    }
-  }   
+  }
  }
  difference {
   union {
@@ -287,7 +287,7 @@ union {
  rotate z*-90
 }
 
-#declare lg_3193_clear = 
+#declare lg_3193_clear =
 merge {
  difference {
   merge {
@@ -491,7 +491,7 @@ merge {
     <-(LENGTH-1)*LG_BRICK_WIDTH-0.1-LG_CORNER_SPACE, LG_BRICK_WIDTH/2+0.1, -HEIGHT/2*LG_BRICK_HEIGHT-LG_KNOB_RADIUS>,
     <-(LENGTH-1)*LG_BRICK_WIDTH+0.025, LG_BRICK_WIDTH/2-LG_WALL_WIDTH-2*LG_E, -HEIGHT/2*LG_BRICK_HEIGHT+LG_KNOB_RADIUS>
    }
-  }   
+  }
  }
  difference {
   merge {
@@ -554,8 +554,8 @@ merge {
   0,-1, 0,
   0, 0, 1,
   0, 0, 0>
-}
 
  rotate z*-90
+}
 
 #end

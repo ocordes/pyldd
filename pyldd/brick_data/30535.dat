@@ -1,0 +1,21 @@
+# brick 2 x 4 x 4 with propellor housing
+#
+# Oliver Cordes 2019-10-13
+# 
+[DEFAULT]
+descr=brick 2 x 4 x 4 with propellor housing
+type=brick
+file=lg_30535
+width=3
+length=1
+depth=4
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_30535
+texture=n
+
+[MAPPING0]

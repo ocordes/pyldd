@@ -4824,3 +4824,444 @@ union {
                 }
         }
 }
+
+
+#declare LDX_stug3_dash_1x5_dot_dat_in_part = union {
+// Stud Tube Solid Group  1 x  5
+// Name: stug3-1x5.dat
+// Author: Steffen [Steffen]
+// !LDRAW_ORG Primitive UPDATE 2013-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2013-07-21 [PTadmin] Official Update 2013-01
+        object {
+                LDX_stud3_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,-40,0,0>
+        }
+        object {
+                LDX_stud3_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,-20,0,0>
+        }
+        object {
+                LDX_stud3_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+        object {
+                LDX_stud3_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,20,0,0>
+        }
+        object {
+                LDX_stud3_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,40,0,0>
+        }
+}
+
+
+#declare LDX_5_dash_16cyli_dot_dat_in_part = cylinder // Cylinder 0.3125
+{
+        <0,0,0>,<0,1,0>,1 open
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.92387953251128673848,0,-0.38268343236508967076>,0
+                }
+        }
+}
+
+
+#declare LDX_5_dash_16cylo_dot_dat_in_part = //union {
+// Cylinder Open 0.3125
+// Name: 5-16cylo.dat
+// Author: Max Martin Richter [MMR1988]
+// !LDRAW_ORG Primitive UPDATE 2013-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2013-07-21 [PTadmin] Official Update 2013-01
+        object {
+                LDX_5_dash_16cyli_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+//}
+
+
+#declare LDX_connhol3_dot_dat_in_part = union {
+// Technic Connector Hole One-Sided
+// Name: connhol3.dat
+// Author: Taylor Bangs [DoomTay]
+// !LDRAW_ORG Primitive UPDATE 2013-02
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2013-12-23 [PTadmin] Official Update 2013-02
+        object {
+                LDX_peghole_dot_dat_in_part
+                matrix <-1,0,0,0,1,0,0,0,1,0,-10,0>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_4_dash_4cyli_dot_dat_in_part
+                matrix <-6,0,0,0,-16,0,0,0,6,0,8,0>
+        }
+        object {
+                LDX_4_dash_4ring8_dot_dat_in_part
+                matrix <-1,0,0,0,1,0,0,0,-1,0,-10,0>
+        }
+}
+
+
+#declare LDX_stug4_dash_1x3_dot_dat_in_part = union {
+// Stud Tube Open Group  1 x  3
+// Name: stug4-1x3.dat
+// Author: Steffen [Steffen]
+// !LDRAW_ORG Primitive UPDATE 2011-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2011-07-25 [PTadmin] Official Update 2011-01
+        object {
+                LDX_stud4_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,-20,0,0>
+        }
+        object {
+                LDX_stud4_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+        object {
+                LDX_stud4_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,20,0,0>
+        }
+}
+
+
+#declare LDX_48_slash_1_dash_16cylo_dot_dat_in_part = //union {
+// Hi-Res Cylinder Open 0.0625
+// Name: 48\1-16cylo.dat
+// Author: Max Martin Richter [MMR1988]
+// !LDRAW_ORG 48_Primitive UPDATE 2013-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2013-07-21 [PTadmin] Official Update 2013-01
+        object {
+                LDX_48_slash_1_dash_16cyli_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+//}
+
+
+#declare LDX_48_slash_1_dash_48cyli_dot_dat_in_part = cylinder // Cylinder 0.020833
+{
+        <0,0,0>,<0,1,0>,1 open
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.13052619608779178484,0,0.99144486086461269814>,0
+                }
+        }
+}
+
+
+#declare LDX_48_slash_1_dash_48cylo_dot_dat_in_part = //union {
+// Hi-Res Cylinder Open 0.02083
+// Name: 48\1-48cylo.dat
+// Author: Max Martin Richter [MMR1988]
+// !LDRAW_ORG 48_Primitive UPDATE 2014-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2014-06-21 [PTadmin] Official Update 2014-01
+        object {
+                LDX_48_slash_1_dash_48cyli_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+//}
+
+
+#declare LDX_7_dash_8cylo_dot_dat_in_part = //union {
+// Cylinder Open 0.875
+// Name: 7-8cylo.dat
+// Author: Santeri Piippo [arezey]
+// !LDRAW_ORG Primitive UPDATE 2013-02
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2013-12-23 [PTadmin] Official Update 2013-02
+        object {
+                LDX_7_dash_8cyli_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+//}
+
+
+#declare LDX_48_slash_1_dash_3cyli_dot_dat_in_part = cylinder // Cylinder 0.333333
+{
+        <0,0,0>,<0,1,0>,1 open
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.86602537257551814864,0,-0.50000005405543213044>,0
+                }
+        }
+}
+
+
+#declare LDX_48_slash_1_dash_3cylo_dot_dat_in_part = //union {
+// Hi-Res Cylinder Open 0.3333
+// Name: 48\1-3cylo.dat
+// Author: Max Martin Richter [MMR1988]
+// !LDRAW_ORG 48_Primitive UPDATE 2014-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2014-06-21 [PTadmin] Official Update 2014-01
+        object {
+                LDX_48_slash_1_dash_3cyli_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+//}
+
+
+#declare LDX_48_slash_1_dash_24cylo_dot_dat_in_part = //union {
+// Hi-Res Cylinder Open 0.0417
+// Name: 48\1-24cylo.dat
+// Author: Max Martin Richter [MMR1988]
+// !LDRAW_ORG 48_Primitive UPDATE 2013-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2013-07-21 [PTadmin] Official Update 2013-01
+        object {
+                LDX_48_slash_1_dash_24cyli_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+//}
+
+
+#declare LDX_48_slash_7_dash_48cyli_dot_dat_in_part = cylinder // Cylinder 0.145833
+{
+        <0,0,0>,<0,1,0>,1 open
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.79335332129244851007,0,0.60876145376842072388>,0
+                }
+        }
+}
+
+
+#declare LDX_48_slash_7_dash_48cylo_dot_dat_in_part = //union {
+// Hi-Res Cylinder Open 0.1458
+// Name: 48\7-48cylo.dat
+// Author: Max Martin Richter [MMR1988]
+// !LDRAW_ORG 48_Primitive UPDATE 2014-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2014-06-21 [PTadmin] Official Update 2014-01
+        object {
+                LDX_48_slash_7_dash_48cyli_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+//}
+
+
+#declare LDX_48_slash_5_dash_24cyli_dot_dat_in_part = cylinder // Cylinder 0.208333
+{
+        <0,0,0>,<0,1,0>,1 open
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.96592581821160528044,0,0.25881907524802133524>,0
+                }
+        }
+}
+
+
+#declare LDX_48_slash_5_dash_24cylo_dot_dat_in_part = //union {
+// Hi-Res Cylinder Open 0.2083
+// Name: 48\5-24cylo.dat
+// Author: Max Martin Richter [MMR1988]
+// !LDRAW_ORG 48_Primitive UPDATE 2013-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2013-07-21 [PTadmin] Official Update 2013-01
+        object {
+                LDX_48_slash_5_dash_24cyli_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+//}
+
+
+#declare LDX_48_slash_3_dash_16rin8_dot_dat_in_part = disc // Ring 0.1875
+{
+        <0,0,0>,<0,1,0>,9,8
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.92387953251128673848,0,0.38268343236508983729>,0
+                }
+        }
+}
+
+
+#declare LDX_48_slash_1_dash_6con7_dot_dat_in_part = cone // Cone 0.166667
+{
+        <0,0,0>,8,<0,1,0>,7 open
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.8660254193888975438,0,0.49999997297228343518>,0
+                }
+        }
+}
+
+
+#declare LDX_48_slash_3_dash_16cyli_dot_dat_in_part = cylinder // Cylinder 0.1875
+{
+        <0,0,0>,<0,1,0>,1 open
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.92387953251128673848,0,0.38268343236508983729>,0
+                }
+        }
+}
+
+
+#declare LDX_48_slash_1_dash_4rin17_dot_dat_in_part = disc // Ring 0.25
+{
+        <0,0,0>,<0,1,0>,18,17
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-1,0,0>,0
+                }
+        }
+}
+
+
+#declare LDX_48_slash_1_dash_4rin18_dot_dat_in_part = disc // Ring 0.25
+{
+        <0,0,0>,<0,1,0>,19,18
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-1,0,0>,0
+                }
+        }
+}
+
+
+#declare LDX_48_slash_5_dash_24ri17_dot_dat_in_part = disc // Ring 0.208333
+{
+        <0,0,0>,<0,1,0>,18,17
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.96592581821160528044,0,0.25881907524802133524>,0
+                }
+        }
+}
+
+
+#declare LDX_48_slash_5_dash_24ri18_dot_dat_in_part = disc // Ring 0.208333
+{
+        <0,0,0>,<0,1,0>,19,18
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-0.96592581821160528044,0,0.25881907524802133524>,0
+                }
+        }
+}
+
+
+#declare LDX_48_slash_4_dash_4rin17_dot_dat_in_part = disc // Ring 1
+{
+        <0,0,0>,<0,1,0>,18,17
+}
+
+
+#declare LDX_48_slash_4_dash_4rin18_dot_dat_in_part = disc // Ring 1
+{
+        <0,0,0>,<0,1,0>,19,18
+}
+
+
+#declare LDX_48_slash_4_dash_4con2_dot_dat_in_part = cone // Cone 1
+{
+        <0,0,0>,3,<0,1,0>,2 open
+}
+
+
+#declare LDX_48_slash_4_dash_4cylo_dot_dat_in_part = //union {
+// Hi-Res Cylinder Open 1.0
+// Name: 48\4-4cylo.dat
+// Author: Philippe Hurbain [Philo]
+// !LDRAW_ORG 48_Primitive UPDATE 2011-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2011-07-25 [PTadmin] Official Update 2011-01
+        object {
+                LDX_48_slash_4_dash_4cyli_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+//}
+
+
+#declare LDX_48_slash_4_dash_4con1_dot_dat_in_part = cone // Cone 1
+{
+        <0,0,0>,2,<0,1,0>,1 open
+}
