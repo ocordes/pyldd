@@ -240,7 +240,7 @@ class PovLEGOBrick(PovCSGObject, PovPreTransformation):
             return None
 
         obj = PovCSGMacro('#%i %s mapping' % ( self._nr, self._descr), macrocmd=macro)
-        obj.set_texture(self._color) # the original color first...
+        obj.set_texture(self._color[0]) # the original color first...
 
         # create the texture
         scale     = mapdef.get('scale', '1.0')
