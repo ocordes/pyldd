@@ -16,6 +16,10 @@
 /* Adapted version for POV-Ray 3.7 by Friedrich.A.Lohm�ller, 07-Feb-2009       */
 /*                                                                             */
 /*******************************************************************************/
+/* python convert from HEX */
+/* print('%i/255, %i/255, %i/255' % (0xD9, 0xE4, 0xA7)) */
+
+
 #ifndef(lg_quality)
  #declare lg_quality = 2;
 #end
@@ -639,6 +643,17 @@
  normal { lg_normal }
  finish { lg_solid_finish }
 }
+
+// 311
+#declare lg_clear_bright_green = texture {
+  pigment { rgb <217/255, 228/255, 167/255> 
+    #if (lg_quality > 1)
+        filter 0.9
+    #end
+  }
+  finish { lg_transparent_finish }
+}
+
 
 // 313
 #declare lg_maersk_blue = texture {

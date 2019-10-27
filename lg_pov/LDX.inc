@@ -5265,3 +5265,130 @@ union {
 {
         <0,0,0>,2,<0,1,0>,1 open
 }
+
+
+#declare LDX_stug_dash_1x2_dot_dat_in_part = union {
+// Stud Group  1 x  2
+// Name: stug-1x2.dat
+// Author: Steffen [Steffen]
+// !LDRAW_ORG Primitive UPDATE 2011-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2011-07-25 [PTadmin] Official Update 2011-01
+        object {
+                lg_knob
+                matrix <0,0,-25,-25,0,0,0,-25,0,0,0,0>
+                matrix <1,0,0,0,1,0,0,0,1,-10,0,0>
+        }
+        object {
+                lg_knob
+                matrix <0,0,-25,-25,0,0,0,-25,0,0,0,0>
+                matrix <1,0,0,0,1,0,0,0,1,10,0,0>
+        }
+}
+
+
+#declare LDX_wpin_dot_dat_in_part = union {
+// Wheel Holding Pin
+// Name: wpin.dat
+// Author: William Howard [WilliamH]
+// !LDRAW_ORG Primitive UPDATE 2009-03
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2009-12-29 [PTadmin] Official Update 2009-03
+        object {
+                LDX_4_dash_4cyli_dot_dat_in_part
+                matrix <4,0,0,0,-4,0,0,0,4,0,0,0>
+        }
+        object {
+                LDX_3_dash_8cyli_dot_dat_in_part
+                matrix <-3.69552,0,-1.53073,0,7,0,1.53073,0,-3.69552,0,-11,0>
+        }
+        object {
+                LDX_3_dash_8cyli_dot_dat_in_part
+                matrix <3.69552,0,1.53073,0,7,0,-1.53073,0,3.69552,0,-11,0>
+        }
+        object {
+                LDX_3_dash_8cyli_dot_dat_in_part
+                matrix <4.00348,0,1.65829,0,1,0,-1.65829,0,4.00348,0,-12,0>
+        }
+        object {
+                LDX_3_dash_8cyli_dot_dat_in_part
+                matrix <-4.00348,0,-1.65829,0,1,0,1.65829,0,-4.00348,0,-12,0>
+        }
+        object {
+                LDX_3_dash_8rin12_dot_dat_in_part
+                matrix <0.30796,0,0.127561,0,-0.6,0,-0.127561,0,0.30796,0,-11,0>
+        }
+        object {
+                LDX_3_dash_8rin12_dot_dat_in_part
+                matrix <-0.30796,0,-0.127561,0,-0.6,0,0.127561,0,-0.30796,0,-11,0>
+        }
+        object {
+                LDX_3_dash_8chrd_dot_dat_in_part
+                matrix <4.00348,0,1.65829,0,0.6,0,-1.65829,0,4.00348,0,-12,0>
+        }
+        object {
+                LDX_3_dash_8chrd_dot_dat_in_part
+                matrix <-4.00348,0,-1.65829,0,0.6,0,1.65829,0,-4.00348,0,-12,0>
+        }
+        object {
+                LDX_1_dash_4ndis_dot_dat_in_part
+                matrix <0,0.6,0,0.666667,0,0,0.132667,0,0.666667,-4,-4.6,0>
+        }
+        object {
+                LDX_1_dash_4ndis_dot_dat_in_part
+                matrix <0,0.6,0,0.666667,0,0,0.132667,0,-0.666667,-4,-4.6,0>
+        }
+        object {
+                LDX_1_dash_4ndis_dot_dat_in_part
+                matrix <0,0.6,0,-0.666667,0,0,-0.132667,0,-0.666667,4,-4.6,0>
+        }
+        object {
+                LDX_1_dash_4ndis_dot_dat_in_part
+                matrix <0,0.6,0,-0.666667,0,0,-0.132667,0,0.666667,4,-4.6,0>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_1_dash_4cyli_dot_dat_in_part
+                matrix <0,0.6,0,4,0,0,0.132667,0,0.666667,-4,-4.6,0>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_1_dash_4cyli_dot_dat_in_part
+                matrix <0,0.6,0,4,0,0,0.132667,0,-0.666667,-4,-4.6,0>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_1_dash_4cyli_dot_dat_in_part
+                matrix <0,0.6,0,-4,0,0,-0.132667,0,-0.666667,4,-4.6,0>
+        }
+// BFC INVERTNEXT
+        object {
+                LDX_1_dash_4cyli_dot_dat_in_part
+                matrix <0,0.6,0,-4,0,0,-0.132667,0,0.666667,4,-4.6,0>
+        }
+}
+
+
+#declare LDX_wpin2a_dot_dat_in_part = union {
+// Wheel Holding Pin with 2 Fillets without Bottom Faces
+// Name: wpin2a.dat
+// Author: William Howard [WilliamH]
+// !LDRAW_ORG Primitive UPDATE 2009-03
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2009-12-29 [PTadmin] Official Update 2009-03
+        object {
+                LDX_1_dash_4cyli_dot_dat_in_part
+                matrix <-3.53,0,-3.53,0,-2,0,-3.53,0,3.53,0,2,0>
+        }
+        object {
+                LDX_1_dash_4chrd_dot_dat_in_part
+                matrix <-3.53,0,-3.53,0,1,0,-3.53,0,3.53,0,0,0>
+        }
+        object {
+                LDX_wpin_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+}

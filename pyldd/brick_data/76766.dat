@@ -1,0 +1,21 @@
+# bracket 5 x 2 x 2 1/3 with inside fillets 
+#
+# Oliver Cordes 2019-10-27
+# 
+[DEFAULT]
+descr=bracket 5 x 2 x 2 1/3 with inside fillets
+type=brick
+file=lg_76766
+width=4
+length=1
+depth=7/3
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_76766
+texture=n
+
+[MAPPING0]

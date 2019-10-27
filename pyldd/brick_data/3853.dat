@@ -1,0 +1,21 @@
+# window 1 x 4 x 3
+#
+# Oliver Cordes 2019-10-27
+# 
+[DEFAULT]
+descr=window 1 x 4 x 3
+type=window
+file=lg_3853
+width=3
+length=0
+depth=3
+sx=1
+sy=1
+sz=-1
+parts=1
+
+[PART0]
+part=lg_3853
+texture=n
+
+[MAPPING0]

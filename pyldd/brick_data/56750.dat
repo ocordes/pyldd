@@ -1,0 +1,21 @@
+# flower head
+#
+# Oliver Cordes 2019-10-27
+# 
+[DEFAULT]
+descr=flower head
+type=flower
+file=lg_56750
+width=0
+length=0
+depth=0
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_56750
+texture=n
+
+[MAPPING0]

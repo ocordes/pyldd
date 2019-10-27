@@ -379,6 +379,7 @@ union {
   <-(LENGTH-0.5)*LG_BRICK_WIDTH+0.24+0.09, LG_BRICK_WIDTH/2+0.2-LG_CORNER_SPACE, -2.73+LG_CORNER_SPACE>,
   LG_CORNER_SPACE
  }
+ rotate z*-90
 }
 
 #declare lg_3861_clear = 
@@ -744,6 +745,7 @@ merge {
   <-(LENGTH-0.5)*LG_BRICK_WIDTH+0.24+0.09, LG_BRICK_WIDTH/2+0.2-LG_CORNER_SPACE, -2.73+LG_CORNER_SPACE>,
   LG_CORNER_SPACE
  }
+ rotate z*-90
 }
 
 #end

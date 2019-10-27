@@ -50,6 +50,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '2654':  [ '2654', None ],     # boot stud 2 x 2
                  '2680':  [ '2680', None ],     # support 4 x 4 x 5 stanchion
                  '2730':  [ '2730', None ],     # technic beam 1 x 10 with holes
+                 '2748':  [ '3857', None ],     # baseplate 16 x 32
                  '2875':  [ '2875', None ],     # slope brick 45 2 x 6 x 2/3
                  '2877':  [ '2877', None ],     # brick 1 x 2 with grille
                  '2921':  [ '2921', None ],     # brick 1 x 1 with handle
@@ -121,6 +122,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '3622':  [ '3622', None ],     # brick 1 x 3
                  '3623':  [ '3623', None ],     # plate 1 x 3
                  '3626':  [ '3626', None ],     # Minifig head with hollow stud
+                 '3633':  [ '3633', None ],     # fence 1 x 4 x 1
                  '3660':  [ '3660', None ],     # slope brick 45 2 x 2 inverted
                  '3665':  [ '3665', None ],     # slope brick 45 2 x 1 inverted
                  '3666':  [ '3666', None ],     # plate 1 x 6
@@ -144,6 +146,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '3747':  [ '3747', None ],     # slope brick 33 3 x 2 inverted
                  '3754':  [ '3754', None ],     # brick 1 x 6 x 5
                  '3755':  [ '3755', None ],     # brick 1 x 3 x 5
+                 '3778':  [ '3778', None ],     # cypress
                  '3794':  [ '3794', None ],     # plate 1 x 2 with stud
                  '3795':  [ '3795', None ],     # plate 2 x 6
                  '3811':  [ '3811', None ],     # base 32 x 32 plate
@@ -165,6 +168,9 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '3838':  [ '3838', None ],     # minifig airtanks
                  '3839':  [ '3839', None ],     # plate 1 x 2 with handles low attachment
                  '3842':  [ '3842', None ],     # minifig helmet classic with thick chin guard and visor dimples
+                 '3853':  [ '3853', None ],     # window 1 x 4 x 3
+                 '3857':  [ '3857', None ],     # baseplate 16 x 32
+                 '3861':  [ '3861', None ],     # door 1 x 4 x 5
                  '3865':  [ '3865', None ],     # base plate 8 x 16
                  '3894':  [ '3894', None ],     # technic beam 1 x 6 with holes
                  '3895':  [ '3895', None ],     # technic beam 1 x 12 with holes
@@ -309,6 +315,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '20460': [ '3817', None ],     # minifig leg left
                  '20461': [ '3816', None ],     # minifig leg right
                  '20953': [ '20953', None ],    # double sphere 2 x 2 x 1 2/3 w knob
+                 '21445': [ '21445', None ],    # plate 1 x 2 with wheel holder
                  '22388': [ '22388', None ],    # slope brick 50 1 x 1 x 2/3 quadruple  *wrong texture*
                  '22391': [ '22391', None ],    # wedge 4 x 4 pointed
                  '22885': [ '22885', None ],    # brick 1 x 2 x 1 2/3 with stud on 1 side
@@ -421,6 +428,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '52107': [ '52107', None ],    # brick 1 x 2 with studs on two opposite sides
                  '54383': [ '54383', None ],    # wedge plate 6 x 3 right
                  '54384': [ '54384', None ],    # wedge plate 6 x 3 left
+                 '56750': [ '56750', None ],    # flower head
                  '57893': [ '57893', None ],    # lattice tower with wall 2 x 2 x 10
                  '57894': [ '57894', None ],    # window 1 x 4 x 6 frame with three panes
                  '57895': [ '57895', None ],    # glass for window 1 x 4 x 6
@@ -460,6 +468,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '74698': [ '2376', None ],     # tile 2 x 2 round with lifting ring
                  '75347': [ '75347', None ],    # pillar 2 x 2 x 11
                  '76385': [ '76385', None ],    # hinge brick 1 x 2 locking with 1 finger on top
+                 '76766': [ '76766', None ],    # bracket 5 x 2 x 2 1/3 with inside fillets
                  '85080': [ '3063', None ],     # brick 2 x 2 corner round ?? LEGO has a different description but looks similar
                  '85984': [ '85984', None ],    # slope tile 30 2 x 1 x 2/3
                  '85943': [ '85943', None ],    # technic brick 1 x 2 with two liftarms

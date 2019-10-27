@@ -1,0 +1,21 @@
+# door 1 x 4 x 5
+#
+# Oliver Cordes 2019-10-27
+# 
+[DEFAULT]
+descr=door 1 x 4 x 5
+type=door
+file=lg_3861
+width=0
+length=0
+depth=5
+sx=-1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_3861
+texture=n
+
+[MAPPING0]

@@ -1,0 +1,21 @@
+# cypress
+#
+# Oliver Cordes 2019-10-27
+# 
+[DEFAULT]
+descr=cypress
+type=flower
+file=lg_3778
+width=0
+length=0
+depth=0
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_3778
+texture=n
+
+[MAPPING0]
