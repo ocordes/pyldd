@@ -368,4 +368,15 @@ box {
  rotate <0, 0, -90>
 }
 
+#declare lg_3040b_decals_1 =
+box {
+ <LENGTH*LG_BRICK_WIDTH-LG_CORNER_SPACE, LG_CORNER_SPACE, 0>,
+ <LG_CORNER_SPACE, -(LG_WALL_WIDTH-LG_CORNER_SPACE), -LG_BRICK_WIDTH/sin(pi*lg_angle1/180)>
+ rotate <lg_angle1, 0, 0>
+ translate <0, LG_BRICK_WIDTH-LG_CORNER_SPACE, LG_BRICK_HEIGHT-LG_CORNER_SPACE>
+ translate <-LG_BRICK_WIDTH/2, -0.5*LG_BRICK_WIDTH, -LG_BRICK_HEIGHT>
+ rotate <0, 0, -90>
+ translate <0,0,LG_EE>
+}
+
 #end

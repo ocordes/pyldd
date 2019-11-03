@@ -6,6 +6,7 @@
  #declare lg_3040 = lg_3040b
  #declare lg_3040_clear = lg_3040b_clear
  #declare lg_3040_slope = lg_3040b_slope
+ #declare lg_3040_decals_1 = lg_3040b_decals_1
 #end
 
 
