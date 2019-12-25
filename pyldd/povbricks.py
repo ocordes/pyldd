@@ -370,14 +370,18 @@ class PovLEGOBrick(PovCSGObject, PovPreTransformation):
 
 
 class PovLEGOModel(PovCSGUnion):
-    def find_brick(self, itemNos):
+    def find_brick(self, itemNos, color=None):
         bricks = []
         for i in self._items:
             if isinstance(i, PovLEGOBrick):
                 if i._itemNos == itemNos:
+                    #if (color is not None):
+                    #    print(i._color[0], color)
+                    if (color is not None) and (i._color[0] != color):
+                        continue
                     bricks.append(i)
             elif hasattr( i, 'find_brick' ):
-                j = i.find_brick(itemNos)
+                j = i.find_brick(itemNos, color=color)
                 bricks += j
             else:
                 print('class: ', i.__class__.__name__)
