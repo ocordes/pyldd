@@ -5392,3 +5392,71 @@ union {
                 matrix <1,0,0,0,1,0,0,0,1,0,0,0>
         }
 }
+
+
+#declare LDX_3_dash_4cylo_dot_dat_in_part = //union {
+// Cylinder Open 0.75
+// Name: 3-4cylo.dat
+// Author: Philippe Hurbain [Philo]
+// !LDRAW_ORG Primitive UPDATE 2011-02
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2011-12-29 [PTadmin] Official Update 2011-02
+        object {
+                LDX_3_dash_4cyli_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+//}
+
+
+#declare LDX_3_dash_8cylo_dot_dat_in_part = //union {
+// Cylinder Open 0.375
+// Name: 3-8cylo.dat
+// Author: J.C. Tchang [tchang]
+// !LDRAW_ORG Primitive UPDATE 2013-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2013-07-21 [PTadmin] Official Update 2013-01
+        object {
+                LDX_3_dash_8cyli_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+//}
+
+
+#declare LDX_5_dash_8cylo_dot_dat_in_part = //union {
+// Cylinder Open 0.625
+// Name: 5-8cylo.dat
+// Author: J.C. Tchang [tchang]
+// !LDRAW_ORG Primitive UPDATE 2013-01
+// !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+// BFC CERTIFY CCW
+// !HISTORY 2013-07-21 [PTadmin] Official Update 2013-01
+        object {
+                LDX_5_dash_8cyli_dot_dat_in_part
+                matrix <1,0,0,0,1,0,0,0,1,0,0,0>
+        }
+//}
+
+
+#declare LDX_1_dash_4con0_dot_dat_in_part = cone // Cone 0.25
+{
+        <0,0,0>,1,<0,1,0>,0 open
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-1,0,0>,0
+                }
+        }
+}
+
+
+#declare LDX_4_dash_4con2_dot_dat_in_part = cone // Cone 1
+{
+        <0,0,0>,3,<0,1,0>,2 open
+}

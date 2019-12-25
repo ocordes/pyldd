@@ -426,6 +426,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '52040': [ '52040', None ],    # brick 12 x 12 with 3 pin holes on sides & axle holes in corners
                  '52501': [ '52501', None ],    # slope brick 45 6 x 1 inverted double
                  '52107': [ '52107', None ],    # brick 1 x 2 with studs on two opposite sides
+                 '53401': [ '53401', None ],    # train track 6 studs wide straight
                  '54383': [ '54383', None ],    # wedge plate 6 x 3 right
                  '54384': [ '54384', None ],    # wedge plate 6 x 3 left
                  '56750': [ '56750', None ],    # flower head
@@ -466,6 +467,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '63965': [ '63965', None ],    # bar 6L with thick stop
                  '72454': [ '72454', None ],    # slope brick 45 4 x 4 inverted double with holes
                  '74698': [ '2376', None ],     # tile 2 x 2 round with lifting ring
+                 '74784': [ '74784', None ],    # train wheel bearing element 3 x 6
                  '75347': [ '75347', None ],    # pillar 2 x 2 x 11
                  '76385': [ '76385', None ],    # hinge brick 1 x 2 locking with 1 finger on top
                  '76766': [ '76766', None ],    # bracket 5 x 2 x 2 1/3 with inside fillets

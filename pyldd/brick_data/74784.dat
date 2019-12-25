@@ -1,0 +1,29 @@
+# train wheel bearing element 3 x 6 
+#
+# Oliver Cordes 2019-12-25
+# 
+[DEFAULT]
+descr=train wheel bearing element 3 x 6
+type=train
+file=lg_74784
+width=0
+length=0
+depth=0
+sx=1
+sy=1
+sz=1
+parts=3
+
+[PART0]
+part=lg_74784_1
+texture=n
+
+[PART1]
+part=lg_74784_2
+texture=n
+
+[PART2]
+part=lg_74784_3
+texture=n
+
+[MAPPING0]
