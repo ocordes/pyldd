@@ -1,0 +1,21 @@
+# train left points
+#
+# Oliver Cordes 2019-12-26
+# 
+[DEFAULT]
+descr=train left points
+type=train
+file=lg_75542
+width=0
+length=0
+depth=0
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_75542
+texture=n
+
+[MAPPING0]

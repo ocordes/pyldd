@@ -1,0 +1,19 @@
+# train buffer beam with sealed magnet
+#
+# Oliver Cordes 2019-12-26
+# 
+[DEFAULT]
+descr=train buffer beam with sealed magnet
+type=train
+file=lg_64424
+width=0
+length=0
+depth=0
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_64424
+texture=n

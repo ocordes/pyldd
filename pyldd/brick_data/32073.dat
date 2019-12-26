@@ -1,0 +1,21 @@
+# technic axle 5
+#
+# Oliver Cordes 2019-12-26
+# 
+[DEFAULT]
+descr=technic axle 5
+type=brick
+file=lg_32073
+width=0
+length=5
+depth=0
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_32073
+texture=n
+
+[MAPPING0]

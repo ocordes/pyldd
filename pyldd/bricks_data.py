@@ -375,6 +375,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '32028': [ '32028', None ],    # plate 1 x 2 with door rail
                  '32039': [ '32039', None ],    # technic connector with axlehole
                  '32065': [ '32065', None ],    # technic liftarm 1 x 7 thin
+                 '32073': [ '32073', None ],    # technic axle 5
                  '32083': [ '32083', None ],    # slope brick 45 4 x 6 double
                  '32123': [ '32123', None ],    # technic bush 1/2 type smooth
                  '32316': [ '32316', None ],    # technic liftarm 1 x 5 straight
@@ -426,13 +427,17 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '52040': [ '52040', None ],    # brick 12 x 12 with 3 pin holes on sides & axle holes in corners
                  '52501': [ '52501', None ],    # slope brick 45 6 x 1 inverted double
                  '52107': [ '52107', None ],    # brick 1 x 2 with studs on two opposite sides
+                 '53400': [ '53400', None ],    # train track curved 22.5 degrees
                  '53401': [ '53401', None ],    # train track 6 studs wide straight
                  '54383': [ '54383', None ],    # wedge plate 6 x 3 right
                  '54384': [ '54384', None ],    # wedge plate 6 x 3 left
+                 '54755': [ '54755', None ],    # train motor 2006
+                 '54757': [ '54757', None ],    # train motor 2006 axle tube
                  '56750': [ '56750', None ],    # flower head
                  '57893': [ '57893', None ],    # lattice tower with wall 2 x 2 x 10
                  '57894': [ '57894', None ],    # window 1 x 4 x 6 frame with three panes
                  '57895': [ '57895', None ],    # glass for window 1 x 4 x 6
+                 '57999': [ '57999', None ],    # train wheel w/o ring
                  '58181': [ '3939', None ],     # slope brick 33 3 x 6
                  '58827': [ '58827', None ],    # support 2 x 2 x 10 girder triangular with axlehole
                  '58846': [ '58846', None ],    # brick 10 x 10 corner round with tapered edge and cutout
@@ -465,10 +470,16 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '64453': [ '64453', None ],    # windscreen 1 x 6 x 3
                  '64799': [ '64799', None ],    # frame plate 4 x 4
                  '63965': [ '63965', None ],    # bar 6L with thick stop
+                 '64417': [ '64417', None ],    # train buffer sealed magnet casing
+                 '64424': [ '64424', None ],    # train buffer beam with sealed magnet
                  '72454': [ '72454', None ],    # slope brick 45 4 x 4 inverted double with holes
                  '74698': [ '2376', None ],     # tile 2 x 2 round with lifting ring
+                 '74746': [ '53401', None ],    # train track 6 studs wide straight
+                 '74747': [ '53400', None ],    # train track curved 22.5 degrees
                  '74784': [ '74784', None ],    # train wheel bearing element 3 x 6
                  '75347': [ '75347', None ],    # pillar 2 x 2 x 11
+                 '75541': [ '75541', None ],    # train right points
+                 '75542': [ '75542', None ],    # train left points
                  '76385': [ '76385', None ],    # hinge brick 1 x 2 locking with 1 finger on top
                  '76766': [ '76766', None ],    # bracket 5 x 2 x 2 1/3 with inside fillets
                  '85080': [ '3063', None ],     # brick 2 x 2 corner round ?? LEGO has a different description but looks similar
