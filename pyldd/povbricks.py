@@ -123,11 +123,18 @@ class PovPreTransformation(PovWriterObject):
             self._write_indent(ffile, 'translate %s\n' % r, indent=indent)
 
 
+    def write_pov(self, ffile, indent=0):
+        self._write_pre_rotate(ffile, indent=indent)
+        self._write_pre_translate(ffile, indent=indent)
+
+
 class PovLEGOBrick(PovCSGObject, PovPreTransformation):
     _name = 'LEGO Brick'
     def __init__(self, nr, itemNos, color, config,
                   decoration, decoration_mappings):
         PovCSGObject.__init__(self)
+        PovPreTransformation.__init__(self)
+
 
         self._decoration          = decoration
         self._decoration_mappings = decoration_mappings
@@ -151,6 +158,7 @@ class PovLEGOBrick(PovCSGObject, PovPreTransformation):
             self._container = None
         else:
             self._container = PovCSGUnion(comment=self._descr)
+
 
         for partnr in range(default_config.getint('parts', 0)):
             parts = config['PART%i' % partnr]
@@ -177,6 +185,9 @@ class PovLEGOBrick(PovCSGObject, PovPreTransformation):
             else:
                 self._container.add(brick_part)
 
+
+        self._container.add_pre_commands(self._write_pre_rotate)
+        self._container.add_pre_commands(self._write_pre_translate)
 
         # add decoration if necessary
         if len(self._decoration) > 0:
