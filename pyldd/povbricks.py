@@ -89,6 +89,7 @@ class PovPreTransformation(PovWriterObject):
     def __init__(self, comment='pre transform'):
         self.__pre_rotate    = []
         self.__pre_translate = []
+        self.__pre_scale     = []
 
 
     @property
@@ -123,9 +124,27 @@ class PovPreTransformation(PovWriterObject):
             self._write_indent(ffile, 'translate %s\n' % r, indent=indent)
 
 
-    def write_pov(self, ffile, indent=0):
+    @property
+    def pre_scale(self):
+        return self.__pre_scale
+
+
+    @pre_scale.setter
+    def pre_scale(self, new_scale):
+        scale = Point3D(new_scale)
+        self.__pre_scale.append(scale)
+
+
+    def _write_pre_scale(self, ffile, indent=0):
+        for s in self.__pre_scale:
+            self._write_indent(ffile, 'scale %s\n' % s, indent=indent)
+
+
+    def _write_pre_geometry(self, ffile, indent=0):
         self._write_pre_rotate(ffile, indent=indent)
         self._write_pre_translate(ffile, indent=indent)
+        self._write_pre_scale(ffile, indent=indent)
+
 
 
 class PovLEGOBrick(PovCSGObject, PovPreTransformation):
@@ -186,8 +205,7 @@ class PovLEGOBrick(PovCSGObject, PovPreTransformation):
                 self._container.add(brick_part)
 
 
-        self._container.add_pre_commands(self._write_pre_rotate)
-        self._container.add_pre_commands(self._write_pre_translate)
+        self._container.add_pre_commands(self._write_pre_geometry)
 
         # add decoration if necessary
         if len(self._decoration) > 0:
