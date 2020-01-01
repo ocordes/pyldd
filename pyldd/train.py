@@ -21,6 +21,14 @@ def angle(grad_angle):
     return (np.pi / 180) * grad_angle
 
 
+def add_array(a, x):
+    if a is None:
+        return x
+    else:
+        print(np.isclose(a[-1], x[0]))
+        print('AA', a[-1], x[0])
+        return np.concatenate((a, x))
+
 
 class TrainTrack(object):
     def __init__(self, prev=None, scale=1,
@@ -80,9 +88,31 @@ class TrainTrack(object):
         return scene
 
 
+    def get_train_track_data(self, prev):
+        return np.array([self._position[0], self._end_position[0]])*self._scale[0], \
+               np.array([self._position[1], self._end_position[1]])*self._scale[1], \
+               np.array([self._position[2], self._end_position[2]])*self._scale[2], \
+               self._next
+
+
     def get_train_track(self):
-        return True
-        
+        prev = None
+        current = self
+
+        data_x = None
+        data_y = None
+        data_z = None
+
+        while current is not None:
+            x, y, z, next = current.get_train_track_data(prev)
+            data_x = add_array(data_x, x)
+            data_y = add_array(data_y, y)
+            data_z = add_array(data_z, z)
+            prev = current
+            current = next
+
+        return data_x, data_y, data_z
+
 
     def new_position(self, offset_x, offset_y):
         a = angle(-self._rotation[1])
@@ -120,6 +150,17 @@ class TrainTrackStraight(TrainTrack):
         obj.pre_rotate = [0,-90,0]
         obj.pre_translate = [0, 0, -3.5*LG_BRICK_WIDTH]
         return obj
+
+
+    def get_train_track_data(self, prev):
+        num_elements = 100
+        x = np.linspace(self._position[0], self._end_position[0], num_elements)
+        y = np.linspace(self._position[1], self._end_position[1], num_elements)
+        z = np.linspace(self._position[2], self._end_position[2], num_elements)
+        return x*self._scale[0], \
+               y*self._scale[1], \
+               z*self._scale[2], \
+               self._next
 
 
 class TrainTrackCurve(TrainTrack):
@@ -170,6 +211,45 @@ class TrainTrackCurve(TrainTrack):
             obj.pre_rotate = [0,-90,0]
             obj.pre_translate = [0, 0, -3.5*LG_BRICK_WIDTH]
         return obj
+
+
+    def get_train_track_data(self, prev):
+        Mx = 0
+        if self._left:
+            My = -40*LG_BRICK_WIDTH
+        else:
+            My = 40*LG_BRICK_WIDTH
+
+        My = -40*LG_BRICK_WIDTH
+
+        M = self.new_position(Mx, My)
+
+        print(M)
+
+        num_elements = 100
+
+        alpha = np.linspace(self._rotation[1], self._end_rotation[1], num_elements)
+        alpha *= np.pi / 180.
+        x = M[0]+40*LG_BRICK_WIDTH*np.sin(alpha)
+        x -= np.sin(alpha)*LG_WALL_WIDTH
+        if self._left:
+            z = M[2]+40*LG_BRICK_WIDTH*np.cos(alpha)
+            z -= np.cos(alpha)*LG_WALL_WIDTH
+        else:
+            z = M[2]-40*LG_BRICK_WIDTH*np.cos(alpha)
+            z += np.cos(alpha)*LG_WALL_WIDTH
+        y = np.linspace(self._position[1], self._end_position[1], num_elements)
+
+        print('TDa', alpha[0], alpha[-1])
+        print('TDx', x[0], x[-1])
+        print('FDx', self._position[0], self._end_position[0])
+        print('TDz', z[0], z[-1])
+        print('FDz', self._position[2], self._end_position[2])
+
+        return x*self._scale[0], \
+               y*self._scale[1], \
+               z*self._scale[2], \
+               self._next
 
 
 class TrainTrackSlave(TrainTrack):
