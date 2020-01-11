@@ -21,13 +21,13 @@ def angle(grad_angle):
     return (np.pi / 180) * grad_angle
 
 
-def add_array(a, x):
+def add_array(a, x, atol=0.01):
     if a is None:
-        return x
+        return x, True
     else:
-        print(np.isclose(a[-1], x[0]))
-        print('AA', a[-1], x[0])
-        return np.concatenate((a, x))
+        closed = np.isclose(a[-1], x[0], atol=atol)
+        #print('AA', a[-1], x[0])
+        return np.concatenate((a, x)), closed
 
 
 class TrainTrack(object):
@@ -105,9 +105,9 @@ class TrainTrack(object):
 
         while current is not None:
             x, y, z, next = current.get_train_track_data(prev)
-            data_x = add_array(data_x, x)
-            data_y = add_array(data_y, y)
-            data_z = add_array(data_z, z)
+            data_x, closed = add_array(data_x, x)
+            data_y, closed = add_array(data_y, y)
+            data_z, closed = add_array(data_z, z)
             prev = current
             current = next
 
@@ -214,37 +214,60 @@ class TrainTrackCurve(TrainTrack):
 
 
     def get_train_track_data(self, prev):
-        Mx = 0
-        if self._left:
-            My = -40*LG_BRICK_WIDTH
-        else:
-            My = 40*LG_BRICK_WIDTH
-
-        My = -40*LG_BRICK_WIDTH
-
-        M = self.new_position(Mx, My)
-
-        print(M)
-
         num_elements = 100
+        # Mx = 0
+        # if self._left:
+        #     My = -40*LG_BRICK_WIDTH
+        # else:
+        #     My = 40*LG_BRICK_WIDTH
+        #
+        # My = -40*LG_BRICK_WIDTH
+        #
+        # M = self.new_position(Mx, My)
+        #
+        # print(M)
+        #
+        # alpha = np.linspace(self._rotation[1], self._end_rotation[1], num_elements, endpoint=True)
+        # alpha *= np.pi / 180.
+        # alpha2 = np.linspace(0, 22.5, num_elements, endpoint=True) * np.pi / 180.
+        # x = M[0]+40*LG_BRICK_WIDTH*np.sin(alpha)
+        # x -= np.sin(alpha2)*LG_WALL_WIDTH
+        # #x -= M[0]
+        # if self._left:
+        #     z = M[2]+40*LG_BRICK_WIDTH*np.cos(alpha)
+        #     z -= np.sin(alpha2)*0.3863
+        # else:
+        #     z = M[2]-40*LG_BRICK_WIDTH*np.cos(alpha)
+        #     z += np.sin(alpha2)*0.3863
+        #
+        # #z -= M[2]
+        # #y = np.linspace(self._position[1], self._end_position[1], num_elements)
 
-        alpha = np.linspace(self._rotation[1], self._end_rotation[1], num_elements)
-        alpha *= np.pi / 180.
-        x = M[0]+40*LG_BRICK_WIDTH*np.sin(alpha)
-        x -= np.sin(alpha)*LG_WALL_WIDTH
+
+        # alternative
+        a = np.linspace(0, 22.5, num_elements)
+        a *= np.pi / 180.
+        #a = angle(22.5)
+        dx = 40.0*LG_BRICK_WIDTH*np.sin(a)
+        dx -= np.sin(a)*LG_WALL_WIDTH
         if self._left:
-            z = M[2]+40*LG_BRICK_WIDTH*np.cos(alpha)
-            z -= np.cos(alpha)*LG_WALL_WIDTH
+            dy = -42.0*LG_BRICK_WIDTH*(1-np.cos(a))
+            #dy -= np.cos(a)*LG_WALL_WIDTH
         else:
-            z = M[2]-40*LG_BRICK_WIDTH*np.cos(alpha)
-            z += np.cos(alpha)*LG_WALL_WIDTH
-        y = np.linspace(self._position[1], self._end_position[1], num_elements)
+            dy = 42.0*LG_BRICK_WIDTH*(1-np.cos(a))
+            #dy += np.cos(a)*LG_WALL_WIDTH
 
-        print('TDa', alpha[0], alpha[-1])
-        print('TDx', x[0], x[-1])
-        print('FDx', self._position[0], self._end_position[0])
-        print('TDz', z[0], z[-1])
-        print('FDz', self._position[2], self._end_position[2])
+        positions = self.new_position(dx, dy)
+
+        x = positions[0]
+        y = np.linspace(self._position[1], self._end_position[1], num_elements)
+        z = positions[2]
+
+        # print('TDa', alpha[0], alpha[-1])
+        # print('TDx', x[0], x[-1])
+        # print('FDx', self._position[0], self._end_position[0])
+        # print('TDz', z[0], z[-1])
+        # print('FDz', self._position[2], self._end_position[2])
 
         return x*self._scale[0], \
                y*self._scale[1], \
