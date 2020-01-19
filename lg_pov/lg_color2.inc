@@ -668,6 +668,15 @@
  finish { lg_solid_finish }
 }
 
+
+// 329
+#declare lg_glow_in_dark_white = texture {
+ pigment { rgb <217/255, 217/255, 180/255> }
+ normal { lg_normal }
+ finish { lg_solid_finish }
+}
+
+
 // 334
 #declare lg_gold_chrome = texture {
  pigment { rgb <233/255, 110/255, 19/255> }

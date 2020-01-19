@@ -236,6 +236,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '4589':  [ '4589', None ],     # nose cone small 1 x 1
                  '4597':  [ '4597', None ],     # space cabin base 6 x 6
                  '4599':  [ '4599', None ],     # Tap 1 x 1
+                 '4623':  [ '4623', None ],     # plate 1 x 2 with arm
                  '4729':  [ '4729', None ],     # brick 2 x 2 no studs with pin
                  '4732':  [ '4732', None ],     # bracket 8 x 2 x 1 & 1/3
                  '4733':  [ '4733', None ],     # brick 1 x 1 with studs on sides
@@ -347,6 +348,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '30241': [ '30241', None ],    # brick 1 x 1 with clip vertical
                  '30249': [ '30249', None ],    # slope brick 55 1 x 6 x 5
                  '30250': [ '30250', None ],    # bracket 4 x 7 x 3
+                 '30340': [ '30340', None ],    # minifig life ring
                  '30357': [ '30357', None ],    # plate 3 x 3 corner round
                  '30360': [ '30360', None ],    # cylinder 3 x 6 x 2 2/3 horizontal
                  '30361': [ '30361', None ],    # cylinder 2 x 2 x 2 robot body
@@ -493,6 +495,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '87559': [ '87559', None ],    # brick round corner 6 x 6 x 2
                  '87580': [ '87580', None ],    # plate 2 x 2 with stud
                  '87620': [ '87620', None ],    # brick 2 x 2 facet
+                 '88072': [ '4623', None ],     # plate 1 x 2 with arm
                  '88293': [ '88293', None ],    # brick 3 x 3 x 2 round corner with dome top
                  '88393': [ '88393', None ],    # brick 1 x 2 x 5 with groove
                  '88646': [ '88646', None ],    # plate 3 x 4 with 4 knobs

@@ -1,6 +1,6 @@
 // all includes for handling LDX commands from LDView
 
-// Oliver Cordes 2018-08-31
+// Oliver Cordes 2020-01-12
 //
 
 // the content is copied from povray files which are
@@ -5459,4 +5459,133 @@ union {
 #declare LDX_4_dash_4con2_dot_dat_in_part = cone // Cone 1
 {
         <0,0,0>,3,<0,1,0>,2 open
+}
+
+
+#declare LDX_t02o2000_dot_dat_in_part = torus // Torus 0.5
+{
+        1,0.20000000298023223877
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                difference
+                {
+                        cylinder
+                        {
+                                <0,0,0>,<0,1,0>,2                       }
+                        cylinder
+                        {
+                                <0,0,0>,<0,1,0>,1                       }
+                }
+        }
+}
+
+
+#declare LDX_1_dash_4con18_dot_dat_in_part = cone // Cone 0.25
+{
+        <0,0,0>,19,<0,1,0>,18 open
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-1,0,0>,0
+                }
+        }
+}
+
+
+#declare LDX_1_dash_4con19_dot_dat_in_part = cone // Cone 0.25
+{
+        <0,0,0>,20,<0,1,0>,19 open
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-1,0,0>,0
+                }
+        }
+}
+
+
+#declare LDX_1_dash_4con31_dot_dat_in_part = cone // Cone 0.25
+{
+        <0,0,0>,32,<0,1,0>,31 open
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-1,0,0>,0
+                }
+        }
+}
+
+
+#declare LDX_3_dash_4ring8_dot_dat_in_part = disc // Ring 0.75
+{
+        <0,0,0>,<0,1,0>,9,8
+        clipped_by
+        {
+                union
+                {
+                        plane
+                        {
+                                <0,0,-1>,0
+                        }
+                        plane
+                        {
+                                <1,0,0>,0
+                        }
+                }
+        }
+}
+
+
+#declare LDX_t02i2258_dot_dat_in_part = torus // Torus 0.5
+{
+        1,0.22579999268054962158
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                cylinder
+                {
+                        <0,0,0>,<0,1,0>,1               }
+        }
+}
+
+
+#declare LDX_t04i2258_dot_dat_in_part = torus // Torus 0.25
+{
+        1,0.22579999268054962158
+        clipped_by
+        {
+                plane
+                {
+                        <0,0,-1>,0
+                }
+                plane
+                {
+                        <-1,0,0>,0
+                }
+                cylinder
+                {
+                        <0,0,0>,<0,1,0>,1               }
+        }
 }
