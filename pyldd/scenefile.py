@@ -14,3 +14,7 @@ class SceneFile(object):
 
     def open(self, filename):
         raise NotImplemented
+
+
+    def model(self):
+        raise NotImplemented
