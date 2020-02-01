@@ -185,7 +185,8 @@ def create_custom_brick(scene, itemno, transformation=zero_trafo, colour='194'):
 
     obj, inc_list = brick.get_pov_object()
 
-    scene.add(obj)
-    scene.add_include(inc_list)
+    if obj is not None:
+        scene.add(obj)
+        scene.add_include(inc_list)
 
     return obj
