@@ -162,8 +162,8 @@ def create_custom_bricks():
     scene.add_include('lg_color2.inc')
     scene.add_include('lg_defs.inc')
 
-    scene.scale = [-1,1,1]
-    scene.rotate = [0,180,0]
+    scene.pre_scale = [-1,1,1]
+    scene.pre_rotate = [0,180,0]
     scene.add_macro(lego_transform_macro)
 
     return scene

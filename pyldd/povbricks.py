@@ -398,7 +398,12 @@ class PovLEGOBrick(PovCSGObject, PovPreTransformation):
 # python brick models
 
 
-class PovLEGOModel(PovCSGUnion):
+class PovLEGOModel(PovCSGUnion, PovPreTransformation):
+    def __init__(self):
+        PovCSGUnion.__init__(self)
+        PovPreTransformation.__init__(self)
+        self.add_pre_commands(self._write_pre_geometry)
+
     def find_brick(self, itemNos, color=None):
         bricks = []
         for i in self._items:

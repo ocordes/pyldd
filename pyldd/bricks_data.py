@@ -172,6 +172,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '3857':  [ '3857', None ],     # baseplate 16 x 32
                  '3861':  [ '3861', None ],     # door 1 x 4 x 5
                  '3865':  [ '3865', None ],     # base plate 8 x 16
+                 '3867':  [ '3867', None ],     # base plate 16 x 16
                  '3894':  [ '3894', None ],     # technic beam 1 x 6 with holes
                  '3895':  [ '3895', None ],     # technic beam 1 x 12 with holes
                  '3899':  [ '3899', None ],     # town mug
