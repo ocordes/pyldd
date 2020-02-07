@@ -87,9 +87,37 @@ def move2union(fromobj, union, obj, shift=None):
 
 class PovPreTransformation(PovWriterObject):
     def __init__(self, comment='pre transform'):
-        self.__pre_rotate    = []
-        self.__pre_translate = []
-        self.__pre_scale     = []
+        self.__pre_rotate       = []
+        self.__pre_translate    = []
+        self.__pre_scale        = []
+        self.__pre_full_matrix  = []
+
+
+    @property
+    def pre_full_matrix(self):
+        return self.__pre_full_matrix
+
+
+    @pre_full_matrix.setter
+    def pre_full_matrix(self, val):
+        if val is None:
+            self.__pre_full_matrix = []
+        elif isinstance(val, (list, tuple)):
+            l = True
+            if len(val) == 12:   # check if matrices list or
+                                 # single matrix
+                try:
+                    m = Matrix3D(val[0])
+                except:
+                    l = False
+
+            if l:
+                for m in val:
+                    self._pre_full_matrix.append(Matrix3D(m))
+            else:
+                self.__pre_full_matrix.append(Matrix3D(val))
+        else:
+            self.__pre_full_matrix.append(Matrix3D(val))
 
 
     @property
@@ -140,10 +168,16 @@ class PovPreTransformation(PovWriterObject):
             self._write_indent(ffile, 'scale %s\n' % s, indent=indent)
 
 
+    def _write_pre_full_matrix( self, ffile, indent=0 ):
+        for m in self.__pre_full_matrix:
+            self._write_indent(ffile, 'matrix <{}>\n'.format(m), indent)
+
+
     def _write_pre_geometry(self, ffile, indent=0):
         self._write_pre_rotate(ffile, indent=indent)
         self._write_pre_translate(ffile, indent=indent)
         self._write_pre_scale(ffile, indent=indent)
+        self._write_pre_full_matrix(ffile, indent=indent)
 
 
 

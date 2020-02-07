@@ -5,7 +5,7 @@
 [DEFAULT]
 descr=tile 1 x 2 grille without groove
 type=plate
-file=lg_2412
+file=lg_2412b
 width=1
 length=0
 depth=1/3
@@ -15,7 +15,7 @@ sz=1
 parts=1
 
 [PART0]
-part=lg_2412
+part=lg_2412b
 texture=n
 
 [MAPPING0]

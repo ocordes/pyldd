@@ -20,6 +20,9 @@ from pyldd.ldr_trafo import ldr2lddtrafo
 
 ldr_bricks = {
                 '2412b.dat': '2412',
+                '3003.dat': '3003',
+                '3004.dat': '3004',
+                '3005.dat': '3005',
                 '3867.dat': '3867',
                 '4733.dat': '4733',
 }
@@ -35,7 +38,54 @@ def getldrtrafo(t):
     nt = t.copy()
     nt[0:9] = t[3:12]
     nt[9:12] = t[0:3] * 0.04
+    nt[10] = -nt[10]
+
+    y = nt[0:9]
+    # check for special rotation matrix
+    x = np.array([0.0,0.0,-1.0,-1.0,0.0,0.0,0.0,1.0,0.0])
+    if np.all(np.isclose(x,y)):
+        nt[0:9] = np.array([0.,-1.,0.,0.,0.,-1.,1.,0.,0.])
+
+    x = np.array([0.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,-1.0])
+    if np.all(np.isclose(x,y)):
+        nt[0:9] = np.array([0.,1.,0.,-1.,0.,0.,0.,0.,1.])
+
+    x = np.array([0.0,0.0,-1.0,1.0,0.0,0.0,0.0,-1.0,0.0])
+    if np.all(np.isclose(x,y)):
+        nt[0:9] = np.array([0.,-1.,0.,0.,0.,1.,-1.,0.,0.])
+
+
     return nt
+
+
+def trafo2matrix(t):
+    m = np.array([[2,0,0,0],
+                 [0,2,0,0],
+                 [0,0,2,0],
+                 [0,0,0,1]], dtype=np.float64)
+
+    m[0:3,0:3] = t[0:9].reshape((3,3))
+    m[0:3,3] = t[9:12]
+
+    #print('t=', t)
+    #print('m=', m)
+
+    return m
+
+
+def matrix2trafo(m):
+    t = np.array([1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0], dtype=np.float64)
+    t[0:9] = m[0:3,0:3].flatten()
+    t[9:12] = m[0:3,3]
+
+    return t
+
+
+def trafo_dot_trafo(t1, t2):
+    t1 = trafo2matrix(t1)
+    t2 = trafo2matrix(t2)
+    t = np.dot(t1, t2)
+    return matrix2trafo(t)
 
 
 class LdrBrick(object):
@@ -56,7 +106,7 @@ class LdrBrick(object):
 
     def get_min_height(self):
         if self._isbrick:
-            return self._trafo[10]
+            return self._trafo[10]+self._ldd_trafo[10]
         else:
             return 0.0
 
@@ -74,10 +124,13 @@ class LdrBrick(object):
 
         if self._isbrick:
             #trafo = np.array([1.,0.,0.,0.,1.,0.,0.,0.,1.,0.,0.,0.])
+            t = trafo_dot_trafo(self._ldd_trafo, self._trafo)
+            print('result:', t)
             b = create_custom_brick(scene, self._itemno,
                                     transformation = self._trafo,
+                                    #transformation = t,
                                     colour='{}'.format(self._color))
-            b.pre_matrix = self._ldd_trafo
+            b.pre_full_matrix = self._ldd_trafo
         else:
             print('including sub {}'.format(self._itemno))
             self._sub_file = self.get_sub_file(groups, self._itemno)
@@ -110,8 +163,8 @@ class BrickGroup(object):
             scene.add_include('lg_color2.inc')
             scene.add_include('lg_defs.inc')
 
-            scene.pre_scale = [-1,1,1]
-            scene.pre_rotate = [0,180,0]
+            #scene.pre_scale = [-1,1,1]
+            #scene.pre_rotate = [0,180,0]
             scene.add_macro(lego_transform_macro)
 
         nr = 1
