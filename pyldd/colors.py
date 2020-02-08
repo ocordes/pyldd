@@ -84,6 +84,7 @@ color_table = {    1: 'lg_white',
 		 232: 'lg_sky_blue',
 		 234: 'lg_clear_neon_yellow',
 		  24: 'lg_yellow',
+          25: 'lg_brown',   # add from LDR conversion
 		  26: 'lg_black',
 		 268: 'lg_dark_purple',
 		  27: 'lg_dark_grey',
