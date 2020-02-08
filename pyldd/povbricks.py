@@ -113,7 +113,7 @@ class PovPreTransformation(PovWriterObject):
 
             if l:
                 for m in val:
-                    self._pre_full_matrix.append(Matrix3D(m))
+                    self.__pre_full_matrix.append(Matrix3D(m))
             else:
                 self.__pre_full_matrix.append(Matrix3D(val))
         else:
@@ -174,11 +174,10 @@ class PovPreTransformation(PovWriterObject):
 
 
     def _write_pre_geometry(self, ffile, indent=0):
+        self._write_pre_full_matrix(ffile, indent=indent)
         self._write_pre_rotate(ffile, indent=indent)
         self._write_pre_translate(ffile, indent=indent)
         self._write_pre_scale(ffile, indent=indent)
-        self._write_pre_full_matrix(ffile, indent=indent)
-
 
 
 class PovLEGOBrick(PovCSGObject, PovPreTransformation):

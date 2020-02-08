@@ -57,7 +57,7 @@ class Scene(object):
         return mat_list
 
 
-    def generate_povlist(self, python_model, scene=None):
+    def generate_povlist(self, python_model, scene=None, ldr=False):
         known_bricks = 0
         unknown_bricks = 0
 
@@ -78,7 +78,7 @@ class Scene(object):
 
 
             for brick in self.bricks:
-                pov_part, include_list = brick.get_pov_object()
+                pov_part, include_list = brick.get_pov_object(ldr=ldr)
                 if pov_part is None:
                     unknown_bricks += 1
                 else:
@@ -169,7 +169,7 @@ def create_custom_bricks():
     return scene
 
 
-def create_custom_brick(scene, itemno, transformation=zero_trafo, colour='194'):
+def create_custom_brick(scene, itemno, transformation=zero_trafo, colour='194', ldr=False):
     # create a list from colors
     if isinstance(colour, list) == False:
         colour = [colour]
@@ -183,7 +183,7 @@ def create_custom_brick(scene, itemno, transformation=zero_trafo, colour='194'):
     brick = Brick(adict)
 
 
-    obj, inc_list = brick.get_pov_object()
+    obj, inc_list = brick.get_pov_object(ldr=ldr)
 
     if obj is not None:
         scene.add(obj)

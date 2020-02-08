@@ -113,7 +113,7 @@ class Brick( object ):
         print('Done.')
 
 
-    def get_pov_object(self):
+    def get_pov_object(self, ldr=False):
         if decoration_mappings is None:
             self._load_decorations_mappings()
 

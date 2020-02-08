@@ -23,8 +23,13 @@ ldr_bricks = {
                 '3003.dat': '3003',
                 '3004.dat': '3004',
                 '3005.dat': '3005',
+                '3023.dat': '3023',
                 '3867.dat': '3867',
+                '4740.dat': '4740',
                 '4733.dat': '4733',
+                '6636.dat': '6636',
+                '4275b.dat': '4275',
+                '4276b.dat': '4276',
 }
 
 
@@ -34,26 +39,43 @@ def getldrbrick(s):
     return s, False
 
 
-def getldrtrafo(t):
+def getldrtrafo(t, brick=True):
     nt = t.copy()
     nt[0:9] = t[3:12]
     nt[9:12] = t[0:3] * 0.04
     nt[10] = -nt[10]
 
-    y = nt[0:9]
-    # check for special rotation matrix
-    x = np.array([0.0,0.0,-1.0,-1.0,0.0,0.0,0.0,1.0,0.0])
-    if np.all(np.isclose(x,y)):
-        nt[0:9] = np.array([0.,-1.,0.,0.,0.,-1.,1.,0.,0.])
+    # y = nt[0:9]
+    # # check for special rotation matrix
+    # x = np.array([0.0,0.0,-1.0,-1.0,0.0,0.0,0.0,1.0,0.0])
+    # if np.all(np.isclose(x,y)):
+    #     nt[0:9] = np.array([0.,-1.,0.,0.,0.,-1.,1.,0.,0.])
+    #
+    # x = np.array([0.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,-1.0])
+    # if np.all(np.isclose(x,y)):
+    #     nt[0:9] = np.array([0.,1.,0.,-1.,0.,0.,0.,0.,1.])
+    #
+    # x = np.array([0.0,0.0,-1.0,1.0,0.0,0.0,0.0,-1.0,0.0])
+    # if np.all(np.isclose(x,y)):
+    #     nt[0:9] = np.array([0.,-1.,0.,0.,0.,1.,-1.,0.,0.])
 
-    x = np.array([0.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,-1.0])
-    if np.all(np.isclose(x,y)):
-        nt[0:9] = np.array([0.,1.,0.,-1.,0.,0.,0.,0.,1.])
+    # create new sorting
+    nt[0:9] = nt[[0,3,6,1,4,7,2,5,8]]
 
-    x = np.array([0.0,0.0,-1.0,1.0,0.0,0.0,0.0,-1.0,0.0])
-    if np.all(np.isclose(x,y)):
-        nt[0:9] = np.array([0.,-1.,0.,0.,0.,1.,-1.,0.,0.])
 
+    # mirror matrix which should be applied to bricks
+    # not to groups
+    mmatrix = np.array([[-1.0, 0.0, 0.0],
+                        [0.0, 1.0, 0.0],
+                        [0.0, 0.0, -1.0]])
+
+    # recreate trafo matrix
+    m = nt[0:9].reshape((3,3))
+
+    print('det=',np.linalg.det(m))
+    if brick:
+        # apply mirror ...
+        nt[0:9] = np.dot(m, mmatrix).flatten()
 
     return nt
 
@@ -93,9 +115,11 @@ class LdrBrick(object):
         print('line:', line)
         sline = line.split()
         self._ldrname = sline[-1]
-        self._trafo = getldrtrafo(np.array(sline[1:13], dtype=np.float64))
-        self._color = getldrcolors(int(sline[0]))
         self._itemno, self._isbrick = getldrbrick(self._ldrname)
+
+        self._trafo = getldrtrafo(np.array(sline[1:13], dtype=np.float64),brick=self._isbrick)
+        self._color = getldrcolors(int(sline[0]))
+
         print(self._itemno)
 
         if self._isbrick:
@@ -123,9 +147,6 @@ class LdrBrick(object):
         #              decoration, decoration_mappings):
 
         if self._isbrick:
-            #trafo = np.array([1.,0.,0.,0.,1.,0.,0.,0.,1.,0.,0.,0.])
-            t = trafo_dot_trafo(self._ldd_trafo, self._trafo)
-            print('result:', t)
             b = create_custom_brick(scene, self._itemno,
                                     transformation = self._trafo,
                                     #transformation = t,
