@@ -140,7 +140,8 @@ class LdrBrick(object):
         if self._isbrick:
             return self._trafo[10]+self._ldd_trafo[10]
         else:
-            return 0.0
+            return self._sub_file.get_min_height()+self._trafo[10]
+
 
     def get_sub_file(self, groups, name):
         name = name.lower()
