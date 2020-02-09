@@ -8,10 +8,13 @@ type=flower
 file=lg_3741
 width=0
 length=0
-depth=0
+depth=1/2
 sx=1
 sy=1
 sz=1
+lsx=1
+lsy=1
+lsz=-1
 parts=1
 
 [PART0]

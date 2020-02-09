@@ -129,6 +129,7 @@ union {
   }
   #declare ROT = ROT + 1;
  #end
+ rotate y*180
 }
 
 #declare lg_3742_clear =

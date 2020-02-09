@@ -632,7 +632,8 @@
 
 // 288
 #declare lg_dark_green = texture {
- pigment { rgb <39/255, 70/255, 44/255> }
+ //pigment { rgb <40/255, 127/255, 70/255> }
+ pigment { rgb <0/255, 40/255, 10/255> }
  normal { lg_normal }
  finish { lg_solid_finish }
 }

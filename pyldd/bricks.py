@@ -74,7 +74,7 @@ class Brick( object ):
         #filename = os.path.join( brick_data_dir, '{}.dat'.format( brickname ) )
         filename = resource_filename(__name__, '{}/{}.dat'.format(brick_data_dir, brickname))
         if verbose:
-            print( 'loading brick data \'{}\' ...'.format( filename ) )
+            print('Loading brick data \'{}\' ...'.format(filename))
 
 
         config = configparser.ConfigParser()
@@ -87,7 +87,7 @@ class Brick( object ):
 
     def _load_decorations_mappings(self):
         global decoration_mappings
-        print('Loading DecorationsMappings...')
+        print('Loading DecorationsMappings ... ', end='')
 
         filename = resource_filename(__name__, '{}/DecorationMapping.xml'.format(brick_data_dir))
 
@@ -110,7 +110,7 @@ class Brick( object ):
                     print(mapping.attrib['decorationID'])
                 decoration_mappings[mapping.attrib['decorationID']] = el
 
-        print('Done.')
+        print('done.')
 
 
     def get_pov_object(self, ldr=False):

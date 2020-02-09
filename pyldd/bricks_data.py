@@ -143,6 +143,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '3710':  [ '3710', None ],     # plate 1 x 4
                  '3730':  [ '3730', None ],     # plate 2 x 2 with towball coupling
                  '3741':  [ '3741', None ],     # flower stem
+                 '3742':  [ '3742', None ],     # flower
                  '3747':  [ '3747', None ],     # slope brick 33 3 x 2 inverted
                  '3754':  [ '3754', None ],     # brick 1 x 6 x 5
                  '3755':  [ '3755', None ],     # brick 1 x 3 x 5
@@ -527,6 +528,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '98285': [ '98285', None ],    # hinge plate 2 x 4.5 base with technic pin hole
                  '98286': [ '98286', None ],    # hinge plate 2 x 4.5 base with technic pin hole
                  '98302': [ '3475', None ],     # plate 1 x 2 with jet enginde with axle hole
+                 '98549': [ '98549', None ],    # tile, modified 2 x 2 with bar and stud with stop ring
                  '98560': [ '98560', None ],    # slope brick 75 2 x 2 x 3 not open studs
                  '99206': [ '99206', None ],    # plate 2 x 2 x 2/3 with two studs on side and two raised
                  '99249': [ '99249', None ],    # mini bouq. stem with 3.2 shaft

@@ -1,0 +1,21 @@
+# flower
+#
+# Oliver Cordes 2020-02-09
+# 
+[DEFAULT]
+descr=flower
+type=flower
+file=lg_3742
+width=0
+length=0
+depth=1/6
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_3742
+texture=n
+
+[MAPPING0]

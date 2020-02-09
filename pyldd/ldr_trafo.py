@@ -45,7 +45,7 @@ def create_rotation_matrix(vector, angle):
 
 def load_ldr_trafo_matrix():
     global ldr_trafo_matrix
-    print('Loading \'ldraw.xml\'')
+    print('Loading \'ldraw.xml\' ', end='')
     filename = resource_filename(__name__, '{}/ldraw.xml.gz'.format(brick_data_dir))
 
     ldr_trafo_matrix = {}
@@ -56,7 +56,7 @@ def load_ldr_trafo_matrix():
         for trafo in trafos:
             ldr_trafo_matrix[trafo.attrib['ldraw']] = {i:trafo.attrib[i] for i in ['tx', 'ty', 'tz', 'ax', 'ay', 'az', 'angle']}
 
-    print('Done.')
+    print('done.')
 
 
 def calculate_matrix(trafo):
@@ -79,8 +79,6 @@ def calculate_matrix(trafo):
     matrix[9] = float(trafo['tx'])
     matrix[10] = float(trafo['ty'])
     matrix[11] = float(trafo['tz'])
-
-    print(matrix)
 
     return matrix
 

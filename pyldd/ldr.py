@@ -17,19 +17,29 @@ from pyldd.ldr_trafo import ldr2lddtrafo
 
 
 
-
+# list of all checked ldr parts
 ldr_bricks = {
                 '2412b.dat': '2412',
                 '3003.dat': '3003',
                 '3004.dat': '3004',
                 '3005.dat': '3005',
                 '3023.dat': '3023',
+                '3062b.dat': '3062',
+                '3069a.dat': '3069',
+                '3470.dat': '3470',
+                '3471.dat': '3471',
+                '3666.dat': '3666',
+                '3741.dat': '3741',
+                '3742.dat': '3742',
+                '3865.dat': '3865',
                 '3867.dat': '3867',
+                '4162.dat': '4162',
                 '4740.dat': '4740',
                 '4733.dat': '4733',
                 '6636.dat': '6636',
                 '4275b.dat': '4275',
                 '4276b.dat': '4276',
+                '98549.dat': '98549',
 }
 
 
@@ -88,9 +98,6 @@ def trafo2matrix(t):
     m[0:3,0:3] = t[0:9].reshape((3,3))
     m[0:3,3] = t[9:12]
 
-    #print('t=', t)
-    #print('m=', m)
-
     return m
 
 
@@ -111,18 +118,20 @@ def trafo_dot_trafo(t1, t2):
 
 class LdrBrick(object):
     def __init__(self, line):
-        print('line:', line)
+        #print('line:', line)
         sline = line.split()
         self._ldrname = sline[-1]
         self._itemno, self._isbrick = getldrbrick(self._ldrname)
 
         self._trafo = getldrtrafo(np.array(sline[1:13], dtype=np.float64),brick=self._isbrick)
-        self._color = getldrcolors(int(sline[0]))
 
-        print(self._itemno)
-
+        # do some things only if object is a brick not a group
         if self._isbrick:
             self._ldd_trafo = ldr2lddtrafo(self._ldrname)
+            self._color = getldrcolors(int(sline[0]))
+        else:
+            self._ldd_trafo = None
+            self._color = None
 
         self._sub_file = None
 
@@ -151,9 +160,10 @@ class LdrBrick(object):
                                     #transformation = t,
                                     colour='{}'.format(self._color),
                                     ldr=True)
-            b.pre_full_matrix = self._ldd_trafo
+            if b is not None:
+                b.pre_full_matrix = self._ldd_trafo
         else:
-            print('including sub {}'.format(self._itemno))
+            print('Including sub-file {} ...'.format(self._itemno))
             self._sub_file = self.get_sub_file(groups, self._itemno)
             if self._sub_file is None:
                 print('WARNING: sub-file `{}` not found!'.format(self._itemno))
@@ -170,7 +180,7 @@ class BrickGroup(object):
         self._bricks = []
         self._min_height = 1e100
 
-        print('File start ->', name)
+        #print('File start ->', name)
 
 
     def add(self, brick):
@@ -234,7 +244,7 @@ class LdrFile(SceneFile):
                     if brick_group is not None:
                         self.brick_groups.append(brick_group)
                         brick_group = None
-                    print('File end')
+                    #print('File end')
                 elif metacmd[0] == 'Name:':
                     #print('Sub-File:', metacmd[1])
                     name = metacmd[1]
@@ -256,18 +266,21 @@ class LdrFile(SceneFile):
                     brick_group = BrickGroup(name)
                 brick_group.add(brick)
             else:
-                print(sline)
+                #print(sline)
+                pass
 
         # if only bricks and no subfiles are around
         # add this default group
         if len(self.brick_groups) == 0:
             self.brick_groups.append(brick_group)
-        print('groups:', len(self.brick_groups))
+        print('# of LDR groups:', len(self.brick_groups))
 
 
     def open(self, filename):
+        print('Reading \'%s\' ...' % filename)
         with f.open(filename) as ldrfile:
             self.parse(ldrfile)
+        print('Reading \'%s\' done.' % filename)
 
 
     def model(self):
