@@ -498,7 +498,8 @@
 
 // 70
 #declare lg_reddish_brown = texture {
- pigment { rgb <105/255, 64/255, 39/255> }
+ //pigment { rgb <105/255, 64/255, 39/255> }
+ pigment { rgb <53/255, 32/255, 20/255> }
  normal { lg_normal }
  finish { lg_solid_finish }
 }

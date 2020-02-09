@@ -177,6 +177,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '3894':  [ '3894', None ],     # technic beam 1 x 6 with holes
                  '3895':  [ '3895', None ],     # technic beam 1 x 12 with holes
                  '3899':  [ '3899', None ],     # town mug
+                 '3901':  [ '3901', None ],     # minifig, hair female
                  '3933':  [ '3933', None ],     # wing 8 x 4 left
                  '3934':  [ '3934', None ],     # wing 8 x 4 right
                  '3935':  [ '3935', None ],     # wing 4 x 4 left
@@ -232,6 +233,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '4515':  [ '4515', None ],     # slope brick 10 6 x 8
                  '4519':  [ '4519', None ],     # technic axle 3
                  '4528':  [ '4528', None ],     # town frypan
+                 '4530':  [ '4530', None ],     # minifig hair girl
                  '4532':  [ '4532', None ],     # cupboard 2 x 3 x 2
                  '4533':  [ '4533', None ],     # cupboard 2 x 3 x 2 door
                  '4536':  [ '4536', None ],     # cupboard 2 x 3 x 2 drawer

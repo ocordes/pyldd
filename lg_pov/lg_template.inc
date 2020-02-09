@@ -2,7 +2,7 @@
 /*                                                                             */
 /* LGEO Libray Include File                                                    */
 /*                                                                             */
-/* 20191010 Oliver Cordes                                                      */
+/* 20200209 Oliver Cordes                                                      */
 /*                                                                             */
 /* This file is in no way related to the LEGO(tm) Group.                       */
 /* It is provided for private non-commercial use only.                         */

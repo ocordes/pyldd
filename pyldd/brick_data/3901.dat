@@ -1,0 +1,21 @@
+# minifig, hair female
+#
+# Oliver Cordes 2020-02-09
+# 
+[DEFAULT]
+descr=minifig, hair female
+type=hair
+file=lg_3901
+width=0
+length=0
+depth=0
+sx=1
+sy=1
+sz=1
+parts=1
+
+[PART0]
+part=lg_3901
+texture=n
+
+[MAPPING0]
