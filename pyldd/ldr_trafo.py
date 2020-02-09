@@ -62,12 +62,11 @@ def load_ldr_trafo_matrix():
 def calculate_matrix(trafo):
     matrix = np.array([1., 0., 0., 0., 1., 0., 0., 0., 1., 0., 0., 0.])
 
-    print(trafo)
-
     ax = float(trafo['ax'])
     ay = float(trafo['ay'])
     az = float(trafo['az'])
     angle = float(trafo['angle'])
+
 
     rot_vector = np.array([ax, ay, az])
     rot_matrix = create_rotation_matrix(rot_vector, angle)
@@ -80,6 +79,8 @@ def calculate_matrix(trafo):
     matrix[9] = float(trafo['tx'])
     matrix[10] = float(trafo['ty'])
     matrix[11] = float(trafo['tz'])
+
+    print(matrix)
 
     return matrix
 

@@ -140,6 +140,7 @@ class Brick( object ):
             if 'transformation' in self.__dict__:
                 obj.full_matrix = self.transformation
             else:
+                print('WARNING: wrong angle transformation implemented!')
                 ax = self.ax * self.angle
                 ay = self.ay * self.angle
                 az = self.az * self.angle
@@ -147,13 +148,30 @@ class Brick( object ):
                 obj.translate = [self.tx,self.ty,self.tz]
 
             # now apply the macros
-            obj.macros = 'L_Transform( {},{},{},{},{},{} )'.format(defs['DEFAULT']['width'],
-                                                                   defs['DEFAULT']['depth'],
-                                                                   defs['DEFAULT']['length'],
-                                                                   defs['DEFAULT']['sx'],
-                                                                   defs['DEFAULT']['sy'],
-                                                                   defs['DEFAULT']['sz'])
-            return obj, '{}.inc'.format(defs['DEFAULT']['file'])
+
+            defs = defs['DEFAULT']
+
+            scale_x = defs['sx']
+            scale_y = defs['sy']
+            scale_z = defs['sz']
+
+            # use special ldr configs
+            if ldr:
+                if 'lsx' in defs:
+                    scale_x = defs['lsx']
+                if 'lsy' in defs:
+                    scale_y = defs['lsy']
+                if 'lsz' in defs:
+                    scale_z = defs['lsz']
+
+
+            obj.macros = 'L_Transform( {},{},{},{},{},{} )'.format(defs['width'],
+                                                                   defs['depth'],
+                                                                   defs['length'],
+                                                                   scale_x,
+                                                                   scale_y,
+                                                                   scale_z)
+            return obj, '{}.inc'.format(defs['file'])
         else:
             print('Brick with designID={} not implemented!'.format(self.designID))
         return None, None

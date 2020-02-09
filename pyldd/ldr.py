@@ -72,7 +72,6 @@ def getldrtrafo(t, brick=True):
     # recreate trafo matrix
     m = nt[0:9].reshape((3,3))
 
-    print('det=',np.linalg.det(m))
     if brick:
         # apply mirror ...
         nt[0:9] = np.dot(m, mmatrix).flatten()
@@ -150,7 +149,8 @@ class LdrBrick(object):
             b = create_custom_brick(scene, self._itemno,
                                     transformation = self._trafo,
                                     #transformation = t,
-                                    colour='{}'.format(self._color))
+                                    colour='{}'.format(self._color),
+                                    ldr=True)
             b.pre_full_matrix = self._ldd_trafo
         else:
             print('including sub {}'.format(self._itemno))
