@@ -194,6 +194,7 @@ class PovLEGOBrick(PovCSGObject, PovPreTransformation):
         self._config              = config
         self._color               = color
         self._nr                  = nr           # brick number in list
+        self._parent              = None
 
         default_config = config['DEFAULT']
         # create the brick description
@@ -259,6 +260,18 @@ class PovLEGOBrick(PovCSGObject, PovPreTransformation):
                     else:
                         self._container.add(decal)
 
+
+    def set_parent(self, parent):
+        self._parent = parent
+
+
+    def adjust_light(self, light):
+        self.set_lights(light)
+
+        print(type(self.full_matrix))
+        #v = np.dot(self.full_matrix.rotation, light.__xyz) + self.full_matrix.translation
+
+        #light.__xyz = v
 
 
     def decorate(self, decoration, surface):
@@ -436,6 +449,18 @@ class PovLEGOModel(PovCSGUnion, PovPreTransformation):
         PovCSGUnion.__init__(self)
         PovPreTransformation.__init__(self)
         self.add_pre_commands(self._write_pre_geometry)
+
+        self._parent = None
+
+
+    def set_parent(self, parent):
+        self._parent = parent
+
+
+    def add(self, obj):
+        PovCSGUnion.add(self, obj)
+        obj.set_parent(self)
+
 
     def find_brick(self, itemNos, color=None):
         bricks = []
