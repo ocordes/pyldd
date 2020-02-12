@@ -261,17 +261,95 @@ class PovLEGOBrick(PovCSGObject, PovPreTransformation):
                         self._container.add(decal)
 
 
+    # looks_like
+    #
+    # returns a simple POVray LEGO desccription of the
+    # used brick! Can be used for light_sources
+    def looks_like(self, texture=None, inner_scale=0.95, translate=Point3D([0., 0., 0.])):
+        # calculate the total scale for the brick
+        p = self._parent
+        s = Point3D([1,1,1])
+        while p is not None:
+            if isinstance(p.scale, Point3D):
+                s = s * p.scale
+            p = p._parent
+
+        p = self._container
+        if isinstance(p, PovCSGUnion):
+            p = p._items[0]   # always the first object
+
+        if texture is None:
+            t = ''
+        else:
+            t = texture
+
+        # apply the inner_scale which should be smaller if the brick
+        # is transparent and larger if brick is solid!
+        s *= inner_scale
+
+        return """
+            object{
+                %s
+                %s%s
+                translate %s
+                scale %s
+            }
+        """ % (p._macrocmd, p.macros[0], t, translate, s)
+
+
     def set_parent(self, parent):
         self._parent = parent
 
 
     def adjust_light(self, light):
+        self.hidden = True
         self.set_lights(light)
 
         print(type(self.full_matrix))
-        #v = np.dot(self.full_matrix.rotation, light.__xyz) + self.full_matrix.translation
 
-        #light.__xyz = v
+        x = light.xyz
+        print('before:', x)
+        for m in self.pre_full_matrix:
+            x = m * x
+
+        for m in self.full_matrix:
+            x = m * x
+
+        print('after:', x)
+
+        p = self._parent
+        s = Point3D([1,1,1])
+        i = 1
+        while p is not None:
+            print('type:', type(p))
+            print(i)
+            for m in p.pre_full_matrix:
+                x = m * x
+
+            for m in p.full_matrix:
+                x = m * x
+
+            for t in p.pre_translate:
+                x += t
+
+            if isinstance(p.scale, Point3D):
+                x *= p.scale
+                s = s * p.scale
+
+            for t in p.translate:
+                x += t
+
+            p = p._parent
+            i += 1
+
+        print('scale:', s)
+
+        print('after2:', x)
+
+        light.xyz = x
+        #light.set_scale(s)
+
+
 
 
     def decorate(self, decoration, surface):
