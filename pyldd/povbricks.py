@@ -305,24 +305,19 @@ class PovLEGOBrick(PovCSGObject, PovPreTransformation):
         self.hidden = True
         self.set_lights(light)
 
-        print(type(self.full_matrix))
-
         x = light.xyz
-        print('before:', x)
+
         for m in self.pre_full_matrix:
             x = m * x
 
         for m in self.full_matrix:
             x = m * x
 
-        print('after:', x)
 
         p = self._parent
         s = Point3D([1,1,1])
         i = 1
         while p is not None:
-            print('type:', type(p))
-            print(i)
             for m in p.pre_full_matrix:
                 x = m * x
 
@@ -342,12 +337,8 @@ class PovLEGOBrick(PovCSGObject, PovPreTransformation):
             p = p._parent
             i += 1
 
-        print('scale:', s)
-
-        print('after2:', x)
-
         light.xyz = x
-        #light.set_scale(s)
+
 
 
 

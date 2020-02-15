@@ -26,11 +26,13 @@ ldr_bricks = {
                 '3023.dat': '3023',
                 '3062b.dat': '3062',
                 '3069a.dat': '3069',
+                '3069b.dat': '3069',
                 '3470.dat': '3470',
                 '3471.dat': '3471',
                 '3666.dat': '3666',
                 '3741.dat': '3741',
                 '3742.dat': '3742',
+                '3778.dat': '3778',
                 '3865.dat': '3865',
                 '3867.dat': '3867',
                 '4162.dat': '4162',
@@ -140,7 +142,10 @@ class LdrBrick(object):
         if self._isbrick:
             return self._trafo[10]+self._ldd_trafo[10]
         else:
-            return self._sub_file.get_min_height()+self._trafo[10]
+            if self._sub_file is not None:
+                return self._sub_file.get_min_height()+self._trafo[10]
+            else:
+                return 0.
 
 
     def get_sub_file(self, groups, name):
