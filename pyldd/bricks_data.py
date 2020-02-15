@@ -33,6 +33,7 @@ known_bricks = { '0608':  [ '0608p01', None ],     # base 32 x 32 road T interse
                  '2431':  [ '2431', None ],     # flat tile 1 x 4
                  '2432':  [ '2432', None ],     # tile 1 x 2 with handle
                  '2434':  [ '2434', None ],     # brick 2 x 4 x 2 with studs on sides
+                 '2435':  [ '2435', None ],     # tree pine small 2 x 2 x 4
                  '2445':  [ '2445', None ],     # plate 2 x 12
                  '2449':  [ '2449', None ],     # slope brick 75 2 x 1 x 3 inverted
                  '2450':  [ '2450', None ],     # plate 3 x 3 without corner

@@ -19,6 +19,7 @@ from pyldd.ldr_trafo import ldr2lddtrafo
 
 # list of all checked ldr parts
 ldr_bricks = {
+                '2435.dat' : '2435',
                 '2412b.dat': '2412',
                 '3003.dat': '3003',
                 '3004.dat': '3004',
@@ -145,7 +146,7 @@ class LdrBrick(object):
             if self._sub_file is not None:
                 return self._sub_file.get_min_height()+self._trafo[10]
             else:
-                return 0.
+                return 1e100
 
 
     def get_sub_file(self, groups, name):
