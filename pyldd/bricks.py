@@ -36,6 +36,14 @@ from pyldd.povbricks import *
 from pyldd.bricks_data import *
 from pyldd.colors import *
 
+import random
+
+from pyldd.config import ldrconfig
+
+# setup random numbers
+
+random.seed(123456789)
+
 brick_data_dir = 'brick_data'
 
 from pkg_resources import resource_string, resource_filename
@@ -164,6 +172,13 @@ class Brick( object ):
                 if 'lsz' in defs:
                     scale_z = defs['lsz']
 
+            # add some random things to the brick if it fits
+            # to the probability
+
+            total = ldrconfig.get('brick_random_total', None)
+            r = random.uniform(0, 1)
+            if r <= total:
+                obj.add_random_things()
 
             obj.macros = 'L_Transform( {},{},{},{},{},{} )'.format(defs['width'],
                                                                    defs['depth'],

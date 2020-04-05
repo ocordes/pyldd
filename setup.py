@@ -12,6 +12,7 @@ setup(
     packages=['pyldd'],
     install_requires=[
      'numpy',
+     'python-dotenv',
     ],
     entry_points='''
         [console_scripts]

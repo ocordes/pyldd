@@ -24,6 +24,10 @@ from pypovlib.pypovtextures import *
 from pyldd.lego_defs import *
 import pyldd.files
 
+from pyldd.config import ldrconfig
+
+import random
+
 import pickle
 import gzip
 
@@ -341,6 +345,25 @@ class PovLEGOBrick(PovCSGObject, PovPreTransformation):
 
 
 
+    def add_random_things(self):
+        #print('Add random things')
+        rp = ldrconfig.get('brick_random_position', 0.01)
+
+        x = random.uniform(-rp, rp)
+        y = random.uniform(-rp, rp)
+        z = random.uniform(-rp, rp)
+
+        #print(x, y, z)
+        self._container.full_matrix[0].translate([x, y, z])
+
+        rp = ldrconfig.get('brick_random_rotation', None)
+        if rp is not None:
+            x = random.uniform(-rp, rp)
+            y = random.uniform(-rp, rp)
+            z = random.uniform(-rp, rp)
+            self._container.full_matrix[0].rotate(angle_X(x).rotation)
+            self._container.full_matrix[0].rotate(angle_Y(y).rotation)
+            self._container.full_matrix[0].rotate(angle_Z(z).rotation)
 
 
     def decorate(self, decoration, surface):
