@@ -15,7 +15,7 @@
 #ifdef(lg_3062b)
 #else
 #declare lg_3062b =
-merge {
+union {
  object {
   lg_tech_knob
  }
@@ -44,7 +44,7 @@ merge {
   }
  }
  difference {
-  merge {
+  union {
    cylinder {
     <0, 0, -LG_BRICK_HEIGHT+LG_PLATE_INNER_HEIGHT+LG_CORNER_SPACE>,
     <0, 0, -LG_CORNER_SPACE>,
@@ -56,7 +56,7 @@ merge {
     LG_BRICK_WIDTH/2-LG_CORNER_SPACE 
    }
   }
-  merge {
+  union {
    cylinder {
     <0, 0, -LG_BRICK_HEIGHT>,
     <0, 0, -LG_TOP_HEIGHT>,
@@ -137,7 +137,7 @@ merge {
     LG_BRICK_WIDTH/2-LG_CORNER_SPACE 
    }
   }
-  merge {
+  union {
    cylinder {
     <0, 0, -LG_BRICK_HEIGHT>,
     <0, 0, -LG_TOP_HEIGHT>,

@@ -81,8 +81,8 @@
 
 #if (lg_quality > 2)
  #declare lego_logo_text =
-  merge {
-   merge {
+  union {
+   union {
     /* Letter L */
     sphere {<-59, 0, -96>, 6}
     cylinder {<-59, 0, -96>, <59, 0, -122>, 6}
@@ -90,7 +90,7 @@
     cylinder {<59, 0, -122>, <59, 0, -84>, 6}
     sphere {<59, 0, -84>, 6}
    }
-   merge {
+   union {
      /* Letter E */
     sphere {<-59, 0, -36>, 6}
     cylinder {<-59, 0, -36>, <-59, 0, 1>, 6}
@@ -105,7 +105,7 @@
      translate <0, 0, 60>
     #end
    }
-   merge {
+   union {
     /* Letter G */
     sphere {<-35.95, 0, 57>, 6}
     torus {18.45, 6 clipped_by{plane{<40, 0, -9>, 0}} translate<-40, 0, 39>}
@@ -119,7 +119,7 @@
      translate <0, 0, -65>
     #end
    }
-   merge {
+   union {
     /* Letter O */
     torus {18.45, 6 clipped_by{plane{<40, 0, -9>, 0}} translate<-40, 0, 99>}
     cylinder {<-44.05, 0, 81>, <35.95, 0, 63>, 6}
@@ -193,8 +193,8 @@
 
 // solid stud
 #declare lg_knob =
-merge {
- merge {
+union {
+ union {
   cylinder {
    <0, 0, LG_KNOB_HEIGHT-LG_KNOB_CORNER_SPACE>,
    <0, 0, -LG_E>,
@@ -230,9 +230,9 @@ intersection {
 
 // hollow stud
 #declare lg_tech_knob =
-merge{
+union{
  difference {
-  merge {
+  union {
    cylinder {
     <0, 0, LG_KNOB_HEIGHT-LG_CORNER_SPACE>,
     <0, 0, -LG_E>,
@@ -274,7 +274,7 @@ merge{
 // hollow stud with logo
 #declare lg_tech_knob_logo =
 #if (lg_quality > 3)
-merge {
+union {
 #end
  object { lg_tech_knob 
   #if (lg_test > 0)
@@ -290,7 +290,7 @@ merge {
 
 // brick inner cylinder to fit stud inside
 #declare lg_brick_cylinder =
-merge {
+union {
  difference {
   cylinder {
    <0, 0, LG_BRICK_INNER_HEIGHT+LG_E>,
@@ -313,7 +313,7 @@ merge {
 
 // plate inner cylinder to fit stud inside
 #declare lg_plate_cylinder =
-merge {
+union {
  difference {
   cylinder {
    <0, 0, LG_PLATE_INNER_HEIGHT+LG_E>,

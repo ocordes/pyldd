@@ -176,9 +176,10 @@ class Brick( object ):
             # to the probability
 
             total = ldrconfig.get('brick_random_total', None)
-            r = random.uniform(0, 1)
-            if r <= total:
-                obj.add_random_things()
+            if total:
+                r = random.uniform(0, 1)
+                if r <= total:
+                    obj.add_random_things()
 
             obj.macros = 'L_Transform( {},{},{},{},{},{} )'.format(defs['width'],
                                                                    defs['depth'],
